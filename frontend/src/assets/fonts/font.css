@@ -1,0 +1,7 @@
+/* File: font.css */
+@font-face {
+    font-family: 'bossa';
+    src: local('bossa'),
+         url('../BossaFont/WOFF/Bossa-Regular.woff') format('woff'),
+         url('../BossaFont/WOFF2/Bossa-Regular.woff2') format('woff2');
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meet_uss",
+  "info": {
+    "singularName": "meet-us",
+    "pluralName": "meet-uss",
+    "displayName": "Meet Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "scheduleDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "linkedin_link": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

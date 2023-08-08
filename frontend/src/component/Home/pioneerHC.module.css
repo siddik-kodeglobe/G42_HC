@@ -1,0 +1,55 @@
+.heading{
+    font-family: Bossa;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text1{
+    font-family: Bossa;
+    font-size: 40px;
+    color: black;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+}
+
+.text2{
+    color: #00D2AA;
+    font-family: Bossa;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700;
+}
+
+.desc{
+    color: #747272;
+    font-family: Bossa;
+    font-size: 18px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 51px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .text1{
+        font-size: 24px;
+    }
+    .text2{
+        font-size: 18px;
+    }
+    .desc{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+
