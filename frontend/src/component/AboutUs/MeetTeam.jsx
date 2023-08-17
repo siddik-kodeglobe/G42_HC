@@ -62,10 +62,10 @@ const MeetTeam = () => {
         margin="78px 10% 0px 10%"
         gap={7}
       >
-        <Flex alignItems={"center"} gap={7}>
+        <Flex flexDirection={["column", "column", "row"]} alignItems={"center"} gap={7}>
           <Text
             fontFamily={"Bossa"}
-            fontSize={50}
+            fontSize={["24px", "24px", "50px"]}
             fontWeight={700}
             color={"white"}
           >
@@ -74,7 +74,7 @@ const MeetTeam = () => {
           <Text
             color={"#00D2AA"}
             fontFamily={"Bossa"}
-            fontSize={20}
+            fontSize={["14px", "14px", "20px"]}
             fontWeight={500}
             textDecoration={"underline"}
           >
@@ -133,7 +133,7 @@ const MeetTeam = () => {
           spaceBetween:44,
         },
         390: {
-          slidesPerView: 1.5,
+          slidesPerView: 1,
           slidesOffsetBefore: 15
           // spaceBetween:22,
         },

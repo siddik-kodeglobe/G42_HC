@@ -17,17 +17,31 @@ const VideoSection = () => {
             width={"100%"}
             height={"100%"}
             playing={true}
-            
             loop={true}
             url="http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
           />
         </Box>
 
-        <Box position={"absolute"} bottom={0}  margin={0}>
+        <Box position={"absolute"} bottom={0} margin={0}>
           {/* TAGLINE  */}
-          <Flex flexDirection={["column", "column", "row"]} alignItems={["start", "start", "center"]} paddingLeft={["20px", "20px", "72px"]} paddingBottom={["0px", "0px", "92px"]} bgGradient={"linear-gradient(0deg, #00D2AA 0%, rgba(0, 210, 170, 0.00) 100%);"} gap={[0,0,"14px"]}>
+          <Flex
+            flexDirection={["column", "column", "row"]}
+            alignItems={["start", "start", "center"]}
+            paddingLeft={["20px", "20px", "72px"]}
+            paddingBottom={["0px", "0px", "92px"]}
+            bgGradient={
+              "linear-gradient(0deg, #00D2AA 0%, rgba(0, 210, 170, 0.00) 100%);"
+            }
+            gap={[0, 0, "14px"]}
+          >
             <Box>
-            <Image onClick={onOpen} width={["48px", "48px", "90px"]} cursor={"pointer"} src={playBtn} alt="playBtn" />
+              <Image
+                onClick={onOpen}
+                width={["48px", "48px", "90px"]}
+                cursor={"pointer"}
+                src={playBtn}
+                alt="playBtn"
+              />
             </Box>
             <Box>
               <Text
@@ -40,7 +54,7 @@ const VideoSection = () => {
                 Supporting tagline: Max one line statement.
               </Text>
               <Text
-              w={"70%"}
+                w={"70%"}
                 color={"white"}
                 fontFamily={"Bossa"}
                 fontSize={["28px", "28px", "80px"]}

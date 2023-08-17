@@ -31,7 +31,7 @@ const Home_VideoSection = () => {
 
         <Box
           w={"98.7vw"}
-          h={"50vh"}
+          h={["25vh","25vh","50vh"]}
           position={"absolute"}
           bgGradient={
             "linear-gradient(0deg, #00AFFF 0%, rgba(0, 175, 255, 0.00) 100%);"
@@ -40,17 +40,24 @@ const Home_VideoSection = () => {
           margin={0}
         >
           {/* TAGLINE  */}
-          <Box paddingLeft={"72px"} paddingBottom={"92px"}>
-            <Image onClick={onOpen} cursor={"pointer"} src={playBtn} alt="playBtn" />
+          <Box paddingLeft={["31px", "31px","72px"]} paddingBottom={["45px", "45px","92px"]}>
+            <Image
+              w={["40px", "40px", "90px"]}
+              onClick={onOpen}
+              cursor={"pointer"}
+              src={playBtn}
+              alt="playBtn"
+            />
           </Box>
-          <Box position={"absolute"} bottom={-9} w="100%" h="35%">
+          <Box position={"absolute"} bottom={[-2, -2, -9]} left={[9,9,0]} w="90%" h="35%">
             <Box
               position={"absolute"}
               bottom={0}
-              right={5}
-              height={"214px"}
+              left={[-8,-8,5]}
+              right={[1,1,5]}
+              height={["50px", "50px","214px"]}
               w={"96vw"}
-              padding={"75px 148px"}
+              padding={["15px 50px","75px 148px"]}
               mt={5}
               justifyContent={"space-between"}
               alignItems={"center"}
@@ -59,7 +66,7 @@ const Home_VideoSection = () => {
               <Text
                 w={"50%"}
                 fontFamily={"bossa"}
-                fontSize={"48px"}
+                fontSize={["24px", "24px", "48px"]}
                 textTransform={"capitalize"}
                 fontWeight={700}
               >

@@ -5,27 +5,27 @@ import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 const ImageSubHeading = () => {
   return (
     <>
-    <Box margin={"0px 180px"}>
+    <Box margin={["33px 14px", "0px 180px"]}>
       <Image src={omicsImg} alt="Img" />
-      <Flex mt={"78px"} justifyContent={"space-between"}>
+      <Flex margin={["0px 22px", "0px 22px", "78px 0px"]} mt={"78px"} flexDirection={["column", "column", "row"]} justifyContent={"space-between"}>
         <Box w={"50%"}>
           <Text
             fontFamily={"Bossa"}
             fontStyle={"normal"}
             fontWeight={700}
-            fontSize={"60px"}
+            fontSize={["24px", "24px", "60px"]}
           >
             Sub-Heading
           </Text>
         </Box>
-        <Box w={"50%"}>
+        <Box mt={["14px", 0, 0]} w={["100%","100%", "50%"]}>
           <Text
             color={"#747272"}
             fontFamily={"Bossa"}
             fontStyle={"normal"}
             fontWeight={300}
             lineHeight={"22px"}
-            fontSize={"16px"}
+            fontSize={["12px", "12px", "16px"]}
           >
             The Omics Centre of Excellence is invested in the accentuated power
             of Wellness genomic, clinical, precision medicine and

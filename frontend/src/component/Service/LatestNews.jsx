@@ -32,11 +32,11 @@ const LatestNews = () => {
     <>
       <Text
       fontFamily={"Bossa"}
-      fontSize={"48px"}
+      fontSize={["24px", "24px", "48px"]}
       fontWeight={700}
       lineHeight={"normal"}
       fontStyle={"normal"}
-      margin={"72px 60px"}>Latest News</Text>
+      margin={["40px 20px", "40px 20px", "72px 60px"]}>Latest News</Text>
       <Box marginBottom={"125px"}>
         <Swiper
           breakpoints={{

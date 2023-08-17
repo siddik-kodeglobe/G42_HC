@@ -11,8 +11,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 import axios from "axios";
-import minus from '../../assets/icons/minus.svg'
-import plus from '../../assets/Services/icons/plus.svg'
+import minus from "../../assets/icons/minus.svg";
+import plus from "../../assets/Services/icons/plus.svg";
 
 const Offering = () => {
   const swiperRef = React.useRef(null);
@@ -33,16 +33,27 @@ const Offering = () => {
   return (
     <>
       <Box mt={"62px"} bgImage={bgImg}>
-        <Box padding={"15px"}>
+        <Text
+          padding={["40px 15px 0px 15px","72px 60px 0px 178px"]}
+          color={"black"}
+          fontFamily={"Bossa"}
+          fontSize={["32px", "32px", "60px"]}
+          fontWeight={700}
+        >
+          Offerings
+        </Text>
+        <Box padding={["0px 15px","0px 15px","15px"]} paddingBottom={"15px"}>
           <Swiper
             // slidesPerView={2.75}
             breakpoints={{
               1024: {
+                slidesOffsetBefore: 175,
                 slidesPerView: 2.75,
-                spaceBetween: 44,
+                spaceBetween:22,
               },
               390: {
-                slidesPerView: 1.5,
+                slidesPerView: 1,
+                slidesOffsetBefore: 15
                 // spaceBetween:22,
               },
             }}
@@ -53,41 +64,46 @@ const Offering = () => {
           >
             {data?.map((el) => (
               <SwiperSlide
-              className={style.swipe_slide}
-              breakpoints={{
-                1024: {
-                  slidesPerView: 2.75,
-                  spaceBetween:54,
-                },
-                390: {
-                  slidesPerView: 1.25,
-                  // spaceBetween:22,
-                },
-              }}
-            >
+                className={style.swipe_slide}
+                breakpoints={{
+                  1024: {
+                    slidesPerView: 2.75,
+                    spaceBetween: 54,
+                  },
+                  390: {
+                    slidesPerView: 1,
+                    // spaceBetween:22,
+                  },
+                }}
+              >
                 <Box
                   backgroundColor={"white"}
                   w={"450px"}
                   h={"458px"}
                   position={"relative"}
-                >
-                    
-                </Box>
-                
+                ></Box>
+
                 <Box left={5} bottom={5} position={"absolute"}>
-                <Text
-                noOfLines={2}
-                fontFamily={"Bossa"}
-                fontSize={["24px", "24px", "48px"]}
-                fontWeight={700}
-                lineHeight={"normal"}
-                fontStyle={"normal"}
-                >{el.attributes.title}</Text>
-
+                  <Text
+                    noOfLines={2}
+                    fontFamily={"Bossa"}
+                    fontSize={["24px", "24px", "48px"]}
+                    fontWeight={700}
+                    lineHeight={"normal"}
+                    fontStyle={"normal"}
+                  >
+                    {el.attributes.title}
+                  </Text>
                 </Box>
 
-                <Box borderRadius={"50%"} backgroundColor={"#00AFFF"} right={2} top={5} position={"absolute"}>
-                <Image padding={"21px"} src={plus}/>
+                <Box
+                  borderRadius={"50%"}
+                  backgroundColor={"#00AFFF"}
+                  right={[7,7, 2]}
+                  top={5}
+                  position={"absolute"}
+                >
+                  <Image padding={"21px"} src={plus} />
                 </Box>
               </SwiperSlide>
             ))}

@@ -19,12 +19,12 @@ const Impact = () => {
   }, []);
   return (
     <>
-      <Box  padding={"125px 60px 0px 60px"}>
+      <Box  padding={["80px 20px 0px 20px", "80px 20px 0px 20px","125px 60px 0px 60px"]}>
         <Text
           fontFamily={"Bossa"}
           fontStyle={"normal"}
           fontWeight={700}
-          fontSize={"48px"}
+          fontSize={["24px", "24px", "48px"]}
         >
           Impact we deliver
         </Text>
@@ -32,7 +32,7 @@ const Impact = () => {
           fontFamily={"Bossa"}
           fontStyle={"normal"}
           fontWeight={300}
-          fontSize={"18px"}
+          fontSize={["12px", "12px", "18px"]}
           color={"#747272"}
         >
           Harness data, develop artificial super intelligence and deliver
@@ -40,16 +40,17 @@ const Impact = () => {
           precision medicine to shape the future of healthcare
         </Text>
 
-        <SimpleGrid mt={"34px"} columns={3} spacing={"5px"}>
+        <SimpleGrid mt={"34px"} columns={[2,2,3]} spacing={"5px"}>
           {data?.map((el) => (
             <Flex
-              w={"373px"}
-              h={"198px"}
+              w={["171px", "171px", "373px"]}
+              h={["91px", "91px", "198px"]}
               backgroundColor={"#cff0ff"}
               border={"1px solid #B6B6B6"}
               
             >
               <Image
+              w={"25%"}
               margin={"auto"}
                 src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
               />

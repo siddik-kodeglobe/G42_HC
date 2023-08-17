@@ -91,7 +91,7 @@ const AU_Slider = () => {
       <Box width={"98.7vw"} margin={"64px 0px"}>
         <OurPartners />
       </Box>
-      <ChartingTriumph />
+      {/* <ChartingTriumph /> */}
       <Box width={"98.7vw"} margin={"64px 0px"}>
         <MeetTeam />
       </Box>

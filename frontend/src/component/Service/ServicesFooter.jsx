@@ -5,20 +5,20 @@ import Footer from "../Footer/Footer";
 const ServicesFooter = () => {
   return (
     <>
-      <Box margin={"125px 175px 0px 175px"}>
-        <Flex justifyContent={"space-between"} alignItems={"start"}>
-          <Box w={"60%"}>
+      <Box margin={["80px 20px 0px 20px", "125px 175px 0px 175px"]}>
+        <Flex flexDirection={["column", "column", "row"]} justifyContent={"space-between"} alignItems={"start"}>
+          <Box w={["100%", "100%", "60%"]}>
             <Text
             fontFamily={"Bossa"}
             fontStyle={"normal"}
             fontWeight={700}
-            fontSize={"48px"}
+            fontSize={["24px", "24px", "48px"]}
             >Curious to know more</Text>
             <Text
             fontFamily={"Bossa"}
             fontStyle={"normal"}
             fontWeight={500}
-            fontSize={"14px"}
+            fontSize={["12px", "12px", "14px"]}
             color={"#747272"}
             >
               Need 2-3 line statement to support the heading. Partner with G42
@@ -29,7 +29,7 @@ const ServicesFooter = () => {
             </Text>
           </Box>
           <Box>
-            <Button borderRadius={"80px"} padding={"15px 34px"} textTransform={"capitalize"} fontSize={"16px"} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"#004141"}>
+            <Button borderRadius={"80px"} mt={["16px", 0,0]} padding={"15px 34px"} textTransform={"capitalize"} fontSize={["12px", "12px", "16px"]} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"#004141"}>
               Make Enquiry
             </Button>
           </Box>
