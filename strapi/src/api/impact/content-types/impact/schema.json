@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "impacts",
+  "info": {
+    "singularName": "impact",
+    "pluralName": "impacts",
+    "displayName": "Impact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usp_services",
+  "info": {
+    "singularName": "usp-service",
+    "pluralName": "usp-services",
+    "displayName": "usp_Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shortHeading": {
+      "type": "string",
+      "required": true
+    },
+    "subStatement": {
+      "type": "text",
+      "required": true
+    },
+    "tag": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

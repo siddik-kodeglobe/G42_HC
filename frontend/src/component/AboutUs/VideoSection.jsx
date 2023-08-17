@@ -31,7 +31,7 @@ const VideoSection = () => {
             right={5}
             height={"214px"}
             w={"96vw"}
-            padding={"75px 148px"}
+            padding={"75px 138px"}
             justifyContent={"space-between"}
             alignItems={"center"}            
             backgroundColor={"white"}

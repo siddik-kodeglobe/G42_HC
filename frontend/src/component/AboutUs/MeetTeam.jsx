@@ -126,7 +126,18 @@ const MeetTeam = () => {
 
 
       <Swiper
-        slidesPerView={2.5}
+      breakpoints={{
+        1024: {
+          slidesOffsetBefore: 125,
+          slidesPerView: 2.5,
+          spaceBetween:44,
+        },
+        390: {
+          slidesPerView: 1.5,
+          slidesOffsetBefore: 15
+          // spaceBetween:22,
+        },
+      }}
         ref={swiperRef}
         // navigation={true}
         modules={[Navigation]}

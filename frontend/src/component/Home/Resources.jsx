@@ -40,6 +40,7 @@ const Resources = () => {
     }
   };
 
+  
   const getData = async () => {
     // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`);
     const res = await axios.get(
@@ -47,6 +48,33 @@ const Resources = () => {
     );
     console.log(res.data.data);
     setData(res.data.data);
+  };
+
+  const convertData = (inputDateString) => {
+    const inputDate = new Date(inputDateString);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const day = inputDate.getUTCDate();
+    const formattedDay = (day < 10) ? `0${day}` : day;
+    const month = months[inputDate.getUTCMonth()];
+    const year = inputDate.getUTCFullYear();
+
+    const customFormattedDate = `${month} ${formattedDay} ${year}`;
+    return customFormattedDate;
   };
 
   useEffect(() => {
@@ -115,17 +143,33 @@ const Resources = () => {
 
         <Box>
           <Swiper
-            slidesPerView={2.75}
-            spaceBetween={44}
+            breakpoints={{
+              1024: {
+                slidesOffsetBefore: 150,
+                slidesPerView: 2.75,
+                spaceBetween:44,
+              },
+              390: {
+                slidesPerView: 1.5,
+                slidesOffsetBefore: 15
+                // spaceBetween:22,
+              },
+            }}
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide className={style.swipe_slide}>
-                <Box position={"relative"}>
+              <SwiperSlide
+              
+              className={style.swipe_slide}
+              >
+                <Box h={["214px", "214px", "338px"]}
+                  w={["285px", "285px", "451px"]} position={"relative"}>
                   <Image
+                  h={["214px", "214px", "338px"]}
+                  w={["285px", "285px", "451px"]}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                 </Box>
@@ -137,9 +181,12 @@ const Resources = () => {
                     fontWeight={500}
                     lineHeight={"normal"}
                   >
-                    {el.attributes.createdAt}
+                    {convertData(el.attributes.createdAt)}
                   </Text>
                   <Text
+                  mt={"5px"}
+                  h={"96px"}
+                  noOfLines={2}
                     color={"white"}
                     fontFamily={"Bossa"}
                     fontSize={20}

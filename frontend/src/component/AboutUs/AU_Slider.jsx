@@ -25,64 +25,64 @@ const AU_Slider = () => {
   const swiperRef = useRef();
 
   const goNext = () => {
-    if(swiperRef.current && swiperRef.current.swiper){
+    if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
-  }
+  };
 
   const goPrev = () => {
-    if(swiperRef.current && swiperRef.current.swiper){
+    if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
-  }
+  };
 
   return (
     <div style={{ position: "absolute" }}>
-      <Swiper
-        slidesPerView={1.25}
-        spaceBetween={21}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode]}
-        className={style.swiper}
-      >
-        {/* buttons  */}
+      {/* SLIDER  */}
+      <Box position={"relative"}>
+        <Swiper
+          slidesPerView={1.25}
+          spaceBetween={21}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode]}
+          className={style.swiper}
+        >
+          {/* slides  */}
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+          <SwiperSlide className={style.swipe_slide}>
+            <Image src={img1} alt="Img1" />
+          </SwiperSlide>
+        </Swiper>
+      </Box>
 
-        <div>
-          
-        </div>
-
-        {/* slides  */}
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-        <SwiperSlide className={style.swipe_slide}>
-          <Image src={img1} alt="Img1" />
-        </SwiperSlide>
-      </Swiper>
+      {/* SLIDER BTN  */}
+      <Box></Box>
       <WhoWeAre />
       <hr style={{ width: "100%", marginTop: "64px" }} />
       <PurposeMV />
@@ -91,11 +91,11 @@ const AU_Slider = () => {
       <Box width={"98.7vw"} margin={"64px 0px"}>
         <OurPartners />
       </Box>
-      <ChartingTriumph/>
+      <ChartingTriumph />
       <Box width={"98.7vw"} margin={"64px 0px"}>
         <MeetTeam />
       </Box>
-      <AU_Footer/>
+      <AU_Footer />
     </div>
   );
 };

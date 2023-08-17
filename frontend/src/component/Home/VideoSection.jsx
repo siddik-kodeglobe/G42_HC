@@ -1,10 +1,13 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
 import playBtn from "../../assets/icons/playBtn.svg";
 import News from "./News";
+import VideoModal from "../VideoModal/VideoModal";
 
 const VideoSection = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Box position={"relative"}>
@@ -14,6 +17,7 @@ const VideoSection = () => {
             width={"100%"}
             height={"100%"}
             playing={true}
+            
             loop={true}
             url="http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
           />
@@ -23,7 +27,7 @@ const VideoSection = () => {
           {/* TAGLINE  */}
           <Flex flexDirection={["column", "column", "row"]} alignItems={["start", "start", "center"]} paddingLeft={["20px", "20px", "72px"]} paddingBottom={["0px", "0px", "92px"]} bgGradient={"linear-gradient(0deg, #00D2AA 0%, rgba(0, 210, 170, 0.00) 100%);"} gap={[0,0,"14px"]}>
             <Box>
-            <Image width={["48px", "48px", "90px"]} cursor={"pointer"} src={playBtn} alt="playBtn" />
+            <Image onClick={onOpen} width={["48px", "48px", "90px"]} cursor={"pointer"} src={playBtn} alt="playBtn" />
             </Box>
             <Box>
               <Text
@@ -50,6 +54,14 @@ const VideoSection = () => {
           </Flex>
         </Box>
 
+        <VideoModal
+          url={
+            "http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
+          }
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onClose}
+        />
       </Box>
     </>
   );

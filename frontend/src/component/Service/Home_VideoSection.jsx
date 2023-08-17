@@ -1,9 +1,20 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Image,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
 import playBtn from "../../assets/icons/playBtn.svg";
+import omicsImg from "../../assets/temp/services/omicsImg.svg";
+import VideoModal from "../VideoModal/VideoModal";
 
 const Home_VideoSection = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <>
       <Box position={"relative"}>
@@ -30,15 +41,10 @@ const Home_VideoSection = () => {
         >
           {/* TAGLINE  */}
           <Box paddingLeft={"72px"} paddingBottom={"92px"}>
-            <Image cursor={"pointer"} src={playBtn} alt="playBtn" />
+            <Image onClick={onOpen} cursor={"pointer"} src={playBtn} alt="playBtn" />
           </Box>
-          <Box
-            position={"absolute"}
-            bottom={-9}
-            w="100%"
-            h="35%"
-          >
-            <Flex
+          <Box position={"absolute"} bottom={-9} w="100%" h="35%">
+            <Box
               position={"absolute"}
               bottom={0}
               right={5}
@@ -59,9 +65,18 @@ const Home_VideoSection = () => {
               >
                 Omics
               </Text>
-            </Flex>
+            </Box>
           </Box>
         </Box>
+
+        <VideoModal
+          url={
+            "http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
+          }
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onClose}
+        />
       </Box>
     </>
   );

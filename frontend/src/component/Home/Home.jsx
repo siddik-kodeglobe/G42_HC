@@ -9,11 +9,15 @@ import Resources from "./Resources";
 import SocialMedia from "./SocialMedia";
 import MeetUs from "./MeetUs";
 import AU_Footer from "../AboutUs/AU_Footer";
+import Navbar from "../Navbar/Navbar";
+import TopScroll from "../TopScroll/TopScroll";
+
 
 const Home = () => {
   return (
     <>
       <Box>
+        <Navbar/>
         <VideoSection />
         <News/>
         <AboutUsMarquee/>
@@ -23,6 +27,7 @@ const Home = () => {
         <SocialMedia/>
         <MeetUs/>
         <AU_Footer/>
+        <TopScroll/>
       </Box>
     </>
   );

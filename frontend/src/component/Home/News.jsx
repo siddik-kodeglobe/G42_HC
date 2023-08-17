@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -6,6 +6,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 // Import Swipper
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,13 +17,17 @@ import style from "../AboutUs/OurPartner_Slider.module.css";
 
 const News = () => {
   const [data, setData] = useState([]);
+  const [hoverArrowColor, setHoverArrowColor] = useState("white")
+  const [hoverArrowColorR, setHoverArrowColorR] = useState("white")
   // const swiper = useSwiper();
   const swiperRef = React.useRef(null);
 
   const goNext = () => {
+    
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
+    // console.log(swiperRef.current.swiper);
   };
 
   const goPrev = () => {
@@ -40,6 +45,33 @@ const News = () => {
     setData(res.data.data);
   };
 
+  const convertData = (inputDateString) => {
+    const inputDate = new Date(inputDateString);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const day = inputDate.getUTCDate();
+    const formattedDay = (day < 10) ? `0${day}` : day;
+    const month = months[inputDate.getUTCMonth()];
+    const year = inputDate.getUTCFullYear();
+
+    const customFormattedDate = `${month} ${formattedDay},${year}`;
+    return customFormattedDate;
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -52,7 +84,7 @@ const News = () => {
           "linear-gradient(180deg, #00D2AA 28.96%, rgba(0, 210, 170, 0.00) 100%);"
         }
       >
-        <Flex justifyContent={"space-between"} padding={["40px 15px 20px 15px","72px 60px 33px 178px"]}>
+        <Flex alignItems={"center"} justifyContent={"space-between"} padding={["40px 15px 20px 15px","72px 60px 0px 178px"]}>
           <Text
             color={"white"}
             fontFamily={"Bossa"}
@@ -62,71 +94,82 @@ const News = () => {
             News
           </Text>
           <Flex alignItems={"center"} gap={5}>
-            <Flex
-              onClick={() => goPrev()}
-              _hover={{ backgroundColor: "#00D2AA" }}
+          <Button
+              // onClick={() => goPrev()}
+              onClick={() => swiperRef.current.swiper.slidePrev()}
+              _hover={{ backgroundColor: "white"}}
+              backgroundColor={"#00D2AA"}
+              onMouseOver={() => setHoverArrowColor("black")}
+              onMouseOut={() => setHoverArrowColor("white")}
               alignItems={"center"}
               justifyContent={"center"}
               border={"1px solid white"}
               borderStyle={"dashed"}
+              w={"52px"}
+              h={"52px"}
+              margin={0}
+              padding={"11px"}
               borderRadius={"50%"}
-              cursor={"pointer"}
+              // cursor={swiperRef.current?.swiper.isBeginning ? "not-allowed" : "pointer"}
+              // disabled={swiperRef.current?.swiper.isBeginning}
             >
               <BsArrowLeft
                 style={{
-                  color: "white",
+                  color: hoverArrowColor,
                   height: "52px",
                   width: "52px",
-                  padding: "11px",
-                  cursor: "pointer",
                 }}
               />
-            </Flex>
-            <Flex
+            </Button>
+            <Button
               onClick={() => goNext()}
-              _hover={{ backgroundColor: "#00D2AA" }}
+              _hover={{ backgroundColor: "white" }}
+              onMouseOver={() => setHoverArrowColorR("black")}
+              onMouseOut={() => setHoverArrowColorR("white")}
+              backgroundColor={"#00D2AA"}
               alignItems={"center"}
               justifyContent={"center"}
               border={"1px solid white"}
               borderStyle={"dashed"}
+              w={"52px"}
+              h={"52px"}
+              margin={0}
+              padding={"11px"}
               borderRadius={"50%"}
-              cursor={"pointer"}
             >
               <BsArrowRight
                 style={{
-                  color: "white",
+                  color: hoverArrowColorR,
                   height: "52px",
                   width: "52px",
-                  padding: "11px",
                 }}
               />
-            </Flex>
+            </Button>
           </Flex>
         </Flex>
 
-        <Box padding={"15px"}>
+        <Box>
           <Swiper
-            // slidesPerView={2.75}
             breakpoints={{
               1024: {
+                slidesOffsetBefore: 178,
                 slidesPerView: 2.75,
-                spaceBetween:44,
+                spaceBetween:22,
               },
               390: {
                 slidesPerView: 1.5,
+                slidesOffsetBefore: 15
                 // spaceBetween:22,
               },
             }}
-          
-            
             ref={swiperRef}
             // navigation={true}
-            modules={[Navigation]}
+            freeMode={true}
+            modules={[Navigation, FreeMode]}
             className={style.swiper}
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
-                
                 <Box position={"relative"}>
                   <Image
                   w={["238px", "238px", "451px"]}
@@ -142,9 +185,11 @@ const News = () => {
                     fontWeight={500}
                     lineHeight={"normal"}
                   >
-                    {el.attributes.createdAt}
+                    {convertData(el.attributes.createdAt)}
                   </Text>
                   <Text
+                  mt={"5px"}
+                  h={"96px"}
                   noOfLines={2}
                     color={"white"}
                     fontFamily={"Bossa"}

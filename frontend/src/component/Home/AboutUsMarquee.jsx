@@ -1,24 +1,85 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import aboutImage from "../../assets/temp/about_HomePage.svg";
+// import gsap from 'gsap';
+// import { GSDevTools, SplitText } from 'gsap/all';
+import Marquee from "react-fast-marquee";
+import ReactPlayer from "react-player";
+import homeVideo from "../../assets/logo/homeVideo.mp4";
 
 const AboutUsMarquee = () => {
+  let split;
+  let tl;
+
+  // const init = () => {
+  //   gsap.set(".fullScreen", { autoAlpha: 1 });
+
+  //   if (split) {
+  //     gsap.getById("tools").kill();
+  //     split.revert();
+  //   }
+  //   split = new SplitText("h1", { charsClass: "chars", linesClass: "lines" });
+  //   tl = gsap.timeline();
+
+  //   split.lines.forEach((line, index) => {
+  //     tl.from(line.querySelectorAll(".chars"), { duration: 0.3, yPercent: 100, stagger: 0.04 }, ">-50%");
+  //   });
+  //   gsap.create({ animation: tl, id: "tools" });
+  // };
+
   return (
     <>
       <Box mt={111}>
-        <marquee>
+        <Marquee autoFill>
           <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
-            <hr style={{ width: "88px", border: "1px solid black", margin: "auto" }} />
-            <Text textAlign={"center"} fontFamily={"Bossa"} fontSize={[ "32px", "32px", "60px", "60px"]} fontWeight={700}>
+            <hr
+              style={{
+                width: "88px",
+                border: "1px solid black",
+                margin: "auto",
+              }}
+            />
+
+            <Text
+              textAlign={"center"}
+              fontFamily={"Bossa"}
+              fontSize={["32px", "32px", "60px", "60px"]}
+              fontWeight={700}
+            >
               About G42 Healthcare
             </Text>
-            <hr style={{ width: "88px", border: "1px solid black", margin: "auto" }} />
+            <hr
+              style={{
+                width: "88px",
+                border: "1px solid black",
+                margin: "auto",
+              }}
+            />
           </Flex>
-        </marquee>
+        </Marquee>
 
-        <Flex flexDirection={["column", "column", "row"]} mt={"100px"} padding={["0px 20px", "0px 20px", "0px 151px"]} gap={["33px", "33px", "90px"]} alignItems={"self-start"}>
-          <Image w={["352px", "352px", "519px"]} src={aboutImage} alt="About Image" />
-          <Flex flexDirection={"column"} justifyContent={"space-between"}>
+        <Flex
+          flexDirection={["column", "column", "row"]}
+          mt={"100px"}
+          padding={["0px 20px", "0px 20px", "0px 151px"]}
+          gap={["33px", "33px", "90px"]}
+          alignItems={["self-start", "self-start", "self-start"]}
+        >
+          <Box height={"377px"} w={"619px"}>
+            <ReactPlayer 
+            // style={{position: "absolute", top: 0, left: 0}}
+            width={"100%"}
+            // height={"100%"}
+              playing={true}
+              loop={true}
+              url={homeVideo}
+            />
+          </Box>
+          <Flex
+            w={"450px"}
+            flexDirection={"column"}
+            justifyContent={"space-between"}
+          >
             <Text
               fontFamily={"Bossa"}
               fontSize={18}
@@ -36,7 +97,7 @@ const AboutUsMarquee = () => {
               43,000 participants from 125+ nationalities.
             </Text>
             <Button
-            mt={"15px"}
+              mt={"15px"}
               _hover={{ bgColor: "#00D2AA" }}
               bgColor={"#00D2AA"}
               borderRadius={"80px"}

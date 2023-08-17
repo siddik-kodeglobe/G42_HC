@@ -1,12 +1,14 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import style from './pioneerHC.module.css';
+import style from "./pioneerHC.module.css";
 
 const PioneeringHC = () => {
   return (
     <>
       <Box mt={"125px"}>
-        <Text fontSize={["32px", "32px", "48px"]} className={style.heading}>Pioneering Healthcare</Text>
+        <Text fontSize={["32px", "32px", "48px"]} className={style.heading}>
+          Pioneering Healthcare
+        </Text>
         <Box padding={["20px", "20px", "56px 155px"]}>
           <Flex flexDirection={["column", "column", "row"]}>
             <Box w={"100%"} padding={"0px 20px"}>
@@ -24,7 +26,9 @@ const PioneeringHC = () => {
           <hr />
           <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
             <Box w={"100%"} padding={"0px 20px"}>
-              <Text className={style.text1}>1st Omics Facility in the Region</Text>
+              <Text className={style.text1}>
+                1st Omics Facility in the Region
+              </Text>
               <Text className={style.text2}>Omics Center of Intelligence</Text>
             </Box>
             <Box w={"100%"} padding={"0px 20px"}>
@@ -36,7 +40,7 @@ const PioneeringHC = () => {
             </Box>
           </Flex>
           <hr />
-          
+
           <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
             <Box w={"100%"} padding={"0px 20px"}>
               <Text className={style.text1}>1st Waste Water Lab</Text>
@@ -54,7 +58,9 @@ const PioneeringHC = () => {
 
           <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
             <Box w={"100%"} padding={"0px 20px"}>
-              <Text className={style.text1}>1st clinical trial pan MENA region</Text>
+              <Text className={style.text1}>
+                1st clinical trial pan MENA region
+              </Text>
               <Text className={style.text2}>4Humanity trial Diagnostics</Text>
             </Box>
             <Box w={"100%"} padding={"0px 20px"}>
@@ -66,7 +72,6 @@ const PioneeringHC = () => {
             </Box>
           </Flex>
           <hr />
-          
         </Box>
       </Box>
     </>

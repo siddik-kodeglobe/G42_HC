@@ -39,7 +39,18 @@ const OurPartners = () => {
       </Text>
 
       <Swiper
-
+        breakpoints={{
+          1024: {
+            slidesOffsetBefore: 150,
+            slidesPerView: 2.75,
+            spaceBetween:44,
+          },
+          390: {
+            slidesPerView: 1.5,
+            slidesOffsetBefore: 15
+            // spaceBetween:22,
+          },
+        }}
         slidesPerView={2.5}
         spaceBetween={15}
         freeMode={true}

@@ -49,6 +49,33 @@ const SocialMedia = () => {
     setData(res.data.data);
   };
 
+  const convertData = (inputDateString) => {
+    const inputDate = new Date(inputDateString);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const day = inputDate.getUTCDate();
+    const formattedDay = (day < 10) ? `0${day}` : day;
+    const month = months[inputDate.getUTCMonth()];
+    const year = inputDate.getUTCFullYear();
+
+    const customFormattedDate = `${formattedDay} ${month} ${year}`;
+    return customFormattedDate;
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -56,7 +83,7 @@ const SocialMedia = () => {
     <>
       <Box>
         <Flex
-          padding={"95px 60px 20px 150px"}
+          padding={["40px 15px 20px 15px","95px 60px 20px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -113,8 +140,18 @@ const SocialMedia = () => {
 
         <Box>
           <Swiper
-            slidesPerView={2.75}
-            spaceBetween={44}
+            breakpoints={{
+              1024: {
+                slidesOffsetBefore: 150,
+                slidesPerView: 2.75,
+                spaceBetween:44,
+              },
+              390: {
+                slidesPerView: 1.5,
+                slidesOffsetBefore: 15
+                // spaceBetween:22,
+              },
+            }}
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
@@ -122,13 +159,16 @@ const SocialMedia = () => {
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
-                <Box>
+                  
+                <Box w={["285px", "285px", "451px"]}>
                   <Image
-                  w={"450px"}
-                  h={"424px"}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                  w={["285px", "285px", "451px"]}
+                  h={["238px", "238px", "411px"]}
+                  src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
+                    mt={"30px"}
+                    noOfLines={2}
                     color={"#747272"}
                     fontFamily={"Bossa"}
                     fontSize={"14px"}
@@ -136,7 +176,7 @@ const SocialMedia = () => {
                     textTransform={"capitalize"}
                     lineHeight={"normal"}
                   >
-                    {el.attributes.createdAt}
+                    {convertData(el.attributes.createdAt)}
                   </Text>
 
                   <Text

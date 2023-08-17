@@ -23,7 +23,7 @@ import "swiper/css/navigation";
 
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
-import bgImg from '../../assets/MeetUs/background.png'
+import bgImg from "../../assets/MeetUs/background.png";
 
 const MeetUs = () => {
   const [data, setData] = useState([]);
@@ -51,6 +51,33 @@ const MeetUs = () => {
     setData(res.data.data);
   };
 
+  const convertData = (inputDateString) => {
+    const inputDate = new Date(inputDateString);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const day = inputDate.getUTCDate();
+    const formattedDay = (day < 10) ? `0${day}` : day;
+    const month = months[inputDate.getUTCMonth()];
+    const year = inputDate.getUTCFullYear();
+
+    const customFormattedDate = `${formattedDay} ${month} ${year}`;
+    return customFormattedDate;
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -58,7 +85,7 @@ const MeetUs = () => {
     <>
       <Box mt={"95px"} paddingBottom={"80px"} backgroundImage={bgImg}>
         <Flex
-          padding={"85px 60px 20px 150px"}
+          padding={["40px 15px 20px 15px", "95px 60px 20px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -115,8 +142,18 @@ const MeetUs = () => {
 
         <Box>
           <Swiper
-            slidesPerView={2.5}
-            spaceBetween={44}
+            breakpoints={{
+              1024: {
+                slidesOffsetBefore: 150,
+                slidesPerView: 2.5,
+                spaceBetween: 44,
+              },
+              390: {
+                slidesPerView: 1.5,
+                slidesOffsetBefore: 15,
+                // spaceBetween:22,
+              },
+            }}
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
@@ -124,31 +161,36 @@ const MeetUs = () => {
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
-                <Box h={"380px"} w={"fit-content"} backgroundColor={"white"}>
-                <Text
+                <Box
+                  w={["306px", "306px", "516px"]}
+                  h={["285px", "285px", "450px"]}
+                  backgroundColor={"white"}
+                >
+                  <Text
+                    padding={["8px", "8px", "14px 0px 17px 14px"]}
                     color={"#747272"}
                     fontFamily={"Bossa"}
                     fontSize={"14px"}
                     fontWeight={400}
                     textTransform={"capitalize"}
+                    fontStyle={"normal"}
                     lineHeight={"normal"}
                   >
-                    {el.attributes.createdAt}
+                    {convertData(el.attributes.createdAt)}
                   </Text>
                   <Image
-                  padding={"14px"}
-                  w={"450px"}
-                  h={"291px"}
+                    padding={["8px", "8px", "0px 14px"]}
+                    w={["100%", "100%", "100%"]}
+                    h={["172px", "172px", "291px"]}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
-                  
 
                   <Text
-                  textOverflow={"ellipsis"}
+                    textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
                     fontFamily={"Bossa"}
-                    fontSize={"20px"}
+                    fontSize={["15px", "15px", "20px"]}
                     fontWeight={700}
                     lineHeight={"normal"}
                     overflow={"hidden"}
@@ -159,7 +201,8 @@ const MeetUs = () => {
                   </Text>
 
                   <Text
-                  textOverflow={"ellipsis"}
+                    margin={"17px 13px 79px 13px"}
+                    textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
                     fontFamily={"Bossa"}
@@ -167,7 +210,7 @@ const MeetUs = () => {
                     fontWeight={700}
                     lineHeight={"normal"}
                     overflow={"hidden"}
-                    noOfLines={2}
+                    noOfLines={3}
                     textTransform={"capitalize"}
                   >
                     {el.attributes.title}
