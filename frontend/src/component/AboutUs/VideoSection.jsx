@@ -6,7 +6,6 @@ import AU_Slider from "./AU_Slider";
 const VideoSection = () => {
   return (
     <>
-    
       <Box>
         <ReactPlayer
           style={{ position: "position" }}
@@ -28,16 +27,31 @@ const VideoSection = () => {
           <Flex
             position={"absolute"}
             bottom={0}
-            right={5}
-            height={"214px"}
+            right={[2,2,5]}
+            height={["105px", "105px", "214px"]}
             w={"96vw"}
-            padding={"75px 138px"}
+            padding={["40px 31px", "40px 31px", "75px 138px"]}
             justifyContent={"space-between"}
-            alignItems={"center"}            
+            alignItems={"center"}
             backgroundColor={"white"}
+            flexDirection={["column", "column", "row"]}
           >
-            <Text w={"50%"} fontFamily={"bossa"} fontSize={"48px"} textTransform={"capitalize"} fontWeight={700} >Invent better everyday</Text>
-            <Text w={"50%"} color={"#747272"} fontSize={"18px"} fontFamily={"Bossa"} fontWeight={300}>
+            <Text
+              w={["100%", "100%", "50%"]}
+              fontFamily={"bossa"}
+              fontSize={["24px", "24px", "48px"]}
+              textTransform={"capitalize"}
+              fontWeight={700}
+            >
+              Invent better everyday
+            </Text>
+            <Text
+              w={["100%", "100%", "50%"]}
+              color={"#747272"}
+              fontSize={["12px", "12px", "18px"]}
+              fontFamily={"Bossa"}
+              fontWeight={300}
+            >
               G42 Healthcare, a leading AI-powered healthcare company, is on a
               mission to develop a world-class healthcare sector in the UAE and
               beyond, by harnessing data and emerging technologies in healthcare
@@ -45,7 +59,6 @@ const VideoSection = () => {
             </Text>
           </Flex>
         </Box>
-
       </Box>
     </>
   );

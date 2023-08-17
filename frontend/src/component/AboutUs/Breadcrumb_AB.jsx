@@ -9,7 +9,7 @@ import {
 const Breadcrumb_AB = () => {
   return (
     <>
-      <Breadcrumb marginLeft={"61px"} marginTop={"100px"}>
+      <Breadcrumb margin={["90px 20px 0px 20px", "90px 20px 0px 20px", "60px 100px"]}>
         <BreadcrumbItem>
           <BreadcrumbLink href="#">Home</BreadcrumbLink>
         </BreadcrumbItem>

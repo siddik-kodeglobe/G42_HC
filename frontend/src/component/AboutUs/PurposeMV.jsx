@@ -5,17 +5,18 @@ const PurposeMV = () => {
   return (
     <div style={{ margin: "78px 10% 0px 10%" }}>
       <Flex
-        padding={"0px 25px"}
+        flexDirection={["column", "column", "row"]}
+        padding={["0px", "0px", "0px 25px"]}
         justifyContent={"space-between"}
-        alignItems={"center"}
+        alignItems={["start", "start","center"]}
       >
-        <Text fontFamily={"Bossa"} fontSize={48} fontWeight={700}>
+        <Text fontFamily={"Bossa"} fontSize={["24px", "24px", "48px"]} fontWeight={700}>
           Our Purpose
         </Text>
         <Text
           color={"#747272"}
           fontFamily={"Bossa"}
-          fontSize={"14px"}
+          fontSize={["12px", "12px","14px"]}
           fontWeight={300}
         >
           To invent a better healthcare everyday
@@ -23,17 +24,18 @@ const PurposeMV = () => {
       </Flex>
       <hr style={{ border: "1px solid black", margin: "64px 0px" }} />
       <Flex
-        padding={"0px 25px"}
+      flexDirection={["column", "column", "row"]}
+        padding={["0px", "0px", "0px 25px"]}
         justifyContent={"space-between"}
-        alignItems={"center"}
+        alignItems={["start", "start","center"]}
       >
-        <Text fontFamily={"Bossa"} fontSize={48} fontWeight={700}>
+        <Text fontFamily={"Bossa"} fontSize={["24px", "24px", "48px"]} fontWeight={700}>
           Our Mission
         </Text>
         <Text
           color={"#747272"}
           fontFamily={"Bossa"}
-          fontSize={"14px"}
+          fontSize={["12px", "12px","14px"]}
           fontWeight={300}
         >
           Unlock the power of data to transform the way we live
@@ -43,18 +45,19 @@ const PurposeMV = () => {
       <hr style={{ border: "1px solid black", margin: "64px 0px" }} />
 
       <Flex
-        padding={"0px 25px"}
+      flexDirection={["column", "column", "row"]}
+        padding={["0px", "0px", "0px 25px"]}
         justifyContent={"space-between"}
-        alignItems={"center"}
+        alignItems={["start", "start","center"]}
       >
-        <Text fontFamily={"Bossa"} fontSize={48} fontWeight={700}>
+        <Text fontFamily={"Bossa"} fontSize={["24px", "24px", "48px"]} fontWeight={700}>
           Our Vision
         </Text>
         <Text
-          w={"47%"}
+          w={["100%", "100%", "47%"]}
           color={"#747272"}
           fontFamily={"Bossa"}
-          fontSize={"14px"}
+          fontSize={["12px", "12px","14px"]}
           fontWeight={300}
         >
           Harness data, develop artificial super intelligence and deliver

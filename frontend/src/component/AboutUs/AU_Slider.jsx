@@ -41,8 +41,18 @@ const AU_Slider = () => {
       {/* SLIDER  */}
       <Box position={"relative"}>
         <Swiper
-          slidesPerView={1.25}
-          spaceBetween={21}
+        breakpoints={{
+          1024: {
+            slidesOffsetBefore: 0,
+            slidesPerView: 1.25,
+            spaceBetween:22,
+          },
+          390: {
+            slidesPerView: 1,
+            slidesOffsetBefore: 0
+            // spaceBetween:22,
+          },
+        }}
           freeMode={true}
           pagination={{
             clickable: true,

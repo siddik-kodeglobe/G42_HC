@@ -4,13 +4,13 @@ import React from "react";
 const WhoWeAre = () => {
   return (
     <>
-      <Flex alignItems={"start"} margin="78px 10% 0px 10%" mt={45} justifyContent={"space-between"}>
-        <Box w={"50%"}>
+      <Flex flexDirection={["column", "column", "row"]} alignItems={"start"} margin="78px 10% 0px 10%" mt={45} justifyContent={"space-between"}>
+        <Box w={["100%", "100%", "50%"]}>
 
-        <Text fontFamily={"bossa"} fontWeight={700} fontSize={"48px"} >Who we are</Text>
+        <Text fontFamily={"bossa"} fontWeight={700} fontSize={["24px", "24px", "48px"]} >Who we are</Text>
         </Box>
-        <Box w={"50%"}>
-          <Text fontFamily={"bossa"} fontWeight={700} fontSize={"41px"}>G42 Healthcare - Health Tech Company</Text>
+        <Box w={["100%", "100%", "50%"]}>
+          <Text fontFamily={"bossa"} fontWeight={700} fontSize={["24px", "24px", "41px"]}>G42 Healthcare - Health Tech Company</Text>
           <Text mt={5} fontSize={14} fontFamily={"bossa"} fontWeight={300}>
             G42 Healthcare, a leading AI-powered healthcare company, is on a
             mission to develop a world-class healthcare sector in the UAE and

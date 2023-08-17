@@ -14,14 +14,14 @@ const About = () => {
       <Navbar />
       <Breadcrumb_AB />
       <Flex
-        margin={"60px 56px"}
+        margin={["14px 20px", "14px 20px", "60px 56px"]}
         justifyContent={"space-between"}
         alignItems={"center"}
       >
-        <Text fontFamily={"bossa"} fontWeight={700} fontSize={"60px"}>
+        <Text fontFamily={"bossa"} fontWeight={700} fontSize={["24px", "24px", "60px"]}>
           Our Introduction
         </Text>
-        <Image cursor={"pointer"} w={"85px"} src={menuIcon} alt="menuIcon" />
+        <Image cursor={"pointer"} w={["0px", "0px", "85px"]} src={menuIcon} alt="menuIcon" />
       </Flex>
       <VideoSection  />
       <AU_Slider/>
