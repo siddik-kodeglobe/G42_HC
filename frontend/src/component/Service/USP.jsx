@@ -60,12 +60,12 @@ const USP = () => {
                         <h2>
                           <AccordionButton>
                             <Box as="span" flex="1" textAlign="left">
-                              <Text w={"80%"}>
+                              <Text fontWeight={isExpanded ? 700 : 400} w={"80%"}>
                                 {el.attributes.shortHeading}
                               </Text>
                             </Box>
                             {isExpanded ? (
-                              <MinusIcon w={"50%"} fontSize="12px" />
+                              <MinusIcon fontSize="12px" />
                             ) : (
                               <AddIcon fontSize="12px" />
                             )}

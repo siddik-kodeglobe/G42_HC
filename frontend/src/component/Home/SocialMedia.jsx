@@ -147,7 +147,7 @@ const SocialMedia = () => {
                 spaceBetween:44,
               },
               390: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.25,
                 slidesOffsetBefore: 15
                 // spaceBetween:22,
               },

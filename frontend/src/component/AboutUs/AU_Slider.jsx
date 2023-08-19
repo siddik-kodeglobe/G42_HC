@@ -37,7 +37,7 @@ const AU_Slider = () => {
   };
 
   return (
-    <div style={{ position: "absolute" }}>
+    <div style={{ position: "absolute"}}>
       {/* SLIDER  */}
       <Box position={"relative"}>
         <Swiper
@@ -96,7 +96,7 @@ const AU_Slider = () => {
       <WhoWeAre />
       <hr style={{ width: "100%", marginTop: "64px" }} />
       <PurposeMV />
-      <hr style={{ margin: "64px 0px" }} />
+      <hr style={{ margin: "64px 0px 0px 0px", border: "1px solid rgba(0, 0, 0, 0.10)" }} />
       <CEO />
       <Box width={"98.7vw"} margin={"64px 0px"}>
         <OurPartners />

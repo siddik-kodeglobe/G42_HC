@@ -69,7 +69,7 @@ const Footer = () => {
         </Flex>
       </Flex>
 
-      <hr style={{ marginTop: "10%" }} />
+      <hr style={{ marginTop: "10%", border: "1px solid lightgray" }} />
 
       <Flex
         fontFamily={"Bossa"}

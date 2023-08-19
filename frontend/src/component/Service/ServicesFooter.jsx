@@ -64,7 +64,7 @@ const ServicesFooter = () => {
         </Button>
       </Flex>
 
-      <hr style={{ margin: "101px 0px 67px 0px" }} />
+      <hr style={{ margin: "101px 0px 67px 0px", border: "1px solid lightgray" }} />
       <Footer />
       </Box>
     </>

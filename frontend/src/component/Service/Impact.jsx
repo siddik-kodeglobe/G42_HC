@@ -19,7 +19,13 @@ const Impact = () => {
   }, []);
   return (
     <>
-      <Box  padding={["80px 20px 0px 20px", "80px 20px 0px 20px","125px 60px 0px 60px"]}>
+      <Box
+        padding={[
+          "80px 20px 0px 20px",
+          "80px 20px 0px 20px",
+          "125px 60px 0px 60px",
+        ]}
+      >
         <Text
           fontFamily={"Bossa"}
           fontStyle={"normal"}
@@ -40,21 +46,30 @@ const Impact = () => {
           precision medicine to shape the future of healthcare
         </Text>
 
-        <SimpleGrid mt={"34px"} columns={[2,2,3]} spacing={"5px"}>
+        <SimpleGrid mt={"34px"} columns={[2, 2, 3]} spacing={["25px", "25px","50px"]}>
           {data?.map((el) => (
-            <Flex
-              w={["171px", "171px", "373px"]}
-              h={["91px", "91px", "198px"]}
-              backgroundColor={"#cff0ff"}
-              border={"1px solid #B6B6B6"}
-              
-            >
-              <Image
-              w={"25%"}
-              margin={"auto"}
-                src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
-              />
-            </Flex>
+            <Box w={["171px", "171px", "373px"]}>
+              <Flex
+                w={["171px", "171px", "373px"]}
+                h={["91px", "91px", "198px"]}
+                backgroundColor={"#cff0ff"}
+                border={"1px solid #B6B6B6"}
+              >
+                <Image
+                  w={"25%"}
+                  margin={"auto"}
+                  src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                />
+              </Flex>
+              <Text
+                color={"#000000"}
+                fontFamily={"Bossa"}
+                fontSize={["12px", "12px", "20px"]}
+                fontWeight={400}
+              >
+                {el.attributes.title}
+              </Text>
+            </Box>
           ))}
         </SimpleGrid>
       </Box>

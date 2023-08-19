@@ -15,7 +15,7 @@ const ImageSubHeading = () => {
             fontWeight={700}
             fontSize={["24px", "24px", "60px"]}
           >
-            Sub-Heading
+            Sub Heading
           </Text>
         </Box>
         <Box mt={["14px", 0, 0]} w={["100%","100%", "50%"]}>

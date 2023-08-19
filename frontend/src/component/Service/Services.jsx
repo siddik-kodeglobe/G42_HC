@@ -10,6 +10,8 @@ import LatestNews from "./LatestNews";
 import Impact from "./Impact";
 import Navbar from "../Navbar/Navbar";
 import TopScroll from "../TopScroll/TopScroll";
+import CaseStudies from "./CaseStudies";
+import Companies from "./Companies";
 
 const Services = () => {
   return (
@@ -21,8 +23,10 @@ const Services = () => {
       <USP/>
       <ClientNPartner bgColor={"#F5F5F5"}/>
       <Impact/>
+      <CaseStudies/>
       <LatestNews/>
       <MeetTeam/>
+      <Companies/>
       <ServicesFooter/>
       <TopScroll/>
     </div>

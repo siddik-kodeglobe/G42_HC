@@ -19,7 +19,7 @@ const VideoSection = () => {
           position={"absolute"}
           bottom={0}
           w="100%"
-          h="35%"
+          h={"35%"}
           bgGradient={
             "linear(360deg, #00D2AA 27.38%, rgba(0, 210, 170, 0) 100%)"
           }
@@ -28,9 +28,9 @@ const VideoSection = () => {
             position={"absolute"}
             bottom={0}
             right={[2,2,5]}
-            height={["105px", "105px", "214px"]}
+            height={["55px", "55px", "214px"]}
             w={"96vw"}
-            padding={["40px 31px", "40px 31px", "75px 138px"]}
+            padding={["15px 31px 65px 31px", "15px 31px 65px 31px", "75px 138px"]}
             justifyContent={"space-between"}
             alignItems={"center"}
             backgroundColor={"white"}

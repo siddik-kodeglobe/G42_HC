@@ -65,7 +65,7 @@ const AboutUsMarquee = () => {
           gap={["33px", "33px", "90px"]}
           alignItems={["self-start", "self-start", "self-start"]}
         >
-          <Box height={"377px"} w={"619px"}>
+          <Box height={["214px", "214px", "377px"]} w={["352px", "352px", "619px"]}>
             <ReactPlayer 
             // style={{position: "absolute", top: 0, left: 0}}
             width={"100%"}
@@ -76,13 +76,14 @@ const AboutUsMarquee = () => {
             />
           </Box>
           <Flex
+          mt={["50px", "50px", "25px"]}
             w={"450px"}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
             <Text
               fontFamily={"Bossa"}
-              fontSize={18}
+              fontSize={"18px"}
               fontStyle={"normal"}
               fontWeight={500}
               lineHeight={"24px"}
@@ -109,6 +110,7 @@ const AboutUsMarquee = () => {
               textAlign={"center"}
               color={"white"}
               w={"219px"}
+              h={"55px"}
             >
               About Us
             </Button>

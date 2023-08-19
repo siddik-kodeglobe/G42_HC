@@ -83,7 +83,7 @@ const MeetUs = () => {
   }, []);
   return (
     <>
-      <Box mt={"95px"} paddingBottom={"80px"} backgroundImage={bgImg}>
+      <Box mt={"95px"} paddingBottom={"80px"} backgroundImage={bgImg} backgroundRepeat={"no-repeat"} backgroundSize={"cover"}>
         <Flex
           padding={["40px 15px 20px 15px", "95px 60px 20px 150px"]}
           alignItems={"center"}
@@ -149,7 +149,7 @@ const MeetUs = () => {
                 spaceBetween: 44,
               },
               390: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.25,
                 slidesOffsetBefore: 15,
                 // spaceBetween:22,
               },

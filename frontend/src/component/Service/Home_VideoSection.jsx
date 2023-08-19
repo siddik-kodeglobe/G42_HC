@@ -40,7 +40,7 @@ const Home_VideoSection = () => {
           margin={0}
         >
           {/* TAGLINE  */}
-          <Box paddingLeft={["31px", "31px","72px"]} paddingBottom={["45px", "45px","92px"]}>
+          <Box position={["absolute", "absolute", ""]} top={"5px"} paddingLeft={["31px", "31px","72px"]} paddingBottom={["0px", "0px","92px"]}>
             <Image
               w={["40px", "40px", "90px"]}
               onClick={onOpen}

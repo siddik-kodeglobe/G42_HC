@@ -9,13 +9,13 @@ import {
 const Breadcrumb_AB = () => {
   return (
     <>
-      <Breadcrumb margin={["90px 20px 0px 20px", "90px 20px 0px 20px", "60px 100px"]}>
+      <Breadcrumb margin={["90px 20px 0px 20px", "90px 20px 0px 20px", "100px 70px"]}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">Home</BreadcrumbLink>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
 
         <BreadcrumbItem>
-          <BreadcrumbLink href="#">About G42 Healthcare</BreadcrumbLink>
+          <BreadcrumbLink href="/about">About G42 Healthcare</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
     </>

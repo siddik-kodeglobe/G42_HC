@@ -11,6 +11,8 @@ import MeetUs from "./MeetUs";
 import AU_Footer from "../AboutUs/AU_Footer";
 import Navbar from "../Navbar/Navbar";
 import TopScroll from "../TopScroll/TopScroll";
+import OurServices from "./OurServices";
+import LatestInitiative from "./LatestInitiative";
 
 
 const Home = () => {
@@ -22,7 +24,9 @@ const Home = () => {
         <News/>
         <AboutUsMarquee/>
         <PioneeringHC/>
+        <OurServices/>
         <ClientnPartner/>
+        <LatestInitiative/>
         <Resources/>
         <SocialMedia/>
         <MeetUs/>

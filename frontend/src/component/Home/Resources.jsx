@@ -150,7 +150,7 @@ const Resources = () => {
                 spaceBetween:44,
               },
               390: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.25,
                 slidesOffsetBefore: 15
                 // spaceBetween:22,
               },
@@ -177,7 +177,7 @@ const Resources = () => {
                   <Text
                     color={"white"}
                     fontFamily={"Bossa"}
-                    fontSize={14}
+                    fontSize={["10px", "10px", "14px"]}
                     fontWeight={500}
                     lineHeight={"normal"}
                   >
@@ -185,11 +185,11 @@ const Resources = () => {
                   </Text>
                   <Text
                   mt={"5px"}
-                  h={"96px"}
+                  h={["60px", "60px","96px"]}
                   noOfLines={2}
                     color={"white"}
                     fontFamily={"Bossa"}
-                    fontSize={20}
+                    fontSize={["12px", "12px", "20px"]}
                     fontWeight={500}
                     lineHeight={"normal"}
                   >

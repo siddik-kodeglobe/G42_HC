@@ -36,7 +36,7 @@ const ClientnPartner = () => {
 
   return (
     <>
-    <Box bgColor={"#d3f4ec"} paddingTop={"74px"}>
+    <Box bgColor={"#ebfaf6"} paddingTop={"74px"}>
       <Text fontSize={["32px", "32px", "60px"]} fontWeight={700} className={style1.text}>Clients & Partners</Text>
       <Text padding={["5px 20px"]} w={"600px"} margin={"auto"} textAlign={"center"} fontSize={["18px", "18px", "24px"]} fontWeight={400} className={style1.text}>
         Please provide a subheading for a brief introduction consisting of 1-2

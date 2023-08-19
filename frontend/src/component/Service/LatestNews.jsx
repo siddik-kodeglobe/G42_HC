@@ -17,12 +17,41 @@ const LatestNews = () => {
   const [data, setData] = useState([]);
   // const swiper = useSwiper();
   const swiperRef = React.useRef(null);
+
+
   const getData = async () => {
     // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`);
     const res = await axios.get(
       `${process.env.REACT_APP_BACKEND_URL}/api/news-plural?populate=*`
     );
     setData(res.data.data);
+  };
+
+  const convertDate = (inputDateString) => {
+    const inputDate = new Date(inputDateString);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const day = inputDate.getUTCDate();
+    const formattedDay = (day < 10) ? `0${day}` : day;
+    const month = months[inputDate.getUTCMonth()];
+    const year = inputDate.getUTCFullYear();
+
+    const customFormattedDate = `${month} ${formattedDay},${year}`;
+    return customFormattedDate;
   };
 
   useEffect(() => {
@@ -76,10 +105,10 @@ const LatestNews = () => {
                   color={"white"}
                   fontFamily={"Bossa"}
                   fontSize={["7px", "7px", "14px"]}
-                  fontWeight={500}
+                  fontWeight={400}
                   lineHeight={"normal"}
                 >
-                  {el.attributes.createdAt}
+                  {convertDate(el.attributes.createdAt)}
                 </Text>
                 <Text
                   noOfLines={2}

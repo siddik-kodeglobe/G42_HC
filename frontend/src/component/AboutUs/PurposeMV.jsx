@@ -14,6 +14,8 @@ const PurposeMV = () => {
           Our Purpose
         </Text>
         <Text
+        w={["100%", "100%", "50%"]}
+        textAlign={"start"}
           color={"#747272"}
           fontFamily={"Bossa"}
           fontSize={["12px", "12px","14px"]}
@@ -33,6 +35,8 @@ const PurposeMV = () => {
           Our Mission
         </Text>
         <Text
+          w={["100%", "100%", "50%"]}
+          textAlign={"start"}
           color={"#747272"}
           fontFamily={"Bossa"}
           fontSize={["12px", "12px","14px"]}
@@ -54,7 +58,7 @@ const PurposeMV = () => {
           Our Vision
         </Text>
         <Text
-          w={["100%", "100%", "47%"]}
+          w={["100%", "100%", "50%"]}
           color={"#747272"}
           fontFamily={"Bossa"}
           fontSize={["12px", "12px","14px"]}

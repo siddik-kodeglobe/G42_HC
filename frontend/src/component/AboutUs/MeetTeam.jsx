@@ -129,13 +129,13 @@ const MeetTeam = () => {
       breakpoints={{
         1024: {
           slidesOffsetBefore: 125,
-          slidesPerView: 2.5,
-          spaceBetween:44,
+          slidesPerView: 3.2,
+          spaceBetween:11,
         },
         390: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
+          spaceBetween:22,
           slidesOffsetBefore: 15
-          // spaceBetween:22,
         },
       }}
         ref={swiperRef}
@@ -147,7 +147,7 @@ const MeetTeam = () => {
           <SwiperSlide className={style.swipe_slide}>
             <Box w={"fit-content"}>
               <Image
-                height={500}
+                height={"500px"}
                 src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.avatar.data.attributes.url}`}
               />
               <Text
