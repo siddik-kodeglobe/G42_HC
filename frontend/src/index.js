@@ -4,13 +4,27 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      'html, body': {
+        fontFamily: "Bossa",
+      },
+      Text: {
+        fontFamily: "Bossa",
+      },
+    },
+  },
+})
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
   </BrowserRouter>

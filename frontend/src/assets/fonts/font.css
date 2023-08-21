@@ -1,7 +1,10 @@
 /* File: font.css */
 @font-face {
-    font-family: 'bossa';
-    src: local('bossa'),
-         url('../BossaFont/WOFF/Bossa-Regular.woff') format('woff'),
-         url('../BossaFont/WOFF2/Bossa-Regular.woff2') format('woff2');
+    font-family: 'Bossa';
+    src: local('Bossa'),
+    url('./Og/Bossa-Regular.woff2') format(woff2),
+    url('./Og/Bossa-Bold.woff2') format(woff2),
+    url('./Og/Bossa-ExtendedBold.woff2') format(woff2),
+    url('./Og/Bossa-ExtendedRegular.woff2') format(woff2),
+    url('./Og/Bossa-Light.woff2') format(woff2);
 }

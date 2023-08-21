@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Flex, Image } from '@chakra-ui/react'
+import { Flex, Image, Link } from '@chakra-ui/react'
 import logo from '../../assets/logo/logo.svg'
 import searchIcon from '../../assets/icons/searchIcon.svg'
-import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [navBg, setNavBg] = useState(false);
@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       <Flex top={0} zIndex={10} backgroundColor={navBg ? "white" : "transparent"} position={"fixed"} w={"100vw"} boxShadow={"0px 4px 13px rgba(0, 0, 0, 0.04)"} boxSizing='border-box' padding={"22px 60px"} justifyContent={"space-between"} alignItems={"center"}>
-        <Link to="/">
+        <Link href="/">
         <Image w={"80px"} cursor={"pointer"} src={logo} alt='logo'/>
         </Link>
         <Image cursor={"pointer"} src={searchIcon} alt='searchIcon'/>

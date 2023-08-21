@@ -78,6 +78,7 @@ const AboutUsMarquee = () => {
           <Flex
           mt={["50px", "50px", "25px"]}
             w={"450px"}
+            maxW={"100vw"}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
@@ -87,6 +88,7 @@ const AboutUsMarquee = () => {
               fontStyle={"normal"}
               fontWeight={500}
               lineHeight={"24px"}
+              color={"#747272"}
             >
               About G42 Healthcare in 2 paragraphs not more than 60-70 words.
               uses AI and data to create a world-class healthcare sector in the

@@ -27,6 +27,7 @@ const VideoSection = () => {
           <Flex
             position={"absolute"}
             bottom={0}
+            left={[2,2,"16px"]}
             right={[2,2,5]}
             height={["55px", "55px", "214px"]}
             w={"96vw"}

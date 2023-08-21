@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import G42Logo from "../../assets/Footer/G42_logo.svg";
 import certifiedImg from "../../assets/Footer/Certified_Img.svg";
@@ -24,11 +24,13 @@ const Footer = () => {
           w={"100%"}
           gap={["0px", "0px", "136px"]}
         >
+          <a href="/">
           <Image
             h={["29px", "29px", "79px"]}
             w={["80px", "80px", "212px"]}
             src={G42Logo}
           />
+          </a>
           <Flex
             marginTop={["20px", "20px", "0px"]}
             justifyContent={["space-between", "space-between", ""]}
@@ -36,7 +38,7 @@ const Footer = () => {
             gap={7}
           >
             <Box>
-              <Text>About G42 Healthcare</Text>
+              <Link href={"/about"}>About G42 Healthcare</Link>
               <Text>News</Text>
               <Text>What We Do</Text>
               <Text>Case Studies</Text>

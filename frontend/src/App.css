@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* File: font.css */
+@font-face {
+  font-family: 'Bossa';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-Regular.woff2') format(woff2),
+  url('./assets/fonts/Og/Bossa-Bold.woff2') format(woff2),
+  url('./assets/fonts/Og/Bossa-ExtendedBold.woff2') format(woff2),
+  url('./assets/fonts/Og/Bossa-ExtendedRegular.woff2') format(woff2),
+  url('./assets/fonts/Og/Bossa-Light.woff2') format(woff2);
+}

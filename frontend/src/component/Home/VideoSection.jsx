@@ -23,7 +23,7 @@ const VideoSection = () => {
         </Box>
 
         <Box position={"absolute"} bottom={0} margin={0}>
-          {/* TAGLINE  */}
+           
           <Flex
             flexDirection={["column", "column", "row"]}
             alignItems={["start", "start", "center"]}
@@ -37,7 +37,7 @@ const VideoSection = () => {
             <Box>
               <Image
                 onClick={onOpen}
-                width={["48px", "48px", "90px"]}
+                width={["35px", "35px", "90px"]}
                 cursor={"pointer"}
                 src={playBtn}
                 alt="playBtn"

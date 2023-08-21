@@ -97,7 +97,7 @@ const LatestInitiative = () => {
 
   return (
     <>
-      <Box backgroundColor={"#174042"}>
+      <Box display={["none", "none", "block"]} backgroundColor={"#174042"}>
         {/* heading  */}
         <Flex
           padding={["40px 15px 20px 15px", "95px 60px 20px 150px"]}

@@ -114,6 +114,7 @@ const OurServices = () => {
   return (
     <>
       <Box
+      display={["none", "none", "block"]}
         position={"relative"}
         bgImage={`url(${process.env.REACT_APP_BACKEND_URL}${firstImg})`}
         height={["629px", "629px", "800px"]}
@@ -184,7 +185,8 @@ const OurServices = () => {
               lineHeight={"normal"}
               fontStyle={"normal"}
             >
-              {info}
+              {/* {alert(info.length)} */}
+              {firstTitle.length > 8 && info.length > 100 ? info.slice(0, 100).concat("...") : info}
             </Text>
           </Box>
           <Box
