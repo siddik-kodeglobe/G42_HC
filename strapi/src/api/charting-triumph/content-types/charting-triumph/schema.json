@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "charting_triumphs",
+  "info": {
+    "singularName": "charting-triumph",
+    "pluralName": "charting-triumphs",
+    "displayName": "Charting Triumph"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
