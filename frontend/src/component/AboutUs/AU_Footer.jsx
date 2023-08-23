@@ -42,6 +42,7 @@ const AU_Footer = () => {
         justifyContent={"space-between"}
       >
         <Text
+          maxW={["","","595px"]}
           fontFamily={"Bossa"}
           fontSize={["24px", "24px", "48px"]}
           fontWeight={700}

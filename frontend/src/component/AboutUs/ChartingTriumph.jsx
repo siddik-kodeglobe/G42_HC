@@ -381,8 +381,8 @@ const ChartingTriumph = () => {
             position={"absolute"}
             bottom={"0px"}
             right={"0px"}
-            w={["90%"]}
-            border={"6px solid white"}
+            w={["92%"]}
+            border={"3px solid white"}
           ></Box>
         </Box>
 

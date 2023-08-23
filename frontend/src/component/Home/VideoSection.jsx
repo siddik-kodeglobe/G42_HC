@@ -22,7 +22,7 @@ const VideoSection = () => {
           />
         </Box>
 
-        <Box position={"absolute"} bottom={0} margin={0}>
+        <Box position={"absolute"} bottom={"0px"} margin={0}>
            
           <Flex
             flexDirection={["column", "column", "row"]}

@@ -79,6 +79,7 @@ const News = () => {
     <>
     <Box >
       <Box
+      mt={["", "", "-80px"]}
         w={["100vw", "100vw", "98.7vw"]}
         bgGradient={
           "linear-gradient(180deg, #00D2AA 28.96%, rgba(0, 210, 170, 0.00) 100%);"
@@ -148,7 +149,7 @@ const News = () => {
           </Flex>
         </Flex>
 
-        <Box>
+        <Box mt={["", "", "-25px"]}>
           <Swiper
             breakpoints={{
               1024: {
@@ -157,9 +158,9 @@ const News = () => {
                 spaceBetween:22,
               },
               390: {
-                slidesPerView: 1.5,
-                slidesOffsetBefore: 15
-                // spaceBetween:22,
+                slidesPerView: 1.75,
+                slidesOffsetBefore: 0,
+                spaceBetween:22,
               },
             }}
             ref={swiperRef}
@@ -170,6 +171,7 @@ const News = () => {
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
+                  
                 <Box position={"relative"}>
                   <Image
                   w={["238px", "238px", "451px"]}

@@ -162,9 +162,10 @@ const OurServices = () => {
             padding={"10px"}
           >
             <Image
-              objectFit={"cover"}
-              w={"551px"}
+              w={"100%"}
               h={"245px"}
+              maxW={"100%"}
+              objectFit={"cover"}
               borderRadius={"14px"}
               src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
             />
@@ -194,11 +195,11 @@ const OurServices = () => {
             borderRadius={"20px"}
             backgroundColor={"white"}
             w={"35%"}
-            h={"346px"}
+            h={"316px"}
           >
             <Image
               objectFit={"cover"}
-              w={"432px"}
+              w={"100%"}
               h={"206px"}
               borderRadius={"24px"}
               src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
@@ -206,7 +207,7 @@ const OurServices = () => {
             <Text
               paddingBottom={"25px"}
               fontFamily={"Bossa"}
-              fontSize={["24px", "24px", "48px"]}
+              fontSize={["16px", "16px", "32px"]}
               fontWeight={700}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -221,7 +222,7 @@ const OurServices = () => {
             h={"189px"}
           >
             <Image
-              padding={"10px"}
+              padding={"10px 0px 10px 10px"}
               width={"100%"}
               height={"100%"}
               objectFit={"cover"}

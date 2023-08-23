@@ -56,14 +56,14 @@ const ClientnPartner = () => {
             },
           }}
           ref={swiperRef}
+          loop={true}          
           autoplay={{
             delay: 1500,
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
           className={style.swiper}
-          loop={true}
-        >
+          >
           {data?.map((el) => (
             <SwiperSlide className={style.swipe_slide}>
               <Box w={"fit-content"}>

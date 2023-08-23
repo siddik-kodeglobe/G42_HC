@@ -12,7 +12,7 @@ const ImageSubHeading = () => {
           <Text
             fontFamily={"Bossa"}
             fontStyle={"normal"}
-            fontWeight={700}
+            fontWeight={"700"}
             fontSize={["24px", "24px", "60px"]}
           >
             Sub Heading

@@ -84,7 +84,7 @@ const Resources = () => {
     <>
       <Box>
         <Flex
-          padding={["40px 15px 20px 15px","95px 60px 20px 150px"]}
+          padding={["40px 15px 20px 15px","95px 60px 0px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -169,7 +169,11 @@ const Resources = () => {
                   w={["285px", "285px", "451px"]} position={"relative"}>
                   <Image
                   h={["214px", "214px", "338px"]}
+                  maxH={["214px", "214px", "338px"]}
                   w={["285px", "285px", "451px"]}
+                  maxW={["285px", "285px", "451px"]}
+
+                  objectFit={"cover"}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                 </Box>
@@ -201,7 +205,7 @@ const Resources = () => {
           </Swiper>
         </Box>
 
-        <Box padding={"55px 60px"}>
+        <Box padding={"55px 150px"}>
           <hr style={{ width: "85%", background: "#004141" }} />
         </Box>
       </Box>

@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import aboutImage from "../../assets/temp/about_HomePage.svg";
 // import gsap from 'gsap';
 // import { GSDevTools, SplitText } from 'gsap/all';
@@ -7,9 +7,64 @@ import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import homeVideo from "../../assets/logo/homeVideo.mp4";
 
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
 const AboutUsMarquee = () => {
-  let split;
-  let tl;
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const textElement = textRef.current;
+    let timeout;
+    const delay = 250;
+
+    const init = () => {
+      gsap.set(textElement, { autoAlpha: 1 });
+
+      const split = new SplitText(textElement, {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+      const tl = gsap.timeline();
+
+      split.lines.forEach((line, index) => {
+        tl.from(
+          line.querySelectorAll(".chars"),
+          { duration: 0.3, yPercent: 100, stagger: 0.04 },
+          `>-50%`
+        );
+      });
+
+      ScrollTrigger.create({
+        trigger: textElement,
+        start: "top 80%",
+        onEnter: () => {
+          tl.play();
+        },
+        onLeaveBack: () => {
+          tl.reverse();
+        },
+      });
+    };
+
+    
+    const handleResize = () => {
+      gsap.set(textElement, { autoAlpha: 0 });
+      clearTimeout(timeout);
+      timeout = setTimeout(init, delay);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    init();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // const init = () => {
   //   gsap.set(".fullScreen", { autoAlpha: 1 });
@@ -65,20 +120,23 @@ const AboutUsMarquee = () => {
           gap={["33px", "33px", "90px"]}
           alignItems={["self-start", "self-start", "self-start"]}
         >
-          <Box height={["214px", "214px", "377px"]} w={["352px", "352px", "619px"]}>
-            <ReactPlayer 
-            // style={{position: "absolute", top: 0, left: 0}}
-            width={"100%"}
-            // height={"100%"}
+          <Box
+            height={["214px", "214px", "377px"]}
+            w={["352px", "352px", "619px"]}
+          >
+            <ReactPlayer
+              // style={{position: "absolute", top: 0, left: 0}}
+              width={"100%"}
+              // height={"100%"}
               playing={true}
               loop={true}
               url={homeVideo}
             />
           </Box>
           <Flex
-          mt={["50px", "50px", "25px"]}
-            w={"450px"}
-            maxW={"100vw"}
+            mt={["50px", "50px", "25px"]}
+            w={"453px"}
+            maxW={"453px"}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
@@ -89,12 +147,15 @@ const AboutUsMarquee = () => {
               fontWeight={500}
               lineHeight={"24px"}
               color={"#747272"}
+              letterSpacing={"-0.42px"}
             >
               About G42 Healthcare in 2 paragraphs not more than 60-70 words.
               uses AI and data to create a world-class healthcare sector in the
               UAE and beyond. We partner with governments, scientists, and the
-              medical community to future-proof nations' health. We built
-              Biogenix Labs, the first COVID-19 accredited large-scale
+              medical community to future-proof nations' health.
+              <br />
+              <br />
+              We built Biogenix Labs, the first COVID-19 accredited large-scale
               throughput lab in the UAE, and facilitated the world's first phase
               three inactivated COVID-19 vaccine trial, 4Humanity, with over
               43,000 participants from 125+ nationalities.

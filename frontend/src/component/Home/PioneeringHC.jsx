@@ -11,8 +11,8 @@ const PioneeringHC = () => {
         </Text>
         <Box padding={["20px", "20px", "56px 155px"]}>
           <Flex flexDirection={["column", "column", "row"]}>
-            <Box w={"100%"} padding={"0px 20px"}>
-              <Text className={style.text1}>1st COVID Lab</Text>
+            <Box w={"100%"} padding={"0px 0px"}>
+              <Text className={style.text1}>1<sup>st</sup> COVID Lab</Text>
               <Text className={style.text2}>Biogenix</Text>
             </Box>
             <Box w={"100%"} padding={"0px 20px"}>
@@ -25,9 +25,9 @@ const PioneeringHC = () => {
           </Flex>
           <hr />
           <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
-            <Box w={"100%"} padding={"0px 20px"}>
+            <Box w={"100%"} padding={"0px 0px"}>
               <Text className={style.text1}>
-                1st Omics Facility in the Region
+                1<sup>st</sup> Omics Facility in the Region
               </Text>
               <Text className={style.text2}>Omics Center of Intelligence</Text>
             </Box>
@@ -42,8 +42,8 @@ const PioneeringHC = () => {
           <hr />
 
           <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
-            <Box w={"100%"} padding={"0px 20px"}>
-              <Text className={style.text1}>1st Waste Water Lab</Text>
+            <Box w={"100%"} padding={"0px 0px"}>
+              <Text className={style.text1}>1<sup>st</sup> Waste Water Lab</Text>
               <Text className={style.text2}>RASID</Text>
             </Box>
             <Box w={"100%"} padding={"0px 20px"}>
@@ -57,9 +57,9 @@ const PioneeringHC = () => {
           <hr />
 
           <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
-            <Box w={"100%"} padding={"0px 20px"}>
+            <Box w={"100%"} padding={"0px 0px"}>
               <Text className={style.text1}>
-                1st clinical trial pan MENA region
+                1<sup>st</sup> clinical trial pan MENA region
               </Text>
               <Text className={style.text2}>4Humanity trial Diagnostics</Text>
             </Box>
@@ -71,7 +71,7 @@ const PioneeringHC = () => {
               </Text>
             </Box>
           </Flex>
-          <hr />
+          {/* <hr /> */}
         </Box>
       </Box>
     </>

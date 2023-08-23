@@ -1,8 +1,10 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import caretLeftIcon from '../../assets/icons/caretLeftIcon.svg'
+import caretLeftIcon from "../../assets/icons/caretLeftIcon.svg";
+import { Sine, gsap } from "gsap";
+import { Timeline } from "gsap/gsap-core";
 
 const LatestInitiative = () => {
   const [data, setData] = useState([]);
@@ -27,7 +29,7 @@ const LatestInitiative = () => {
     const res = await axios.get(
       `${process.env.REACT_APP_BACKEND_URL}/api/latest-initiatives?populate=*`
     );
-    console.log("Latest Initiative:", res.data.data);
+    // console.log("Latest Initiative:", res.data.data);
     setData(res.data.data);
 
     // initial Image
@@ -47,7 +49,6 @@ const LatestInitiative = () => {
   };
 
   const scrollLeft = () => {
-
     const temp = data;
     temp.unshift(temp.pop());
     setData(temp);
@@ -67,14 +68,13 @@ const LatestInitiative = () => {
     setSecondInfo(data[1].attributes.info);
     setThirdInfo(data[2].attributes.info);
 
-   
   };
 
   const scrollRight = () => {
     const temp = data;
     temp.push(temp.shift());
-    setData(temp);   
-    
+    setData(temp);
+
     // initial Image
     setFirstImg(data[0].attributes.image.data.attributes.url);
     setSecondImg(data[1].attributes.image.data.attributes.url);
@@ -89,18 +89,46 @@ const LatestInitiative = () => {
     setFirstInfo(data[0].attributes.info);
     setSecondInfo(data[1].attributes.info);
     setThirdInfo(data[2].attributes.info);
-  }
+    animL2R();
+
+  };
 
   useEffect(() => {
     getData();
   }, []);
+
+  // Slides Transition
+
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+
+  const animL2R = () => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+
+    gsap.set(outer, { xPercent: -100, autoAlpha: 1 });
+    gsap.set(inner, { xPercent: 100, autoAlpha: 1 });
+
+    const tl = gsap.timeline();
+
+    tl.to(
+      outer,
+      { duration: 3, xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      inner,
+      { duration: 3, xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+    // console.log(tl);
+  };
 
   return (
     <>
       <Box display={["none", "none", "block"]} backgroundColor={"#174042"}>
         {/* heading  */}
         <Flex
-          padding={["40px 15px 20px 15px", "95px 60px 20px 150px"]}
+          padding={["40px 15px 20px 15px", "95px 60px 20px 108px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -111,7 +139,7 @@ const LatestInitiative = () => {
             fontWeight={700}
             fontStyle={"normal"}
           >
-            Latest Initiatives
+            Latest <span style={{ color: "#00D2AA" }}>Initiatives</span>
           </Text>
           <Flex alignItems={"center"} gap={5}>
             <Flex
@@ -157,74 +185,147 @@ const LatestInitiative = () => {
         </Flex>
 
         {/* slider  */}
-        <Flex padding={"0px 60px 73px 158px"} justifyContent={"space-between"} w={"fit-content"} gap={"5%"}>
-          <Box position={"relative"} mt={"136px"} w={"30%"} >
-            <Image h={"336px"} w={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`} />
-            <Text
-            mt={"7px"}
-            color={"white"}
-            fontFamily={"Bossa"}
-            fontSize={["16px", "16px", "32px"]}
-            fontWeight={700}
-            lineHeight={"normal"}
-            fontStyle={"normal"}
-            >{firstTitle}</Text>
-            <Text 
-            mt={"2.5px"}           
-            color={"white"}
-            fontFamily={"Bossa"}
-            fontSize={["8px", "8px", "16px"]}
-            fontWeight={400}
-            lineHeight={"normal"}
-            fontStyle={"normal"}
-            >{firstInfo}</Text>
-            <Image pos={"absolute"} top={2} right={2} backgroundColor={"white"} padding={"5px"} borderRadius={"50%"} src={caretLeftIcon}/>
+        <Flex padding={"0px 30px 73px 108px"} w={"fit-content"} gap={"60px"}>
+          {/* first container  */}
+          <Box 
+          // position={"absolute"}
+          // top={0}
+                // visibility={"hidden"}
+          >
+            <Box
+            className="outer" ref={outerRef}
+            right={0}
+            overflow={"hidden"}
+            w={"406px"}
+            opacity={0}
+              position={"relative"}
+              mt={"136px"}
+              // visibility={"hidden"}
+              >
+              <Image
+              ref={innerRef}
+              className="inner"
+                // position={"absolute"}
+                h={"336px"}
+                w={"100%"}
+                objectFit={"cover"}
+                src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
+              />
+              <Text
 
+                mt={"0px"}
+                color={"white"}
+                fontFamily={"Bossa"}
+                fontSize={["16px", "16px", "32px"]}
+                fontWeight={700}
+                lineHeight={"normal"}
+                fontStyle={"normal"}
+              >
+                {firstTitle}
+              </Text>
+              <Text
+                mt={"2.5px"}
+                color={"white"}
+                fontFamily={"Bossa"}
+                fontSize={["8px", "8px", "16px"]}
+                fontWeight={400}
+                lineHeight={"normal"}
+                fontStyle={"normal"}
+              >
+                {firstInfo}
+              </Text>
+              <Image
+                pos={"absolute"}
+                top={2}
+                right={2}
+                backgroundColor={"white"}
+                padding={"5px"}
+                borderRadius={"50%"}
+                src={caretLeftIcon}
+              />
+            </Box>
           </Box>
-          <Box position={"relative"} mt={"56px"} w={"25.5%"} >
-            <Image h={"352px"} w={"100%"} objectFit={"cover"}  src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`} />
-            <Text
-            mt={"7px"}
-            color={"white"}
-            fontFamily={"Bossa"}
-            fontSize={["16px", "16px", "32px"]}
-            fontWeight={700}
-            lineHeight={"normal"}
-            fontStyle={"normal"}
-            >{firstTitle}</Text>
-            <Text 
-            mt={"2.5px"}           
-            color={"white"}
-            fontFamily={"Bossa"}
-            fontSize={["8px", "8px", "16px"]}
-            fontWeight={400}
-            lineHeight={"normal"}
-            fontStyle={"normal"}
-            >{firstInfo}</Text>
-            <Image pos={"absolute"} top={2} right={2} backgroundColor={"white"} padding={"5px"} borderRadius={"50%"} src={caretLeftIcon}/>
 
-          </Box>
-          <Box position={"relative"} mt={"207px"} w={"20%"} >
-            <Image h={"273px"} w={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`} />
+          {/* second container  */}
+          <Box position={"relative"} mt={"56px"} w={"307px"}>
+            <Image
+              h={"352px"}
+              w={"100%"}
+              objectFit={"cover"}
+              src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
+            />
             <Text
-            mt={"7px"}
-            color={"white"}
-            fontFamily={"Bossa"}
-            fontSize={["16px", "16px", "32px"]}
-            fontWeight={700}
-            lineHeight={"normal"}
-            fontStyle={"normal"}
-            >{firstTitle}</Text>
-            <Text 
-            mt={"2.5px"}           
-            color={"white"}
-            fontFamily={"Bossa"}
-            fontSize={["8px", "8px", "16px"]}
-            fontWeight={400}
-            lineHeight={"normal"}
-            fontStyle={"normal"}
-            >{firstInfo}</Text>
-            <Image pos={"absolute"} top={2} right={2} backgroundColor={"white"} padding={"5px"} borderRadius={"50%"} src={caretLeftIcon}/>
+              mt={"7px"}
+              color={"white"}
+              fontFamily={"Bossa"}
+              fontSize={["16px", "16px", "32px"]}
+              fontWeight={700}
+              lineHeight={"normal"}
+              fontStyle={"normal"}
+            >
+              {firstTitle}
+            </Text>
+            <Text
+              mt={"2.5px"}
+              color={"white"}
+              fontFamily={"Bossa"}
+              fontSize={["8px", "8px", "16px"]}
+              fontWeight={400}
+              lineHeight={"normal"}
+              fontStyle={"normal"}
+            >
+              {firstInfo}
+            </Text>
+            <Image
+              pos={"absolute"}
+              top={2}
+              right={2}
+              backgroundColor={"white"}
+              padding={"5px"}
+              borderRadius={"50%"}
+              src={caretLeftIcon}
+            />
+          </Box>
+
+          {/* third container  */}
+          <Box position={"relative"} mt={"247px"} w={"275px"}>
+            <Image
+              h={"273px"}
+              w={"100%"}
+              objectFit={"cover"}
+              src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
+            />
+            <Text
+              mt={"7px"}
+              color={"white"}
+              fontFamily={"Bossa"}
+              fontSize={["16px", "16px", "32px"]}
+              fontWeight={700}
+              lineHeight={"normal"}
+              fontStyle={"normal"}
+            >
+              {firstTitle}
+            </Text>
+            <Text
+              mt={"2.5px"}
+              color={"white"}
+              fontFamily={"Bossa"}
+              fontSize={["8px", "8px", "16px"]}
+              fontWeight={400}
+              lineHeight={"normal"}
+              fontStyle={"normal"}
+            >
+              {firstInfo}
+            </Text>
+            <Image
+              pos={"absolute"}
+              top={2}
+              right={2}
+              backgroundColor={"white"}
+              padding={"5px"}
+              borderRadius={"50%"}
+              src={caretLeftIcon}
+            />
           </Box>
         </Flex>
       </Box>
