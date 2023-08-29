@@ -5,7 +5,6 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import caretLeftIcon from "../../assets/icons/caretLeftIcon.svg";
 // import { TweenLite, Sine, TimelineMax } from "gsap";
 import { TweenLite, TimelineMax, Linear, Back, Sine } from "gsap";
-import "./LatestInitiative.css";
 
 const LatestInitiative = () => {
   const [data, setData] = useState([]);
@@ -43,11 +42,7 @@ const LatestInitiative = () => {
     setSecondImg(res.data.data[1].attributes.image.data.attributes.url);
     setThirdImg(res.data.data[2].attributes.image.data.attributes.url);
 
-    //outerImg
     firstImgRef.current = res.data.data[0].attributes.image.data.attributes.url;
-    secondImgRef.current =
-      res.data.data[1].attributes.image.data.attributes.url;
-    thirdImgRef.current = res.data.data[1].attributes.image.data.attributes.url;
 
     // initial title
     setFirstTitle(res.data.data[0].attributes.name);
@@ -66,8 +61,6 @@ const LatestInitiative = () => {
     setData(temp);
 
     firstImgRef.current = firstImg;
-    secondImgRef.current = secondImg;
-    thirdImgRef.current = thirdImg;
 
     // initial Image
     setFirstImg(data[0].attributes.image.data.attributes.url);
@@ -90,15 +83,12 @@ const LatestInitiative = () => {
     temp.push(temp.shift());
     setData(temp);
 
-    // REF image
-    firstImgRef.current = firstImg;
-    secondImgRef.current = secondImg;
-    thirdImgRef.current = thirdImg;
-
     // initial Image
+    firstImgRef.current = firstImg;
     setFirstImg(data[0].attributes.image.data.attributes.url);
     setSecondImg(data[1].attributes.image.data.attributes.url);
     setThirdImg(data[2].attributes.image.data.attributes.url);
+    console.log(firstImgRef);
     animL2R();
 
     // initial title
@@ -120,76 +110,34 @@ const LatestInitiative = () => {
 
   const outerRef = useRef(null);
   const innerRef = useRef(null);
-
-  // Second Outer Box Ref
-  const outerRef2 = useRef(null);
-  const innerRef2 = useRef(null);
-
-  // Third Outer Box Ref
-  const outerRef3 = useRef(null);
-  const innerRef3 = useRef(null);
-
   const tlRef = useRef(null);
+  const tl = new TimelineMax();
 
   const animL2R = () => {
     const outer = outerRef.current;
     const inner = innerRef.current;
 
-    //first Box Animation
-    TweenLite.set(outer, { xPercent: 100, autoAlpha: 1 });
-    TweenLite.set(inner, { xPercent: -100, autoAlpha: 1 });
+    
+TweenLite.set(outer, { xPercent: -100, autoAlpha: 1 });
+// TweenLite.set(inner, { xPercent:  100, autoAlpha: 1 });
 
-    var tl = new TimelineMax();
 
-    tl.to(outer, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0).to(
-      inner,
-      1.5,
-      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
-      0
-    );
+var tl = new TimelineMax();
 
-    // 2nd Box Animation
-    TweenLite.set(outerRef2.current, { xPercent: 100, autoAlpha: 1 });
-    TweenLite.set(innerRef2.current, { xPercent: -100, autoAlpha: 1 });
+tl.to(outer, 3, {xPercent: 0, force3D: true,ease:Sine.easeInOut }, 0)
+  // .to(inner, 3, {xPercent: 0, force3D: true,ease:Sine.easeInOut }, 0)
 
-    var tl = new TimelineMax();
+    // TweenLite.set(outer, { xPercent: -100, autoAlpha: 1 });
+    // var tl = new TimelineMax();
 
-    tl.to(
-      outerRef2.current,
-      1.5,
-      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
-      0
-    ).to(
-      innerRef2.current,
-      1.5,
-      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
-      0
-    );
+    // tl.to(outer, 3, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0);
 
-    // 3rd Box Animation
-
-    // if(outerRe)
-    TweenLite.set(outerRef3.current, { xPercent: 100, autoAlpha: 1 });
-    TweenLite.set(innerRef3.current, { xPercent: -100, autoAlpha: 1 });
-
-    var tl = new TimelineMax();
-
-    tl.to(
-      outerRef3.current,
-      1.5,
-      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
-      0
-    ).to(
-      innerRef3.current,
-      1.5,
-      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
-      0
-    );
+    // tl.to(outer, 3, { xPercent: "0%", force3D: true, ease: "sine.inOut" }, 0);
   };
 
   return (
     <>
-      <Box display={["none", "none", "block"]} overflow={"hidden"} backgroundColor={"#174042"}>
+      <Box display={["none", "none", "block"]} backgroundColor={"#174042"}>
         {/* heading  */}
         <Flex
           padding={["40px 15px 20px 15px", "95px 60px 20px 108px"]}
@@ -252,21 +200,52 @@ const LatestInitiative = () => {
         <Flex padding={"0px 30px 73px 108px"} w={"fit-content"} gap={"60px"}>
           {/* first container  */}
           <Box pos={"relative"} w={"406px"} mt={"136px"}>
-            <Box id="wrapper">
+            <Box
+              style={{
+                width: "100%",
+                height: "auto",
+                // visibility: "hidden",
+                // opacity: 0,
+              }}
+              pos={"relative"}
+              top={0}
+              h={"336px"}
+              w={"100%"}
+              ref={innerRef}
+            >
               <Image
+                h={"336px"}
+                w={"100%"}
+                objectFit={"cover"}
                 src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
-                alt=""
               />
             </Box>
-
-            <Box id="outer" ref={outerRef}>
-              <Box id="inner" ref={innerRef}>
-                <Image
-                  src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
-                  id="top"
-                />
-              </Box>
+            <Box
+              pos={"absolute"}
+              top={0}
+              bottom={0}
+              h={"336px"}
+              w={"100%"}
+              maxW={"100%"}
+              ref={outerRef}
+              style={{
+                // position: "absolute",
+                top: 0,
+                overflow: "hidden",
+                width: "100%",
+                height: "auto",
+                // visibility: "hidden",
+                opacity: 0,
+              }}
+            >
+              <Image
+                h={"336px"}
+                // w={"100%"}
+                objectFit={"cover"}
+                src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
+              />
             </Box>
+            {/* {console.log(firstImgRef.current)} */}
 
             <Text
               mt={"0px"}
@@ -303,22 +282,12 @@ const LatestInitiative = () => {
 
           {/* second container  */}
           <Box position={"relative"} mt={"56px"} w={"307px"}>
-            <Box id="wrapper2">
-              <Image
-                src={`${process.env.REACT_APP_BACKEND_URL}${secondImgRef.current}`}
-                alt=""
-              />
-            </Box>
-
-            <Box id="outer2" ref={outerRef2}>
-              <Box id="inner2" ref={innerRef2}>
-                <Image
-                  src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
-                  id="top2"
-                />
-              </Box>
-            </Box>
-
+            <Image
+              h={"352px"}
+              w={"100%"}
+              objectFit={"cover"}
+              src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
+            />
             <Text
               mt={"7px"}
               color={"white"}
@@ -354,22 +323,12 @@ const LatestInitiative = () => {
 
           {/* third container  */}
           <Box position={"relative"} mt={"247px"} w={"275px"}>
-            <Box id="wrapper3">
-              <Image
-                src={`${process.env.REACT_APP_BACKEND_URL}${thirdImgRef.current}`}
-                alt=""
-              />
-            </Box>
-
-            <Box id="outer3" ref={outerRef3}>
-              <Box id="inner3" ref={innerRef3}>
-                <Image
-                  src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
-                  id="top3"
-                />
-              </Box>
-            </Box>
-
+            <Image
+              h={"273px"}
+              w={"100%"}
+              objectFit={"cover"}
+              src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
+            />
             <Text
               mt={"7px"}
               color={"white"}

@@ -27,7 +27,7 @@ const Home = () => {
         <OurServices/>
         <ClientnPartner/>
         <LatestInitiative/>
-        <Resources/>
+        <Resources/> 
         <SocialMedia/>
         <MeetUs/>
         <AU_Footer/>

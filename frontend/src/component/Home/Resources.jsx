@@ -40,7 +40,6 @@ const Resources = () => {
     }
   };
 
-  
   const getData = async () => {
     // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`);
     const res = await axios.get(
@@ -69,7 +68,7 @@ const Resources = () => {
     ];
 
     const day = inputDate.getUTCDate();
-    const formattedDay = (day < 10) ? `0${day}` : day;
+    const formattedDay = day < 10 ? `0${day}` : day;
     const month = months[inputDate.getUTCMonth()];
     const year = inputDate.getUTCFullYear();
 
@@ -84,7 +83,7 @@ const Resources = () => {
     <>
       <Box>
         <Flex
-          padding={["40px 15px 20px 15px","95px 60px 0px 150px"]}
+          padding={["40px 15px 20px 15px", "95px 60px 0px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -143,15 +142,17 @@ const Resources = () => {
 
         <Box>
           <Swiper
+            speed={750}
+
             breakpoints={{
               1024: {
                 slidesOffsetBefore: 150,
                 slidesPerView: 2.75,
-                spaceBetween:44,
+                spaceBetween: 44,
               },
               390: {
                 slidesPerView: 1.25,
-                slidesOffsetBefore: 15
+                slidesOffsetBefore: 15,
                 // spaceBetween:22,
               },
             }}
@@ -161,22 +162,18 @@ const Resources = () => {
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide
-              
-              className={style.swipe_slide}
-              >
-                <Box h={["214px", "214px", "338px"]}
-                  w={["285px", "285px", "451px"]} position={"relative"}>
-                  <Image
+              <SwiperSlide className={style.swipe_slide}>
+                <Box
+                  // border={"5px solid red"}
                   h={["214px", "214px", "338px"]}
-                  maxH={["214px", "214px", "338px"]}
-                  w={["285px", "285px", "451px"]}
-                  maxW={["285px", "285px", "451px"]}
-
-                  objectFit={"cover"}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
-                  />
-                </Box>
+                  // maxH={["214px", "214px", "338px"]}
+                  w={["285px", "285px", "425px"]}
+                  // maxW={["285px", "285px", "425px"]}
+                  // objectFit={"cover"}
+                  backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url})`}
+                  backgroundSize={"cover"}
+                  position={"relative"}
+                ></Box>
                 <Box position={"absolute"} bottom={5} left={5}>
                   <Text
                     color={"white"}
@@ -188,9 +185,9 @@ const Resources = () => {
                     {convertData(el.attributes.createdAt)}
                   </Text>
                   <Text
-                  mt={"5px"}
-                  h={["60px", "60px","96px"]}
-                  noOfLines={2}
+                    mt={"5px"}
+                    h={["60px", "60px", "96px"]}
+                    maxH={"96px"}
                     color={"white"}
                     fontFamily={"Bossa"}
                     fontSize={["12px", "12px", "20px"]}

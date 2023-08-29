@@ -10,7 +10,8 @@ const VideoSection = () => {
 
   return (
     <>
-      <Box position={"relative"}>
+                
+      <Box marginBottom={"-20px"} onClick={onOpen}  style={{cursor: `url(${playBtn}), auto`}} position={"relative"}>
         <Box position={"relative"}>
           <ReactPlayer
             style={{ position: "position" }}
@@ -22,44 +23,38 @@ const VideoSection = () => {
           />
         </Box>
 
-        <Box position={"absolute"} bottom={"0px"} margin={0}>
+        <Box w={"100%"} position={"absolute"} bottom={"0px"} margin={0}>
            
           <Flex
             flexDirection={["column", "column", "row"]}
             alignItems={["start", "start", "center"]}
-            paddingLeft={["20px", "20px", "72px"]}
-            paddingBottom={["0px", "0px", "92px"]}
+            paddingLeft={["20px", "20px", "72px", "72px"]}
+            paddingBottom={["0px", "0px", "55px"]}
             bgGradient={
               "linear-gradient(0deg, #00D2AA 0%, rgba(0, 210, 170, 0.00) 100%);"
             }
             gap={[0, 0, "14px"]}
           >
             <Box>
-              <Image
-                onClick={onOpen}
-                width={["35px", "35px", "90px"]}
-                cursor={"pointer"}
-                src={playBtn}
-                alt="playBtn"
-              />
-            </Box>
-            <Box>
               <Text
                 color={"white"}
                 fontFamily={"Bossa"}
-                fontSize={["16px", "16px", "24px"]}
+                fontSize={["16px", "16px", "20px", "24px"]}
                 fontWeight={400}
                 fontStyle={"normal"}
+                letterSpacing={"-0.72px"}
               >
                 Supporting tagline: Max one line statement.
               </Text>
               <Text
-                w={"70%"}
+                w={["", "", "75%", "75%"]}
+                textShadow={"0px 4px 30px rgba(0, 65, 65, 0.27)"}
                 color={"white"}
                 fontFamily={"Bossa"}
-                fontSize={["28px", "28px", "80px"]}
+                fontSize={["28px", "28px", "50px", "80px"]}
                 fontWeight={700}
                 fontStyle={"normal"}
+                letterSpacing={"-0.72px"}
                 lineHeight={"normal"}
               >
                 Company Tagline max 3-4 words

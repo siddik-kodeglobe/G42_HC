@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -16,6 +16,7 @@ import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
 import style1 from './ClientnPartner.module.css'
+import Marquee from "react-fast-marquee";
 
 const ClientnPartner = () => {
   const [data, setData] = useState([]);
@@ -64,17 +65,22 @@ const ClientnPartner = () => {
           modules={[Autoplay]}
           className={style.swiper}
           >
+              <Marquee autoplay autoFill speed={35}>
+            <Flex alignItems={"center"} >
           {data?.map((el) => (
-            <SwiperSlide className={style.swipe_slide}>
-              <Box w={"fit-content"}>
+            // <SwiperSlide className={style.swipe_slide}>
                 <Image
                 w={"100px"}
+                objectFit={"cover"}
+              marginLeft={"105px"}
+                
                   src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.logo.data.attributes.url}`}
                 />
                
-              </Box>
-            </SwiperSlide>
-          ))}
+                // </SwiperSlide>
+                ))}
+            </Flex>
+                </Marquee>
         </Swiper>
       </Box>
 

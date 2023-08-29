@@ -7,80 +7,9 @@ import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import homeVideo from "../../assets/logo/homeVideo.mp4";
 
-import { gsap } from "gsap";
-import { SplitText } from "gsap/SplitText";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const AboutUsMarquee = () => {
   const textRef = useRef(null);
-
-  useEffect(() => {
-    const textElement = textRef.current;
-    let timeout;
-    const delay = 250;
-
-    const init = () => {
-      gsap.set(textElement, { autoAlpha: 1 });
-
-      const split = new SplitText(textElement, {
-        charsClass: "chars",
-        linesClass: "lines",
-      });
-      const tl = gsap.timeline();
-
-      split.lines.forEach((line, index) => {
-        tl.from(
-          line.querySelectorAll(".chars"),
-          { duration: 0.3, yPercent: 100, stagger: 0.04 },
-          `>-50%`
-        );
-      });
-
-      ScrollTrigger.create({
-        trigger: textElement,
-        start: "top 80%",
-        onEnter: () => {
-          tl.play();
-        },
-        onLeaveBack: () => {
-          tl.reverse();
-        },
-      });
-    };
-
-    
-    const handleResize = () => {
-      gsap.set(textElement, { autoAlpha: 0 });
-      clearTimeout(timeout);
-      timeout = setTimeout(init, delay);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    init();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // const init = () => {
-  //   gsap.set(".fullScreen", { autoAlpha: 1 });
-
-  //   if (split) {
-  //     gsap.getById("tools").kill();
-  //     split.revert();
-  //   }
-  //   split = new SplitText("h1", { charsClass: "chars", linesClass: "lines" });
-  //   tl = gsap.timeline();
-
-  //   split.lines.forEach((line, index) => {
-  //     tl.from(line.querySelectorAll(".chars"), { duration: 0.3, yPercent: 100, stagger: 0.04 }, ">-50%");
-  //   });
-  //   gsap.create({ animation: tl, id: "tools" });
-  // };
 
   return (
     <>
@@ -98,7 +27,7 @@ const AboutUsMarquee = () => {
             <Text
               textAlign={"center"}
               fontFamily={"Bossa"}
-              fontSize={["32px", "32px", "60px", "60px"]}
+              fontSize={["32px", "32px", "50px", "60px"]}
               fontWeight={700}
             >
               About G42 Healthcare
@@ -127,14 +56,16 @@ const AboutUsMarquee = () => {
             <ReactPlayer
               // style={{position: "absolute", top: 0, left: 0}}
               width={"100%"}
-              // height={"100%"}
+              height={"377px"}
+              
+              style={{maxHeight:"100%", border:"1px solid red"}}
               playing={true}
               loop={true}
               url={homeVideo}
             />
           </Box>
           <Flex
-            mt={["50px", "50px", "25px"]}
+            // mt={["50px", "50px", "25px"]}
             w={"453px"}
             maxW={"453px"}
             flexDirection={"column"}
@@ -144,7 +75,7 @@ const AboutUsMarquee = () => {
               fontFamily={"Bossa"}
               fontSize={"18px"}
               fontStyle={"normal"}
-              fontWeight={500}
+              fontWeight={300}
               lineHeight={"24px"}
               color={"#747272"}
               letterSpacing={"-0.42px"}
