@@ -23,10 +23,12 @@ const VideoModal = ({ url, isOpen, onOpen, onClose }) => {
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton backgroundColor={"green.400"} color={"white"} position={"absolute"} top={5} right={5} zIndex={5}/>
-          <ModalBody>
+          <ModalBody position={"relative"} paddingTop={"56.25%"} h={"100vh"} maxH={"100%"} w={"100vw"} maxW={"100%"}>
             <ReactPlayer
+          style={{ position: "absolute", top: 0, left: 0 }}
+
               width={"100%"}
-              height={"100vh"}
+              height={"100%"}
               url={url}
               controls={true}
               playing={true}

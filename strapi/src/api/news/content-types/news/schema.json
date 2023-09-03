@@ -4,7 +4,8 @@
   "info": {
     "singularName": "news",
     "pluralName": "news-plural",
-    "displayName": "News"
+    "displayName": "News",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "title": {
       "type": "string"
@@ -32,7 +34,10 @@
       "enum": [
         "Omics",
         "Digital Health",
-        "Advanced Diagnostics"
+        "Advanced Diagnostics",
+        "Environmental Sciences",
+        "Contact Research Organization (IROS)",
+        "Pharma & Therapeutics"
       ],
       "required": true
     },

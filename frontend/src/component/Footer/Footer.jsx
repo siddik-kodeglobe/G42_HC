@@ -9,7 +9,7 @@ import ytIcon from "../../assets/Footer/yt.svg";
 
 const Footer = () => {
   return (
-    <div>
+    <>
       <Flex
         fontFamily={"Bossa"}
         fontSize={14}
@@ -21,7 +21,8 @@ const Footer = () => {
       >
         <Flex
           flexDirection={["column", "column", "row"]}
-          w={"100%"}
+          w={"100vw"}
+          maxW={"100%"}
           gap={["0px", "0px", "136px"]}
         >
           <a href="/">
@@ -71,7 +72,7 @@ const Footer = () => {
         </Flex>
       </Flex>
 
-      <hr style={{ marginTop: "10%", border: "1px solid lightgray" }} />
+      <hr style={{ width: "98vw", maxWidth:"100%", marginTop: "10%", border: "1px solid lightgray" }} />
 
       <Flex
         fontFamily={"Bossa"}
@@ -87,7 +88,7 @@ const Footer = () => {
         <Text>{new Date().getFullYear()} G42. All right reserved</Text>
         <Text>Terms&Conditions | Privacy Policy</Text>
       </Flex>
-    </div>
+    </>
   );
 };
 

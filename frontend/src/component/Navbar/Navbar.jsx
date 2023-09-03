@@ -8,7 +8,7 @@ const Navbar = () => {
   const [navBg, setNavBg] = useState(false);
 
   const changeNavBg = () => {
-   window.scrollY >= 80 ? setNavBg(true) : setNavBg(false);
+   window.scrollY >= 50 ? setNavBg(true) : setNavBg(false);
   }
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Navbar = () => {
   
   return (
     <>
-      <Flex top={0} zIndex={10} backgroundColor={navBg ? "white" : "transparent"} position={"fixed"} w={"100vw"} boxShadow={"0px 4px 13px rgba(0, 0, 0, 0.04)"} boxSizing='border-box' padding={"22px 60px"} justifyContent={"space-between"} alignItems={"center"}>
+      <Flex top={0} zIndex={9} backgroundColor={navBg ? "white" : "transparent"} position={"fixed"} w={"100vw"} maxW={"100%"} boxShadow={"0px 4px 13px rgba(0, 0, 0, 0.04)"} boxSizing='border-box' padding={"22px 60px"} justifyContent={"space-between"} alignItems={"center"}>
         <Link href="/">
         <Image w={"80px"} cursor={"pointer"} src={logo} alt='logo'/>
         </Link>

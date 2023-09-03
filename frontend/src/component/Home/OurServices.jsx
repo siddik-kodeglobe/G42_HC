@@ -1,5 +1,8 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+// Import GSAP
+import { TweenLite, TimelineMax, Linear, Back, Sine } from "gsap";
 
 // Import Swipper
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
@@ -16,6 +19,9 @@ import axios from "axios";
 import leftArrow from "../../assets/icons/leftArrowIconNavService.svg";
 import rightArrow from "../../assets/icons/rightArrowIconNavService.svg";
 
+// CSS import
+import "./OurServices.module.css";
+
 const OurServices = () => {
   //active Slide
   const [activeSlide, setActiveSlide] = useState(0);
@@ -24,6 +30,11 @@ const OurServices = () => {
   const [firstImg, setFirstImg] = useState("");
   const [secondImg, setSecondImg] = useState("");
   const [thirdImg, setThirdImg] = useState("");
+
+  // OuterImg
+  const firstImgRef = useRef("");
+  const secondImgRef = useRef("");
+  const thirdImgRef = useRef("");
 
   //showTitle
   const [firstTitle, setFirstTitle] = useState("");
@@ -49,6 +60,14 @@ const OurServices = () => {
     setSecondImg(res.data.data[1].attributes.thumbnail.data.attributes.url);
     setThirdImg(res.data.data[2].attributes.thumbnail.data.attributes.url);
 
+    //outerImg
+    firstImgRef.current =
+      res.data.data[0].attributes.thumbnail.data.attributes.url;
+    secondImgRef.current =
+      res.data.data[1].attributes.thumbnail.data.attributes.url;
+    thirdImgRef.current =
+      res.data.data[1].attributes.thumbnail.data.attributes.url;
+
     // initial title
     setFirstTitle(res.data.data[0].attributes.heading);
     setsecondTitle(res.data.data[1].attributes.heading);
@@ -58,17 +77,22 @@ const OurServices = () => {
   };
 
   const scrollLeft = () => {
-
     const temp = data;
     temp.unshift(temp.pop());
-    setData(temp)
+    setData(temp);
     // const temp = reduceVal(1, data);
     // setData(temp);
+
+    // change outer image
+    firstImgRef.current = firstImg;
+    secondImgRef.current = secondImg;
+    thirdImgRef.current = thirdImg;
 
     // initial Image
     setFirstImg(data[0].attributes.thumbnail.data.attributes.url);
     setSecondImg(data[1].attributes.thumbnail.data.attributes.url);
     setThirdImg(data[2].attributes.thumbnail.data.attributes.url);
+    animL2R();
 
     // initial title
     setFirstTitle(data[0].attributes.heading);
@@ -76,18 +100,23 @@ const OurServices = () => {
 
     // initial info
     setInfo(data[0].attributes.info);
-
   };
 
   const scrollRight = () => {
     const temp = data;
     temp.push(temp.shift());
-    setData(temp);   
-    
+    setData(temp);
+
+    // Change Outer Image
+    firstImgRef.current = firstImg;
+    secondImgRef.current = secondImg;
+    thirdImgRef.current = thirdImg;
+
     // initial Image
     setFirstImg(data[0].attributes.thumbnail.data.attributes.url);
     setSecondImg(data[1].attributes.thumbnail.data.attributes.url);
     setThirdImg(data[2].attributes.thumbnail.data.attributes.url);
+    animR2L();
 
     // initial title
     setFirstTitle(data[0].attributes.heading);
@@ -95,7 +124,7 @@ const OurServices = () => {
 
     // initial info
     setInfo(data[0].attributes.info);
-  }
+  };
 
   const reduceVal = (index, arr) => {
     const length = arr.length;
@@ -111,10 +140,136 @@ const OurServices = () => {
     getData();
   }, []);
 
+  // Slides Transition
+
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+
+  // Second Outer Box Ref
+  const outerRef2 = useRef(null);
+  const innerRef2 = useRef(null);
+
+  // Third Outer Box Ref
+  const outerRef3 = useRef(null);
+  const innerRef3 = useRef(null);
+
+  const animR2L = () => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+
+    //first Box Animation
+    TweenLite.set(outer, { xPercent: 100, autoAlpha: 1 });
+    TweenLite.set(inner, { xPercent: -100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outer,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(inner, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0);
+
+    // 2nd Box Animation
+    TweenLite.set(outerRef2.current, { xPercent: 100, autoAlpha: 1 });
+    TweenLite.set(innerRef2.current, { xPercent: -100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outerRef2.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      innerRef2.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+
+    // 3rd Box Animation
+
+    // if(outerRe)
+    TweenLite.set(outerRef3.current, { xPercent: 100, autoAlpha: 1 });
+    TweenLite.set(innerRef3.current, { xPercent: -100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outerRef3.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      innerRef3.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+  };
+
+  const animL2R = () => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+
+    //first Box Animation
+    TweenLite.set(outer, { xPercent: -100, autoAlpha: 1 });
+    TweenLite.set(inner, { xPercent: 100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outer,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(inner, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0);
+
+    // 2nd Box Animation
+    TweenLite.set(outerRef2.current, { xPercent: -100, autoAlpha: 1 });
+    TweenLite.set(innerRef2.current, { xPercent: 100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outerRef2.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      innerRef2.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+
+    // 3rd Box Animation
+
+    // if(outerRe)
+    TweenLite.set(outerRef3.current, { xPercent: -100, autoAlpha: 1 });
+    TweenLite.set(innerRef3.current, { xPercent: 100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outerRef3.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      innerRef3.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+  };
+
   return (
     <>
       <Box
-      display={["none", "none", "block"]}
+      overflow={"hidden"}
+        display={["none", "none", "block"]}
         position={"relative"}
         bgImage={`url(${process.env.REACT_APP_BACKEND_URL}${firstImg})`}
         height={["629px", "629px", "800px"]}
@@ -154,21 +309,39 @@ const OurServices = () => {
 
         {/* SLIDER  */}
         <Flex gap={"20px"} padding={["54px 0px 206px 178px"]}>
+          {/* 1st Container  */}
           <Box
+          pos={"relative"}
             borderRadius={"20px"}
             backgroundColor={"white"}
             w={"50%"}
             h={"426px"}
             padding={"10px"}
           >
-            <Image
+            <Box id="wrapper">
+              <Image
+              
+                src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
+                alt=""
+              />
+            </Box>
+
+            <Box id="outer" ref={outerRef}>
+              <Box id="inner" ref={innerRef}>
+                <Image
+                  src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
+                  id="top"
+                />
+              </Box>
+            </Box>
+            {/* <Image
               w={"100%"}
               h={"245px"}
               maxW={"100%"}
               objectFit={"cover"}
               borderRadius={"14px"}
               src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
-            />
+            /> */}
             <Text
               fontFamily={"Bossa"}
               fontSize={["24px", "24px", "48px"]}
@@ -187,9 +360,13 @@ const OurServices = () => {
               fontStyle={"normal"}
             >
               {/* {alert(info.length)} */}
-              {firstTitle.length > 8 && info.length > 100 ? info.slice(0, 100).concat("...") : info}
+              {firstTitle.length > 8 && info.length > 100
+                ? info.slice(0, 100).concat("...")
+                : info}
             </Text>
           </Box>
+
+          {/* 2nd Container  */}
           <Box
             padding={"10px"}
             borderRadius={"20px"}
@@ -215,6 +392,8 @@ const OurServices = () => {
               {secondTitle}
             </Text>
           </Box>
+
+          {/* 3rd Container  */}
           <Box
             borderRadius={"20px 0px 0px 20px"}
             backgroundColor={"white"}

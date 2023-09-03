@@ -15,7 +15,7 @@ const LatestInitiative = () => {
   const [secondImg, setSecondImg] = useState("");
   const [thirdImg, setThirdImg] = useState("");
 
-  // InnerImg
+  // OuterImg
   const firstImgRef = useRef("");
   const secondImgRef = useRef("");
   const thirdImgRef = useRef("");
@@ -47,7 +47,7 @@ const LatestInitiative = () => {
     firstImgRef.current = res.data.data[0].attributes.image.data.attributes.url;
     secondImgRef.current =
       res.data.data[1].attributes.image.data.attributes.url;
-    thirdImgRef.current = res.data.data[1].attributes.image.data.attributes.url;
+    thirdImgRef.current = res.data.data[2].attributes.image.data.attributes.url;
 
     // initial title
     setFirstTitle(res.data.data[0].attributes.name);
@@ -65,6 +65,7 @@ const LatestInitiative = () => {
     temp.unshift(temp.pop());
     setData(temp);
 
+    // change outer image
     firstImgRef.current = firstImg;
     secondImgRef.current = secondImg;
     thirdImgRef.current = thirdImg;
@@ -73,6 +74,7 @@ const LatestInitiative = () => {
     setFirstImg(data[0].attributes.image.data.attributes.url);
     setSecondImg(data[1].attributes.image.data.attributes.url);
     setThirdImg(data[2].attributes.image.data.attributes.url);
+    animL2R()
 
     // initial title
     setFirstTitle(data[0].attributes.name);
@@ -90,7 +92,7 @@ const LatestInitiative = () => {
     temp.push(temp.shift());
     setData(temp);
 
-    // REF image
+    // Change Outer Image
     firstImgRef.current = firstImg;
     secondImgRef.current = secondImg;
     thirdImgRef.current = thirdImg;
@@ -99,7 +101,7 @@ const LatestInitiative = () => {
     setFirstImg(data[0].attributes.image.data.attributes.url);
     setSecondImg(data[1].attributes.image.data.attributes.url);
     setThirdImg(data[2].attributes.image.data.attributes.url);
-    animL2R();
+    animR2L();
 
     // initial title
     setFirstTitle(data[0].attributes.name);
@@ -129,9 +131,7 @@ const LatestInitiative = () => {
   const outerRef3 = useRef(null);
   const innerRef3 = useRef(null);
 
-  const tlRef = useRef(null);
-
-  const animL2R = () => {
+  const animR2L = () => {
     const outer = outerRef.current;
     const inner = innerRef.current;
 
@@ -171,6 +171,62 @@ const LatestInitiative = () => {
     // if(outerRe)
     TweenLite.set(outerRef3.current, { xPercent: 100, autoAlpha: 1 });
     TweenLite.set(innerRef3.current, { xPercent: -100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outerRef3.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      innerRef3.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+  };
+
+  const animL2R = () => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+
+    //first Box Animation
+    TweenLite.set(outer, { xPercent: -100, autoAlpha: 1 });
+    TweenLite.set(inner, { xPercent: 100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(outer, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0).to(
+      inner,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+
+    // 2nd Box Animation
+    TweenLite.set(outerRef2.current, { xPercent: -100, autoAlpha: 1 });
+    TweenLite.set(innerRef2.current, { xPercent: 100, autoAlpha: 1 });
+
+    var tl = new TimelineMax();
+
+    tl.to(
+      outerRef2.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    ).to(
+      innerRef2.current,
+      1.5,
+      { xPercent: 0, force3D: true, ease: Sine.easeInOut },
+      0
+    );
+
+    // 3rd Box Animation
+
+    // if(outerRe)
+    TweenLite.set(outerRef3.current, { xPercent: -100, autoAlpha: 1 });
+    TweenLite.set(innerRef3.current, { xPercent: 100, autoAlpha: 1 });
 
     var tl = new TimelineMax();
 
