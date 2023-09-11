@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Breadcrumb_AB from "./Breadcrumb_AB";
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import menuIcon from "../../assets/aboutUs/menuIcon.svg";
 import VideoSection from "./VideoSection";
 import AU_Slider from "./AU_Slider";
@@ -11,6 +11,7 @@ import TopScroll from "../TopScroll/TopScroll";
 const About = () => {
   return (
     <>
+    <Box w={"100vw"} maxW={"100%"}>
       <Navbar />
       <Breadcrumb_AB />
       <Flex
@@ -21,11 +22,10 @@ const About = () => {
         <Text fontFamily={"bossa"} fontWeight={700} fontSize={["24px", "24px", "60px"]}>
           Our Introduction
         </Text>
-        <Image cursor={"pointer"} w={["0px", "0px", "85px"]} src={menuIcon} alt="menuIcon" />
       </Flex>
       <VideoSection  />
       <AU_Slider/>
-      <TopScroll/>
+      </Box>
     </>
   );
 };

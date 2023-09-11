@@ -119,7 +119,7 @@ const ChartingTriumph = () => {
 
   return (
     <>
-      <Box display={["none", "none", "block"]}>
+      <Box w={"100vw"} maxW={"100%"} display={["none", "none", "block"]}>
         <Box
           position={"relative"}
           background={
