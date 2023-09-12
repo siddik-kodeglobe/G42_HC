@@ -9,6 +9,8 @@ import Resources from "../component/Resources/Resources";
 import Collaborations from "../component/Collaborations/Collaborations";
 import CaseStudy from "../component/CaseStudy/CaseStudy";
 import NewsID from "../component/NewsID/NewsID";
+import ContactUs from "../component/ContactUs/ContactUs";
+import Career from "../component/Careers/Career";
 
 const AllRoutes = () => {
   return (
@@ -23,6 +25,8 @@ const AllRoutes = () => {
         <Route path="/collaborations" element={<Collaborations/>}/>
         <Route path="/caseStudy/:caseStudyId" element={<CaseStudy/>}/>
         <Route path="/news/:newsId" element={<NewsID/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/career" element={<Career/>}/>
 
       </Routes>
     </div>
