@@ -4,6 +4,7 @@ import ReactPlayer from "react-player";
 import playBtn from "../../assets/icons/playBtn.svg";
 import News from "./News";
 import VideoModal from "../VideoModal/VideoModal";
+import g42Video from '../../assets/temp/Video/G42 Video.mp4'
 
 const VideoSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,7 +20,8 @@ const VideoSection = () => {
             height={"100%"}
             playing={true}
             loop={true}
-            url="http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
+            url={g42Video}
+            muted={true}
           />
         </Box>
 
@@ -65,7 +67,7 @@ const VideoSection = () => {
 
         <VideoModal
           url={
-            "http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
+            g42Video
           }
           isOpen={isOpen}
           onOpen={onOpen}

@@ -92,17 +92,16 @@ const AU_Slider = () => {
       </Box>
 
       {/* SLIDER BTN  */}
-      <Box></Box>
       <WhoWeAre />
-      <hr style={{ width: "100%", marginTop: "64px" }} />
+      <hr style={{ width: "99.5%", marginTop: "64px" }} />
       <PurposeMV />
-      <hr style={{ margin: "64px 0px 0px 0px", border: "1px solid rgba(0, 0, 0, 0.10)" }} />
+      <hr style={{ width: "99.5%", margin: "64px 0px 0px 0px", border: "1px solid rgba(0, 0, 0, 0.10)" }} />
       <CEO />
       <Box width={"98.7vw"} margin={"64px 0px"}>
         <OurPartners />
       </Box>
       <ChartingTriumph />
-      <Box width={"98.7vw"} margin={"64px 0px"}>
+      <Box width={"98.7vw"} margin={"64px -10px"}>
         <MeetTeam />
       </Box>
       <AU_Footer />

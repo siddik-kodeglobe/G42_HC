@@ -66,7 +66,7 @@ const OurServices = () => {
     secondImgRef.current =
       res.data.data[1].attributes.thumbnail.data.attributes.url;
     thirdImgRef.current =
-      res.data.data[1].attributes.thumbnail.data.attributes.url;
+      res.data.data[2].attributes.thumbnail.data.attributes.url;
 
     // initial title
     setFirstTitle(res.data.data[0].attributes.heading);
@@ -268,7 +268,7 @@ const OurServices = () => {
   return (
     <>
       <Box
-      overflow={"hidden"}
+        overflow={"hidden"}
         display={["none", "none", "block"]}
         position={"relative"}
         bgImage={`url(${process.env.REACT_APP_BACKEND_URL}${firstImg})`}
@@ -311,7 +311,7 @@ const OurServices = () => {
         <Flex gap={"20px"} padding={["54px 0px 206px 178px"]}>
           {/* 1st Container  */}
           <Box
-          pos={"relative"}
+            pos={"relative"}
             borderRadius={"20px"}
             backgroundColor={"white"}
             w={"50%"}
@@ -320,7 +320,6 @@ const OurServices = () => {
           >
             <Box id="wrapper">
               <Image
-              
                 src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
                 alt=""
               />
@@ -374,13 +373,28 @@ const OurServices = () => {
             w={"35%"}
             h={"316px"}
           >
-            <Image
+            <Box id="wrapper2">
+              <Image
+                src={`${process.env.REACT_APP_BACKEND_URL}${secondImgRef.current}`}
+                alt=""
+              />
+            </Box>
+
+            <Box id="outer2" ref={outerRef2}>
+              <Box id="inner2" ref={innerRef2}>
+                <Image
+                  src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
+                  id="top2"
+                />
+              </Box>
+            </Box>
+            {/* <Image
               objectFit={"cover"}
               w={"100%"}
               h={"206px"}
               borderRadius={"24px"}
               src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
-            />
+            /> */}
             <Text
               paddingBottom={"25px"}
               fontFamily={"Bossa"}
@@ -400,14 +414,30 @@ const OurServices = () => {
             w={"15%"}
             h={"189px"}
           >
-            <Image
+            <Box id="wrapper3">
+              <Image
+                src={`${process.env.REACT_APP_BACKEND_URL}${thirdImgRef.current}`}
+                alt=""
+              />
+            </Box>
+
+            <Box id="outer3" ref={outerRef3}>
+              <Box id="inner3" ref={innerRef3}>
+                <Image
+                  src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
+                  id="top3"
+                />
+              </Box>
+            </Box>
+
+            {/* <Image
               padding={"10px 0px 10px 10px"}
               width={"100%"}
               height={"100%"}
               objectFit={"cover"}
               borderRadius={"18px"}
               src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
-            />
+            /> */}
           </Box>
         </Flex>
       </Box>

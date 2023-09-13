@@ -58,7 +58,7 @@ const AboutUsMarquee = () => {
               width={"100%"}
               height={"377px"}
               
-              style={{maxHeight:"100%", border:"1px solid red"}}
+              style={{maxHeight:"100%"}}
               playing={true}
               loop={true}
               url={homeVideo}

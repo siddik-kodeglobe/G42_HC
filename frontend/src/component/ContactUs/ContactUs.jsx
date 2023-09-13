@@ -7,6 +7,7 @@ import IconDiv from './IconDiv'
 import JoinOurTeam from './JoinOurTeam'
 import EnquiryForm from './EnquiryForm'
 import Footer_CU from './Footer_CU'
+import Category from './Category'
 
 const ContactUs = () => {
   return (
@@ -14,9 +15,9 @@ const ContactUs = () => {
         
         <Navbar/>
         <Breadcrumb_CU/>
-        {/* <hr style={{width: "99vw"}}/> */}
         <Connect/>
         <IconDiv/>
+        <Category/>
         <JoinOurTeam/>
         <EnquiryForm/>
         <Footer_CU/>

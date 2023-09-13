@@ -167,8 +167,6 @@ const LatestInitiative = () => {
     );
 
     // 3rd Box Animation
-
-    // if(outerRe)
     TweenLite.set(outerRef3.current, { xPercent: 100, autoAlpha: 1 });
     TweenLite.set(innerRef3.current, { xPercent: -100, autoAlpha: 1 });
 
@@ -384,7 +382,7 @@ const LatestInitiative = () => {
               lineHeight={"normal"}
               fontStyle={"normal"}
             >
-              {firstTitle}
+              {secondTitle}
             </Text>
             <Text
               mt={"2.5px"}
@@ -395,7 +393,7 @@ const LatestInitiative = () => {
               lineHeight={"normal"}
               fontStyle={"normal"}
             >
-              {firstInfo}
+              {secondInfo}
             </Text>
             <Image
               pos={"absolute"}
@@ -435,7 +433,7 @@ const LatestInitiative = () => {
               lineHeight={"normal"}
               fontStyle={"normal"}
             >
-              {firstTitle}
+              {thirdTitle}
             </Text>
             <Text
               mt={"2.5px"}
@@ -446,7 +444,7 @@ const LatestInitiative = () => {
               lineHeight={"normal"}
               fontStyle={"normal"}
             >
-              {firstInfo}
+              {thirdInfo}
             </Text>
             <Image
               pos={"absolute"}

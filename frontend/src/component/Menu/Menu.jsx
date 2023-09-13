@@ -30,17 +30,18 @@ const Menu = () => {
         top={"40%"}
         right={"36px"}
         borderRadius={"50%"}
+        border={"1px solid #00D2AA"}
         ref={btnRef}
         height={["85px"]}
         width={["85px"]}
         _hover={{ backgroundColor: "#00D2AA" }}
-        backgroundColor="#00D2AA"
+        backgroundColor="white"
         onClick={onOpen}
       >
         {onOpen ? (
-          <HamburgerIcon color={"white"} />
+          <HamburgerIcon color={"black"} />
         ) : (
-          <CloseIcon color={"white"} />
+          <CloseIcon color={"black"} />
         )}
       </Button>
       <Drawer
