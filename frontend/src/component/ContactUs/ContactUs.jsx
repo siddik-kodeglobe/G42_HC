@@ -8,6 +8,7 @@ import JoinOurTeam from './JoinOurTeam'
 import EnquiryForm from './EnquiryForm'
 import Footer_CU from './Footer_CU'
 import Category from './Category'
+import ContactUs_Text from './ContactUs_Text'
 
 const ContactUs = () => {
   return (
@@ -15,6 +16,7 @@ const ContactUs = () => {
         
         <Navbar/>
         <Breadcrumb_CU/>
+        <ContactUs_Text/>
         <Connect/>
         <IconDiv/>
         <Category/>

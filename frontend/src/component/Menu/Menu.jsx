@@ -34,12 +34,12 @@ const Menu = () => {
         ref={btnRef}
         height={["85px"]}
         width={["85px"]}
-        _hover={{ backgroundColor: "#00D2AA" }}
+        // _hover={{ backgroundColor: "#00D2AA" }}
         backgroundColor="white"
         onClick={onOpen}
       >
         {onOpen ? (
-          <HamburgerIcon color={"black"} />
+          <HamburgerIcon boxSize={"35px"} color={"#00D2AA"} />
         ) : (
           <CloseIcon color={"black"} />
         )}

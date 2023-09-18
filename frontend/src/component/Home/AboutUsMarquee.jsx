@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import homeVideo from "../../assets/logo/homeVideo.mp4";
 
+import g42Video from '../../assets/temp/Video/G42 Video.mp4'
 
 const AboutUsMarquee = () => {
   const textRef = useRef(null);
@@ -47,31 +48,34 @@ const AboutUsMarquee = () => {
           mt={"100px"}
           padding={["0px 20px", "0px 20px", "0px 151px"]}
           gap={["33px", "33px", "90px"]}
-          alignItems={["self-start", "self-start", "self-start"]}
+          alignItems={["self-start", "self-start", "self-start", "start"]}
         >
           <Box
+          pos={"relative"}
+          // paddingTop={"56.25%"}
             height={["214px", "214px", "377px"]}
             w={["352px", "352px", "619px"]}
           >
             <ReactPlayer
-              // style={{position: "absolute", top: 0, left: 0}}
+            style={{position:"absolute", top: 0, left: 0, objectFit:"cover"}}
               width={"100%"}
               height={"377px"}
               
-              style={{maxHeight:"100%"}}
               playing={true}
               loop={true}
-              url={homeVideo}
+              url={g42Video}
+              muted
             />
           </Box>
           <Flex
-            // mt={["50px", "50px", "25px"]}
-            w={"453px"}
-            maxW={"453px"}
+            mt={["50px", "50px", "25px"]}
+            w={["100vw","100vw", "453px", "453px"]}
+            maxW={["100%", "100%", "453px", "453px"]}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
             <Text
+
               fontFamily={"Bossa"}
               fontSize={"18px"}
               fontStyle={"normal"}

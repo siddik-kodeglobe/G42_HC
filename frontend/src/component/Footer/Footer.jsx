@@ -38,37 +38,39 @@ const Footer = () => {
             alignItems={"top"}
             gap={7}
           >
-            <Box>
+            <Flex flexDir={"column"}>
               <Link href={"/about"}>About G42 Healthcare</Link>
-              <Text>News</Text>
-              <Text>What We Do</Text>
-              <Text>Case Studies</Text>
-            </Box>
+              <Link href="/news">News</Link>
+              <Link href="/whatwedo">What We Do</Link>
+              <Link href="casestudy">Case Studies</Link>
+            </Flex>
 
-            <Box>
-              <Text>Careers</Text>
+            <Flex flexDir={"column"}>
+              <Link href="/career">Careers</Link>
+              <Link href="/contactus">Contact Us</Link>
               <Text>Cookies Policy</Text>
-            </Box>
+            </Flex>
           </Flex>
         </Flex>
 
         <Flex
           marginTop={["42px", "42px", "0px"]}
           h={["150px", "150px", "150px"]}
+          w={["","","","395px"]}
           alignItems={"end"}
-        >
-          <Box>
+          >
+          <Box w={"fit-content"}>   
             <Text>SOCIAL MEDIA:</Text>
-            <Flex mt={2} gap={7}>
+            <Flex mt={2} gap={"15px"}>
               <Image w={18} src={instaIcon} />
               <Image w={18} src={linkedinIcon} />
               <Image w={18} src={twitterIcon} />
               <Image w={18} src={ytIcon} />
             </Flex>
           </Box>
-          <Flex w={["106px", "106px", "106px"]} h={["150px", "150px", "150px"]}>
+          <Box w={["106px", "106px", "106px"]} h={["150px", "150px", "150px"]}>
             <Image w={"100%"} h={"100%"} src={certifiedImg} />
-          </Flex>
+          </Box>
         </Flex>
       </Flex>
 

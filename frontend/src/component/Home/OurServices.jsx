@@ -20,7 +20,7 @@ import leftArrow from "../../assets/icons/leftArrowIconNavService.svg";
 import rightArrow from "../../assets/icons/rightArrowIconNavService.svg";
 
 // CSS import
-import "./OurServices.module.css";
+// import "./OurServices.module.css";
 
 const OurServices = () => {
   //active Slide
@@ -318,29 +318,50 @@ const OurServices = () => {
             h={"426px"}
             padding={"10px"}
           >
+
             <Box id="wrapper">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
                 alt=""
+                borderRadius={["14px"]}
+                width={["100%"]}
+                height={["245px"]}
+                objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer" ref={outerRef}>
-              <Box id="inner" ref={innerRef}>
+            <Box id="outer" ref={outerRef}
+            pos={"absolute"}
+            overflow={"hidden"}
+            width={["96.5%"]}
+            objectFit={"cover"}
+            height={["245px"]}
+            visibility={"hidden"}
+            opacity={0}
+            top={"10px"}
+            >
+              <Box id="inner" ref={innerRef}
+              width={["100%"]}
+              objectFit={"cover"}
+              height={["245px"]}
+              visibility={"hidden"}
+              opacity={0}
+              // top={10}
+              borderRadius={["14px"]}
+
+              >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
                   id="top"
+
+                  w={["100%"]}
+                  objectFit={"cover"}
+                  h={["245px"]}
+                  borderRadius={"14px"}
+
                 />
               </Box>
             </Box>
-            {/* <Image
-              w={"100%"}
-              h={"245px"}
-              maxW={"100%"}
-              objectFit={"cover"}
-              borderRadius={"14px"}
-              src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
-            /> */}
             <Text
               fontFamily={"Bossa"}
               fontSize={["24px", "24px", "48px"]}
@@ -367,6 +388,7 @@ const OurServices = () => {
 
           {/* 2nd Container  */}
           <Box
+          pos={"relative"}
             padding={"10px"}
             borderRadius={"20px"}
             backgroundColor={"white"}
@@ -377,24 +399,42 @@ const OurServices = () => {
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${secondImgRef.current}`}
                 alt=""
+
+                borderRadius={["14px"]}
+                w={["100%"]}
+                height={["206px"]}
+                objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer2" ref={outerRef2}>
-              <Box id="inner2" ref={innerRef2}>
+            <Box id="outer2" ref={outerRef2}
+            pos={"absolute"}
+            top={"10px"}
+            overflow={"hidden"}
+            w={["94.5%"]}
+            h={["206px"]}
+            objectFit={"cover"}
+            visibility={"hidden"}
+            opacity={0}
+            >
+              <Box id="inner2" ref={innerRef2}
+              w={["100%"]}
+              h={["206px"]}
+              objectFit={"cover"}
+              visibility={"hidden"}
+              opacity={0}
+              borderRadius={["14px"]}
+              >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
                   id="top2"
+                  borderRadius={["14px"]}
+                  w={["100%"]}
+                  h={["206px"]}
+                  objectFit={"cover"}
                 />
               </Box>
             </Box>
-            {/* <Image
-              objectFit={"cover"}
-              w={"100%"}
-              h={"206px"}
-              borderRadius={"24px"}
-              src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
-            /> */}
             <Text
               paddingBottom={"25px"}
               fontFamily={"Bossa"}
@@ -409,6 +449,8 @@ const OurServices = () => {
 
           {/* 3rd Container  */}
           <Box
+          pos={"relative"}
+          padding={"10px"}
             borderRadius={"20px 0px 0px 20px"}
             backgroundColor={"white"}
             w={"15%"}
@@ -418,14 +460,38 @@ const OurServices = () => {
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${thirdImgRef.current}`}
                 alt=""
+
+                w={["100%"]}
+                height={["171px"]}
+                objectFit={"cover"}
+                borderRadius={["14px"]}
               />
             </Box>
 
-            <Box id="outer3" ref={outerRef3}>
-              <Box id="inner3" ref={innerRef3}>
+            <Box id="outer3" ref={outerRef3}
+            pos={"absolute"}
+            top={"10px"}
+            w={["100%"]}
+            height={["171px"]}
+            visibility={"hidden"}
+            opacity={0}
+            overflow={"hidden"}
+            borderRadius={["14px"]}
+            >
+              <Box id="inner3" ref={innerRef3}
+              w={["100%"]}
+              height={["171px"]}
+              visibility={"hidden"}
+              opacity={0}
+              borderRadius={["14px"]}
+              >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
                   id="top3"
+                  w={["100%"]}
+                  h={["171px"]}
+                  objectFit={"cover"}
+                  borderRadius={["14px"]}
                 />
               </Box>
             </Box>

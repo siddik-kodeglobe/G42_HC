@@ -12,7 +12,7 @@ const VideoSection = () => {
   return (
     <>
                 
-      <Box marginBottom={"-20px"} onClick={onOpen}  style={{cursor: `url(${playBtn}), auto`}} position={"relative"}>
+      <Box marginBottom={"-20px"} onClick={onOpen}  style={{cursor: `url(${playBtn}) 45 45, auto`}} position={"relative"}>
         <Box position={"relative"}>
           <ReactPlayer
             style={{ position: "position" }}

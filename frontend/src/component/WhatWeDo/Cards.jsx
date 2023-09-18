@@ -417,6 +417,7 @@ const Cards = () => {
             width: "100vw",
             maxWidth: "100%",
             border: "1px solid #D9D9D9",
+            marginTop: "124px"
           }}
         />
       </Box>

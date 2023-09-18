@@ -6,8 +6,8 @@ import mapIcon from "../../assets/contact_us/map_icon.svg";
 const SubCategory = ({name, email, dropemail, desc}) => {
   return (
     <div>
-        <Box>
-          <Box>
+        <Box borderLeft={"1px solid #D9D9D9"}>
+          <Box padding={["100px 60px 140px 98px"]}>
             <Text
             fontSize={["32px"]}
             fontWeight={[700]}
@@ -27,9 +27,9 @@ const SubCategory = ({name, email, dropemail, desc}) => {
                 {desc}  
             </Text>
 
-            <hr />
+            <hr style={{border: "1px solid #D9D9D9"}}/>
 
-            <Flex gap={["85px"]} margin={["78px 0px 140px 100px"]}>
+            <Flex gap={["85px"]} margin={["78px 0px 140px 0px"]}>
 
                 {/* mail div  */}
               <Box>
@@ -57,7 +57,7 @@ const SubCategory = ({name, email, dropemail, desc}) => {
 
               <Box>
                 <Image mb={["14px"]} src={mapIcon} />
-                <Text mb={["6px"]}>Main Office</Text>
+                <Text mb={["6px"]}>Office</Text>
                 <Text
                   fontSize={["16px"]}
                   fontWeight={[400]}

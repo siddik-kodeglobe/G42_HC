@@ -49,8 +49,9 @@ const Category = () => {
 
   return (
     <>
-      <Flex border={"1px solid #D9D9D9"} padding={["100px 60px 140px 60px"]}>
-        <Box w={"50%"}>
+      <Flex border={"1px solid #D9D9D9"}>
+
+        <Box padding={["100px 0px 140px 60px"]} w={"50%"}>
           {/* Title  */}
           <Box>
             <Text
@@ -67,7 +68,7 @@ const Category = () => {
           <Flex
             alignItems={"center"}
             mt={["54px"]}
-            marginLeft={"100px"}
+            marginLeft={"35px"}
             flexDir={"column"}
           >
             <Text

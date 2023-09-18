@@ -37,7 +37,7 @@ const AU_Footer = () => {
       <hr style={{ margin: "35px 0px 54px 0px" }} />
       <Flex
         flexDirection={["column", "column", "row"]}
-        alignItems={["start", "start", "center"]}
+        alignItems={["start", "start", "start", "start"]}
         gap={["12px", "12px", ""]}
         justifyContent={"space-between"}
       >

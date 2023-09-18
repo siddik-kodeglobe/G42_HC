@@ -64,7 +64,7 @@ const EnquiryForm = () => {
               backgroundColor={"#F5F5F5"}
               placeholder="Message"
             />
-            <Text>
+            <Text fontSize={["12px"]} color={"#747272"} fontWeight={[400]} fontStyle={"normal"} lineHeight={"normal"}>
               This site is protected by reCAPTCHA and the Google Privacy Policy
               and Terms of Service apply.
             </Text>

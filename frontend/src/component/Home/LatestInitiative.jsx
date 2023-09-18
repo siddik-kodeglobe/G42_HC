@@ -5,7 +5,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import caretLeftIcon from "../../assets/icons/caretLeftIcon.svg";
 // import { TweenLite, Sine, TimelineMax } from "gsap";
 import { TweenLite, TimelineMax, Linear, Back, Sine } from "gsap";
-import "./LatestInitiative.css";
+import "./LatestInitiative.module.css";
 
 const LatestInitiative = () => {
   const [data, setData] = useState([]);
@@ -58,6 +58,7 @@ const LatestInitiative = () => {
     setFirstInfo(res.data.data[0].attributes.info);
     setSecondInfo(res.data.data[1].attributes.info);
     setThirdInfo(res.data.data[2].attributes.info);
+  
   };
 
   const scrollLeft = () => {
@@ -91,7 +92,7 @@ const LatestInitiative = () => {
     const temp = data;
     temp.push(temp.shift());
     setData(temp);
-
+    
     // Change Outer Image
     firstImgRef.current = firstImg;
     secondImgRef.current = secondImg;
@@ -304,20 +305,43 @@ const LatestInitiative = () => {
 
         {/* slider  */}
         <Flex padding={"0px 30px 73px 108px"} w={"fit-content"} gap={"60px"}>
+          
           {/* first container  */}
           <Box pos={"relative"} w={"406px"} mt={"136px"}>
             <Box id="wrapper">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
-                alt=""
+                alt="img1"
+
+                width={"100%"}
+                height={["336px"]}
+                objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer" ref={outerRef}>
-              <Box id="inner" ref={innerRef}>
+            <Box id="outer" ref={outerRef}
+            pos={"absolute"}
+            top={0}
+            overflow={"hidden"}
+            w={["100%"]}
+            h={["336px"]}
+            visibility={"hidden"}
+            opacity={0}
+            >
+              <Box id="inner" ref={innerRef}
+              w={["100%"]}
+              h={["336px"]}
+              objectFit={"cover"}
+              visibility={"hidden"}
+              opacity={0}
+              >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
                   id="top"
+
+                  width={["100%"]}
+                  h={["336px"]}
+                  objectFit={"cover"}
                 />
               </Box>
             </Box>
@@ -361,14 +385,36 @@ const LatestInitiative = () => {
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${secondImgRef.current}`}
                 alt=""
+
+                w={["100%"]}
+                h={["352px"]}
+                objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer2" ref={outerRef2}>
-              <Box id="inner2" ref={innerRef2}>
+            <Box id="outer2" ref={outerRef2}
+            pos={["absolute"]}
+            top={0}
+            overflow={"hidden"}
+            w={"100%"}
+            h={["352px"]}
+            objectFit={"cover"}
+            visibility={"hidden"}
+            opacity={0}
+            >
+              <Box id="inner2" ref={innerRef2}
+              w={["100%"]}
+              h={["352px"]}
+              objectFit={"cover"}
+              visibility={"hidden"}
+              opacity={0}
+              >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
                   id="top2"
+                  w={["100%"]}
+                  h={["352px"]}
+                  objectFit={"cover"}
                 />
               </Box>
             </Box>
@@ -412,14 +458,37 @@ const LatestInitiative = () => {
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${thirdImgRef.current}`}
                 alt=""
+
+                w={["100%"]}
+                h={["273px"]}
+                objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer3" ref={outerRef3}>
-              <Box id="inner3" ref={innerRef3}>
+            <Box id="outer3" ref={outerRef3}
+            pos={"absolute"}
+            top={0}
+            w={"100%"}
+            h={["273px"]}
+            objectFit={"cover"}
+            visibility={"hidden"}
+            opacity={0}
+            overflow={"hidden"}
+            >
+              <Box id="inner3" ref={innerRef3}
+              w={"100%"}
+              h={["273px"]}
+              objectFit={"cover"}
+              visibility={"hidden"}
+              opacity={0}
+              >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
                   id="top3"
+
+                  w={["100%"]}
+                  h={["273px"]}
+                  objectFit={"cover"}
                 />
               </Box>
             </Box>

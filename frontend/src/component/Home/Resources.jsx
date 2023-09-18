@@ -140,10 +140,9 @@ const Resources = () => {
           </Flex>
         </Flex>
 
-        <Box>
+        <Box mt={["","","", "-20px"]}>
           <Swiper
             speed={750}
-
             breakpoints={{
               1024: {
                 slidesOffsetBefore: 150,
@@ -167,10 +166,10 @@ const Resources = () => {
                   // border={"5px solid red"}
                   h={["214px", "214px", "338px"]}
                   // maxH={["214px", "214px", "338px"]}
-                  w={["285px", "285px", "425px"]}
+                  w={["285px", "285px", "451px"]}
                   // maxW={["285px", "285px", "425px"]}
-                  // objectFit={"cover"}
                   backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url})`}
+                  // objectFit={"cover"}
                   backgroundSize={"cover"}
                   position={"relative"}
                 ></Box>
@@ -186,6 +185,7 @@ const Resources = () => {
                   </Text>
                   <Text
                     mt={"5px"}
+                    w={"90%"}
                     h={["60px", "60px", "96px"]}
                     maxH={"96px"}
                     color={"white"}
@@ -202,8 +202,8 @@ const Resources = () => {
           </Swiper>
         </Box>
 
-        <Box padding={"55px 150px"}>
-          <hr style={{ width: "85%", background: "#004141" }} />
+        <Box padding={"55px 100px 55px 150px"}>
+          <hr style={{ width: "100%", background: "#004141" }} />
         </Box>
       </Box>
     </>

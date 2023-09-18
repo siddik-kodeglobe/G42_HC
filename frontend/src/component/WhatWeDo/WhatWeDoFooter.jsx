@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 const WhatWeDoFooter = () => {
   return (
     <div>
-      <Box style={{ margin: "0px 10% 0px 10%" }}>
+      <Box style={{ margin: "-80px 10% 0px 10%" }}>
         <Flex
           flexDirection={["column", "column", "row"]}
           alignItems={["start", "start", "center"]}
@@ -22,6 +22,8 @@ const WhatWeDoFooter = () => {
             Partner with G42 Healthcare
           </Text>
           <Button
+          height={["55px"]}
+          w={["219px"]}
             fontFamily={"Bossa"}
             fontSize={["12px", "12px", "16px"]}
             fontWeight={500}

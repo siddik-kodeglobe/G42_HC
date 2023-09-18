@@ -85,7 +85,7 @@ const MeetUs = () => {
     <>
       <Box mt={"95px"} paddingBottom={"80px"} backgroundImage={bgImg} backgroundRepeat={"no-repeat"} backgroundSize={"cover"}>
         <Flex
-          padding={["40px 15px 20px 15px", "95px 60px 20px 150px"]}
+          padding={["40px 15px 20px 15px", "55px 60px 20px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -140,7 +140,7 @@ const MeetUs = () => {
           </Flex>
         </Flex>
 
-        <Box>
+        <Box mt={["", "","", "-45px"]}>
           <Swiper
             breakpoints={{
               1024: {

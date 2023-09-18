@@ -97,8 +97,8 @@ const News = () => {
             </Text>
             <Flex alignItems={"center"} gap={5}>
               <Button
-                // onClick={() => goPrev()}
-                onClick={() => swiperRef.current.swiper.slidePrev()}
+                onClick={() => goPrev()}
+                // onClick={() => swiperRef.current.swiper.slidePrev()}
                 _hover={{ backgroundColor: "white" }}
                 backgroundColor={"#00D2AA"}
                 onMouseOver={() => setHoverArrowColor("black")}
@@ -112,7 +112,7 @@ const News = () => {
                 margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
-                // cursor={swiperRef.current?.swiper.isBeginning ? "not-allowed" : "pointer"}
+                cursor={swiperRef.current?.swiper.isBeginning ? "not-allowed" : "pointer"}
                 // disabled={swiperRef.current?.swiper.isBeginning}
               >
                 <BsArrowLeft
@@ -138,6 +138,7 @@ const News = () => {
                 margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
+                cursor={swiperRef.current?.swiper.isEnd ? "not-allowed" : "pointer"}
               >
                 <BsArrowRight
                   style={{
