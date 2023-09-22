@@ -12,15 +12,15 @@ const Breadcrumb_NewsID = () => {
     <>
       <Breadcrumb mt={["164px"]} marginLeft={["61px"]}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
 
         <BreadcrumbItem>
-          <BreadcrumbLink href="/news">News</BreadcrumbLink>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} href="/news">News</BreadcrumbLink>
         </BreadcrumbItem>
 
         <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href="#">Title</BreadcrumbLink>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">Title</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
     </>

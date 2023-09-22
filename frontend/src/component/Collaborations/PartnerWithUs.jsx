@@ -17,10 +17,11 @@ const PartnerWithUs = () => {
             />
 
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               textAlign={"center"}
-              fontFamily={"Bossa"}
+              color={"black"}
               fontSize={["32px", "32px", "50px", "60px"]}
-              fontWeight={700}
+              // fontWeight={700}
               lineHeight={["81px"]}
             >
                 Partner with us

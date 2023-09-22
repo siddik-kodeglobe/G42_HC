@@ -27,8 +27,8 @@ const FourImg_CS = () => {
 
   return (
     <>
-      <Box margin={["118px 60px 0px 60px"]}>
-        <SimpleGrid gap={["20px"]} columns={[2]}>
+      <Box margin={["36px 20px 0px 20px", "36px 20px 0px 20px", "118px 60px 0px 60px", "118px 60px 0px 60px"]}>
+        <SimpleGrid gap={["20px"]} columns={[1,1,2,2]}>
             <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${first}`}/>
             <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${second}`}/>
             <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${third}`}/>

@@ -88,7 +88,7 @@ const Resources = () => {
           justifyContent={"space-between"}
         >
           <Text
-            fontFamily={"Bossa"}
+          fontFamily={"Bossa-ExtendedBold"}
             fontSize={"32px"}
             fontWeight={700}
             fontStyle={"normal"}
@@ -175,8 +175,8 @@ const Resources = () => {
                 ></Box>
                 <Box position={"absolute"} bottom={5} left={5}>
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     color={"white"}
-                    fontFamily={"Bossa"}
                     fontSize={["10px", "10px", "14px"]}
                     fontWeight={500}
                     lineHeight={"normal"}
@@ -184,12 +184,12 @@ const Resources = () => {
                     {convertData(el.attributes.createdAt)}
                   </Text>
                   <Text
+                  fontFamily={"Bossa-Medium"}
                     mt={"5px"}
                     w={"90%"}
                     h={["60px", "60px", "96px"]}
                     maxH={"96px"}
                     color={"white"}
-                    fontFamily={"Bossa"}
                     fontSize={["12px", "12px", "20px"]}
                     fontWeight={500}
                     lineHeight={"normal"}

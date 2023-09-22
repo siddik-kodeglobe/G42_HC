@@ -12,11 +12,11 @@ const BreadCrumb = () => {
       <Box zIndex={-14} padding={["115px 0px 0px 20px", "115px 60px 0px 60px", "115px 60px 0px 60px"]}>
         <Breadcrumb>
           <BreadcrumbItem >
-            <BreadcrumbLink  href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">What We Do</BreadcrumbLink>
+            <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">What We Do</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       </Box>

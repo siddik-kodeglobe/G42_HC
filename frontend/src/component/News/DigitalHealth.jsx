@@ -93,6 +93,7 @@ const DigitalHealth = () => {
           >
             <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
                 fontFamily={"Bossa"}
                 fontSize={["24px", "24px", "60px", "60px"]}
@@ -113,6 +114,7 @@ const DigitalHealth = () => {
                 borderRadius={"80px"}
               >
                 <Text
+                fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}
                   fontSize={["12px", "12px", "16px", "16px"]}
@@ -216,9 +218,10 @@ const DigitalHealth = () => {
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
                   />
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     noOfLines={1}
                     color={"#747272"}
-                    fontFamily={"Bossa"}
+                    
                     fontSize={["9px", "9px", "14px", "14px"]}
                     fontWeight={500}
                     lineHeight={"31px"}
@@ -228,11 +231,12 @@ const DigitalHealth = () => {
                   </Text>
 
                   <Text
+                  fontFamily={"Bossa-ExtendedBold"}
                     noOfLines={2}
                     w={["306px", "306px", "473px", "473px"]}
                     maxW={"100%"}
                     color={"black"}
-                    fontFamily={"Bossa"}
+
                     fontSize={["12px", "12px", "20px", "20px"]}
                     fontWeight={700}
                     lineHeight={"31px"}

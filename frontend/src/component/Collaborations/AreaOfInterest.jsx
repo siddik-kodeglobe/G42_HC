@@ -6,9 +6,28 @@ const AreaOfInterest = () => {
   return (
     <>
       <Box>
-        <Text margin={"auto"} w={["867px"]} fontSize={["40px"]} fontWeight={[700]} lineHeight={"normal"} textAlign={"center"}>Our Areas of <span style={{color: "var(--Emergent-Green, #00D2AA)"}}> Collaborations interests.</span></Text>
+        <Text
+        fontFamily={"Bossa-ExtendedBold"}
+          margin={"auto"}
+          mt={["125px"]}
+          w={["80%", "80%", "867px", "867px"]}
+          fontSize={["24px", "24px", "40px", "40px"]}
+          fontWeight={[700]}
+          lineHeight={"normal"}
+          textAlign={"center"}
+        >
+          Our Areas of{" "}
+          <span style={{ color: "var(--Emergent-Green, #00D2AA)" }}>
+            {" "}
+            Collaborations interests.
+          </span>
+        </Text>
 
-        <SimpleGrid gap={["21px"]} columns={[2]} margin={["81px 60px 0px 60px"]}>
+        <SimpleGrid
+          gap={["21px"]}
+          columns={[1, 1, 2, 2]}
+          margin={["81px 60px 0px 60px"]}
+        >
           {/* 1st Box  */}
           <Box
             position={"relative"}
@@ -17,11 +36,12 @@ const AreaOfInterest = () => {
             height={["286px"]}
           >
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["32px"]}
+              fontSize={["24px", "24px", "32px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -53,11 +73,12 @@ const AreaOfInterest = () => {
             height={["286px"]}
           >
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["32px"]}
+              fontSize={["24px", "24px", "32px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -88,11 +109,12 @@ const AreaOfInterest = () => {
             height={["286px"]}
           >
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["32px"]}
+              fontSize={["24px", "24px", "32px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -115,19 +137,20 @@ const AreaOfInterest = () => {
             </Flex>
           </Box>
 
-           {/* 4th Box  */}
-           <Box
+          {/* 4th Box  */}
+          <Box
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
             height={["286px"]}
           >
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["32px"]}
+              fontSize={["24px", "24px", "32px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -149,7 +172,6 @@ const AreaOfInterest = () => {
               <AddIcon width={["18px"]} height={["18px"]} color={"white"} />
             </Flex>
           </Box>
-
         </SimpleGrid>
       </Box>
     </>

@@ -90,7 +90,7 @@ const MeetUs = () => {
           justifyContent={"space-between"}
         >
           <Text
-            fontFamily={"Bossa"}
+          fontFamily={"Bossa-ExtendedBold"}
             fontSize={"32px"}
             fontWeight={700}
             fontStyle={"normal"}
@@ -142,6 +142,7 @@ const MeetUs = () => {
 
         <Box mt={["", "","", "-45px"]}>
           <Swiper
+          speed={750}
             breakpoints={{
               1024: {
                 slidesOffsetBefore: 150,
@@ -167,9 +168,9 @@ const MeetUs = () => {
                   backgroundColor={"white"}
                 >
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     padding={["8px", "8px", "14px 0px 17px 14px"]}
                     color={"#747272"}
-                    fontFamily={"Bossa"}
                     fontSize={"14px"}
                     fontWeight={400}
                     textTransform={"capitalize"}
@@ -185,27 +186,14 @@ const MeetUs = () => {
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
 
-                  <Text
-                    textOverflow={"ellipsis"}
-                    color={"black"}
-                    fontStyle={"normal"}
-                    fontFamily={"Bossa"}
-                    fontSize={["15px", "15px", "20px"]}
-                    fontWeight={700}
-                    lineHeight={"normal"}
-                    overflow={"hidden"}
-                    noOfLines={2}
-                    textTransform={"capitalize"}
-                  >
-                    {el.attributes.Heading}
-                  </Text>
+                 
 
                   <Text
+                  fontFamily={"Bossa-ExtendedBold"}
                     margin={"17px 13px 79px 13px"}
                     textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontFamily={"Bossa"}
                     fontSize={"20px"}
                     fontWeight={700}
                     lineHeight={"normal"}

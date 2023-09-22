@@ -10,14 +10,14 @@ import { useParams } from "react-router-dom";
 const BreadcrumbCareer = () => {
   return (
     <>
-      <Breadcrumb mt={["164px"]} marginLeft={["61px"]}>
+      <Breadcrumb mt={["111px", "111px", "164px", "164px"]} marginLeft={["20px", "20px", "61px", "61px"]}>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} fontSize={["12px", "12px", "16px", "16px"]} href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
 
        
         <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href="#">Career</BreadcrumbLink>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} fontSize={["12px", "12px", "16px", "16px"]} href="#">Career</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
     </>

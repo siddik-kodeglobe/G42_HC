@@ -55,6 +55,7 @@ const Category = () => {
           {/* Title  */}
           <Box>
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               fontSize={["32px"]}
               fontWeight={700}
               lineHeight={"normal"}
@@ -72,6 +73,7 @@ const Category = () => {
             flexDir={"column"}
           >
             <Text
+            fontFamily={"Bossa-Regular"}
               h={["54px"]}
               w={["100%"]}
               cursor={"pointer"}
@@ -87,6 +89,7 @@ const Category = () => {
               Omics
             </Text>
             <Text
+            fontFamily={"Bossa-Regular"}
               h={["54px"]}
               w={["100%"]}
               cursor={"pointer"}
@@ -103,6 +106,7 @@ const Category = () => {
               Digital Health
             </Text>
             <Text
+            fontFamily={"Bossa-Regular"}
               h={["54px"]}
               w={["100%"]}
               cursor={"pointer"}
@@ -119,6 +123,7 @@ const Category = () => {
               Advanced Diagnostic
             </Text>
             <Text
+            fontFamily={"Bossa-Regular"}
               h={["54px"]}
               w={["100%"]}
               cursor={"pointer"}
@@ -135,6 +140,7 @@ const Category = () => {
               Pharma & Therapeutics
             </Text>
             <Text
+            fontFamily={"Bossa-Regular"}
               h={["54px"]}
               w={["100%"]}
               cursor={"pointer"}
@@ -151,6 +157,7 @@ const Category = () => {
               IROS
             </Text>
             <Text
+            fontFamily={"Bossa-Regular"}
               h={["54px"]}
               w={["100%"]}
               cursor={"pointer"}

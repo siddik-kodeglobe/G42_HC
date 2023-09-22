@@ -12,11 +12,11 @@ const NewsBreadcrumb = () => {
       <Box padding={"115px 60px 0px 60px"}>
         <Breadcrumb>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <BreadcrumbLink href="#">Career</BreadcrumbLink>
+            <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">News</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       </Box>

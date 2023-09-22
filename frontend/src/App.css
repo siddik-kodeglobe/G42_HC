@@ -40,11 +40,61 @@
 
 /* File: font.css */
 @font-face {
-  font-family: 'Bossa';
+  font-family: 'Bossa-Black';
   src: local('Bossa'),
-  url('./assets/fonts/Og/Bossa-Regular.woff2') format(woff2),
-  url('./assets/fonts/Og/Bossa-Bold.woff2') format(woff2),
-  url('./assets/fonts/Og/Bossa-ExtendedBold.woff2') format(woff2),
-  url('./assets/fonts/Og/Bossa-ExtendedRegular.woff2') format(woff2),
-  url('./assets/fonts/Og/Bossa-Light.woff2') format(woff2);
+  url('./assets/fonts/Og/Bossa-Black.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-ExtendedBlack';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-ExtendedBlack.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-Bold';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-Bold.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-ExtendedBold';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-ExtendedBold.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-Light';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-Light.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-ExtendedLight';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-ExtendedLight.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-Medium';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-Medium.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-ExtendedMedium';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-ExtendedMedium.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-Regular';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-Regular.woff') format(woff)
+}
+
+@font-face {
+  font-family: 'Bossa-ExtendedRegular';
+  src: local('Bossa'),
+  url('./assets/fonts/Og/Bossa-ExtendedRegular.woff') format(woff)
 }

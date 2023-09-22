@@ -12,15 +12,15 @@ const AU_Footer = () => {
         gap={["12px", "12px", ""]}
       >
         <Text
+        fontFamily={"Bossa-ExtendedBold"}
           color={"#00AFFF"}
-          fontFamily={"Bossa"}
           fontSize={["24px", "24px", "48px"]}
           fontWeight={700}
         >
           →Join Our Team
         </Text>
         <Button
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedMedium"}
           fontSize={["12px", "12px", "16px"]}
           fontWeight={500}
           textTransform={"capitalize"}
@@ -42,8 +42,8 @@ const AU_Footer = () => {
         justifyContent={"space-between"}
       >
         <Text
+          fontFamily={"Bossa-ExtendedBold"}
           maxW={["","","595px"]}
-          fontFamily={"Bossa"}
           fontSize={["24px", "24px", "48px"]}
           fontWeight={700}
           color={"black"}
@@ -51,7 +51,7 @@ const AU_Footer = () => {
           Partner with G42 Healthcare
         </Text>
         <Button
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedMedium"}
           fontSize={["12px", "12px", "16px"]}
           fontWeight={500}
           textTransform={"capitalize"}

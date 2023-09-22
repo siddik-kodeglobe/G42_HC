@@ -55,17 +55,18 @@ const CareerVideo = () => {
               right={[1, 1, 5]}
               height={["50px", "50px", "214px"]}
               w={"96vw"}
-              padding={["15px 50px", "75px 148px"]}
+              padding={["15px 50px", "15px 50px", "75px 148px", "75px 148px"]}
               mt={5}
               justifyContent={"space-between"}
               alignItems={"center"}
               backgroundColor={"white"}
             >
-              <Flex>
+              <Flex flexDir={["column", "column", "row", "row",]}>
                 <Text
-                  w={"50%"}
-                  fontFamily={"bossa"}
-                  fontSize={["24px", "24px", "48px"]}
+fontFamily={"Bossa-ExtendedBold"}
+                  w={["100%", "100%", "50%", "50%"]}
+                  
+                  fontSize={["24px", "24px", "48px", "48px"]}
                   textTransform={"capitalize"}
                   fontWeight={700}
                 >
@@ -73,9 +74,10 @@ const CareerVideo = () => {
                 </Text>
 
                 <Text
+fontFamily={"Bossa-Light"}
                 color={"#747272"}
-                  w={"50%"}
-                  fontSize={["9px", "9px", "18px"]}
+                  w={["100%", "100%", "50%", "50%"]}
+                  fontSize={["9px", "9px", "18px", "18px"]}
                   fontWeight={300}
                   letterSpacing={["-0.42px"]}
                 >

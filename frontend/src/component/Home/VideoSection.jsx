@@ -39,8 +39,8 @@ const VideoSection = () => {
           >
             <Box>
               <Text
+              fontFamily={"Bossa-Regular"}
                 color={"white"}
-                fontFamily={"Bossa"}
                 fontSize={["16px", "16px", "20px", "24px"]}
                 fontWeight={400}
                 fontStyle={"normal"}
@@ -49,11 +49,11 @@ const VideoSection = () => {
                 Supporting tagline: Max one line statement.
               </Text>
               <Text
-                w={["", "", "75%", "75%"]}
+              fontFamily={"Bossa-ExtendedBold"}
+                w={["", "", "66%", "66%"]}
                 textShadow={"0px 4px 30px rgba(0, 65, 65, 0.27)"}
                 color={"white"}
-                fontFamily={"Bossa"}
-                fontSize={["28px", "28px", "50px", "80px"]}
+                fontSize={["28px", "28px", "50px", "65px"]}
                 fontWeight={700}
                 fontStyle={"normal"}
                 letterSpacing={"-0.72px"}

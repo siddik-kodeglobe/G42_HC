@@ -12,7 +12,7 @@ const JoinUsMarquee = () => {
 
   return (
     <>
-      <Box mt={111}>
+      <Box mt={["91px", "91px", "111px", "111px"]}>
         <Marquee autoFill>
           <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
             <hr
@@ -24,8 +24,10 @@ const JoinUsMarquee = () => {
             />
 
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
+
               textAlign={"center"}
-              fontFamily={"Bossa"}
+              color={"black"}
               fontSize={["32px", "32px", "50px", "60px"]}
               fontWeight={700}
             >

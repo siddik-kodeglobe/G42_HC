@@ -5,7 +5,15 @@ const EnquiryForm = () => {
   return (
     <>
       <Flex justifyContent={"space-between"}>
-        <Box border={"1px solid #D9D9D9"} w={["35%"]} paddingLeft={["26px"]} paddingTop={["90px"]}> <Text
+        <Box
+          border={"1px solid #D9D9D9"}
+          w={["35%"]}
+          paddingLeft={["26px"]}
+          paddingTop={["90px"]}
+        >
+          {" "}
+          <Text
+            fontFamily={"Bossa-ExtendedBold"}
             w={["326px"]}
             fontSize={["32px"]}
             fontWeight={[700]}
@@ -17,13 +25,15 @@ const EnquiryForm = () => {
             Did not find what you are Looking for?
           </Text>
           <Text
-          fontSize={["18px"]}
-          fontWeight={[400]}
-          lineHeight={"normal"}
-          fontStyle={"normal"}
-          color={"#747272"}
-          >Tell us more about your specifics.</Text>
-        
+          fontFamily={"Bossa-Regular"}
+            fontSize={["18px"]}
+            fontWeight={[400]}
+            lineHeight={"normal"}
+            fontStyle={"normal"}
+            color={"#747272"}
+          >
+            Tell us more about your specifics.
+          </Text>
         </Box>
 
         <Box w={["65%"]} border={"1px solid #D9D9D9"}>
@@ -36,6 +46,7 @@ const EnquiryForm = () => {
             w={["710px"]}
           >
             <Text
+            fontFamily={"Bossa-Regular"}
               fontSize={["18px"]}
               lineHeight={"normal"}
               fontStyle={["normal"]}
@@ -64,11 +75,19 @@ const EnquiryForm = () => {
               backgroundColor={"#F5F5F5"}
               placeholder="Message"
             />
-            <Text fontSize={["12px"]} color={"#747272"} fontWeight={[400]} fontStyle={"normal"} lineHeight={"normal"}>
+            <Text
+            fontFamily={"Bossa-Regular"}
+              fontSize={["12px"]}
+              color={"#747272"}
+              fontWeight={[400]}
+              fontStyle={"normal"}
+              lineHeight={"normal"}
+            >
               This site is protected by reCAPTCHA and the Google Privacy Policy
               and Terms of Service apply.
             </Text>
             <Button
+            fontFamily={"Bossa-ExtendedMedium"}
               fontSize={["16px"]}
               fontWeight={[500]}
               lineHeight={["22px"]}

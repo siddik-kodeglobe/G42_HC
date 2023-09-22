@@ -88,8 +88,8 @@ const News = () => {
             padding={["40px 15px 20px 15px", "72px 60px 0px 178px"]}
           >
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               color={"white"}
-              fontFamily={"Bossa"}
               fontSize={"32px"}
               fontWeight={700}
             >
@@ -155,8 +155,8 @@ const News = () => {
             <Swiper
             speed={750}
               breakpoints={{
-                640: {
-                  slidesPerView: 1.75,
+                390: {
+                  slidesPerView: 1.25,
                   slidesOffsetBefore: 0,
                   spaceBetween: 22,
                 },
@@ -179,23 +179,25 @@ const News = () => {
             >
               {data?.map((el) => (
                 <SwiperSlide className={style.swipe_slide}>
-                  <Box backgroundSize={"cover"} w={"451px"} h={"338px"} backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`} position={"relative"}>
+                  <Box backgroundSize={"cover"} 
+                  // w={["238px", "238px", "451px", "451px"]}
+                   h={["179px", "179px", "338px", "338px"]} backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`} position={"relative"}>
                     {/* <Image
                       w={["238px", "238px", "451px"]}
                       src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
                     /> */}
                   </Box>
                   <Box
-                    w={["238px", "238px", "451px"]}
+                    // w={["238px", "238px", "451px", "451px"]}
                     paddingRight={[8, 8, 9]}
                     position={"absolute"}
                     bottom={1.5}
                     left={5}
                   >
                     <Text
+                    fontFamily={"Bossa-Regular"}
                       noOfLines={2}
                       color={"white"}
-                      fontFamily={"Bossa"}
                       fontSize={["7px", "7px", "14px"]}
                       fontWeight={500}
                       lineHeight={"normal"}
@@ -203,12 +205,12 @@ const News = () => {
                       {convertData(el.attributes.createdAt)}
                     </Text>
                     <Text
+                    fontFamily={"Bossa-Medium"}
                       mt={"5px"}
                       h={"96px"}
                       maxHeight={"96px"}
                       marginBottom={"15px"}
                       color={"white"}
-                      fontFamily={"Bossa"}
                       fontSize={["10px", "10px", "15px", "20px"]}
                       fontWeight={500}
                       lineHeight={"normal"}

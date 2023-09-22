@@ -43,6 +43,7 @@ const Video = () => {
           h={"341px"}
         >
           <Text
+          fontFamily={"Bossa-ExtendedBold"}
             position={"absolute"}
             bottom={["22px","22px","45px","45px"]}
             left={["24px","24px","60px","60px"]}

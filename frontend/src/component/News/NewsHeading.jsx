@@ -6,7 +6,7 @@ const NewsHeading = () => {
     <>
       <Box padding={["14px 60px 39px","14px 60px 39px","41px 60px","41px 60px"]}>
         <Text
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedBold"}
           fontWeight={700}
           lineHeight={"81px"}
           letterSpacing={"-0.72px"}

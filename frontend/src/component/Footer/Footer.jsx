@@ -11,7 +11,6 @@ const Footer = () => {
   return (
     <>
       <Flex
-        fontFamily={"Bossa"}
         fontSize={14}
         fontWeight={700}
         color={"black"}
@@ -38,17 +37,17 @@ const Footer = () => {
             alignItems={"top"}
             gap={7}
           >
-            <Flex flexDir={"column"}>
-              <Link href={"/about"}>About G42 Healthcare</Link>
-              <Link href="/news">News</Link>
-              <Link href="/whatwedo">What We Do</Link>
-              <Link href="casestudy">Case Studies</Link>
+            <Flex gap={"7px"} flexDir={"column"}>
+              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href={"/about"}>About G42 Healthcare</Link>
+              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/news">News</Link>
+              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/whatwedo">What We Do</Link>
+              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="casestudy">Case Studies</Link>
             </Flex>
 
-            <Flex flexDir={"column"}>
-              <Link href="/career">Careers</Link>
-              <Link href="/contactus">Contact Us</Link>
-              <Text>Cookies Policy</Text>
+            <Flex gap={"7px"} flexDir={"column"}>
+              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/career">Careers</Link>
+              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/contactus">Contact Us</Link>
+              <Text fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"}>Cookies Policy</Text>
             </Flex>
           </Flex>
         </Flex>
@@ -60,7 +59,7 @@ const Footer = () => {
           alignItems={"end"}
           >
           <Box w={"fit-content"}>   
-            <Text>SOCIAL MEDIA:</Text>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["14px"]}>SOCIAL MEDIA:</Text>
             <Flex mt={2} gap={"15px"}>
               <Image w={18} src={instaIcon} />
               <Image w={18} src={linkedinIcon} />

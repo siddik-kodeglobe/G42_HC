@@ -9,26 +9,29 @@ const CollabHeading = () => {
         alignItems={"start"}
         justifyContent={"space-between"}
         margin={["66px 12% 57px 5%"]}
+        flexDir={["column", "column", "row", "row"]}
       >
-        <Box w={["448px"]} maxW={"100%"}>
+        <Box w={["100vw", "100vw", "448px", "448px"]} maxW={"100%"}>
           <Text
+          fontFamily={"Bossa-ExtendedBold"}
             alignItems={"start"}
-            fontSize={["60px"]}
+            fontSize={["24px", "24px", "60px","60px"]}
             lineHeight={["81px"]}
             letterSpacing={["-0.72px"]}
             fontStyle={["normal"]}
-            fontWeight={700}
+            // fontWeight={700}
           >
             Opening Headline 1
           </Text>
         </Box>
         <Box>
           <Text
-            w={["453px"]}
+          fontFamily={"Bossa-Light"}
+            w={["100vw", "100vw", "453px", "453px"]}
             maxW={"100%"}
             alignItems={"start"}
             color={"#747272"}
-            fontSize={"14px"}
+            fontSize={["12px", "12px", "14px", "14px"]}
             fontWeight={300}
             letterSpacing={"-0.42px"}
             lineHeight={["24px"]}
@@ -40,7 +43,8 @@ const CollabHeading = () => {
           </Text>
 
           <Text
-            w={["453px"]}
+          fontFamily={"Bossa-Light"}
+            w={["100vw", "100vw", "453px", "453px"]}
             maxW={"100%"}
             alignItems={"start"}
             color={"#747272"}

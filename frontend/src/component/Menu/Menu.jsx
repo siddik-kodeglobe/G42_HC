@@ -55,7 +55,8 @@ const Menu = () => {
         <DrawerOverlay />
         <DrawerContent padding={0} margin={0}>
           
-            <Box w={"100%"} border={"4px"}>
+          {/* fix the bug */}
+            <Box w={"100%"} h={"294px"} border={"4px"}>
             <ReactPlayer
           width={"100%"}
           height={"100%"}
@@ -68,12 +69,17 @@ const Menu = () => {
             </Box>
 
           <DrawerBody>
-            <Flex flexDirection={"column"}>
-            <Link href="/about" fontSize={["30px"]} fontWeight={700} color={"black"}>About G42 Healthcare</Link>
-            <Link href="/whatwedo" fontSize={["30px"]} fontWeight={700} color={"black"}>What we do</Link>
-            <Link href="/" fontSize={["30px"]} fontWeight={700} color={"black"}>Partnerships</Link>
-            <Link href="/resources" fontSize={["30px"]} fontWeight={700} color={"black"}>Resources</Link>
-            <Link href="/news" fontSize={["30px"]} fontWeight={700} color={"black"}>News</Link>
+            <Flex gap={"22px"} flexDirection={"column"}>
+            <Link fontFamily={"Bossa-ExtendedBold"} href="/about" fontSize={["30px"]} fontWeight={700} color={"black"}>About G42 Healthcare</Link>
+            <Link fontFamily={"Bossa-ExtendedBold"} href="/whatwedo" fontSize={["30px"]} fontWeight={700} color={"black"}>What we do</Link>
+            <Link fontFamily={"Bossa-ExtendedBold"} href="/collaborations" fontSize={["30px"]} fontWeight={700} color={"black"}>Partnerships</Link>
+            <Link fontFamily={"Bossa-ExtendedBold"} href="/resources" fontSize={["30px"]} fontWeight={700} color={"black"}>Resources</Link>
+            <Link fontFamily={"Bossa-ExtendedBold"} href="/news" fontSize={["30px"]} fontWeight={700} color={"black"}>News</Link>
+
+            <Flex gap={"46px"}>
+            <Link fontFamily={"Bossa-Regular"} href="/contactus" fontSize={["20px"]} fontWeight={400} color={"black"}>Contact</Link>
+            <Link fontFamily={"Bossa-Regular"} href="/career" fontSize={["20px"]} fontWeight={400} color={"black"}>Careers</Link>
+            </Flex>
             </Flex>
           </DrawerBody>
 

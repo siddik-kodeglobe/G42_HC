@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react'
 const Footer_CU = () => {
   return (
     <>
-    <Box margin={["55px 173px 31px 180px"]}>
+    <Box margin={["80px 20px 22px 20px", "55px 173px 31px 180px", "55px 173px 31px 180px"]}>
       <Footer/>
       </Box>
     </>

@@ -23,7 +23,7 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               01
             </Text>
             <Box w={"502px"} maxW={"100%"}>
@@ -35,6 +35,7 @@ const Cards = () => {
                 src={Omics}
               />
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px","5px","18px","18px"]}
                 color={"black"}
                 fontSize={["20px","2 0px","30px","30px"]}
@@ -46,6 +47,7 @@ const Cards = () => {
                 Omics
               </Text>
               <Text
+              fontFamily={"Bossa-Light"}
                 mt={["5px"]}
                 fontSize={["12px","12px","16px","16px"]}
                 fontStyle={"normal"}
@@ -60,6 +62,7 @@ const Cards = () => {
                 adipiscing commodo
               </Text>
               <Button
+              fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px","8px","20px","20px"]}
                 backgroundColor={"#00D2AA"}
                 _hover={{ backgroundColor: "#00D2AA" }}
@@ -85,7 +88,7 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               02
             </Text>
             <Box w={"502px"} maxW={"100%"}>
@@ -97,6 +100,7 @@ const Cards = () => {
                 src={DigitalHealth}
               />
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px","5px","18px","18px"]}
                 color={"black"}
                 fontSize={["20px","2 0px","30px","30px"]}
@@ -108,6 +112,7 @@ const Cards = () => {
                 Digital Health
               </Text>
               <Text
+              fontFamily={"Bossa-Light"}
                 mt={["5px"]}
                 fontSize={["12px","12px","16px","16px"]}
                 fontStyle={"normal"}
@@ -122,6 +127,7 @@ const Cards = () => {
                 adipiscing commodo
               </Text>
               <Button
+              fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px","8px","20px","20px"]}
                 backgroundColor={"#00D2AA"}
                 _hover={{ backgroundColor: "#00D2AA" }}
@@ -159,7 +165,7 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               03
             </Text>
             <Box w={"502px"} maxW={"100%"}>
@@ -171,6 +177,7 @@ const Cards = () => {
                 src={AdvancedDiagnostics}
               />
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px","5px","18px","18px"]}
                 color={"black"}
                 fontSize={["20px","2 0px","30px","30px"]}
@@ -182,6 +189,7 @@ const Cards = () => {
                 Advanced Diagnostics
               </Text>
               <Text
+              fontFamily={"Bossa-Light"}
                 mt={["5px"]}
                 fontSize={["12px","12px","16px","16px"]}
                 fontStyle={"normal"}
@@ -196,6 +204,7 @@ const Cards = () => {
                 adipiscing commodo
               </Text>
               <Button
+              fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px","8px","20px","20px"]}
                 backgroundColor={"#00D2AA"}
                 _hover={{ backgroundColor: "#00D2AA" }}
@@ -221,7 +230,7 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               04
             </Text>
             <Box w={"502px"} maxW={"100%"}>
@@ -233,6 +242,7 @@ const Cards = () => {
                 src={Pharma}
               />
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px","5px","18px","18px"]}
                 color={"black"}
                 fontSize={["20px","2 0px","30px","30px"]}
@@ -244,6 +254,7 @@ const Cards = () => {
                 Pharma & Therapeutics
               </Text>
               <Text
+              fontFamily={"Bossa-Light"}
                 mt={["5px"]}
                 fontSize={["12px","12px","16px","16px"]}
                 fontStyle={"normal"}
@@ -258,6 +269,7 @@ const Cards = () => {
                 adipiscing commodo
               </Text>
               <Button
+              fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px","8px","20px","20px"]}
                 backgroundColor={"#00D2AA"}
                 _hover={{ backgroundColor: "#00D2AA" }}
@@ -295,7 +307,7 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               05
             </Text>
             <Box w={"502px"} maxW={"100%"}>
@@ -307,6 +319,7 @@ const Cards = () => {
                 src={IROS}
               />
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px","5px","18px","18px"]}
                 color={"black"}
                 fontSize={["20px","2 0px","30px","30px"]}
@@ -318,6 +331,7 @@ const Cards = () => {
                 IROS
               </Text>
               <Text
+              fontFamily={"Bossa-Light"}
                 mt={["5px"]}
                 fontSize={["12px","12px","16px","16px"]}
                 fontStyle={"normal"}
@@ -332,6 +346,7 @@ const Cards = () => {
                 adipiscing commodo
               </Text>
               <Button
+              fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px","8px","20px","20px"]}
                 backgroundColor={"#00D2AA"}
                 _hover={{ backgroundColor: "#00D2AA" }}
@@ -357,7 +372,7 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               06
             </Text>
             <Box w={"502px"} maxW={"100%"}>
@@ -369,6 +384,7 @@ const Cards = () => {
                 src={EnvironmentalScience}
               />
               <Text
+              fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px","5px","18px","18px"]}
                 color={"black"}
                 fontSize={["20px","2 0px","30px","30px"]}
@@ -380,6 +396,7 @@ const Cards = () => {
                 Environmental Science
               </Text>
               <Text
+              fontFamily={"Bossa-Light"}
                 mt={["5px"]}
                 fontSize={["12px","12px","16px","16px"]}
                 fontStyle={"normal"}
@@ -394,6 +411,7 @@ const Cards = () => {
                 adipiscing commodo
               </Text>
               <Button
+              fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px","8px","20px","20px"]}
                 backgroundColor={"#00D2AA"}
                 _hover={{ backgroundColor: "#00D2AA" }}

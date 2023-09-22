@@ -12,19 +12,19 @@ const BreadCrumbCaseStudy = () => {
   return (
     <>
       <Breadcrumb mt={["164px"]} marginLeft={["61px"]}>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        <BreadcrumbItem fontSize={["12px", "12px", "16px", "16px"]}>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Resources</BreadcrumbLink>
+        <BreadcrumbItem fontSize={["12px", "12px", "16px", "16px"]}>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Resources</BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbItem>
-          <BreadcrumbLink href="#">Case Studies</BreadcrumbLink>
+        <BreadcrumbItem fontSize={["12px", "12px", "16px", "16px"]}>
+          <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">Case Studies</BreadcrumbLink>
         </BreadcrumbItem>
 
-        <BreadcrumbItem isCurrentPage>
+        <BreadcrumbItem fontFamily={"Bossa-Light"} fontSize={["12px", "12px", "16px", "16px"]} isCurrentPage>
           <BreadcrumbLink href="#">Title</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>

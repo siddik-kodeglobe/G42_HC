@@ -68,7 +68,7 @@ const SocialMedia = () => {
     ];
 
     const day = inputDate.getUTCDate();
-    const formattedDay = (day < 10) ? `0${day}` : day;
+    const formattedDay = day < 10 ? `0${day}` : day;
     const month = months[inputDate.getUTCMonth()];
     const year = inputDate.getUTCFullYear();
 
@@ -83,19 +83,49 @@ const SocialMedia = () => {
     <>
       <Box>
         <Flex
-            padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
-        
+          padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
-          <Text
-            fontFamily={"Bossa"}
-            fontSize={"32px"}
-            fontWeight={700}
-            fontStyle={"normal"}
+          <Flex
+            flexDirection={["column", "column", "row", "row"]}
+            gap={["11px", "11px", "25px", "25px"]}
+            alignItems={["start", "start", "center", "center"]}
           >
-            Social Media
-          </Text>
+            <Text
+              fontFamily={"Bossa-ExtendedBold"}
+              color={"black"}
+              fontSize={["24px", "24px", "60px", "60px"]}
+              fontWeight={700}
+              lineHeight={"normal"}
+              textTransform={"capitalize"}
+            >
+              Social Media
+            </Text>
+            <Flex
+              cursor={"pointer"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              backgroundColor={"#00D2AA"}
+              color={"white"}
+              // w={["128px", "128px", "182px", "182px"]}
+              // h={["40px", "40px", "55px", "55px"]}
+              borderRadius={"80px"}
+            >
+              <Text
+                fontFamily={"Bossa-ExtendedMedium"}
+                lineHeight={["11px", "11px", "22px", "22px"]}
+                textAlign={"center"}
+                fontSize={["12px", "12px", "16px", "16px"]}
+                textTransform={"capitalize"}
+                fontWeight={[400, 400, 500, 500]}
+                padding={"11px 21px"}
+                flexShrink={0}
+              >
+                All Social Media
+              </Text>
+            </Flex>
+          </Flex>
           <Flex alignItems={"center"} gap={5}>
             <Flex
               onClick={() => goPrev()}
@@ -166,18 +196,17 @@ const SocialMedia = () => {
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
-                  
                 <Box w={["285px", "285px", "451px"]}>
                   <Image
-                  w={["285px", "285px", "451px"]}
-                  h={["238px", "238px", "411px"]}
-                  src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                    w={["285px", "285px", "451px"]}
+                    h={["238px", "238px", "411px"]}
+                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
+                    fontFamily={"Bossa-Regular"}
                     mt={"30px"}
                     noOfLines={2}
                     color={"#747272"}
-                    fontFamily={"Bossa"}
                     fontSize={"14px"}
                     fontWeight={400}
                     textTransform={"capitalize"}
@@ -187,10 +216,10 @@ const SocialMedia = () => {
                   </Text>
 
                   <Text
-                  textOverflow={"ellipsis"}
+                  fontFamily={"Bossa-ExtendedBold"}
+                    textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontFamily={"Bossa"}
                     fontSize={"20px"}
                     fontWeight={700}
                     lineHeight={"normal"}

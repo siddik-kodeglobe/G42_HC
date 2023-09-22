@@ -6,7 +6,7 @@ const PioneeringHC = () => {
   return (
     <>
       <Box mt={"125px"}>
-        <Text fontSize={["32px", "32px", "48px"]} className={style.heading}>
+        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["32px", "32px", "48px"]} className={style.heading}>
           Pioneering Healthcare
         </Text>
         <Box padding={["20px", "20px", "56px 155px"]}>

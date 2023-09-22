@@ -8,13 +8,13 @@ const WhatWeDoFooter = () => {
       <Box style={{ margin: "-80px 10% 0px 10%" }}>
         <Flex
           flexDirection={["column", "column", "row"]}
-          alignItems={["start", "start", "center"]}
+          alignItems={["start", "start", "start", "start"]}
           gap={["12px", "12px", ""]}
           justifyContent={"space-between"}
         >
           <Text
+          fontFamily={"Bossa-ExtendedBold"}
             maxW={["", "", "595px"]}
-            fontFamily={"Bossa"}
             fontSize={["24px", "24px", "48px"]}
             fontWeight={700}
             color={"black"}
@@ -22,9 +22,9 @@ const WhatWeDoFooter = () => {
             Partner with G42 Healthcare
           </Text>
           <Button
+          fontFamily={"Bossa-ExtendedMedium"}
           height={["55px"]}
           w={["219px"]}
-            fontFamily={"Bossa"}
             fontSize={["12px", "12px", "16px"]}
             fontWeight={500}
             textTransform={"capitalize"}

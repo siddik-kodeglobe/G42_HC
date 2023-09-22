@@ -9,6 +9,7 @@ const SubCategory = ({name, email, dropemail, desc}) => {
         <Box borderLeft={"1px solid #D9D9D9"}>
           <Box padding={["100px 60px 140px 98px"]}>
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
             fontSize={["32px"]}
             fontWeight={[700]}
             fontStyle={"normal"}
@@ -16,6 +17,7 @@ const SubCategory = ({name, email, dropemail, desc}) => {
             color={"black"}
             >Looking to partner with {name}?</Text>
             <Text
+            fontFamily={"Bossa-Bold"}
             mt={["14px"]}
             fontSize={["24px"]}
             fontStyle={"normal"}
@@ -23,7 +25,7 @@ const SubCategory = ({name, email, dropemail, desc}) => {
             lineHeight={"normal"}
             color={"var(--Emergent-Green, #00D2AA)"}
             >{email}</Text>
-            <Text fontSize={["18px"]} fontStyle={"normal"} color={"#747272"} fontWeight={400} mt={"11px"}>
+            <Text fontFamily={"Bossa-Regular"} fontSize={["18px"]} fontStyle={"normal"} color={"#747272"} fontWeight={400} mt={"11px"}>
                 {desc}  
             </Text>
 
@@ -34,8 +36,9 @@ const SubCategory = ({name, email, dropemail, desc}) => {
                 {/* mail div  */}
               <Box>
                 <Image mb={["14px"]} src={emailIcon} />
-                <Text mb={["6px"]}>Email</Text>
+                <Text fontFamily={"Bossa-Regular"} mb={["6px"]}>Email</Text>
                 <Text
+                fontFamily={"Bossa-Regular"}
                   fontSize={["16px"]}
                   fontWeight={[400]}
                   lineHeight={["normal"]}
@@ -44,6 +47,7 @@ const SubCategory = ({name, email, dropemail, desc}) => {
                   Drop us a line for general enquiry:
                 </Text>
                 <Text
+                fontFamily={"Bossa-Bold"}
                   fontSize={["16px"]}
                   fontWeight={[400]}
                   lineHeight={["normal"]}
@@ -57,8 +61,9 @@ const SubCategory = ({name, email, dropemail, desc}) => {
 
               <Box>
                 <Image mb={["14px"]} src={mapIcon} />
-                <Text mb={["6px"]}>Office</Text>
+                <Text  fontFamily={"Bossa-Regular"} mb={["6px"]}>Office</Text>
                 <Text
+                fontFamily={"Bossa-Regular"}
                   fontSize={["16px"]}
                   fontWeight={[400]}
                   lineHeight={["normal"]}
@@ -69,6 +74,7 @@ const SubCategory = ({name, email, dropemail, desc}) => {
                   Dhabi, United Arab Emirates.
                 </Text>
                 <Text
+                fontFamily={"Bossa-Regular"}
                   fontSize={["16px"]}
                   fontWeight={[400]}
                   lineHeight={["normal"]}

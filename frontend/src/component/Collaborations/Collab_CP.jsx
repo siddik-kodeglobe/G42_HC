@@ -37,8 +37,10 @@ const Collab_CP = () => {
 
   return (
     <>
-      <Box w={"100vw"} maxW={"100%"} background={"linear-gradient(180deg, #F5F5F5 0%, rgba(245, 245, 245, 0.00) 100%)"} paddingTop={"74px"}>
+      <Box w={"100vw"} maxW={"100%"} background={"linear-gradient(0deg, #F5F5F5 0%, rgba(245, 245, 245, 0.00) 100%)"} paddingTop={"74px"}>
         <Text
+        fontFamily={"Bossa-ExtendedBold"}
+        color={"black"}
           fontSize={["32px", "32px", "60px"]}
           fontWeight={700}
           className={style1.text}
@@ -46,9 +48,10 @@ const Collab_CP = () => {
           Clients & Partners
         </Text>
         <Text
+        fontFamily={"Bossa-Regular"}
           padding={["5px 20px"]}
-          w={["600px"]}
-          maxW={"100vw"}
+          w={["800px"]}
+          maxW={"100%"}
           margin={"auto"}
           textAlign={"center"}
           fontSize={["18px", "18px", "24px"]}

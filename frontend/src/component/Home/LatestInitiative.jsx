@@ -252,8 +252,8 @@ const LatestInitiative = () => {
           justifyContent={"space-between"}
         >
           <Text
+          fontFamily={"Bossa-ExtendedBold"}
             color={"white"}
-            fontFamily={"Bossa"}
             fontSize={"48px"}
             fontWeight={700}
             fontStyle={"normal"}
@@ -347,9 +347,9 @@ const LatestInitiative = () => {
             </Box>
 
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               mt={"0px"}
               color={"white"}
-              fontFamily={"Bossa"}
               fontSize={["16px", "16px", "32px"]}
               fontWeight={700}
               lineHeight={"normal"}
@@ -360,7 +360,7 @@ const LatestInitiative = () => {
             <Text
               mt={"2.5px"}
               color={"white"}
-              fontFamily={"Bossa"}
+              fontFamily={"Bossa-Regular"}
               fontSize={["8px", "8px", "16px"]}
               fontWeight={400}
               lineHeight={"normal"}
@@ -422,7 +422,7 @@ const LatestInitiative = () => {
             <Text
               mt={"7px"}
               color={"white"}
-              fontFamily={"Bossa"}
+              fontFamily={"Bossa-ExtendedBold"}
               fontSize={["16px", "16px", "32px"]}
               fontWeight={700}
               lineHeight={"normal"}
@@ -433,7 +433,7 @@ const LatestInitiative = () => {
             <Text
               mt={"2.5px"}
               color={"white"}
-              fontFamily={"Bossa"}
+              fontFamily={"Bossa-Regular"}
               fontSize={["8px", "8px", "16px"]}
               fontWeight={400}
               lineHeight={"normal"}
@@ -496,7 +496,7 @@ const LatestInitiative = () => {
             <Text
               mt={"7px"}
               color={"white"}
-              fontFamily={"Bossa"}
+              fontFamily={"Bossa-ExtendedBold"}
               fontSize={["16px", "16px", "32px"]}
               fontWeight={700}
               lineHeight={"normal"}
@@ -507,7 +507,7 @@ const LatestInitiative = () => {
             <Text
               mt={"2.5px"}
               color={"white"}
-              fontFamily={"Bossa"}
+              fontFamily={"Bossa-Regular"}
               fontSize={["8px", "8px", "16px"]}
               fontWeight={400}
               lineHeight={"normal"}

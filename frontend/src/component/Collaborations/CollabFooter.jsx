@@ -9,13 +9,14 @@ const CollabFooter = () => {
         <Flex flexDirection={["column", "column", "row"]} justifyContent={"space-between"} alignItems={"start"}>
           <Box w={["100%", "100%", "65%"]}>
             <Text
-            fontFamily={"Bossa"}
+fontFamily={"Bossa-ExtendedBold"}
             fontStyle={"normal"}
             fontWeight={700}
             fontSize={["24px", "24px", "48px"]}
             >Curious to know more</Text>
             <Text
-            fontFamily={"Bossa"}
+fontFamily={"Bossa-Regular"}
+
             fontStyle={"normal"}
             fontWeight={500}
             fontSize={["12px", "12px", "14px"]}
@@ -29,7 +30,9 @@ const CollabFooter = () => {
             </Text>
           </Box>
           <Box>
-            <Button borderRadius={"80px"} mt={["16px", 0,0]} padding={"15px 34px"} textTransform={"capitalize"} fontSize={["12px", "12px", "16px"]} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"#004141"}>
+            <Button
+fontFamily={"Bossa-ExtendedMedium"}
+            borderRadius={"80px"} mt={["16px", 0,0]} padding={"15px 34px"} textTransform={"capitalize"} fontSize={["12px", "12px", "16px"]} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"var(--Emergent-Green, #00D2AA)"}>
               Make Enquiry
             </Button>
           </Box>

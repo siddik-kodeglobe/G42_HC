@@ -278,8 +278,8 @@ const OurServices = () => {
         borderRadius={"0px"}
       >
         <Text
+        fontFamily={"Bossa-ExtendedBold"}
           color={"white"}
-          fontFamily={"Bossa"}
           paddingTop={["51px", "51px", "69px"]}
           textAlign={"center"}
           fontSize={["16px", "16px", "32px"]}
@@ -363,7 +363,7 @@ const OurServices = () => {
               </Box>
             </Box>
             <Text
-              fontFamily={"Bossa"}
+            fontFamily={"Bossa-ExtendedBold"}
               fontSize={["24px", "24px", "48px"]}
               fontWeight={700}
               lineHeight={"normal"}
@@ -372,7 +372,7 @@ const OurServices = () => {
               {firstTitle}
             </Text>
             <Text
-              fontFamily={"Bossa"}
+            fontFamily={"Bossa-Regular"}
               fontSize={["7px", "7px", "14px"]}
               fontWeight={400}
               color={"#747272"}
@@ -436,8 +436,8 @@ const OurServices = () => {
               </Box>
             </Box>
             <Text
+            fontFamily={"Bossa-ExtendedBold"}
               paddingBottom={"25px"}
-              fontFamily={"Bossa"}
               fontSize={["16px", "16px", "32px"]}
               fontWeight={700}
               lineHeight={"normal"}

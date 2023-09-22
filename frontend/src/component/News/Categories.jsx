@@ -54,6 +54,7 @@ const Categories = () => {
       >
         {categoryArr?.map((el, ind) => (
           <Text
+          fontFamily={"Bossa-Regular"}
           flexShrink={0}
             cursor={"pointer"}
             fontSize={["12px", "12px","20px","20px"]}

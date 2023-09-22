@@ -22,7 +22,7 @@ const Title_NewsID = () => {
   return (
     <>
         <Box w={"70%"} margin={["67px 0px 0px 61px"]}>
-            <Text fontSize={["60px"]} fontStyle={"normal"} fontWeight={[700]} color={"black"} textTransform={"capitalize"}>{data.title}</Text>
+            <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["60px"]} fontStyle={"normal"} fontWeight={[700]} color={"black"} textTransform={"capitalize"}>{data.title}</Text>
             
         </Box>
         

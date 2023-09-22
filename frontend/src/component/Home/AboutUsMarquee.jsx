@@ -7,7 +7,7 @@ import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import homeVideo from "../../assets/logo/homeVideo.mp4";
 
-import g42Video from '../../assets/temp/Video/G42 Video.mp4'
+import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 
 const AboutUsMarquee = () => {
   const textRef = useRef(null);
@@ -26,8 +26,8 @@ const AboutUsMarquee = () => {
             />
 
             <Text
+              fontFamily={"Bossa-ExtendedBold"}
               textAlign={"center"}
-              fontFamily={"Bossa"}
               fontSize={["32px", "32px", "50px", "60px"]}
               fontWeight={700}
             >
@@ -51,16 +51,20 @@ const AboutUsMarquee = () => {
           alignItems={["self-start", "self-start", "self-start", "start"]}
         >
           <Box
-          pos={"relative"}
-          // paddingTop={"56.25%"}
+            pos={"relative"}
+            // paddingTop={"56.25%"}
             height={["214px", "214px", "377px"]}
             w={["352px", "352px", "619px"]}
           >
             <ReactPlayer
-            style={{position:"absolute", top: 0, left: 0, objectFit:"cover"}}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                objectFit: "cover",
+              }}
               width={"100%"}
               height={"377px"}
-              
               playing={true}
               loop={true}
               url={g42Video}
@@ -69,14 +73,13 @@ const AboutUsMarquee = () => {
           </Box>
           <Flex
             mt={["50px", "50px", "25px"]}
-            w={["100vw","100vw", "453px", "453px"]}
+            w={["100vw", "100vw", "453px", "453px"]}
             maxW={["100%", "100%", "453px", "453px"]}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
             <Text
-
-              fontFamily={"Bossa"}
+              fontFamily={"Bossa-Light"}
               fontSize={"18px"}
               fontStyle={"normal"}
               fontWeight={300}
@@ -96,11 +99,11 @@ const AboutUsMarquee = () => {
               43,000 participants from 125+ nationalities.
             </Text>
             <Button
+            fontFamily={"Bossa-ExtendedMedium"}
               mt={"15px"}
               _hover={{ bgColor: "#00D2AA" }}
               bgColor={"#00D2AA"}
               borderRadius={"80px"}
-              fontFamily={"Bossa"}
               fontSize={16}
               fontStyle={"normal"}
               fontWeight={500}

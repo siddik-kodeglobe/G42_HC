@@ -88,7 +88,7 @@ const SocialMedia = () => {
           justifyContent={"space-between"}
         >
           <Text
-            fontFamily={"Bossa"}
+          fontFamily={"Bossa-ExtendedBold"}
             fontSize={"32px"}
             fontWeight={700}
             fontStyle={"normal"}
@@ -140,6 +140,7 @@ const SocialMedia = () => {
 
         <Box>
           <Swiper
+          speed={750}
             breakpoints={{
               1024: {
                 slidesOffsetBefore: 150,
@@ -167,10 +168,10 @@ const SocialMedia = () => {
                   src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     mt={"30px"}
                     noOfLines={2}
                     color={"#747272"}
-                    fontFamily={"Bossa"}
                     fontSize={"14px"}
                     fontWeight={400}
                     textTransform={"capitalize"}
@@ -180,10 +181,10 @@ const SocialMedia = () => {
                   </Text>
 
                   <Text
+                  fontFamily={"Bossa-ExtendedBold"}
                   textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontFamily={"Bossa"}
                     fontSize={"20px"}
                     fontWeight={700}
                     lineHeight={"normal"}

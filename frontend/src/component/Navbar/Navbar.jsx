@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Flex, Image, Link } from '@chakra-ui/react'
 import logo from '../../assets/logo/logo.svg'
+import whiteLogo from '../../assets/logo/transparent logo.svg'
 import searchIcon from '../../assets/icons/searchIcon.svg'
+import whiteSearchIcon from '../../assets/icons/whiteSearchIcon.svg'
 
 
 const Navbar = () => {
@@ -22,9 +24,9 @@ const Navbar = () => {
     <>
       <Flex top={0} zIndex={9} backgroundColor={navBg ? "white" : "transparent"} position={"fixed"} w={"100vw"} maxW={"100%"} boxShadow={"0px 4px 13px rgba(0, 0, 0, 0.04)"} boxSizing='border-box' padding={"22px 60px"} justifyContent={"space-between"} alignItems={"center"}>
         <Link href="/">
-        <Image w={"80px"} cursor={"pointer"} src={logo} alt='logo'/>
+        <Image w={"80px"} cursor={"pointer"} src={navBg ? logo : whiteLogo} alt='logo'/>
         </Link>
-        <Image cursor={"pointer"} src={searchIcon} alt='searchIcon'/>
+        <Image cursor={"pointer"} src={navBg ? searchIcon : whiteSearchIcon} alt='searchIcon'/>
       </Flex>
     </>
   )

@@ -24,7 +24,7 @@ const Heading2 = () => {
 
   return (
     <>
-      <Box margin={["62px 414px 0px 178px"]}>
+      <Box fontFamily={"Bossa-Light"} margin={["36px 20px 0px 20px", "36px 20px 0px 20px", "62px 414px 0px 178px", "62px 414px 0px 178px"]}>
         <ReactMarkdown children={data} remarkPlugins={[remarkGfm]}/>
       </Box>
     </>
