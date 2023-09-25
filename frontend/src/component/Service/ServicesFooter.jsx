@@ -9,13 +9,13 @@ const ServicesFooter = () => {
         <Flex flexDirection={["column", "column", "row"]} justifyContent={"space-between"} alignItems={"start"}>
           <Box w={["100%", "100%", "60%"]}>
             <Text
-            fontFamily={"Bossa"}
+            fontFamily={"Bossa-ExtendedBold"}
             fontStyle={"normal"}
             fontWeight={700}
             fontSize={["24px", "24px", "48px"]}
             >Curious to know more</Text>
             <Text
-            fontFamily={"Bossa"}
+            fontFamily={"Bossa-Regular"}
             fontStyle={"normal"}
             fontWeight={500}
             fontSize={["12px", "12px", "14px"]}
@@ -29,7 +29,7 @@ const ServicesFooter = () => {
             </Text>
           </Box>
           <Box>
-            <Button borderRadius={"80px"} mt={["16px", 0,0]} padding={"15px 34px"} textTransform={"capitalize"} fontSize={["12px", "12px", "16px"]} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"#004141"}>
+            <Button fontFamily={"Bossa-ExtendedMedium"} borderRadius={"80px"} mt={["16px", 0,0]} padding={"15px 34px"} textTransform={"capitalize"} fontSize={["12px", "12px", "16px"]} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"#004141"}>
               Make Enquiry
             </Button>
           </Box>
@@ -42,7 +42,7 @@ const ServicesFooter = () => {
         justifyContent={"space-between"}
       >
         <Text
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedBold"}
           fontSize={["24px", "24px", "48px"]}
           fontWeight={700}
           color={"black"}
@@ -50,7 +50,7 @@ const ServicesFooter = () => {
           Partner with G42 Healthcare
         </Text>
         <Button
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedMedium"}
           fontSize={["12px", "12px", "16px"]}
           fontWeight={500}
           textTransform={"capitalize"}

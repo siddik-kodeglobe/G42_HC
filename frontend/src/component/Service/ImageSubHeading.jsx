@@ -10,18 +10,18 @@ const ImageSubHeading = () => {
       <Flex margin={["0px 22px", "0px 22px", "78px 0px"]} mt={"78px"} flexDirection={["column", "column", "row"]} justifyContent={"space-between"}>
         <Box w={"50%"}>
           <Text
-            fontFamily={"Bossa"}
+          fontFamily={"Bossa-ExtendedBold"}
             fontStyle={"normal"}
             fontWeight={"700"}
-            fontSize={["24px", "24px", "60px"]}
+            fontSize={["24px", "24px", "45px"]}
           >
             Sub Heading
           </Text>
         </Box>
         <Box mt={["14px", 0, 0]} w={["100%","100%", "50%"]}>
           <Text
+          fontFamily={"Bossa-Light"}
             color={"#747272"}
-            fontFamily={"Bossa"}
             fontStyle={"normal"}
             fontWeight={300}
             lineHeight={"22px"}
@@ -46,11 +46,11 @@ const ImageSubHeading = () => {
             genome even further.
           </Text>
           <Button
+          fontFamily={"Bossa-ExtendedMedium"}
             mt={"15px"}
             _hover={{ backgroundColor: "00D2AA" }}
             backgroundColor={"#00D2AA"}
             color={"white"}
-            fontFamily={"Bossa"}
             fontSize={"16px"}
             fontWeight={500}
             borderRadius={"80px"}

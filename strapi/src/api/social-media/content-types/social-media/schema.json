@@ -4,7 +4,8 @@
   "info": {
     "singularName": "social-media",
     "pluralName": "social-medias",
-    "displayName": "Social Media"
+    "displayName": "Social Media",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,11 +21,15 @@
       "required": true
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "string",
       "required": true
     }
   }

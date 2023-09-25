@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
@@ -91,13 +91,13 @@ const MeetUs = () => {
         >
           <Text
           fontFamily={"Bossa-ExtendedBold"}
-            fontSize={"32px"}
+            fontSize={["18px", "18px", "32px", "32px"]}
             fontWeight={700}
             fontStyle={"normal"}
           >
             Meet us at
           </Text>
-          <Flex alignItems={"center"} gap={5}>
+          <Flex display={["none", "none", "flex", "flex"]} alignItems={"center"} gap={5}>
             <Flex
               onClick={() => goPrev()}
               _hover={{ backgroundColor: "#00D2AA" }}
@@ -140,7 +140,7 @@ const MeetUs = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["", "","", "-45px"]}>
+        <Box mt={["-45px", "-45px","-45px", "-45px"]}>
           <Swiper
           speed={750}
             breakpoints={{
@@ -162,6 +162,7 @@ const MeetUs = () => {
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
+                <Link href={el.attributes.linkedin_link} _hover={{textDecoration: "none"}} isExternal>
                 <Box
                   w={["306px", "306px", "516px"]}
                   h={["285px", "285px", "450px"]}
@@ -194,16 +195,17 @@ const MeetUs = () => {
                     textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontSize={"20px"}
+                    fontSize={["12px", "12px", "20px", "20px"]}
                     fontWeight={700}
                     lineHeight={"normal"}
                     overflow={"hidden"}
-                    noOfLines={3}
+                    noOfLines={[2,2,3,3]}
                     textTransform={"capitalize"}
                   >
                     {el.attributes.title}
                   </Text>
                 </Box>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

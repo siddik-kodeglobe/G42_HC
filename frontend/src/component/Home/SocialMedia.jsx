@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
@@ -83,19 +83,19 @@ const SocialMedia = () => {
     <>
       <Box>
         <Flex
-          padding={["40px 15px 20px 15px","95px 60px 20px 150px"]}
+          padding={["40px 15px 0px 15px","95px 60px 20px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
           <Text
           fontFamily={"Bossa-ExtendedBold"}
-            fontSize={"32px"}
+            fontSize={["24px", "24px", "32px", "32px"]}
             fontWeight={700}
             fontStyle={"normal"}
           >
             Social Media
           </Text>
-          <Flex alignItems={"center"} gap={5}>
+          <Flex display={["none", "none", "flex", "flex"]} alignItems={"center"} gap={5}>
             <Flex
               onClick={() => goPrev()}
               _hover={{ backgroundColor: "#00D2AA" }}
@@ -138,7 +138,7 @@ const SocialMedia = () => {
           </Flex>
         </Flex>
 
-        <Box>
+        <Box mt={["-20px"]}>
           <Swiper
           speed={750}
             breakpoints={{
@@ -160,7 +160,7 @@ const SocialMedia = () => {
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
-                  
+                  <Link _hover={{textDecoration: "none"}} href={el.attributes.link} isExternal>
                 <Box w={["285px", "285px", "451px"]}>
                   <Image
                   w={["285px", "285px", "451px"]}
@@ -185,7 +185,7 @@ const SocialMedia = () => {
                   textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontSize={"20px"}
+                    fontSize={["12px", "12px", "20px", "20px"]}
                     fontWeight={700}
                     lineHeight={"normal"}
                     overflow={"hidden"}
@@ -195,6 +195,7 @@ const SocialMedia = () => {
                     {el.attributes.Heading}
                   </Text>
                 </Box>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

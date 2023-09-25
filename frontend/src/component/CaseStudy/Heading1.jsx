@@ -10,7 +10,7 @@ const Heading1 = () => {
 
   const getData = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/case-studies/${caseStudyId}?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/resources/${caseStudyId}?populate=*`
     );
     // console.log(res.data.data.attributes.Heading_1);
     setData(res.data.data.attributes.Heading_1);

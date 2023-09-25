@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
 import aboutImage from "../../assets/temp/about_HomePage.svg";
 // import gsap from 'gsap';
@@ -14,7 +14,7 @@ const AboutUsMarquee = () => {
 
   return (
     <>
-      <Box mt={111}>
+      <Box mt={["0px", "0px", "111px", "111px"]}>
         <Marquee autoFill>
           <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
             <hr
@@ -45,7 +45,7 @@ const AboutUsMarquee = () => {
 
         <Flex
           flexDirection={["column", "column", "row"]}
-          mt={"100px"}
+          mt={["0px", "0px", "100px", "100px"]}
           padding={["0px 20px", "0px 20px", "0px 151px"]}
           gap={["33px", "33px", "90px"]}
           alignItems={["self-start", "self-start", "self-start", "start"]}
@@ -80,7 +80,7 @@ const AboutUsMarquee = () => {
           >
             <Text
               fontFamily={"Bossa-Light"}
-              fontSize={"18px"}
+              fontSize={[ "12px", "12px", "18px", "18px"]}
               fontStyle={"normal"}
               fontWeight={300}
               lineHeight={"24px"}
@@ -98,23 +98,25 @@ const AboutUsMarquee = () => {
               three inactivated COVID-19 vaccine trial, 4Humanity, with over
               43,000 participants from 125+ nationalities.
             </Text>
+            <Link href="/about">
             <Button
             fontFamily={"Bossa-ExtendedMedium"}
               mt={"15px"}
               _hover={{ bgColor: "#00D2AA" }}
               bgColor={"#00D2AA"}
               borderRadius={"80px"}
-              fontSize={16}
+              fontSize={["14px", "14px", "16px", "16px"]}
               fontStyle={"normal"}
               fontWeight={500}
               textTransform={"capitalize"}
               textAlign={"center"}
               color={"white"}
-              w={"219px"}
-              h={"55px"}
+              w={["167px", "167px", "219px", "219px"]}
+              h={["40px", "40px", "55px", "55px"]}
             >
               About Us
             </Button>
+            </Link>
           </Flex>
         </Flex>
       </Box>

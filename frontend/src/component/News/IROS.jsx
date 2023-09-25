@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -208,7 +208,7 @@ const IROS = () => {
           >
             {data?.map((el) => (
               <SwiperSlide key={el.id} className={style.swipe_slide}>
-                <Box>
+                <Link href={`/news/${el.id}`}>
                   <Image
                     w={["301px", "301px", "465px", "465px"]}
                     h={["275px", "275px", "424px", "424px"]}
@@ -241,7 +241,7 @@ const IROS = () => {
                   >
                     {el.attributes.title}
                   </Text>
-                </Box>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

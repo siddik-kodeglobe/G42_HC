@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import About from "../component/AboutUs/About";
 import Home from "../component/Home/Home";
 import Services from "../component/Service/Services";
 import News from "../component/News/News";
@@ -11,13 +10,14 @@ import CaseStudy from "../component/CaseStudy/CaseStudy";
 import NewsID from "../component/NewsID/NewsID";
 import ContactUs from "../component/ContactUs/ContactUs";
 import Career from "../component/Careers/Career";
+import AboutUs from "../component/AboutUs_New/AboutUs";
 
 const AllRoutes = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/news" element={<News/>}/>
         <Route path="/whatwedo" element={<WhatWeDo/>}/>

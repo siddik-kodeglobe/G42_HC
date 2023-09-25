@@ -33,8 +33,8 @@ const USP = () => {
     <>
       <Box margin={"0px 60px"} mt={"125px"}>
         <Text
+        fontFamily={"Bossa-ExtendedBold"}
           textAlign={"center"}
-          fontFamily={"Bossa"}
           fontSize={["32px", "32px", "60px"]}
           fontWeight={700}
           lineHeight={"normal"}
@@ -60,7 +60,7 @@ const USP = () => {
                         <h2>
                           <AccordionButton>
                             <Box as="span" flex="1" textAlign="left">
-                              <Text fontWeight={isExpanded ? 700 : 400} w={"80%"}>
+                              <Text fontFamily={"Bossa-Medium"} fontWeight={isExpanded ? 700 : 400} w={"80%"}>
                                 {el.attributes.shortHeading}
                               </Text>
                             </Box>
@@ -71,7 +71,7 @@ const USP = () => {
                             )}
                           </AccordionButton>
                         </h2>
-                        <AccordionPanel pb={4}>
+                        <AccordionPanel fontFamily={"Bossa-Light"} pb={4}>
                           {el.attributes.subStatement}
                         </AccordionPanel>
                       </>

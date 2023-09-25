@@ -42,8 +42,8 @@ const Companies = () => {
         ]}
       >
         <Text
+        fontFamily={"Bossa-ExtendedBold"}
           color={"white"}
-          fontFamily={"Bossa"}
           fontSize={["24px", "24px", "48px"]}
           fontWeight={400}
           lineHeight={"normal"}
@@ -53,6 +53,7 @@ const Companies = () => {
 
         <Box>
           <Swiper
+          speed={750}
             breakpoints={{
               1024: {
                 slidesOffsetBefore: 0,
@@ -80,6 +81,7 @@ const Companies = () => {
                 ></Box>
 
                 <Text
+                fontFamily={"Bossa-Bold"}
                   position={"absolute"}
                   bottom={"64px"}
                   left={"25px"}
@@ -87,7 +89,6 @@ const Companies = () => {
                   textAlign={"center"}
                   noOfLines={2}
                   color={"white"}
-                  fontFamily={"Bossa"}
                   fontSize={["15px", "15px", "30px"]}
                   fontWeight={700}
                   lineHeight={"normal"}
@@ -96,13 +97,13 @@ const Companies = () => {
                 </Text>
 
                 <Text
+                fontFamily={"Bossa-Regular"}
                   position={"absolute"}
                   top={"15px"}
                   left={"25px"}
                   w={"100%"}
                   noOfLines={2}
                   color={"white"}
-                  fontFamily={"Bossa"}
                   fontSize={["15px", "15px", "30px"]}
                   fontWeight={700}
                   lineHeight={"normal"}

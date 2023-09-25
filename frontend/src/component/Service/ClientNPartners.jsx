@@ -37,8 +37,8 @@ const ClientNPartner = () => {
   return (
     <>
     <Box mt={"123px"} bgColor={"#F5F5F5"} paddingTop={"74px"}>
-      <Text fontSize={["32px", "32px", "60px"]} fontWeight={700} className={style1.text}>Clients & Partners</Text>
-      <Text padding={["5px 20px"]} fontSize={["18px", "18px", "24px"]} fontWeight={400} className={style1.text}>
+      <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["32px", "32px", "60px"]} fontWeight={700} className={style1.text}>Clients & Partners</Text>
+      <Text fontFamily={"Bossa-Regular"} padding={["5px 20px"]} fontSize={["18px", "18px", "24px"]} fontWeight={400} className={style1.text}>
         Please provide a subheading for a brief introduction consisting of 1-2
         lines.
       </Text>

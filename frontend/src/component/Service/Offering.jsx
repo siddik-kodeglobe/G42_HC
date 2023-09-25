@@ -34,9 +34,9 @@ const Offering = () => {
     <>
       <Box mt={"62px"} bgImage={bgImg}>
         <Text
+        fontFamily={"Bossa-ExtendedBold"}
           padding={["40px 15px 0px 15px","72px 60px 0px 178px"]}
           color={"black"}
-          fontFamily={"Bossa"}
           fontSize={["32px", "32px", "60px"]}
           fontWeight={700}
         >
@@ -84,9 +84,11 @@ const Offering = () => {
                 ></Box>
 
                 <Box left={5} bottom={5} position={"absolute"}>
+                  
+                  {/* add index bug */}
                   <Text
+                  fontFamily={"Bossa-ExtendedBold"}
                     noOfLines={2}
-                    fontFamily={"Bossa"}
                     fontSize={["24px", "24px", "48px"]}
                     fontWeight={700}
                     lineHeight={"normal"}

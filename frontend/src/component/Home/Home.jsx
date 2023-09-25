@@ -8,11 +8,11 @@ import ClientnPartner from "./ClientnPartner";
 import Resources from "./Resources";
 import SocialMedia from "./SocialMedia";
 import MeetUs from "./MeetUs";
-import AU_Footer from "../AboutUs/AU_Footer";
 import Navbar from "../Navbar/Navbar";
 import TopScroll from "../TopScroll/TopScroll";
 import OurServices from "./OurServices";
 import LatestInitiative from "./LatestInitiative";
+import Footer_AU from "../AboutUs_New/Footer_AU";
 
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
         <Resources/> 
         <SocialMedia/>
         <MeetUs/>
-        <AU_Footer/>
+        <Footer_AU/>
         <TopScroll/>
       </Box>
     </>

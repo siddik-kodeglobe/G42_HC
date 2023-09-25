@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -13,6 +13,10 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
+
+
+import doubleSideArrow from '../../assets/icons/doubleSidedArrow.png'
+import playBtn from '../../assets/icons/playBtn.svg'
 
 const News = () => {
   const [data, setData] = useState([]);
@@ -75,7 +79,7 @@ const News = () => {
   }, []);
   return (
     <>
-      <Box paddingBottom={"103px"}>
+      <Box style={{cursor: `url(${doubleSideArrow}), auto`}} paddingBottom={"103px"}>
         <Box
           w={["100vw", "100vw", "98.7vw"]}
           bgGradient={
@@ -151,8 +155,9 @@ const News = () => {
             </Flex>
           </Flex>
 
-          <Box mt={["", "", "-25px"]}>
+          <Box  mt={["", "", "-25px"]}>
             <Swiper
+            
             speed={750}
               breakpoints={{
                 390: {
@@ -176,9 +181,11 @@ const News = () => {
               freeMode={true}
               modules={[Navigation, FreeMode]}
               className={style.swiper}
+              
             >
               {data?.map((el) => (
                 <SwiperSlide className={style.swipe_slide}>
+                  <Link href={`/news/${el.id}`}>
                   <Box backgroundSize={"cover"} 
                   // w={["238px", "238px", "451px", "451px"]}
                    h={["179px", "179px", "338px", "338px"]} backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`} position={"relative"}>
@@ -187,11 +194,12 @@ const News = () => {
                       src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
                     /> */}
                   </Box>
+                  
                   <Box
                     // w={["238px", "238px", "451px", "451px"]}
                     paddingRight={[8, 8, 9]}
                     position={"absolute"}
-                    bottom={1.5}
+                    bottom={["-50px", "-50px", 1.5, 1.5]}
                     left={5}
                   >
                     <Text
@@ -218,6 +226,7 @@ const News = () => {
                       {el.attributes.info}
                     </Text>
                   </Box>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

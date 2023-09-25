@@ -27,7 +27,7 @@ const Impact = () => {
         ]}
       >
         <Text
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedBold"}
           fontStyle={"normal"}
           fontWeight={700}
           fontSize={["24px", "24px", "48px"]}
@@ -35,7 +35,7 @@ const Impact = () => {
           Impact we deliver
         </Text>
         <Text
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-Light"}
           fontStyle={"normal"}
           fontWeight={300}
           fontSize={["12px", "12px", "18px"]}
@@ -62,10 +62,12 @@ const Impact = () => {
                 />
               </Flex>
               <Text
+              fontFamily={"Bossa-Regular"}
                 color={"#000000"}
-                fontFamily={"Bossa"}
                 fontSize={["12px", "12px", "20px"]}
-                fontWeight={400}
+                // fontWeight={400}
+                fontStyle={"normal"}
+                lineHeight={"normal"}
               >
                 {el.attributes.title}
               </Text>

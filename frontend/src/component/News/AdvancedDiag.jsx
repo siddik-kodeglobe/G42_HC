@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -16,6 +16,7 @@ import style from "../AboutUs/OurPartner_Slider.module.css";
 
 
 const AdvancedDiag = () => {
+
 
     const [data, setData] = useState([]);
     const [hoverArrowColor, setHoverArrowColor] = useState("black");
@@ -95,7 +96,7 @@ const AdvancedDiag = () => {
               <Text
               fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
-                fontSize={["24px", "24px", "60px", "60px"]}
+                fontSize={["24px", "24px", "45px", "45px"]}
                 fontWeight={700}
                 lineHeight={"normal"}
                 textTransform={"capitalize"}
@@ -208,7 +209,7 @@ const AdvancedDiag = () => {
           >
             {data?.map((el) => (
               <SwiperSlide key={el.id} className={style.swipe_slide}>
-                <Box>
+                <Link href={`/news/${el.id}`}>
                   <Image
                     w={["301px", "301px", "465px", "465px"]}
                     h={["275px", "275px", "424px", "424px"]}
@@ -241,7 +242,7 @@ fontFamily={"Bossa-ExtendedMedium"}
                   >
                     {el.attributes.title}
                   </Text>
-                </Box>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

@@ -1,0 +1,14 @@
+fontFamily={"Bossa-Black"}
+fontFamily={"Bossa-ExtendedBlack"}
+
+fontFamily={"Bossa-Bold"}
+fontFamily={"Bossa-ExtendedBold"}
+
+fontFamily={"Bossa-Light"}
+fontFamily={"Bossa-ExtendedLight"}
+
+fontFamily={"Bossa-Medium"}
+fontFamily={"Bossa-ExtendedMedium"}
+
+fontFamily={"Bossa-Regular"}
+fontFamily={"Bossa-ExtendedRegular"}

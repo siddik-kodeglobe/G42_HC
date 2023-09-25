@@ -60,7 +60,7 @@ const LatestNews = () => {
   return (
     <>
       <Text
-      fontFamily={"Bossa"}
+      fontFamily={"Bossa-ExtendedBold"}
       fontSize={["24px", "24px", "48px"]}
       fontWeight={700}
       lineHeight={"normal"}
@@ -70,13 +70,15 @@ const LatestNews = () => {
         <Swiper
           breakpoints={{
             1024: {
-              slidesOffsetBefore: 150,
+              slidesOffsetBefore: 0,
+              // slidesOffsetBefore: 150,
               slidesPerView: 2.75,
               spaceBetween:44,
             },
             390: {
               slidesPerView: 1.5,
-              slidesOffsetBefore: 15
+              slidesOffsetBefore: 0,
+              // slidesOffsetBefore: 15,
               // spaceBetween:22,
             },
           }}
@@ -101,9 +103,9 @@ const LatestNews = () => {
                 left={5}
               >
                 <Text
+                fontFamily={"Bossa-Regular"}
                   noOfLines={2}
                   color={"white"}
-                  fontFamily={"Bossa"}
                   fontSize={["7px", "7px", "14px"]}
                   fontWeight={400}
                   lineHeight={"normal"}
@@ -111,9 +113,9 @@ const LatestNews = () => {
                   {convertDate(el.attributes.createdAt)}
                 </Text>
                 <Text
+                fontFamily={"Bossa-Medium"}
                   noOfLines={2}
                   color={"white"}
-                  fontFamily={"Bossa"}
                   fontSize={["10px", "10px", "20px"]}
                   fontWeight={500}
                   lineHeight={"normal"}

@@ -83,19 +83,19 @@ const Resources = () => {
     <>
       <Box>
         <Flex
-          padding={["40px 15px 20px 15px", "95px 60px 0px 150px"]}
+          padding={["40px 15px 0px 15px", "95px 60px 0px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
           <Text
           fontFamily={"Bossa-ExtendedBold"}
-            fontSize={"32px"}
+            fontSize={["24px", "24px", "32px", "32px"]}
             fontWeight={700}
             fontStyle={"normal"}
           >
             Resources
           </Text>
-          <Flex alignItems={"center"} gap={5}>
+          <Flex display={["none", "none", "flex", "flex"]} alignItems={"center"} gap={5}>
             <Flex
               onClick={() => goPrev()}
               _hover={{ backgroundColor: "#00D2AA" }}
@@ -140,7 +140,7 @@ const Resources = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["","","", "-20px"]}>
+        <Box mt={["-20px","-20px","-20px", "-20px"]}>
           <Swiper
             speed={750}
             breakpoints={{

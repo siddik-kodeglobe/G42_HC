@@ -15,7 +15,7 @@ const BreadCrumb = () => {
             <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
 
-          <BreadcrumbItem>
+          <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">What We Do</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>

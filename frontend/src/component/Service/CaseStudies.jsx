@@ -96,7 +96,7 @@ const CaseStudies = () => {
         ]}
       >
         <Text
-          fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedBold"}
           fontSize={["24px", "24px", "48px"]}
           fontWeight={700}
           lineHeight={"normal"}
@@ -104,8 +104,8 @@ const CaseStudies = () => {
           Case Studies
         </Text>
         <Text
+        fontFamily={"Bossa-Light"}
           w={["100%", "100%", "808px"]}
-          fontFamily={"Bossa"}
           fontSize={["7px", "7px", "14px"]}
           fontWeight={300}
           lineHeight={"normal"}
@@ -118,13 +118,13 @@ const CaseStudies = () => {
         <Swiper
           breakpoints={{
             1024: {
-              slidesOffsetBefore: 125,
+              slidesOffsetBefore: 0,
               slidesPerView: 2.75,
               spaceBetween: 44,
             },
             390: {
               slidesPerView: 1.5,
-              slidesOffsetBefore: 15,
+              slidesOffsetBefore: 0,
               // spaceBetween:22,
             },
           }}
@@ -154,9 +154,9 @@ const CaseStudies = () => {
 
                 <Box position={"absolute"} bottom={1} left={5}>
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     noOfLines={2}
                     color={"white"}
-                    fontFamily={"Bossa"}
                     fontSize={["7px", "7px", "14px"]}
                     fontWeight={400}
                     lineHeight={"normal"}
@@ -164,9 +164,9 @@ const CaseStudies = () => {
                     {convertDate(el.attributes.createdAt)}
                   </Text>
                   <Text
+                  fontFamily={"Bossa-Medium"}
                     noOfLines={2}
                     color={"white"}
-                    fontFamily={"Bossa"}
                     fontSize={["11px", "11px", "20px"]}
                     fontWeight={500}
                     lineHeight={"normal"}

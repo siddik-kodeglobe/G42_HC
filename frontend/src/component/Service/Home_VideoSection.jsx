@@ -12,20 +12,23 @@ import playBtn from "../../assets/icons/playBtn.svg";
 import omicsImg from "../../assets/temp/services/omicsImg.svg";
 import VideoModal from "../VideoModal/VideoModal";
 
+import g42Video from '../../assets/temp/Video/G42 Video.mp4'
+
 const Home_VideoSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
       <Box position={"relative"}>
-        <Box position={"relative"}>
+        <Box onClick={onOpen} style={{cursor: `url(${playBtn}) 45 45, auto`}} position={"relative"}>
           <ReactPlayer
             style={{ position: "position" }}
             width={"100%"}
             height={"100%"}
             playing={true}
             loop={true}
-            url="http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
+            url={g42Video}
+            muted={true}
           />
         </Box>
 
@@ -40,15 +43,7 @@ const Home_VideoSection = () => {
           margin={0}
         >
           {/* TAGLINE  */}
-          <Box position={["absolute", "absolute", ""]} top={["45%","5px"]} paddingLeft={["31px", "31px","72px"]} paddingBottom={["0px", "0px","92px"]}>
-            <Image
-              w={["40px", "40px", "90px"]}
-              onClick={onOpen}
-              cursor={"pointer"}
-              src={playBtn}
-              alt="playBtn"
-            />
-          </Box>
+          
           <Box position={"absolute"} bottom={[-2, -2, -9]} left={[9,9,0]} w="90%" h="35%">
             <Box
               position={"absolute"}
@@ -64,8 +59,8 @@ const Home_VideoSection = () => {
               backgroundColor={"white"}
             >
               <Text
+                fontFamily={"Bossa-ExtendedBold"}
                 w={"50%"}
-                fontFamily={"bossa"}
                 fontSize={["24px", "24px", "48px"]}
                 textTransform={"capitalize"}
                 fontWeight={700}
@@ -77,9 +72,7 @@ const Home_VideoSection = () => {
         </Box>
 
         <VideoModal
-          url={
-            "http://localhost:1338/uploads/1065341845_preview_1_5bd602282c.mp4"
-          }
+          url={g42Video}
           isOpen={isOpen}
           onOpen={onOpen}
           onClose={onClose}
