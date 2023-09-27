@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import NewsBreadcrumb from './NewsBreadcrumb'
 import NewsHeading from './NewsHeading'
@@ -12,9 +12,15 @@ import AdvancedDiag from './AdvancedDiag'
 import IROS from './IROS'
 import EnvironmentalSciences from './EnvironmentalSciences'
 import PharmaTherapeutics from './PharmaTherapeutics'
-import Footer from '../Footer/Footer'
+import Footer_News from './Footer_News'
+import LoadMore_News from './LoadMore_News'
 
 const News = () => {
+  const [loadmore, setLoadMore] = useState(true);
+
+  const onChangeLoadStatus = () => {
+    setLoadMore(false);
+  }
   return (
     <>
         <Box>
@@ -27,10 +33,15 @@ const News = () => {
             <Omics/>
             <DigitalHealth/>
             <AdvancedDiag/>
+            {
+              loadmore ? <LoadMore_News onChangeLoadStatus={onChangeLoadStatus}/> : 
+              <Box>
             <IROS/>
             <EnvironmentalSciences/>
             <PharmaTherapeutics/>
-            <Footer/>
+            </Box>
+            }
+            <Footer_News/>
         </Box>
     </>
   )

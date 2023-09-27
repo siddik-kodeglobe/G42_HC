@@ -11,6 +11,7 @@ const Footer = () => {
   return (
     <>
       <Flex
+    
         fontSize={14}
         fontWeight={700}
         color={"black"}

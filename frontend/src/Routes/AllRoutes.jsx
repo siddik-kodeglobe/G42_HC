@@ -11,6 +11,7 @@ import NewsID from "../component/NewsID/NewsID";
 import ContactUs from "../component/ContactUs/ContactUs";
 import Career from "../component/Careers/Career";
 import AboutUs from "../component/AboutUs_New/AboutUs";
+import Search from "../component/Search/Search";
 
 const AllRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const AllRoutes = () => {
         <Route path="/news/:newsId" element={<NewsID/>}/>
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/career" element={<Career/>}/>
+        <Route path="/search" element={<Search/>}/>
 
       </Routes>
     </div>

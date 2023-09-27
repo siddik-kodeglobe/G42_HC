@@ -26,7 +26,7 @@ const AreaOfInterest = () => {
         <SimpleGrid
           gap={["21px"]}
           columns={[1, 1, 2, 2]}
-          margin={["81px 60px 0px 60px"]}
+          margin={["25px 20px 0px 20px","25px 20px 0px 20px", "81px 60px 0px 60px", "81px 60px 0px 60px"]}
         >
           {/* 1st Box  */}
           <Box

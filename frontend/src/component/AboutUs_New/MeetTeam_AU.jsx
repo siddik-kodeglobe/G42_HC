@@ -131,7 +131,7 @@ const MeetTeam_AU = () => {
     speed={750}
     breakpoints={{
       1024: {
-        slidesOffsetBefore: 125,
+        slidesOffsetBefore: 65,
         slidesPerView: 3.2,
         spaceBetween:11,
       },

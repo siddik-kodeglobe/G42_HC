@@ -44,7 +44,7 @@ const CEO_msg_AU = () => {
             investments expertise.
           </Text>
           <Text
-            fontFamily={"Bossa"}
+            fontFamily={"Bossa-ExtendedBold"}
             color={"#00D2AA"}
             fontSize={"20px"}
             fontWeight={700}
@@ -52,7 +52,7 @@ const CEO_msg_AU = () => {
           >
             Ashish Koshy
           </Text>
-          <Text fontFamily={"Bossa"} fontWeight={300} fontSize={"14px"}>
+          <Text fontFamily={"Bossa-Light"} fontWeight={300} fontSize={"14px"}>
             CEO, G42 Healthcare
           </Text>
         </Box>

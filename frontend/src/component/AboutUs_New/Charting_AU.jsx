@@ -132,7 +132,7 @@ const Charting_AU = () => {
               alignItems={"center"}
               gap={7}
             >
-              <Text fontFamily={"Bossa"} fontWeight={700} fontSize={32}>
+              <Text fontFamily={"Bossa-ExtendedBold"} fontWeight={700} fontSize={32}>
                 Charting Triumph
               </Text>
               <Flex alignItems={"center"} gap={5}>
@@ -199,7 +199,7 @@ const Charting_AU = () => {
                   alignItems={"center"}
                   justifyContent={"space-between"}
                 >
-                  <Text fontSize={"32px"} fontWeight={400} fontStyle={"normal"}>
+                  <Text fontFamily={"Bossa-Regular"} fontSize={"32px"} fontWeight={400} fontStyle={"normal"}>
                   {getMonthName(firstMonth)}
                   </Text>
                   <AddIcon
@@ -222,6 +222,7 @@ const Charting_AU = () => {
                   src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
                 />
                 <Text
+                fontFamily={"Bossa-Regular"}
                   padding={"0px 10px 10px 10px"}
                   noOfLines={2}
                   fontSize={"24px"}
@@ -247,6 +248,7 @@ const Charting_AU = () => {
                   justifyContent={"space-between"}
                 >
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     color={"#747272"}
                     fontSize={"24px"}
                     fontWeight={400}
@@ -274,6 +276,7 @@ const Charting_AU = () => {
                   src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
                 />
                 <Text
+                fontFamily={"Bossa-Regular"}
                   color={"#747272"}
                   padding={"0px 10px 10px 10px"}
                   noOfLines={2}
@@ -300,6 +303,7 @@ const Charting_AU = () => {
                   justifyContent={"space-between"}
                 >
                   <Text
+                  fontFamily={"Bossa-Regular"}
                     color={"#747272"}
                     fontSize={"16px"}
                     fontWeight={400}
@@ -327,6 +331,7 @@ const Charting_AU = () => {
                   src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
                 />
                 <Text
+                fontFamily={"Bossa-Regular"}
                   color={"#747272"}
                   padding={"0px 10px 10px 10px"}
                   noOfLines={1}
@@ -343,6 +348,7 @@ const Charting_AU = () => {
   
             {/* year text  */}
             <Flex
+            fontFamily={"Bossa-ExtendedBlack"}
               position={"absolute"}
               bottom={"242px"}
               left={"95px"}

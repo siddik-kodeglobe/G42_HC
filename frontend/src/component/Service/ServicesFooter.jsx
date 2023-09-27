@@ -12,7 +12,7 @@ const ServicesFooter = () => {
             fontFamily={"Bossa-ExtendedBold"}
             fontStyle={"normal"}
             fontWeight={700}
-            fontSize={["24px", "24px", "48px"]}
+            fontSize={["24px", "24px", "48px", "48px"]}
             >Curious to know more</Text>
             <Text
             fontFamily={"Bossa-Regular"}

@@ -181,17 +181,17 @@ const AllNews = () => {
               390: {
                 slidesOffsetBefore: 21,
                 slidesPerView: 1.25,
-                spaceBetween: 11,
+                spaceBetween: 0,
               },
               768: {
                 slidesOffsetBefore: 66,
                 slidesPerView: 2,
-                spaceBetween: 22,
+                spaceBetween: 0,
               },
               1024: {
                 slidesOffsetBefore: 66,
                 slidesPerView: 2.75,
-                spaceBetween: 22,
+                spaceBetween: 0,
               },
             }}
             ref={swiperRef}
@@ -202,8 +202,9 @@ const AllNews = () => {
           >
             {data?.map((el) => (
               <SwiperSlide key={el.id} className={style.swipe_slide}>
-                
-                <Link href={`/news/${el.id}`}>
+                <Box textDecor={"none"} padding={["40px 24px 52px 24px"]} border={"1px solid #D9D9D9"}>
+                <Link href={`/news/${el.id}`} textDecor={"none"}>
+                  
                   <Image
                     w={["301px", "301px", "465px", "465px"]}
                     h={["275px", "275px", "424px", "424px"]}
@@ -237,6 +238,7 @@ const AllNews = () => {
                     {el.attributes.title}
                   </Text>
                 </Link>
+                </Box>
               </SwiperSlide>
             ))}
           </Swiper>

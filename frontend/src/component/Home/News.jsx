@@ -79,7 +79,7 @@ const News = () => {
   }, []);
   return (
     <>
-      <Box style={{cursor: `url(${doubleSideArrow}), auto`}} paddingBottom={"103px"}>
+      <Box style={{cursor: `url(${doubleSideArrow}), auto`}} paddingBottom={["80px", "80px", "90px", "103px"]}>
         <Box
           w={["100vw", "100vw", "98.7vw"]}
           bgGradient={
@@ -89,12 +89,12 @@ const News = () => {
           <Flex
             alignItems={"center"}
             justifyContent={"space-between"}
-            padding={["40px 15px 20px 15px", "72px 60px 0px 178px"]}
+            padding={["40px 15px 0px 15px", "40px 15px 0px 15px", "72px 60px 0px 20px", "72px 60px 0px 178px"]}
           >
             <Text
             fontFamily={"Bossa-ExtendedBold"}
               color={"white"}
-              fontSize={"32px"}
+              fontSize={["22px","22px","32px","32px"]}
               fontWeight={700}
             >
               News
@@ -111,8 +111,9 @@ const News = () => {
                 justifyContent={"center"}
                 border={"1px solid white"}
                 borderStyle={"dashed"}
-                w={"52px"}
-                h={"52px"}
+                w={["32px","32px","42px","52px"]}
+                h={["32px","32px","42px","52px"]}
+               
                 margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
@@ -137,8 +138,8 @@ const News = () => {
                 justifyContent={"center"}
                 border={"1px solid white"}
                 borderStyle={"dashed"}
-                w={"52px"}
-                h={"52px"}
+                w={["32px","32px","42px","52px"]}
+                h={["32px","32px","42px","52px"]}
                 margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
@@ -160,17 +161,17 @@ const News = () => {
             
             speed={750}
               breakpoints={{
-                390: {
+                500: {
                   slidesPerView: 1.25,
                   slidesOffsetBefore: 0,
                   spaceBetween: 22,
                 },
-                768: {
-                  slidesOffsetBefore: 178,
+                1024: {
+                  slidesOffsetBefore: 20,
                   slidesPerView: 2,
                   spaceBetween: 22,
                 },
-                1024: {
+                1280: {
                   slidesOffsetBefore: 178,
                   slidesPerView: 2.75,
                   spaceBetween: 22,

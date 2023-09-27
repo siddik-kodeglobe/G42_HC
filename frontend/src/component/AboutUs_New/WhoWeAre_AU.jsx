@@ -10,6 +10,7 @@ const WhoWeAre_AU = () => {
         margin={["51px 21px 0px 21px", "51px 21px 0px 21px","51px 100px 0px 100px", "78px 148px 0px 148px", "78px 148px 0px 148px"]}
         mt={["45px"]}
         justifyContent={"space-between"}
+        gap={["0px","0px","0px","20px","20px"]}
       >
         <Box w={["100%", "100%", "100%", "50%", "50%"]}>
           <Text fontFamily={"Bossa-ExtendedBold"} fontWeight={700} fontSize={["24px", "24px", "48px", "48px", "48px"]}>

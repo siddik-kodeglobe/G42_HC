@@ -33,7 +33,7 @@ const Partners_AU = () => {
     <div>
       <Text
       margin={["8px 20px 0px 20px", "8px 20px 0px 20px","78px 106px 0px 106px","78px 106px 0px 106px"]}
-        fontFamily={"Bossa"}
+        fontFamily={"Bossa-ExtendedBold"}
         fontWeight={700}
         fontSize={["32px", "32px", "60px", "60px"]}
       >
@@ -88,7 +88,7 @@ const Partners_AU = () => {
                 position={"absolute"}
                 bottom={0}
                 left={5}
-                fontFamily={"Bossa"}
+                fontFamily={"Bossa-ExtendedBold"}
                 fontSize={["34px", "34px", "60px"]}
                 fontWeight={700}
                 color={"white"}
