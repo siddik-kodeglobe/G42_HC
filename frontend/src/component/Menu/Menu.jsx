@@ -28,7 +28,7 @@ const Menu = () => {
         justifyContent={"center"}
         cursor={"pointer"}
         position={"fixed"}
-        zIndex={5}
+        zIndex={10}
         top={["24px", "24px", "30%", "30%"]}
         right={["45%", "45%", "36px", "36px"]}
         borderRadius={"50%"}

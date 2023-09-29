@@ -1,16 +1,105 @@
 import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useRef } from "react";
 import aboutImage from "../../assets/temp/about_HomePage.svg";
-// import gsap from 'gsap';
-// import { GSDevTools, SplitText } from 'gsap/all';
+import gsap from 'gsap';
+import { SplitText } from 'gsap/SplitText';
+import { GSDevTools } from 'gsap/GSDevTools';
 import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import homeVideo from "../../assets/logo/homeVideo.mp4";
 
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
+import style from './AboutUsMarquee.module.css'
 
 const AboutUsMarquee = () => {
   const textRef = useRef(null);
+
+  
+gsap.registerPlugin(GSDevTools, SplitText)
+
+useEffect(() => {
+  
+  let split;
+  let split2;
+  let tl;
+  let t2;
+  
+  function init() {
+  
+    // text1 
+  
+    gsap.set(".aboutUsText", { autoAlpha: 1 })
+    
+    if(split) {
+      GSDevTools.getById("tools").kill()
+      split.revert()
+    }
+    split = new SplitText(".text1", {charsClass:"chars", linesClass:"lines"})
+    tl = gsap.timeline()
+    // Set initial opacity to make the text visible
+
+
+    split.lines.forEach((line, index) => {
+      tl.from(line.querySelectorAll(".chars"), {duration:0.025, yPercent:50, stagger:0.02}, ">-50%");
+      tl.to(line.querySelectorAll(".chars"), {duration:0.025, yPercent:2, stagger:0.02}, ">-50%")
+      // tl.to(line.querySelectorAll(".chars"), {duration:0.025, yPercent: 0, stagger:0.04}, ">-50%")
+
+    })
+    // GSDevTools.create({animation:tl, id:"tools"})
+  
+    // text2 
+    gsap.set(".aboutUsText2", {autoAlpha:1})
+    
+    if(split2) {
+      GSDevTools.getById("tools").kill()
+      split2.revert()
+    }
+
+    split2 = new SplitText(".demo2", {charsClass:"chars2", linesClass:"lines"})
+    t2 = gsap.timeline()
+    split2.lines.forEach((line, index) => {
+      t2.from(line.querySelectorAll(".chars2"), {duration:0.025, yPercent:50, stagger:0.02}, ">-50%");
+      t2.to(line.querySelectorAll(".chars2"), {duration:0.025, yPercent:5, stagger:0.02}, ">-50%")
+  })
+    GSDevTools.create({animation:tl, id:"tools"})
+  }
+  
+  let timeout // holder for timeout id
+  let delay = 250 // delay after event is "complete" to run callback
+  
+  // window.resize event listener
+  window.addEventListener('resize', function() {
+    gsap.set(".aboutUsText", {autoAlpha:0})
+    // gsap.set(".aboutUsText2", {autoAlpha:0})
+    // clear the timeout
+    clearTimeout(timeout);
+    // start timing for event "completion"
+    timeout = setTimeout(init, delay);
+  });
+  
+  
+  //learn how this was made
+  //https://www.creativecodingclub.com
+  // init();
+  window.addEventListener("load", init);
+
+
+  // Event listener for window resize
+  const handleResize = () => {
+    gsap.set(".aboutUsText", { autoAlpha: 0 });
+    clearTimeout(timeout);
+    timeout = setTimeout(init, delay);
+  };
+
+  window.addEventListener('resize', handleResize);
+
+  // Clean up the event listener when the component unmounts
+  // return () => {
+  //   window.removeEventListener('resize', handleResize);
+  // };
+
+}, []); // Empty dependency array means this effect runs once on mount
+
 
   return (
     <>
@@ -78,7 +167,11 @@ const AboutUsMarquee = () => {
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
+            <section 
+            style={{visibility: "hidden"}}
+            className={`${style.aboutUsText} aboutUsText demo`}>
             <Text
+            // visibility={"hidden"}
               fontFamily={"Bossa-Light"}
               fontSize={[ "12px", "12px", "18px", "18px"]}
               fontStyle={"normal"}
@@ -86,13 +179,28 @@ const AboutUsMarquee = () => {
               lineHeight={"24px"}
               color={"#747272"}
               letterSpacing={"-0.42px"}
+              className="text1"
             >
               About G42 Healthcare in 2 paragraphs not more than 60-70 words.
               uses AI and data to create a world-class healthcare sector in the
               UAE and beyond. We partner with governments, scientists, and the
               medical community to future-proof nations' health.
-              <br />
-              <br />
+              </Text>
+              </section>
+
+              <Text
+              mt={["15px"]}
+              fontFamily={"Bossa-Light"}
+              fontSize={[ "12px", "12px", "18px", "18px"]}
+              fontStyle={"normal"}
+              fontWeight={300}
+              lineHeight={"24px"}
+              color={"#747272"}
+              letterSpacing={"-0.42px"}
+              visibility={"hidden"}
+              className="aboutUsText2 demo2"
+
+            >
               We built Biogenix Labs, the first COVID-19 accredited large-scale
               throughput lab in the UAE, and facilitated the world's first phase
               three inactivated COVID-19 vaccine trial, 4Humanity, with over

@@ -163,8 +163,8 @@ const News = () => {
               breakpoints={{
                 500: {
                   slidesPerView: 1.25,
-                  slidesOffsetBefore: 0,
-                  spaceBetween: 22,
+                  slidesOffsetBefore: 20,
+                  spaceBetween: 0,
                 },
                 1024: {
                   slidesOffsetBefore: 20,
@@ -188,7 +188,7 @@ const News = () => {
                 <SwiperSlide className={style.swipe_slide}>
                   <Link href={`/news/${el.id}`}>
                   <Box backgroundSize={"cover"} 
-                  // w={["238px", "238px", "451px", "451px"]}
+                  w={["238px", "238px", "451px", "451px"]}
                    h={["179px", "179px", "338px", "338px"]} backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`} position={"relative"}>
                     {/* <Image
                       w={["238px", "238px", "451px"]}
