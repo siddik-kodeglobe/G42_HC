@@ -56,6 +56,30 @@ const Categories_Search = () => {
          }
        }
       >
+        {/* All  */}
+        <Flex
+          h={["41px"]}
+          w={["fit-content"]}
+          fontFamily={"Bossa-ExtendedRegular"}
+          border={"1px solid black"}
+          borderRadius={"33px"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          _hover={{backgroundColor: "#00D2AA", color:"white", border: "1px solid #00D2AA"}}
+          padding={["20px"]}
+          flexShrink={0}
+            cursor={"pointer"}
+            fontSize={["12px", "12px","16px","16px"]}
+            fontWeight={[300, 300, 400, 400]}
+            color={"black"}
+            fontStyle={"normal"}
+            lineHeight={"-0.42px"}
+          >
+            All
+          </Flex>
+
+        {/* Mapping categories  */}
+
         {categoryArr?.map((el, ind) => (
           <Flex
           h={["41px"]}

@@ -19,7 +19,7 @@ const Input_Search = () => {
           "0px 178px 56px 60px",
         ]}>
       <InputGroup>
-        <Input value={inputText} onChange={(e) => setInputText(e.target.value)} fontFamily={"Bossa-Regular"} color={"#B6B6B6"} fontSize={["16px"]} fontStyle={"normal"} lineHeight={["22px"]} placeholder="What are you looking for?" variant='flushed'/>
+        <Input focusBorderColor={"black"} value={inputText} onChange={(e) => setInputText(e.target.value)} fontFamily={"Bossa-Regular"} color={"#B6B6B6"} fontSize={["16px"]} fontStyle={"normal"} lineHeight={["22px"]} placeholder="What are you looking for?" variant='flushed'/>
         <InputRightElement cursor={"pointer"}>
             {inputText.length > 0 ? 
             <CloseIcon onClick={() => setInputText("")}  w={["19px"]} h={["19px"]} />
