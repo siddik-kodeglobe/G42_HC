@@ -1,105 +1,92 @@
 import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import aboutImage from "../../assets/temp/about_HomePage.svg";
-import gsap from 'gsap';
-import { SplitText } from 'gsap/SplitText';
-import { GSDevTools } from 'gsap/GSDevTools';
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { GSDevTools } from "gsap/GSDevTools";
 import Marquee from "react-fast-marquee";
 import ReactPlayer from "react-player";
 import homeVideo from "../../assets/logo/homeVideo.mp4";
+import FontFaceObserver from 'fontfaceobserver';
 
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
-import style from './AboutUsMarquee.module.css'
 
 const AboutUsMarquee = () => {
-  const textRef = useRef(null);
+  gsap.registerPlugin(GSDevTools, SplitText);
 
-  
-gsap.registerPlugin(GSDevTools, SplitText)
+  const [isVisible, setIsVisible] = useState(false);
 
-useEffect(() => {
-  
-  let split;
-  let split2;
-  let tl;
-  let t2;
-  
-  function init() {
-  
-    // text1 
-  
-    gsap.set(".aboutUsText", { autoAlpha: 1 })
-    
-    if(split) {
-      GSDevTools.getById("tools").kill()
-      split.revert()
-    }
-    split = new SplitText(".text1", {charsClass:"chars", linesClass:"lines"})
-    tl = gsap.timeline()
-    // Set initial opacity to make the text visible
+  useEffect(() => {
+    gsap.registerPlugin(SplitText);
 
+    let split;
+    let tl;
 
-    split.lines.forEach((line, index) => {
-      tl.from(line.querySelectorAll(".chars"), {duration:0.025, yPercent:50, stagger:0.02}, ">-50%");
-      tl.to(line.querySelectorAll(".chars"), {duration:0.025, yPercent:2, stagger:0.02}, ">-50%")
-      // tl.to(line.querySelectorAll(".chars"), {duration:0.025, yPercent: 0, stagger:0.04}, ">-50%")
+    function init() {
+      gsap.set(".fullScreen", { autoAlpha: 1 });
 
-    })
-    // GSDevTools.create({animation:tl, id:"tools"})
-  
-    // text2 
-    gsap.set(".aboutUsText2", {autoAlpha:1})
-    
-    if(split2) {
-      GSDevTools.getById("tools").kill()
-      split2.revert()
+      if (split) {
+        split.revert();
+      }
+
+      split = new SplitText(".title", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+      tl = gsap.timeline();
+
+      split.lines.forEach((line, index) => {
+        const chars = line.querySelectorAll(".chars");
+        tl.from(
+          chars,
+          { duration: 0.3, yPercent: 100, stagger: 0.01, opacity: 0 },
+          ">-40%"
+        );
+        tl.to(chars, { duration: 0.3, yPercent: 5, stagger: 0.01 }, ">-40%");
+      });
     }
 
-    split2 = new SplitText(".demo2", {charsClass:"chars2", linesClass:"lines"})
-    t2 = gsap.timeline()
-    split2.lines.forEach((line, index) => {
-      t2.from(line.querySelectorAll(".chars2"), {duration:0.025, yPercent:50, stagger:0.02}, ">-50%");
-      t2.to(line.querySelectorAll(".chars2"), {duration:0.025, yPercent:5, stagger:0.02}, ">-50%")
-  })
-    GSDevTools.create({animation:tl, id:"tools"})
-  }
-  
-  let timeout // holder for timeout id
-  let delay = 250 // delay after event is "complete" to run callback
-  
-  // window.resize event listener
-  window.addEventListener('resize', function() {
-    gsap.set(".aboutUsText", {autoAlpha:0})
-    // gsap.set(".aboutUsText2", {autoAlpha:0})
-    // clear the timeout
-    clearTimeout(timeout);
-    // start timing for event "completion"
-    timeout = setTimeout(init, delay);
-  });
-  
-  
-  //learn how this was made
-  //https://www.creativecodingclub.com
-  // init();
-  window.addEventListener("load", init);
+    let timeout; // holder for timeout id
+    const delay = 250; // delay after event is "complete" to run callback
 
+    // Debounce function
+    function debounce(func, wait) {
+      let timeout;
+      return function () {
+        const context = this;
+        const args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          func.apply(context, args);
+        }, wait);
+      };
+    }
 
-  // Event listener for window resize
-  const handleResize = () => {
-    gsap.set(".aboutUsText", { autoAlpha: 0 });
-    clearTimeout(timeout);
-    timeout = setTimeout(init, delay);
+    // Window resize event listener with debounce
+    window.addEventListener(
+      "resize",
+      debounce(() => {
+        gsap.set(".fullScreen", { autoAlpha: 0 });
+        clearTimeout(timeout);
+        timeout = setTimeout(init, delay);
+      }, 250)
+    );
+
+    const font = new FontFaceObserver('Bossa-Light');
+    
+    font.load().then(() => {
+      // Font is loaded, you can run your code here
+      // Initial call to init
+      init();
+    }).catch((error) => {
+      console.error('Font could not be loaded:', error);
+    });
+  }, []);
+
+  // Function to toggle visibility
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
   };
-
-  window.addEventListener('resize', handleResize);
-
-  // Clean up the event listener when the component unmounts
-  // return () => {
-  //   window.removeEventListener('resize', handleResize);
-  // };
-
-}, []); // Empty dependency array means this effect runs once on mount
-
 
   return (
     <>
@@ -167,31 +154,32 @@ useEffect(() => {
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
-            <section 
-            style={{visibility: "hidden"}}
-            className={`${style.aboutUsText} aboutUsText demo`}>
-            <Text
-            // visibility={"hidden"}
-              fontFamily={"Bossa-Light"}
-              fontSize={[ "12px", "12px", "18px", "18px"]}
-              fontStyle={"normal"}
-              fontWeight={300}
-              lineHeight={"24px"}
-              color={"#747272"}
-              letterSpacing={"-0.42px"}
-              className="text1"
+            <Box
+              w={"100%"}
+              className={`fullScreen demo ${isVisible ? "visible" : "hidden"}`}
             >
-              About G42 Healthcare in 2 paragraphs not more than 60-70 words.
-              uses AI and data to create a world-class healthcare sector in the
-              UAE and beyond. We partner with governments, scientists, and the
-              medical community to future-proof nations' health.
-              </Text>
-              </section>
-
               <Text
+                // visibility={"hidden"}
+                fontFamily={"Bossa-Light"}
+                fontSize={["12px", "12px", "18px", "18px"]}
+                fontStyle={"normal"}
+                lineHeight={"24px"}
+                color={"#747272"}
+                letterSpacing={"-0.42px"}
+                className="title"
+                onClick={toggleVisibility}
+              >
+                About G42 Healthcare in 2 paragraphs not more than 60-70 words.
+                uses AI and data to create a world-class healthcare sector in
+                the UAE and beyond. We partner with governments, scientists, and
+                the medical community to future-proof nations' health.
+              </Text>
+            </Box>
+
+            <Text
               mt={["15px"]}
               fontFamily={"Bossa-Light"}
-              fontSize={[ "12px", "12px", "18px", "18px"]}
+              fontSize={["12px", "12px", "18px", "18px"]}
               fontStyle={"normal"}
               fontWeight={300}
               lineHeight={"24px"}
@@ -199,7 +187,6 @@ useEffect(() => {
               letterSpacing={"-0.42px"}
               visibility={"hidden"}
               className="aboutUsText2 demo2"
-
             >
               We built Biogenix Labs, the first COVID-19 accredited large-scale
               throughput lab in the UAE, and facilitated the world's first phase
@@ -207,23 +194,23 @@ useEffect(() => {
               43,000 participants from 125+ nationalities.
             </Text>
             <Link href="/about">
-            <Button
-            fontFamily={"Bossa-ExtendedMedium"}
-              mt={"15px"}
-              _hover={{ bgColor: "#00D2AA" }}
-              bgColor={"#00D2AA"}
-              borderRadius={"80px"}
-              fontSize={["14px", "14px", "16px", "16px"]}
-              fontStyle={"normal"}
-              fontWeight={500}
-              textTransform={"capitalize"}
-              textAlign={"center"}
-              color={"white"}
-              w={["167px", "167px", "219px", "219px"]}
-              h={["40px", "40px", "55px", "55px"]}
-            >
-              About Us
-            </Button>
+              <Button
+                fontFamily={"Bossa-ExtendedMedium"}
+                mt={"15px"}
+                _hover={{ bgColor: "#00D2AA" }}
+                bgColor={"#00D2AA"}
+                borderRadius={"80px"}
+                fontSize={["14px", "14px", "16px", "16px"]}
+                fontStyle={"normal"}
+                fontWeight={500}
+                textTransform={"capitalize"}
+                textAlign={"center"}
+                color={"white"}
+                w={["167px", "167px", "219px", "219px"]}
+                h={["40px", "40px", "55px", "55px"]}
+              >
+                About Us
+              </Button>
             </Link>
           </Flex>
         </Flex>

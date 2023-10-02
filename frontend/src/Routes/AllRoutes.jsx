@@ -12,6 +12,7 @@ import ContactUs from "../component/ContactUs/ContactUs";
 import Career from "../component/Careers/Career";
 import AboutUs from "../component/AboutUs_New/AboutUs";
 import Search from "../component/Search/Search";
+import Temp from "../Temp";
 
 const AllRoutes = () => {
   return (
@@ -29,6 +30,7 @@ const AllRoutes = () => {
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/career" element={<Career/>}/>
         <Route path="/search" element={<Search/>}/>
+        <Route path="/temp" element={<Temp/>}/>
 
       </Routes>
     </div>

@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@u-wave/react-vimeo": "^0.9.10",
     "axios": "^1.4.0",
+    "fontfaceobserver": "^2.3.0",
     "framer-motion": "^10.12.16",
     "gsap": "file:gsap-bonus.tgz",
     "moment": "^2.29.4",
