@@ -117,7 +117,7 @@ const Charting_AU = () => {
   
     return (
       <>
-        <Box w={"100vw"} maxW={"100%"} display={["none", "none", "none", "block"]}>
+        <Box w={"100vw"} maxW={"100%"} display={["none", "none", "none", "none"]}>
           <Box
             position={"relative"}
             background={

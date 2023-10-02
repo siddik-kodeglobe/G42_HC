@@ -1,13 +1,13 @@
 import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import aboutImage from "../../assets/temp/about_HomePage.svg";
+import Marquee from "react-fast-marquee";
+import ReactPlayer from "react-player";
+import homeVideo from "../../assets/logo/homeVideo.mp4";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GSDevTools } from "gsap/GSDevTools";
-import Marquee from "react-fast-marquee";
-import ReactPlayer from "react-player";
-import homeVideo from "../../assets/logo/homeVideo.mp4";
 import FontFaceObserver from 'fontfaceobserver';
 
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
