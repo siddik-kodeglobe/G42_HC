@@ -163,11 +163,14 @@ const SocialMedia = () => {
                   <Link _hover={{textDecoration: "none"}} href={el.attributes.link} isExternal>
                 <Box w={["285px", "285px", "451px"]}>
                   <Image
+                  
                   w={["285px", "285px", "451px"]}
-                  h={["238px", "238px", "411px"]}
+                  h={["268px", "268px", "411px"]}
+                  objectFit={"cover"}
                   src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
+                  w={"100%"}
                   fontFamily={"Bossa-Regular"}
                     mt={"30px"}
                     noOfLines={2}
@@ -181,6 +184,8 @@ const SocialMedia = () => {
                   </Text>
 
                   <Text
+                  mt={"5px"}
+                  w={"100%"}
                   fontFamily={"Bossa-ExtendedBold"}
                   textOverflow={"ellipsis"}
                     color={"black"}

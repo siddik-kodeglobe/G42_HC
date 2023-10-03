@@ -46,7 +46,7 @@ const MeetTeam_AU = () => {
     const res = await axios.get(
       `${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`
     );
-    console.log(res.data.data);
+    // console.log(res.data.data);
     setData(res.data.data);
   };
   
@@ -79,6 +79,7 @@ const MeetTeam_AU = () => {
           fontSize={["14px", "14px", "20px"]}
           fontWeight={500}
           textDecoration={"underline"}
+          textUnderlineOffset={["11px", "11px", "0px", "0px"]}
         >
           Leadership Team{" "}
         </Text>
@@ -141,7 +142,7 @@ const MeetTeam_AU = () => {
         spaceBetween:25,
       },
       390: {
-        slidesPerView: 1.2,
+        slidesPerView: 1.45,
         spaceBetween:22,
         slidesOffsetBefore: 15
       },
@@ -155,7 +156,7 @@ const MeetTeam_AU = () => {
         <SwiperSlide className={style.swipe_slide}>
           <Box w={"fit-content"}>
             <Image
-            w={["100%"]}
+            w={["267px","267px","100%","100%"]}
             height={["387px", "387px", "387px", "500px"]}
             src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.avatar.data.attributes.url}`}
             objectFit={"cover"}

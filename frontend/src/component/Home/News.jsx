@@ -161,10 +161,10 @@ const News = () => {
             
             speed={750}
               breakpoints={{
-                500: {
-                  slidesPerView: 1.25,
-                  slidesOffsetBefore: 20,
-                  spaceBetween: 0,
+                390: {
+                  slidesPerView: 1.75,
+                  slidesOffsetBefore: 15,
+                  spaceBetween: 24,
                 },
                 1024: {
                   slidesOffsetBefore: 20,
@@ -197,7 +197,7 @@ const News = () => {
                   </Box>
                   
                   <Box
-                    // w={["238px", "238px", "451px", "451px"]}
+                    w={["238px", "238px", "451px", "451px"]}
                     paddingRight={[8, 8, 9]}
                     position={"absolute"}
                     bottom={["-50px", "-50px", 1.5, 1.5]}
@@ -210,11 +210,13 @@ const News = () => {
                       fontSize={["7px", "7px", "14px"]}
                       fontWeight={500}
                       lineHeight={"normal"}
+                      textOverflow={"ellipsis"}
                     >
                       {convertData(el.attributes.createdAt)}
                     </Text>
                     <Text
                     fontFamily={"Bossa-Medium"}
+                    noOfLines={3}
                       mt={"5px"}
                       h={"96px"}
                       maxHeight={"96px"}
@@ -223,6 +225,7 @@ const News = () => {
                       fontSize={["10px", "10px", "15px", "20px"]}
                       fontWeight={500}
                       lineHeight={"normal"}
+                      textOverflow={"ellipsis"}
                     >
                       {el.attributes.info}
                     </Text>

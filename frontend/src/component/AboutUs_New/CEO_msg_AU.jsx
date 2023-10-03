@@ -154,21 +154,26 @@ const CEO_msg_AU = () => {
         flexDirection={["column", "column", "column", "row"]}
         gap={9}
         margin={[
-          "39px 20px 0px 20px",
-          "39px 20px 0px 20px",
+          "39px 0px 0px 0px",
+          "39px 0px 0px 0px",
           "39px 100px 0px 100px",
           "0px 0px 0px 158px",
         ]}
         justifyContent={"space-between"}
         alignItems={["", "", "start"]}
       >
-        <Box w={["100%", "100%", "100%", "35%"]}>
+        <Box margin={[
+          "39px 20px 0px 20px",
+          "39px 20px 0px 20px",
+          "39px 100px 0px 100px",
+          "0px 0px 0px 158px",
+        ]} w={["100%", "100%", "100%", "35%"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}
             mt={["0px", "0px", "105px"]}
             fontWeight={700}
             fontSize={["24px", "24px", "30px"]}
-            w={["100%", "100%", "100%"]}
+            w={["90%", "90%", "100%"]}
           >
             Message from Our CEO
           </Text>

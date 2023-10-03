@@ -6,19 +6,17 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GSDevTools } from "gsap/GSDevTools";
-import FontFaceObserver from 'fontfaceobserver';
+import FontFaceObserver from "fontfaceobserver";
 
 const PioneeringHC = () => {
-
   gsap.registerPlugin(GSDevTools, SplitText, ScrollTrigger);
 
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
   const sectionRef3 = useRef(null);
   const sectionRef4 = useRef(null);
-  
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
@@ -36,9 +34,9 @@ const PioneeringHC = () => {
     let t4;
 
     const sectionElement1 = sectionRef1.current;
-  const sectionElement2 = sectionRef2.current;
-  const sectionElement3 = sectionRef3.current;
-  const sectionElement4 = sectionRef4.current;
+    const sectionElement2 = sectionRef2.current;
+    const sectionElement3 = sectionRef3.current;
+    const sectionElement4 = sectionRef4.current;
 
     function init() {
       gsap.set(".box1_phc", { autoAlpha: 1 });
@@ -54,7 +52,7 @@ const PioneeringHC = () => {
       tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionElement1,
-          start: 'bottom center+=50%', // Adjust this as needed
+          start: "bottom center+=50%", // Adjust this as needed
           // end: 'bottom center', // Adjust this as needed
           scrub: false, // Smoothly transition the animation
           markers: false, // Remove this in production
@@ -86,7 +84,7 @@ const PioneeringHC = () => {
       t2 = gsap.timeline({
         scrollTrigger: {
           trigger: sectionElement2,
-          start: 'bottom center+=50%',
+          start: "bottom center+=50%",
           // end: 'bottom center',
           scrub: false, // Smoothly transition the animation
           markers: false, // Remove this in production
@@ -118,7 +116,7 @@ const PioneeringHC = () => {
       t3 = gsap.timeline({
         scrollTrigger: {
           trigger: sectionElement3,
-          start: 'bottom center+=50%',
+          start: "bottom center+=50%",
           // end: 'bottom center',
           scrub: false, // Smoothly transition the animation
           markers: false, // Remove this in production
@@ -150,7 +148,7 @@ const PioneeringHC = () => {
       t4 = gsap.timeline({
         scrollTrigger: {
           trigger: sectionElement4,
-          start: 'bottom center+=50%',
+          start: "bottom center+=50%",
           // end: 'bottom center',
           scrub: false, // Smoothly transition the animation
           markers: false, // Remove this in production
@@ -167,8 +165,6 @@ const PioneeringHC = () => {
         t4.to(chars4, { duration: 0.3, yPercent: 7, stagger: 0.005 }, ">-40%");
       });
     }
-
-
 
     let timeout; // holder for timeout id
     const delay = 250; // delay after event is "complete" to run callback
@@ -196,8 +192,8 @@ const PioneeringHC = () => {
       }, 250)
     );
 
-     // Window resize event listener with debounce
-     window.addEventListener(
+    // Window resize event listener with debounce
+    window.addEventListener(
       "resize",
       debounce(() => {
         gsap.set(".box2_phc", { autoAlpha: 0 });
@@ -226,17 +222,18 @@ const PioneeringHC = () => {
       }, 250)
     );
 
+    const font = new FontFaceObserver("Bossa-Light");
 
-
-    const font = new FontFaceObserver('Bossa-Light');
-    
-    font.load().then(() => {
-      // Font is loaded, you can run your code here
-      // Initial call to init
-      init();
-    }).catch((error) => {
-      console.error('Font could not be loaded:', error);
-    });
+    font
+      .load()
+      .then(() => {
+        // Font is loaded, you can run your code here
+        // Initial call to init
+        init();
+      })
+      .catch((error) => {
+        console.error("Font could not be loaded:", error);
+      });
   }, []);
 
   // Function to toggle visibility
@@ -247,17 +244,27 @@ const PioneeringHC = () => {
   return (
     <>
       <Box mt={["87px", "87px", "125px", "125px"]}>
-        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["32px", "32px", "48px", "48px"]} className={style.heading}>
+        <Text
+          fontFamily={"Bossa-ExtendedBold"}
+          fontSize={["32px", "32px", "48px", "48px"]}
+          className={style.heading}
+        >
           Pioneering Healthcare
         </Text>
         <Box padding={["59px 20px 20px 20px", "20px", "56px 155px"]}>
-          <Flex flexDirection={["column", "column", "row"]}>
+          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]}>
             <Box w={"100%"} padding={"0px 0px"}>
-              <Text className={style.text1}>1<sup>st</sup> COVID Lab</Text>
+              <Text className={style.text1}>
+                1<sup>st</sup> COVID Lab
+              </Text>
               <Text className={style.text2}>Biogenix</Text>
-              
             </Box>
-            <Box ref={sectionRef1} className={`box1_phc demo ${isVisible ? "visible" : "hidden"}`} w={"100%"} padding={["0px", "0px", "0px 20px", "0px 20px"]}>
+            <Box
+              ref={sectionRef1}
+              className={`box1_phc demo ${isVisible ? "visible" : "hidden"}`}
+              w={"100%"}
+              padding={["0px", "0px", "0px 20px", "0px 20px"]}
+            >
               <Text className={`${style.desc} text1_phc`}>
                 venenatis efficitur. elementum sollicitudin. ex. varius
                 facilisis turpis Nullam vitae elit. vel quis sodales. risus
@@ -266,14 +273,19 @@ const PioneeringHC = () => {
             </Box>
           </Flex>
           <hr />
-          <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
+          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]} marginTop={"41px"}>
             <Box w={"100%"} padding={"0px 0px"}>
               <Text className={style.text1}>
                 1<sup>st</sup> Omics Facility in the Region
               </Text>
               <Text className={style.text2}>Omics Center of Intelligence</Text>
             </Box>
-            <Box  ref={sectionRef2} className={`box2_phc demo ${isVisible ? "visible" : "hidden"}`} w={"100%"} padding={["0px", "0px", "0px 20px", "0px 20px"]}>
+            <Box
+              ref={sectionRef2}
+              className={`box2_phc demo ${isVisible ? "visible" : "hidden"}`}
+              w={"100%"}
+              padding={["0px", "0px", "0px 20px", "0px 20px"]}
+            >
               <Text className={`${style.desc} text2_phc`}>
                 venenatis efficitur. elementum sollicitudin. ex. varius
                 facilisis turpis Nullam vitae elit. vel quis sodales. risus
@@ -283,12 +295,19 @@ const PioneeringHC = () => {
           </Flex>
           <hr />
 
-          <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
+          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]} marginTop={"41px"}>
             <Box w={"100%"} padding={"0px 0px"}>
-              <Text className={style.text1}>1<sup>st</sup> Waste Water Lab</Text>
+              <Text className={style.text1}>
+                1<sup>st</sup> Waste Water Lab
+              </Text>
               <Text className={style.text2}>RASID</Text>
             </Box>
-            <Box  ref={sectionRef3} className={`box3_phc demo ${isVisible ? "visible" : "hidden"}`} w={"100%"} padding={["0px", "0px", "0px 20px", "0px 20px"]}>
+            <Box
+              ref={sectionRef3}
+              className={`box3_phc demo ${isVisible ? "visible" : "hidden"}`}
+              w={"100%"}
+              padding={["0px", "0px", "0px 20px", "0px 20px"]}
+            >
               <Text className={`${style.desc} text3_phc`}>
                 venenatis efficitur. elementum sollicitudin. ex. varius
                 facilisis turpis Nullam vitae elit. vel quis sodales. risus
@@ -298,14 +317,19 @@ const PioneeringHC = () => {
           </Flex>
           <hr />
 
-          <Flex flexDirection={["column", "column", "row"]} marginTop={"41px"}>
+          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]} marginTop={"41px"}>
             <Box w={"100%"} padding={"0px 0px"}>
               <Text className={style.text1}>
                 1<sup>st</sup> clinical trial pan MENA region
               </Text>
               <Text className={style.text2}>4Humanity trial Diagnostics</Text>
             </Box>
-            <Box  ref={sectionRef4} className={`box4_phc demo ${isVisible ? "visible" : "hidden"}`} w={"100%"} padding={["0px", "0px", "0px 20px", "0px 20px"]}>
+            <Box
+              ref={sectionRef4}
+              className={`box4_phc demo ${isVisible ? "visible" : "hidden"}`}
+              w={"100%"}
+              padding={["0px", "0px", "0px 20px", "0px 20px"]}
+            >
               <Text className={`${style.desc} text4_phc`}>
                 venenatis efficitur. elementum sollicitudin. ex. varius
                 facilisis turpis Nullam vitae elit. vel quis sodales. risus

@@ -202,7 +202,7 @@ const Resources = () => {
           </Swiper>
         </Box>
 
-        <Box padding={"55px 100px 55px 150px"}>
+        <Box padding={["38px 0px 40px 15px", "55px 100px 55px 150px", "55px 100px 55px 150px", "55px 100px 55px 150px"]}>
           <hr style={{ width: "100%", background: "#004141" }} />
         </Box>
       </Box>

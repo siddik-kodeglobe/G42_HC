@@ -32,7 +32,7 @@ const Partners_AU = () => {
   return (
     <div>
       <Text
-      margin={["8px 20px 0px 20px", "8px 20px 0px 20px","78px 106px 0px 106px","78px 106px 0px 106px"]}
+      margin={["65px 20px 0px 20px", "65px 20px 0px 20px","78px 106px 0px 106px","78px 106px 0px 106px"]}
         fontFamily={"Bossa-ExtendedBold"}
         fontWeight={700}
         fontSize={["32px", "32px", "60px", "60px"]}
@@ -54,7 +54,7 @@ const Partners_AU = () => {
           },
           390: {
             slidesPerView: 1.2,
-            slidesOffsetBefore: 35,
+            slidesOffsetBefore: 20,
             spaceBetween:22,
           },
         }}

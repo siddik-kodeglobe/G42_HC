@@ -18,6 +18,9 @@ import style from "../AboutUs/OurPartner_Slider.module.css";
 import style1 from './ClientnPartner.module.css'
 import Marquee from "react-fast-marquee";
 
+import Vimeo from '@u-wave/react-vimeo';
+import greenMotionVideo from '../../assets/backgroundVideo/greenMotionVideo.mp4'
+
 const ClientnPartner = () => {
   const [data, setData] = useState([]);
 
@@ -37,7 +40,8 @@ const ClientnPartner = () => {
 
   return (
     <>
-    <Box w={"100vw"} maxW={"100%"} bgColor={"#ebfaf6"} paddingTop={"74px"}>
+    <Box w={"100vw"} maxW={"100%"}  paddingTop={"74px"}>
+
       <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["32px", "32px", "60px", "60px"]} fontWeight={700} className={style1.text}>Clients & Partners</Text>
       <Text fontFamily={"Bossa-Regular"} padding={["5px 20px"]} w={["600px"]} maxW={"100vw"} margin={"auto"} textAlign={"center"} fontSize={["18px", "18px", "24px"]} fontWeight={400} className={style1.text}>
         Please provide a subheading for a brief introduction consisting of 1-2
@@ -84,7 +88,6 @@ const ClientnPartner = () => {
                 </Marquee>
         </Swiper>
       </Box>
-
       </Box>
     </>
   );
