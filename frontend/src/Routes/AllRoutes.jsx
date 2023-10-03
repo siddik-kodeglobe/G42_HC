@@ -15,6 +15,7 @@ import Search from "../component/Search/Search";
 import Temp from "../Temp";
 
 const AllRoutes = () => {
+  
   return (
     <div>
       <Routes>

@@ -156,7 +156,7 @@ const News = () => {
             </Flex>
           </Flex>
 
-          <Box  mt={["", "", "-25px"]}>
+          <Box  mt={["-27px", "-27px", "-25px"]}>
             <Swiper
             
             speed={750}
