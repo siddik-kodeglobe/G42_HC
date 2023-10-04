@@ -5,18 +5,22 @@ const LifeAtG42 = () => {
   return (
     <>
       <Flex
-      flexDir={["column", "column", "row", "row"]}
+        flexDir={["column", "column", "row", "row"]}
         alignItems={"start"}
         justifyContent={"space-between"}
-        margin={["0px 20px 0px 20px", "70px 178px 64px 178px", "70px 178px 64px 178px"]}
+        margin={[
+          "40px 20px 0px 20px",
+          "40px 20px 0px 20px",
+          "70px 178px 64px 178px",
+          "70px 178px 64px 178px",
+        ]}
       >
         <Box w={["100%", "100%", "50%", "50%"]}>
           <Text
-fontFamily={"Bossa-ExtendedBold"}
+            fontFamily={"Bossa-ExtendedBold"}
             fontSize={["24px", "24px", "48px", "48px"]}
             color={"black"}
             fontWeight={[700]}
-            lineHeight={["51px"]}
             fontStyle={"normal"}
           >
             Life at G42 Healthcare
@@ -25,8 +29,8 @@ fontFamily={"Bossa-ExtendedBold"}
 
         <Box w={["100%", "100%", "50%", "50%"]}>
           <Text
-fontFamily={"Bossa-ExtendedBold"}
-          mt={["21px"]}
+            fontFamily={"Bossa-ExtendedBold"}
+            mt={["21px"]}
             fontSize={["15px", "15px", "30px", "30px"]}
             letterSpacing={["-0.9px"]}
             color={"black"}
@@ -37,8 +41,8 @@ fontFamily={"Bossa-ExtendedBold"}
             G42 Healthcare - Health Tech Company
           </Text>
           <Text
-fontFamily={"Bossa-Light"}
-          mt={["21px"]}
+            fontFamily={"Bossa-Light"}
+            mt={["21px"]}
             fontSize={["14px"]}
             color={"#747272"}
             fontWeight={[300]}

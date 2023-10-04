@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
-
+import {isMobile} from 'react-device-detect';
 import doubleSideArrow from '../../assets/icons/doubleSidedArrow.png'
 import playBtn from '../../assets/icons/playBtn.svg'
 
@@ -120,13 +120,22 @@ const News = () => {
                 cursor={swiperRef.current?.swiper.isBeginning ? "not-allowed" : "pointer"}
                 // disabled={swiperRef.current?.swiper.isBeginning}
               >
-                <BsArrowLeft
-                  style={{
+                {isMobile ? 
+                <BsArrowLeft style={{
+                    color: hoverArrowColor,
+                    height: "21px",
+                    width: "21px",
+                  }}
+                />
+                  :
+
+                  <BsArrowLeft style={{
                     color: hoverArrowColor,
                     height: "52px",
                     width: "52px",
                   }}
                 />
+              }
               </Button>
               <Button
                 onClick={() => goNext()}
@@ -162,7 +171,7 @@ const News = () => {
             speed={750}
               breakpoints={{
                 390: {
-                  slidesPerView: 1.75,
+                  slidesPerView: 1.5,
                   slidesOffsetBefore: 15,
                   spaceBetween: 24,
                 },
@@ -180,6 +189,8 @@ const News = () => {
               ref={swiperRef}
               // navigation={true}
               freeMode={true}
+              observeParents={true}
+              observer={true}
               modules={[Navigation, FreeMode]}
               className={style.swiper}
               

@@ -24,7 +24,7 @@ const CollabPoints = () => {
         </Box>
 
         {/* Points  */}
-        <Box w={["76vw"]} maxW={"100%"} margin={"auto"} mt={"60px"} >
+        <Box w={["85vw","85vw","76vw","76vw"]} maxW={"100%"} margin={"auto"} mt={"60px"} >
           {/* 1st Point  */}
           <Flex
             flexDir={["column", "column", "row", "row"]}

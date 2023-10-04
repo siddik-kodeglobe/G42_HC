@@ -19,7 +19,11 @@ const CareerVideo = () => {
   return (
     <>
       <Box mt={["38px"]} position={"relative"}>
-        <Box onClick={onOpen} style={{ cursor: `url(${playBtn}), auto` }} position={"relative"}>
+        <Box
+          onClick={onOpen}
+          style={{ cursor: `url(${playBtn}), auto` }}
+          position={"relative"}
+        >
           <ReactPlayer
             style={{ position: "position" }}
             width={"100%"}
@@ -32,8 +36,9 @@ const CareerVideo = () => {
         </Box>
 
         <Box
-          w={"98.7vw"}
-          h={["25vh", "25vh", "50vh"]}
+          w={"100vw"}
+          maxW={"100%"}
+          h={["fit-content", "fit-content", "50vh"]}
           position={"absolute"}
           bgGradient={
             "linear-gradient(0deg, #00AFFF 0%, rgba(0, 175, 255, 0.00) 100%);"
@@ -46,26 +51,27 @@ const CareerVideo = () => {
             bottom={[-2, -2, -9]}
             left={[9, 9, 0]}
             w="90%"
-            h="35%"
+            h="100%"
           >
             <Box
               position={"absolute"}
               bottom={0}
               left={[-8, -8, 5]}
               right={[1, 1, 5]}
-              height={["50px", "50px", "214px"]}
+              height={["fit-content", "fit-content", "214px"]}
               w={"96vw"}
+              
               padding={["15px 50px", "15px 50px", "75px 148px", "75px 148px"]}
               mt={5}
               justifyContent={"space-between"}
               alignItems={"center"}
               backgroundColor={"white"}
+              // border={"2px solid red"}
             >
-              <Flex flexDir={["column", "column", "row", "row",]}>
+              <Flex flexDir={["column", "column", "row", "row"]}>
                 <Text
-fontFamily={"Bossa-ExtendedBold"}
+                  fontFamily={"Bossa-ExtendedBold"}
                   w={["100%", "100%", "50%", "50%"]}
-                  
                   fontSize={["24px", "24px", "48px", "48px"]}
                   textTransform={"capitalize"}
                   fontWeight={700}
@@ -74,8 +80,8 @@ fontFamily={"Bossa-ExtendedBold"}
                 </Text>
 
                 <Text
-fontFamily={"Bossa-Light"}
-                color={"#747272"}
+                  fontFamily={"Bossa-Light"}
+                  color={"#747272"}
                   w={["100%", "100%", "50%", "50%"]}
                   fontSize={["9px", "9px", "18px", "18px"]}
                   fontWeight={300}
@@ -93,9 +99,7 @@ fontFamily={"Bossa-Light"}
         </Box>
 
         <VideoModal
-          url={
-            g42Video
-          }
+          url={g42Video}
           isOpen={isOpen}
           onOpen={onOpen}
           onClose={onClose}

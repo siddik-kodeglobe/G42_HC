@@ -90,7 +90,7 @@ const Omics = () => {
             padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
             gap={["15px","15px","0px","0px"]}
           >
-            <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
+            <Flex flexDirection={["row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
               fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
@@ -207,7 +207,7 @@ const Omics = () => {
           >
             {data?.map((el) => (
               <SwiperSlide key={el.id} className={style.swipe_slide}>
-                <Box textDecor={"none"} padding={["40px 24px 52px 24px"]} border={"1px solid #D9D9D9"}>
+                <Box _first={{padding: "40px 48px 52px 24px"}} textDecor={"none"} padding={["40px 24px 52px 24px"]} border={"1px solid #D9D9D9"}>
                 
                 <Link href={`/news/${el.id}`}>
                   <Image

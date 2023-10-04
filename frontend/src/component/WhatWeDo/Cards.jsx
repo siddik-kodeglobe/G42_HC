@@ -23,11 +23,13 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text w={["42px","42px","fit-content","fit-content" ]} fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               01
             </Text>
             <Box w={"502px"} maxW={"100%"}>
               <Image
+              maxH={["100%"]}
+
                 w={["302px","302px","502px","502px"]}
                 maxW={"100%"}
                 h={["233px","233px","387px","387px"]}
@@ -88,11 +90,13 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text w={["42px","42px","fit-content","fit-content" ]} fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               02
             </Text>
             <Box w={"502px"} maxW={"100%"}>
               <Image
+              maxH={["100%"]}
+
                 w={["302px","302px","502px","502px"]}
                 maxW={"100%"}
                 h={["233px","233px","387px","387px"]}
@@ -165,11 +169,13 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text w={["42px","42px","fit-content","fit-content" ]} fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               03
             </Text>
             <Box w={"502px"} maxW={"100%"}>
               <Image
+              maxH={["100%"]}
+
                 w={["302px","302px","502px","502px"]}
                 maxW={"100%"}
                 h={["233px","233px","387px","387px"]}
@@ -230,11 +236,13 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text w={["42px","42px","fit-content","fit-content" ]} fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               04
             </Text>
             <Box w={"502px"} maxW={"100%"}>
               <Image
+              maxH={["100%"]}
+
                 w={["302px","302px","502px","502px"]}
                 maxW={"100%"}
                 h={["233px","233px","387px","387px"]}
@@ -307,11 +315,13 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text w={["42px","42px","fit-content","fit-content" ]} fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               05
             </Text>
             <Box w={"502px"} maxW={"100%"}>
               <Image
+              maxH={["100%"]}
+
                 w={["302px","302px","502px","502px"]}
                 maxW={"100%"}
                 h={["233px","233px","387px","387px"]}
@@ -372,11 +382,13 @@ const Cards = () => {
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
-            <Text fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
+            <Text w={["42px","42px","fit-content","fit-content" ]} fontFamily={"Bossa-Bold"} fontSize={["24px","24px","80px","80px"]} fontWeight={700} lineHeight={"68px"}>
               06
             </Text>
             <Box w={"502px"} maxW={"100%"}>
               <Image
+              maxH={["100%"]}
+
                 w={["302px","302px","502px","502px"]}
                 maxW={"100%"}
                 h={["233px","233px","387px","387px"]}

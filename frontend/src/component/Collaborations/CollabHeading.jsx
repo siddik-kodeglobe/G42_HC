@@ -8,10 +8,10 @@ const CollabHeading = () => {
       <Flex
         alignItems={"start"}
         justifyContent={"space-between"}
-        margin={["66px 12% 57px 5%"]}
+        margin={["23px 20px 0px 20px","23px 20px 0px 20px","66px 12% 57px 5%","66px 12% 57px 5%"]}
         flexDir={["column", "column", "row", "row"]}
       >
-        <Box w={["100vw", "100vw", "448px", "448px"]} maxW={"100%"}>
+        <Box w={["100%", "100%", "448px", "448px"]} maxW={"100%"}>
           <Text
           fontFamily={"Bossa-ExtendedBold"}
             alignItems={"start"}
@@ -27,7 +27,7 @@ const CollabHeading = () => {
         <Box>
           <Text
           fontFamily={"Bossa-Light"}
-            w={["100vw", "100vw", "453px", "453px"]}
+            w={["100%", "100%", "453px", "453px"]}
             maxW={"100%"}
             alignItems={"start"}
             color={"#747272"}
@@ -44,7 +44,7 @@ const CollabHeading = () => {
 
           <Text
           fontFamily={"Bossa-Light"}
-            w={["100vw", "100vw", "453px", "453px"]}
+            w={["100%", "100%", "453px", "453px"]}
             maxW={"100%"}
             alignItems={"start"}
             color={"#747272"}

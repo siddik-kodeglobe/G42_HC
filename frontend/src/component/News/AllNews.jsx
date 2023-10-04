@@ -82,10 +82,10 @@ const AllNews = () => {
             maxW={"100%"}
             alignItems={["start","start","center","center"]}
             justifyContent={"space-between"}
-            padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
+            padding={["40px 15px 0px 15px","40px 15px 0px 15px", "124px 60px 0px 66px"]}
             gap={["15px","15px","0px","0px"]}
           >
-            <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
+            <Flex flexDirection={["row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
               fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}

@@ -8,7 +8,7 @@ const Footer_News = () => {
       <Box
         borderTop={"1px solid #D9D9D9"}
         paddingTop={"55px"}
-        margin={["0px 174px 0px 174px"]}
+        margin={["0px 22px 0px 22px","0px 22px 0px 22px","0px 174px 0px 174px","0px 174px 0px 174px"]}
       >
         <Footer />
       </Box>

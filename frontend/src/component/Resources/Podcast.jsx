@@ -203,6 +203,8 @@ const Podcast = () => {
             ref={swiperRef}
             // navigation={true}
             freeMode={true}
+            observeParents={true}
+            observer={true}
             modules={[Navigation, FreeMode]}
             className={style.swiper}
           >
