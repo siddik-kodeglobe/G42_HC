@@ -12,8 +12,8 @@ const Input_Search = ({inputText, handleInputChange}) => {
   return (
     <>
         <Box  padding={[
-          "14px 0px 39px 20px",
-          "14px 0px 39px 20px",
+          "14px 20px 39px 20px",
+          "14px 20px 39px 20px",
           "0px 178px 56px 60px",
           "0px 178px 56px 60px",
         ]}>

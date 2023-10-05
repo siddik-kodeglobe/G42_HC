@@ -41,8 +41,8 @@ const Categories_Search = ({ handleChangeActiveCategory, activeCategory }) => {
         alignItems={"center"}
         gap={["8px", "8px", "16px", "16px"]}
         margin={[
-          "14px 0px 39px 20px",
-          "14px 0px 39px 20px",
+          "14px 20px 39px 20px",
+          "14px 20px 39px 20px",
           "0px 178px 56px 60px",
           "0px 178px 56px 60px",
         ]}

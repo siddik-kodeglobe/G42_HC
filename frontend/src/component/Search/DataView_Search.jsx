@@ -31,7 +31,7 @@ const DataView_Search = ({ data }) => {
   return (
     <>
       <Box>
-        <SimpleGrid margin={["40px 59px 18px 59px"]} columns={[1,1,3,3]} spacing={10}>
+        <SimpleGrid margin={["40px 20px 18px 20px","40px 20px 18px 20px","40px 59px 18px 59px","40px 59px 18px 59px"]} columns={[1,1,3,3]} spacing={10}>
           {data?.map((el) => (
             <Box w={["100%"]} key={el.id}>
               <Box w={["100%"]} h={["424px"]}>
