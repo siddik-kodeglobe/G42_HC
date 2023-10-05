@@ -8,8 +8,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
-const Input_Search = () => {
-    const [inputText, setInputText] = useState("");
+const Input_Search = ({inputText, handleInputChange}) => {
   return (
     <>
         <Box  padding={[
@@ -19,10 +18,10 @@ const Input_Search = () => {
           "0px 178px 56px 60px",
         ]}>
       <InputGroup>
-        <Input focusBorderColor={"black"} value={inputText} onChange={(e) => setInputText(e.target.value)} fontFamily={"Bossa-Regular"} color={"#B6B6B6"} fontSize={["16px"]} fontStyle={"normal"} lineHeight={["22px"]} placeholder="What are you looking for?" variant='flushed'/>
+        <Input focusBorderColor={"black"} value={inputText} onChange={(e) => handleInputChange(e.target.value)} fontFamily={"Bossa-Regular"} color={"#B6B6B6"} fontSize={["16px"]} fontStyle={"normal"} lineHeight={["22px"]} placeholder="What are you looking for?" variant='flushed'/>
         <InputRightElement cursor={"pointer"}>
             {inputText.length > 0 ? 
-            <CloseIcon onClick={() => setInputText("")}  w={["19px"]} h={["19px"]} />
+            <CloseIcon onClick={() => handleInputChange("")}  w={["19px"]} h={["19px"]} />
             :
             
           <SearchIcon  w={["19px"]} h={["19px"]}/>
