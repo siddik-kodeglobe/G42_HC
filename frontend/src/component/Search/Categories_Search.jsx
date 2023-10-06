@@ -11,7 +11,6 @@ const Categories_Search = ({ handleChangeActiveCategory, activeCategory }) => {
       `${process.env.REACT_APP_BACKEND_URL}/api/resources?populate=*`
     );
     setData(res.data.data);
-    // console.log(res.data.data)
     filterCategoryFn(res.data.data);
   };
 

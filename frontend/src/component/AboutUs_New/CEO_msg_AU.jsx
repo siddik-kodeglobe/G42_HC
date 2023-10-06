@@ -165,8 +165,8 @@ const CEO_msg_AU = () => {
         <Box margin={[
           "39px 20px 0px 20px",
           "39px 20px 0px 20px",
-          "39px 100px 0px 100px",
-          "0px 0px 0px 158px",
+          "39px 100px 0px 0px",
+          "0px 0px 0px 0px",
         ]} w={["100%", "100%", "100%", "35%"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}

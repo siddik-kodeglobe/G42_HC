@@ -16,7 +16,7 @@ import Breadcrumb_AU from './Breadcrumb_AU'
 const AboutUs = () => {
   return (
     <>
-      <Box>
+      <Box pos={"relative"}>
         <Navbar/>
         <Breadcrumb_AU/>
         <Intro_AU/>

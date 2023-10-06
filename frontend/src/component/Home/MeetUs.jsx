@@ -24,6 +24,8 @@ import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
 import bgImg from "../../assets/MeetUs/background.png";
+import blueMotionVideo from '../../assets/backgroundVideo/blueMotionVideo.mp4';
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
 const MeetUs = () => {
   const [data, setData] = useState([]);
@@ -70,7 +72,7 @@ const MeetUs = () => {
     ];
 
     const day = inputDate.getUTCDate();
-    const formattedDay = (day < 10) ? `0${day}` : day;
+    const formattedDay = day < 10 ? `0${day}` : day;
     const month = months[inputDate.getUTCMonth()];
     const year = inputDate.getUTCFullYear();
 
@@ -83,132 +85,149 @@ const MeetUs = () => {
   }, []);
   return (
     <>
-      <Box mt={"95px"} paddingBottom={"80px"} backgroundImage={bgImg} backgroundRepeat={"no-repeat"} backgroundSize={"cover"}>
-        <Flex
-          padding={["40px 15px 20px 15px", "55px 60px 20px 150px"]}
-          alignItems={"center"}
-          justifyContent={"space-between"}
+      <Box mt={"95px"} position={"relative"}>
+        <Box height={"815px"} zIndex={-10} position={"relative"} mt={["80px"]}>
+          <BackgroundVideoContainer
+            videosrc={blueMotionVideo}
+            height={"815px"}
+          />
+        </Box>
+        <Box
+        position={"absolute"} zIndex={2} top={0}  left={0} right={0}
+          
         >
-          <Text
-          fontFamily={"Bossa-ExtendedBold"}
-            fontSize={["18px", "18px", "32px", "32px"]}
-            fontWeight={700}
-            fontStyle={"normal"}
+          <Flex
+            padding={["40px 15px 20px 15px", "55px 60px 20px 150px"]}
+            alignItems={"center"}
+            justifyContent={"space-between"}
           >
-            Meet us at
-          </Text>
-          <Flex display={["none", "none", "flex", "flex"]} alignItems={"center"} gap={5}>
-            <Flex
-              onClick={() => goPrev()}
-              _hover={{ backgroundColor: "#00D2AA" }}
-              alignItems={"center"}
-              justifyContent={"center"}
-              border={"1px solid black"}
-              borderStyle={"dashed"}
-              borderRadius={"50%"}
-              cursor={"pointer"}
+            <Text
+              fontFamily={"Bossa-ExtendedBold"}
+              fontSize={["18px", "18px", "32px", "32px"]}
+              fontWeight={700}
+              fontStyle={"normal"}
             >
-              <BsArrowLeft
-                style={{
-                  color: "black",
-                  height: "52px",
-                  width: "52px",
-                  padding: "11px",
-                  cursor: "pointer",
-                }}
-              />
-            </Flex>
+              Meet us at
+            </Text>
             <Flex
-              onClick={() => goNext()}
-              _hover={{ backgroundColor: "#00D2AA" }}
+              display={["none", "none", "flex", "flex"]}
               alignItems={"center"}
-              justifyContent={"center"}
-              border={"1px solid black"}
-              borderStyle={"dashed"}
-              borderRadius={"50%"}
-              cursor={"pointer"}
+              gap={5}
             >
-              <BsArrowRight
-                style={{
-                  color: "black",
-                  height: "52px",
-                  width: "52px",
-                  padding: "11px",
-                }}
-              />
+              <Flex
+                onClick={() => goPrev()}
+                _hover={{ backgroundColor: "#00D2AA" }}
+                alignItems={"center"}
+                justifyContent={"center"}
+                border={"1px solid black"}
+                borderStyle={"dashed"}
+                borderRadius={"50%"}
+                cursor={"pointer"}
+              >
+                <BsArrowLeft
+                  style={{
+                    color: "black",
+                    height: "52px",
+                    width: "52px",
+                    padding: "11px",
+                    cursor: "pointer",
+                  }}
+                />
+              </Flex>
+              <Flex
+                onClick={() => goNext()}
+                _hover={{ backgroundColor: "#00D2AA" }}
+                alignItems={"center"}
+                justifyContent={"center"}
+                border={"1px solid black"}
+                borderStyle={"dashed"}
+                borderRadius={"50%"}
+                cursor={"pointer"}
+              >
+                <BsArrowRight
+                  style={{
+                    color: "black",
+                    height: "52px",
+                    width: "52px",
+                    padding: "11px",
+                  }}
+                />
+              </Flex>
             </Flex>
           </Flex>
-        </Flex>
 
-        <Box mt={["-45px", "-45px","-45px", "-45px"]}>
-          <Swiper
-          speed={750}
-            breakpoints={{
-              1024: {
-                slidesOffsetBefore: 150,
-                slidesPerView: 2.5,
-                spaceBetween: 44,
-              },
-              390: {
-                slidesPerView: 1.25,
-                slidesOffsetBefore: 15,
-                // spaceBetween:22,
-              },
-            }}
-            ref={swiperRef}
-            // navigation={true}
-            modules={[Navigation]}
-            className={style.swiper}
-          >
-            {data?.map((el) => (
-              <SwiperSlide className={style.swipe_slide}>
-                <Link href={el.attributes.linkedin_link} _hover={{textDecoration: "none"}} isExternal>
-                <Box
-                  w={["306px", "306px", "516px"]}
-                  h={["285px", "285px", "450px"]}
-                  backgroundColor={"white"}
-                >
-                  <Text
-                  fontFamily={"Bossa-Regular"}
-                    padding={["8px", "8px", "14px 0px 17px 14px"]}
-                    color={"#747272"}
-                    fontSize={"14px"}
-                    fontWeight={400}
-                    textTransform={"capitalize"}
-                    fontStyle={"normal"}
-                    lineHeight={"normal"}
+          <Box mt={["-45px", "-45px", "-45px", "-45px"]}>
+            <Swiper
+              speed={750}
+              breakpoints={{
+                1024: {
+                  slidesOffsetBefore: 150,
+                  slidesPerView: 2.5,
+                  spaceBetween: 44,
+                },
+                390: {
+                  slidesPerView: 1.25,
+                  slidesOffsetBefore: 15,
+                  // spaceBetween:22,
+                },
+              }}
+              ref={swiperRef}
+              // navigation={true}
+              modules={[Navigation]}
+              className={style.swiper}
+            >
+              {data?.map((el) => (
+                <SwiperSlide className={style.swipe_slide}>
+                  <Link
+                    href={el.attributes.linkedin_link}
+                    _hover={{ textDecoration: "none" }}
+                    isExternal
                   >
-                    {convertData(el.attributes.createdAt)}
-                  </Text>
-                  <Image
-                    padding={["8px", "8px", "0px 14px"]}
-                    w={["100%", "100%", "100%"]}
-                    h={["172px", "172px", "291px"]}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
-                  />
+                    <Box
+                      w={["306px", "306px", "516px"]}
+                      h={["285px", "285px", "450px"]}
+                      backgroundColor={"white"}
+                    >
+                      <Text
+                        fontFamily={"Bossa-Regular"}
+                        padding={["8px", "8px", "14px 0px 17px 14px"]}
+                        color={"#747272"}
+                        fontSize={"14px"}
+                        fontWeight={400}
+                        textTransform={"capitalize"}
+                        fontStyle={"normal"}
+                        lineHeight={"normal"}
+                      >
+                        {convertData(el.attributes.createdAt)}
+                      </Text>
+                      <Image
+                        padding={["8px", "8px", "0px 14px"]}
+                        w={["100%", "100%", "100%"]}
+                        h={["172px", "172px", "291px"]}
+                        src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                      />
 
-                 
-
-                  <Text
-                  fontFamily={"Bossa-ExtendedBold"}
-                    margin={"17px 13px 79px 13px"}
-                    textOverflow={"ellipsis"}
-                    color={"black"}
-                    fontStyle={"normal"}
-                    fontSize={["12px", "12px", "20px", "20px"]}
-                    fontWeight={700}
-                    lineHeight={"normal"}
-                    overflow={"hidden"}
-                    noOfLines={[2,2,3,3]}
-                    textTransform={"capitalize"}
-                  >
-                    {el.attributes.title}
-                  </Text>
-                </Box>
-                </Link>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                      <Text
+                        fontFamily={"Bossa-ExtendedBold"}
+                        margin={"17px 13px 79px 13px"}
+                        textOverflow={"ellipsis"}
+                        color={"black"}
+                        fontStyle={"normal"}
+                        fontSize={["12px", "12px", "20px", "20px"]}
+                        fontWeight={700}
+                        lineHeight={"normal"}
+                        overflow={"hidden"}
+                        noOfLines={[2, 2, 3, 3]}
+                        textTransform={"capitalize"}
+                      >
+                        {el.attributes.title}
+                      </Text>
+                    </Box>
+                  </Link>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Box>
         </Box>
       </Box>
     </>
