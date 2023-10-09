@@ -1,14 +1,23 @@
-import { AspectRatio, Box, Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Box,
+  Flex,
+  Image,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import playBtn from "../../assets/icons/playBtn.svg";
 import News from "./News";
 import VideoModal from "../VideoModal/VideoModal";
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
-import g42MobVideo from '../../assets/temp/Video/G42_MobVideo.mp4';
-import g42TabVideo from '../../assets/temp/Video/g42_TabVideo.mp4'
+import g42MobVideo from "../../assets/temp/Video/G42_MobVideo.mp4";
+import g42TabVideo from "../../assets/temp/Video/g42_TabVideo.mp4";
 
-import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import LazyLoad from "react-lazy-load";
 
 const VideoSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -16,40 +25,52 @@ const VideoSection = () => {
   const isMobile = useMediaQuery({ maxWidth: 500 }); // Mobile
   const isTablet = useMediaQuery({ maxWidth: 1024 }); // Tablet
 
-  const [videoUrl, setVideoUrl] = useState(
-    g42Video
-  );
+  const [videoUrl, setVideoUrl] = useState(g42Video);
 
   // alert(videoUrl)
   useEffect(() => {
     setVideoUrl(isMobile ? g42MobVideo : isTablet ? g42TabVideo : g42Video);
-
   }, [isMobile, isTablet]);
   return (
     <>
       <Box
-        marginBottom={"-20px"}
+        // border={"1px"}
+        // marginBottom={"-20px"}
         onClick={onOpen}
         style={{ cursor: `url(${playBtn}) 45 45, auto` }}
         position={"relative"}
       >
-        <Box position={"relative"} w={"100vw"} maxW={"100%"}>
+        {/* <Box position={"relative"} w={"100vw"} maxW={"100%"}>
+
           <ReactPlayer
-            style={{ position: "position" }}
+            style={{ position: "position", border: "1px" }}
             width={"100%"}
-            height={"100%"}
+            height={"90%"}
             playing={true}
             loop={true}
             url={videoUrl}
             muted={true}
           />
 
-        </Box>
+        </Box> */}
 
-        <Box w={"100vw"} maxW={"100%"} position={"absolute"} bottom={"0px"} margin={"0px"}>
+      <LazyLoad>
+        <Box maxH={"100%"} position={"relative"}>
+          <BackgroundVideoContainer videosrc={videoUrl} height={"95vh"} />
+        </Box>
+        </LazyLoad>
+
+        <LazyLoad>
+        <Box
+          w={"100vw"}
+          maxW={"100%"}
+          position={"absolute"}
+          bottom={"0px"}
+          margin={"0px"}
+        >
           <Flex
-          h={["125px", "125px", "250px", "431px"]} 
-       
+            position={"relative"}
+            h={["125px", "125px", "250px", "431px"]}
             flexDirection={["column", "column", "row"]}
             alignItems={["start", "start", "center"]}
             paddingLeft={["20px", "20px", "25px", "72px"]}
@@ -59,7 +80,7 @@ const VideoSection = () => {
             }
             gap={[0, 0, "14px"]}
           >
-            <Box>
+            <Box position={"absolute"} bottom={0}>
               <Text
                 fontFamily={"Bossa-Regular"}
                 color={"white"}
@@ -86,6 +107,7 @@ const VideoSection = () => {
             </Box>
           </Flex>
         </Box>
+        </LazyLoad>
 
         <VideoModal
           url={g42Video}

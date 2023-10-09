@@ -83,7 +83,7 @@ const Resources = () => {
     <>
       <Box>
         <Flex
-          padding={["40px 15px 0px 15px", "95px 60px 0px 150px"]}
+          padding={["40px 15px 0px 15px", "125px 60px 0px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -144,29 +144,46 @@ const Resources = () => {
           <Swiper
             speed={750}
             breakpoints={{
-              1024: {
-                slidesOffsetBefore: 150,
-                slidesPerView: 2.75,
-                spaceBetween: 44,
-              },
               390: {
                 slidesPerView: 1.25,
                 slidesOffsetBefore: 15,
-                // spaceBetween:22,
+                // spaceBetween: 24,
               },
+              1021: {
+                slidesPerView: 2.25,
+                slidesOffsetBefore: 150,
+                spaceBetween: 44,
+              },
+              1150: {
+                slidesOffsetBefore: 150,
+                slidesPerView: 2.5,
+                spaceBetween: 22,
+              },
+              1250: {
+                slidesOffsetBefore: 150,
+                slidesPerView: 2.75,
+                spaceBetween: 22,
+              },
+              1900: {
+                slidesOffsetBefore: 150,
+                slidesPerView: 2.75,
+                spaceBetween: 22,
+              }
             }}
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
             className={style.swiper}
+            observer={true}
+            observeParents={true}
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
                 <Box
                   // border={"5px solid red"}
-                  h={["214px", "214px", "338px"]}
+                  h={["214px", "214px", "338px", "338px","480px"]}
                   // maxH={["214px", "214px", "338px"]}
-                  w={["285px", "285px", "451px"]}
+                  w={["285px", "285px", "451px","451px","672px"]}
                   // maxW={["285px", "285px", "425px"]}
                   backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url})`}
                   // objectFit={"cover"}
@@ -187,12 +204,15 @@ const Resources = () => {
                   fontFamily={"Bossa-Medium"}
                     mt={"5px"}
                     w={"90%"}
+                    maxHeight={"100%"}
                     h={["60px", "60px", "96px"]}
                     maxH={"96px"}
                     color={"white"}
                     fontSize={["12px", "12px", "20px"]}
                     fontWeight={500}
                     lineHeight={"normal"}
+                    noOfLines={2}
+                    textOverflow={"ellipsis"}
                   >
                     {el.attributes.heading}
                   </Text>
@@ -202,7 +222,7 @@ const Resources = () => {
           </Swiper>
         </Box>
 
-        <Box padding={["38px 0px 40px 15px", "55px 100px 55px 150px", "55px 100px 55px 150px", "55px 100px 55px 150px"]}>
+        <Box padding={["38px 0px 40px 15px", "55px 100px 55px 150px", "55px 100px 0px 150px", "55px 100px 0px 150px"]}>
           <hr style={{ width: "100%", background: "#004141" }} />
         </Box>
       </Box>

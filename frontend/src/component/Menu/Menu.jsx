@@ -17,6 +17,7 @@ import {
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import ReactPlayer from "react-player";
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
 const Menu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -61,7 +62,7 @@ const Menu = () => {
         <DrawerOverlay />
         <DrawerContent padding={0} margin={0}>
           {/* fix the bug */}
-          <Box w={"100%"} h={"294px"} border={"4px"}>
+          {/* <Box w={"100%"} h={"294px"} border={"4px"}>
             <ReactPlayer
               width={"100%"}
               height={"100%"}
@@ -70,20 +71,26 @@ const Menu = () => {
               url={g42Video}
               muted
             />
+          </Box> */}
+          <Box zIndex={-10} position={"relative"} mt={"-1.5px"}>
+            <BackgroundVideoContainer videosrc={g42Video} height={"371px"} />
           </Box>
 
-          <DrawerBody>
+          <DrawerBody >
             <Flex gap={"22px"} flexDirection={"column"}>
               <Link
+              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/about"
                 fontSize={["20px", "20px", "30px", "30px"]}
                 fontWeight={700}
                 color={"black"}
+                boxShadow={"none!important"}
               >
                 About G42 Healthcare
               </Link>
               <Link
+              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/whatwedo"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -93,6 +100,7 @@ const Menu = () => {
                 What we do
               </Link>
               <Link
+              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/collaborations"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -102,6 +110,7 @@ const Menu = () => {
                 Partnerships
               </Link>
               <Link
+              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/resources"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -111,6 +120,7 @@ const Menu = () => {
                 Resources
               </Link>
               <Link
+              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/news"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -122,6 +132,7 @@ const Menu = () => {
 
               <Flex gap={"46px"}>
                 <Link
+                _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                   fontFamily={"Bossa-Regular"}
                   href="/contactus"
                   fontSize={["16px", "16px", "20px", "20px"]}
@@ -131,6 +142,7 @@ const Menu = () => {
                   Contact
                 </Link>
                 <Link
+                _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
                   fontFamily={"Bossa-Regular"}
                   href="/career"
                   fontSize={["16px", "16px", "20px", "20px"]}

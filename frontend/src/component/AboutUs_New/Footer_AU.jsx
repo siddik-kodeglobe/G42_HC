@@ -5,7 +5,12 @@ import Footer from "../Footer/Footer";
 const Footer_AU = () => {
   return (
     <>
-      <Box margin={["78px 10% 0px 10%"]}>
+      <Box 
+      w={"100vw"}
+      maxW={"100%"}
+      padding={"8.16% 11.77% 1.72% 11.77%"}
+      // margin={["78px 10% 0px 10%","78px 10% 0px 10%","78px 10% 0px 10%","78px 225px 0px 225px"]}
+      >
         <Flex
           flexDirection={["column", "column", "row"]}
           alignItems={["start", "start", "center"]}
@@ -26,7 +31,7 @@ const Footer_AU = () => {
               fontSize={["12px", "12px", "16px"]}
               fontWeight={500}
               textTransform={"capitalize"}
-              padding={"15px 40px"}
+              padding={["15px 40px","15px 40px","15px 40px","15px 40px","20px 46px"]}
               color={"white"}
               _hover={{ backgroundColor: "#00AFFF" }}
               backgroundColor={"#00AFFF"}

@@ -82,7 +82,8 @@ const AllNews = () => {
             maxW={"100%"}
             alignItems={["start","start","center","center"]}
             justifyContent={"space-between"}
-            padding={["40px 15px 0px 15px","40px 15px 0px 15px", "124px 60px 0px 66px"]}
+            padding={"8.17% 3.94% 3.42%  3.94%"}
+            // padding={["40px 15px 0px 15px","40px 15px 0px 15px", "124px 60px 0px 66px"]}
             gap={["15px","15px","0px","0px"]}
           >
             <Flex flexDirection={["row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
@@ -178,25 +179,36 @@ const AllNews = () => {
           <Swiper
             speed={750}
             breakpoints={{
-              390: {
+              380: {
                 slidesOffsetBefore: 21,
                 slidesPerView: 1.25,
                 spaceBetween: 0,
               },
-              768: {
+              765: {
                 slidesOffsetBefore: 66,
                 slidesPerView: 2,
                 spaceBetween: 0,
               },
-              1024: {
+              990: {
                 slidesOffsetBefore: 66,
                 slidesPerView: 2.75,
-                spaceBetween: 0,
+                spaceBetween: 0
               },
+              1250:{
+                slidesOffsetBefore: 66,
+                slidesPerView: 2.75,
+                spaceBetween: 0
+              },
+              1900:{
+                slidesOffsetBefore: 66,
+                slidesPerView: 2.75,
+                spaceBetween: 0
+              }
             }}
             ref={swiperRef}
             // navigation={true}
-            freeMode={true}
+            observeParents
+            observer
             modules={[Navigation, FreeMode]}
             className={style.swiper}
           >

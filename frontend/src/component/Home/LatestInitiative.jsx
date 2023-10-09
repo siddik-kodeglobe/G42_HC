@@ -304,10 +304,10 @@ const LatestInitiative = () => {
         </Flex>
 
         {/* slider  */}
-        <Flex padding={"0px 30px 73px 108px"} w={"fit-content"} gap={"60px"}>
+        <Flex padding={"0px 30px 73px 108px"} w={"fit-content"} gap={["60px","60px","60px","60px","96px"]}>
           
           {/* first container  */}
-          <Box pos={"relative"} w={"406px"} mt={"136px"}>
+          <Box pos={"relative"} w={["406px","406px","406px","406px","576px"]} mt={"136px"}>
             <Box id="wrapper">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
@@ -380,7 +380,7 @@ const LatestInitiative = () => {
           </Box>
 
           {/* second container  */}
-          <Box position={"relative"} mt={"56px"} w={"307px"}>
+          <Box position={"relative"} mt={"56px"} w={["307px","307px","307px","307px","487px"]}>
             <Box id="wrapper2">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${secondImgRef.current}`}
@@ -453,7 +453,7 @@ const LatestInitiative = () => {
           </Box>
 
           {/* third container  */}
-          <Box position={"relative"} mt={"247px"} w={"275px"}>
+          <Box position={"relative"} mt={"247px"} w={["275px","275px","275px","275px","384px"]}>
             <Box id="wrapper3">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${thirdImgRef.current}`}

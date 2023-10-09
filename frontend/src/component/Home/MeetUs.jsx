@@ -92,6 +92,9 @@ const MeetUs = () => {
             height={"815px"}
           />
         </Box>
+
+        <Box height={"390px"} position={"absolute"} zIndex={1} top={0}  left={0} right={0}
+ background={"linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)"}></Box>
         <Box
         position={"absolute"} zIndex={2} top={0}  left={0} right={0}
           
@@ -160,16 +163,31 @@ const MeetUs = () => {
             <Swiper
               speed={750}
               breakpoints={{
-                1024: {
+                390: {
+                  slidesPerView: 1.25,
+                  slidesOffsetBefore: 15,
+                  // spaceBetween: 24,
+                },
+                1021: {
+                  slidesPerView: 2.25,
+                  slidesOffsetBefore: 150,
+                  spaceBetween: 27,
+                },
+                1150: {
+                  slidesOffsetBefore: 150,
+                  slidesPerView: 2.25,
+                  spaceBetween: 5,
+                },
+                1250: {
                   slidesOffsetBefore: 150,
                   slidesPerView: 2.5,
                   spaceBetween: 44,
                 },
-                390: {
-                  slidesPerView: 1.25,
-                  slidesOffsetBefore: 15,
-                  // spaceBetween:22,
-                },
+                1250: {
+                  slidesOffsetBefore: 150,
+                  slidesPerView: 2.75,
+                  spaceBetween: 44,
+                }
               }}
               ref={swiperRef}
               // navigation={true}
@@ -184,8 +202,8 @@ const MeetUs = () => {
                     isExternal
                   >
                     <Box
-                      w={["306px", "306px", "516px"]}
-                      h={["285px", "285px", "450px"]}
+                      w={["306px", "306px", "516px","516px","652px"]}
+                      h={["285px", "285px", "450px","450px","491px"]}
                       backgroundColor={"white"}
                     >
                       <Text

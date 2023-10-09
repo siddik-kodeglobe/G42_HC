@@ -6,21 +6,18 @@ const CBOMsg = () => {
   return (
     <>
       <Box
-        mt={["124px"]}
+        mt={["8.2%"]}
         backgroundColor={"#004141"}
-        h={["fit-content", "fit-content", "814px", "814px"]}
-        w={["100vw"]}
-        maxW={"100%"}
+        padding={"3.71% 11.71% 3.71% 11.71%"}
+
+        // h={["fit-content", "fit-content", "814px", "814px"]}
+        w={["100%"]}
+        // maxW={"100%"}
       >
         <Flex
           flexDir={["column", "column", "row", "row"]}
           alignItems={"start"}
-          padding={[
-            "40px 20px 82px 20px",
-            "40px 20px 82px 20px",
-            "56px 154px",
-            "56px 154px",
-          ]}
+          justifyContent={"space-between"}
         >
           <Flex
             flexDirection={["column"]}
@@ -99,9 +96,11 @@ const CBOMsg = () => {
             alignItems={"start"}
           >
             <Image
-              w={["351px", "351px", "468px", "468px"]}
+            w={"100%"}
+            // w={["100%","100%","100%","50%","50%","50%"]}
+              // w={["351px", "351px", "468px", "468px"]}
               maxW={"100%"}
-              h={["700px"]}
+              h={["221px", "221px","353px","457px","589px","884px"]}
               flexShrink={0}
               objectFit={"cover"}
               src={CBO}

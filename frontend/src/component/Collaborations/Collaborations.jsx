@@ -15,7 +15,7 @@ import CollabFooter from "./CollabFooter";
 const Collaborations = () => {
   return (
     <>
-      <Box w={"100vw"} maxW={"99.9%"}>
+      <Box w={"100vw"} maxW={"100%"}>
         <Navbar />
         <CollabBreadCrumb />
         <Partnership />

@@ -251,7 +251,7 @@ const PioneeringHC = () => {
         >
           Pioneering Healthcare
         </Text>
-        <Box padding={["59px 20px 20px 20px", "20px", "56px 155px"]}>
+        <Box padding={["59px 20px 20px 20px", "20px", "56px 151px", "56px 225px"]}>
           <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]}>
             <Box w={"100%"} padding={"0px 0px"}>
               <Text className={style.text1}>

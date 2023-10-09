@@ -4,6 +4,7 @@ import ReactPlayer from "react-player";
 import VideoModal from "../VideoModal/VideoModal";
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 import playBtn from "../../assets/icons/playBtn.svg";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
 const Video_AU = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -12,18 +13,11 @@ const Video_AU = () => {
       <Box mt={["38px"]} position={"relative"}>
         <Box
           onClick={onOpen}
-          style={{ cursor: `url(${playBtn}), auto` }}
+          style={{ cursor: `url(${playBtn}) 45 45, auto` }}
           position={"relative"}
+          mt={"-1.5px"}
         >
-          <ReactPlayer
-            style={{ position: "position" }}
-            width={"100%"}
-            height={"100%"}
-            playing={true}
-            loop={true}
-            url={g42Video}
-            muted={true}
-          />
+          <BackgroundVideoContainer videosrc={g42Video} height={"100vh"} />
         </Box>
 
         <Box
@@ -51,16 +45,26 @@ const Video_AU = () => {
               right={[1, 1, 5]}
               height={["50px", "50px", "214px"]}
               w={"96vw"}
-              padding={["15px 50px", "15px 50px", "75px 148px", "75px 148px"]}
+              padding={[
+                "15px 46px",
+                "15px 46px",
+                "15px 74px",
+                "75px 96px",
+                "75px 124px",
+                "75px 187px",
+              ]}
               mt={5}
               justifyContent={"space-between"}
               alignItems={"center"}
               backgroundColor={"white"}
             >
-              <Flex flexDir={["column", "column", "column", "row", "row"]} gap={["16px"]}>
+              <Flex
+                flexDir={["column", "column", "column", "row", "row"]}
+                gap={["16px"]}
+              >
                 <Text
                   fontFamily={"Bossa-ExtendedBold"}
-                  w={["100%", "100%", "100%", "50%", "50%"]}
+                  w={["100%", "100%", "100%", "100%", "50%", "50%"]}
                   fontSize={["24px", "24px", "45px", "45px"]}
                   textTransform={"capitalize"}
                   fontWeight={700}

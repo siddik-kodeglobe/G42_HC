@@ -42,9 +42,10 @@ const ClientnPartner = () => {
   return (
     <>
     <Box position={"relative"}>
-    <Box zIndex={-10} position={"relative"} mt={["45px"]}>
+    <Box zIndex={-10} position={"relative"} mt={"-1.5px"}>
       <BackgroundVideoContainer videosrc={greenMotionVideo} height={"641px"}/>
     </Box>
+    <Box position={"absolute"} zIndex={2} top={0} bottom={0} left={0} right={0} background={"linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)"} height={"339px"} w={"100vw"} maxW={"100%"}></Box>
       <Box position={"absolute"} zIndex={2} top={0} bottom={0} left={0} right={0} w={"100vw"} maxW={"100%"} paddingTop={"74px"}>
         <Text
           fontFamily={"Bossa-ExtendedBold"}

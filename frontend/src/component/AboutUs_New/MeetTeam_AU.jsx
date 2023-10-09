@@ -57,11 +57,15 @@ const MeetTeam_AU = () => {
 
   return (
     <>
-    <Box mt={"124px"} backgroundColor={"#174042"} padding={"80px 0px"} >
+    <Box
+    w={"100vw"}
+    maxW={"100%"}
+    mt={"124px"} backgroundColor={"#174042"} padding={"80px 0px"} >
     <Flex
       justifyContent={"space-between"}
       alignItems={"center"}
-      margin={["51px 0px 0px 20px","51px 0px 0px 20px","78px 65px 0px 65px","78px 65px 0px 65px"]}
+      padding={"5.26% 2.64% 5.05% 4.27%"}
+      // margin={["51px 0px 0px 20px","51px 0px 0px 20px","78px 65px 0px 65px","78px 65px 0px 65px"]}
       gap={7}
     >
       <Flex flexDirection={["column", "column", "row"]} alignItems={["start", "start", "center", "center"]} gap={7}>
@@ -127,36 +131,49 @@ const MeetTeam_AU = () => {
       </Flex>
     </Flex>
 
-
     <Swiper
     speed={750}
     breakpoints={{
-      1024: {
-        slidesOffsetBefore: 65,
-        slidesPerView: 3.2,
-        spaceBetween:11,
+      1900: {
+        slidesOffsetBefore: 75.83,
+        slidesPerView: 3.5,
+        spaceBetween:121.34,
+      },
+      1250: {
+        slidesOffsetBefore: 50.55,
+        slidesPerView: 3,
+        spaceBetween:80.89,
+      },
+      990: {
+        slidesOffsetBefore: 39.18,
+        slidesPerView: 3,
+        spaceBetween:62.69,
       },
       760: {
-        slidesOffsetBefore: 65,
-        slidesPerView: 3.2,
-        spaceBetween:25,
+        slidesOffsetBefore: 30.33,
+        slidesPerView: 3,
+        spaceBetween:48.43,
       },
       390: {
-        slidesPerView: 1.45,
-        spaceBetween:22,
-        slidesOffsetBefore: 15
+        slidesOffsetBefore: 18.95,
+        slidesPerView: 1.25,
+        spaceBetween:30.33,
       },
     }}
       ref={swiperRef}
       // navigation={true}
       modules={[Navigation]}
       className={style.swiper}
+      observeParents={true}
+      observer={true}
     >
       {data?.map((el) => (
-        <SwiperSlide className={style.swipe_slide}>
+        <SwiperSlide style={{
+          width:"30%"
+        }} className={style.swipe_slide}>
           <Box w={"fit-content"}>
-            <Image
-            w={["267px","267px","100%","100%"]}
+            <Image            
+            // w={["267px","267px","100%","100%"]}
             height={["387px", "387px", "387px", "500px"]}
             src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.avatar.data.attributes.url}`}
             objectFit={"cover"}

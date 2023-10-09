@@ -106,7 +106,10 @@ const WhoWeAre_AU = () => {
       <Flex
         flexDirection={["column", "column", "column", "row", "row"]}
         alignItems={"start"}
-        margin={["51px 21px 40px 21px", "51px 21px 40px 21px","51px 100px 0px 100px", "78px 148px 0px 148px", "78px 148px 0px 148px"]}
+        w={"100vw"}
+        maxW={"100%"}
+        padding={["0px 11.718% 0px 11.718%"]}
+        // margin={["51px 56px 40px 56px", "51px 89px 40px 89px","51px 116px 0px 116px", "78px 148px 0px 148px", "78px 225px 0px 225px"]}
         mt={["45px"]}
         justifyContent={"space-between"}
         gap={["20px","20px","0px","20px","20px"]}

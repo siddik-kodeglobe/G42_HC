@@ -80,22 +80,22 @@ const Publications = () => {
     
   return (
     <>
-       <Box>
+       <Box  w={"100vw"}
+            maxW={"100%"}>
         <Flex>
           <Flex
           flexDirection={["column","column","row","row"]}
-            w={"100vw"}
-            maxW={"100%"}
+           w={"100%"}
             alignItems={["start","start","center","center"]}
             justifyContent={"space-between"}
-            padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
+            padding={["80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","81px 3.94% 0% 3.94%","105px 3.94% 0% 3.94%","125px 3.94% 0% 3.94%"]}
             gap={["15px","15px","0px","0px"]}
           >
             <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
               fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
-                fontSize={["24px", "24px", "60px", "60px"]}
+                fontSize={["24px", "24px", "30px", "39px", "50px", "60px"]}
                 fontWeight={700}
                 lineHeight={"normal"}
                 textTransform={"capitalize"}
@@ -116,11 +116,12 @@ const Publications = () => {
                 fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}
-                  fontSize={["12px", "12px", "16px", "16px"]}
+                  fontSize={["12px", "12px", "12px", "10px", "13px", "16px"]}
                   textTransform={"capitalize"}
                   fontWeight={[400, 400, 500, 500]}
-                  padding={"11px 21px"}
+                  padding={["12.55px 12px", "12.55px 12px", "", "10.44px 14px", "13.48px 18.53px", "16px 22px"]}
                   flexShrink={0}
+                  color={"white"}
                 >
                   All Publications
                 </Text>
@@ -184,43 +185,54 @@ const Publications = () => {
           <Swiper
             speed={750}
             breakpoints={{
-              390: {
+              380: {
                 slidesOffsetBefore: 21,
                 slidesPerView: 1.25,
-                spaceBetween: 11,
+                spaceBetween: 15,
               },
-              768: {
-                slidesOffsetBefore: 66,
-                slidesPerView: 2,
-                spaceBetween: 22,
+              750: {
+                slidesOffsetBefore: 21,
+                slidesPerView: 1.95,
+                spaceBetween: 24,
               },
-              1024: {
-                slidesOffsetBefore: 66,
+              990: {
+                slidesOffsetBefore: 39,
+                slidesPerView: 2.5,
+                spaceBetween: 31,
+              },
+              1250: {
+                slidesOffsetBefore: 51,
+                slidesPerView: 2.65,
+                spaceBetween: 40,
+              },
+              1530: {
+                slidesOffsetBefore: 60,
                 slidesPerView: 2.75,
-                spaceBetween: 22,
-              },
+                spaceBetween: 60,
+              }
             }}
             ref={swiperRef}
             // navigation={true}
-            freeMode={true}
             modules={[Navigation, FreeMode]}
             className={style.swiper}
+            observeParents={true}
+            observer={true}
           >
             {data?.map((el) => (
-              <SwiperSlide key={el.id} className={style.swipe_slide}>
+              <SwiperSlide style={{width: "30.61%"}} key={el.id} className={style.swipe_slide}>
                 <Box>
                   <Image
-                    w={["301px", "301px", "465px", "465px"]}
-                    h={["275px", "275px", "424px", "424px"]}
-                    objectFit={"cover"}
-                    maxW={"100%"}
+                  w={"100%"}
+                  height={["275px","275px","214px","276px","357px","428px"]}
+                  objectFit={"cover"}
+                    
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
                   fontFamily={"Bossa-Regular"}
                     noOfLines={1}
                     color={"#747272"}
-                    fontSize={["9px", "9px", "14px", "14px"]}
+                    fontSize={["9px", "9px", "9.14px", "14px", "11.8px", "17.68px"]}
                     fontWeight={500}
                     lineHeight={"31px"}
                     textTransform={"capitalize"}
@@ -230,13 +242,13 @@ const Publications = () => {
 
                   <Text
                     noOfLines={2}
-                    w={["306px", "306px", "473px", "473px"]}
+                    w={"100%"}
                     maxW={"100%"}
                     color={"black"}
                     fontFamily={"Bossa-ExtendedBold"}
-                    fontSize={["12px", "12px", "20px", "20px"]}
+                    fontSize={["12px","12px", "12px", "13px", "16px", "25px"]}
                     fontWeight={700}
-                    lineHeight={"31px"}
+                    lineHeight={["18px","18px","18px","20px","26px","31px"]}
                     textTransform={"capitalize"}
                   >
                     {el.attributes.heading}

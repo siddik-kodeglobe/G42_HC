@@ -20,7 +20,7 @@ const PartnerWithUs = () => {
             fontFamily={"Bossa-ExtendedBold"}
               textAlign={"center"}
               color={"black"}
-              fontSize={["32px", "32px", "50px", "60px"]}
+              fontSize={["32px","32px", "32px", "50px", "60px", "75px"]}
               // fontWeight={700}
               lineHeight={["81px"]}
             >

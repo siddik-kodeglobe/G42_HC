@@ -183,25 +183,37 @@ const Omics = () => {
           <Swiper
             speed={750}
             breakpoints={{
-              390: {
+              380: {
                 slidesOffsetBefore: 21,
                 slidesPerView: 1.25,
                 spaceBetween: 0,
               },
-              768: {
+              765: {
                 slidesOffsetBefore: 66,
                 slidesPerView: 2,
                 spaceBetween: 0,
               },
-              1024: {
+              990: {
                 slidesOffsetBefore: 66,
                 slidesPerView: 2.75,
                 spaceBetween: 0
               },
+              1250:{
+                slidesOffsetBefore: 66,
+                slidesPerView: 2.75,
+                spaceBetween: 0
+              },
+              1900:{
+                slidesOffsetBefore: 66,
+                slidesPerView: 2.75,
+                spaceBetween: 0
+
+              }
             }}
             ref={swiperRef}
             // navigation={true}
-            freeMode={true}
+            observeParents
+            observer
             modules={[Navigation, FreeMode]}
             className={style.swiper}
           >

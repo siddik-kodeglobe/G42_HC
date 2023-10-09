@@ -30,9 +30,12 @@ const Partners_AU = () => {
     setData(res.data.data);
   }, []);
   return (
-    <div>
+    <>
+    <Box w={"100vw"} maxW={"100%"}
+    >
       <Text
-      margin={["65px 20px 0px 20px", "65px 20px 0px 20px","78px 106px 0px 106px","78px 106px 0px 106px"]}
+      margin={"8.68% 0px 3.47% 6.97%"}
+      // margin={["65px 20px 0px 20px", "65px 20px 0px 20px","78px 106px 0px 106px","78px 106px 0px 106px"]}
         fontFamily={"Bossa-ExtendedBold"}
         fontWeight={700}
         fontSize={["32px", "32px", "60px", "60px"]}
@@ -42,20 +45,30 @@ const Partners_AU = () => {
 
       <Swiper
         breakpoints={{
-          1024: {
-            slidesOffsetBefore: 120,
+          1900: {
+            slidesOffsetBefore: 138.21,
             slidesPerView: 2.75,
-            spaceBetween: 44,
+            spaceBetween: 25,
+          },
+          1250: {
+            slidesOffsetBefore: 92.14,
+            slidesPerView: 2.75,
+            spaceBetween: 16,
+          },
+          900: {
+            slidesOffsetBefore: 71.4,
+            slidesPerView: 2.25,
+            spaceBetween: 13,
           },
           760: {
-            slidesOffsetBefore: 106,
-            slidesPerView: 2.75,
-            spaceBetween: 35,
+            slidesOffsetBefore: 55.28,
+            slidesPerView: 1.25,
+            spaceBetween: 10,
           },
           390: {
             slidesPerView: 1.2,
-            slidesOffsetBefore: 20,
-            spaceBetween:22,
+            slidesOffsetBefore: 34.5,
+            spaceBetween:6,
           },
         }}
         pagination={{
@@ -99,7 +112,9 @@ const Partners_AU = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+      </Box>
+    </>
+    
   )
 }
 

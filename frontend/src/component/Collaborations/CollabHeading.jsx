@@ -6,9 +6,11 @@ const CollabHeading = () => {
     <>
     <Box>
       <Flex
+      padding={"3.81% 11.71% 3.98% 11.71%"}
+      borderBottom={"1px solid #D9D9D9"}
         alignItems={"start"}
         justifyContent={"space-between"}
-        margin={["23px 20px 0px 20px","23px 20px 0px 20px","66px 12% 57px 5%","66px 12% 57px 5%"]}
+        // margin={["23px 20px 0px 20px","23px 20px 0px 20px","66px 12% 57px 5%","66px 12% 57px 5%"]}
         flexDir={["column", "column", "row", "row"]}
       >
         <Box w={["100%", "100%", "448px", "448px"]} maxW={"100%"}>
@@ -60,7 +62,7 @@ const CollabHeading = () => {
           </Text>
         </Box>
       </Flex>
-      <hr style={{border: "1px solid #D9D9D9", width:"100%"}}/>
+      {/* <hr style={{border: "1px solid #D9D9D9", width:"100%"}}/> */}
       </Box>
     </>
   );

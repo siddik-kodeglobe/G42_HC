@@ -5,9 +5,11 @@ const Partnership = () => {
   return (
     <>
       <Flex
+      
         alignItems={"start"}
         justifyContent={"space-between"}
-        margin={["14px 12% 29px 20px", "66px 12% 57px 5%", "66px 9% 57px 5%"]}
+        padding={"4.40% 11.71% 0% 4.01%"}
+        // margin={["14px 12% 29px 20px", "66px 12% 57px 5%", "66px 9% 57px 5%"]}
         flexDir={["column", "column", "row", "row"]}
       >
         <Text

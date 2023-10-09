@@ -36,29 +36,28 @@ const Categories = () => {
   return (
     <>
       <Flex
-      mt={["32px"]}
-      overflow={"scroll"}
-        alignItems={"center"}
-        backgroundColor={"#f5f5f5"}
-        paddingLeft={"66px"}
-        gap={["18px","18px","36px","36px"]}
-        height={["39px", "39px","82px","82px"]}
+        mt={["2.16%"]}
+        // paddingLeft={"66px"}
+        paddingLeft={"4.01%"}
         w={"100vw"}
         maxW={"100%"}
-        sx={
-          { 
-         '::-webkit-scrollbar':{
-                display:'none'
-            }
-         }
-       }
+        overflow={"scroll"}
+        alignItems={"center"}
+        backgroundColor={"#f5f5f5"}
+        gap={["18px", "18px", "36px", "36px"]}
+        height={["39px", "39px", "43px", "55.51px", "71.62px", "85px"]}
+        sx={{
+          "::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
       >
         {categoryArr?.map((el, ind) => (
           <Text
-          fontFamily={"Bossa-Regular"}
-          flexShrink={0}
+            fontFamily={"Bossa-Regular"}
+            flexShrink={0}
             cursor={"pointer"}
-            fontSize={["12px", "12px","20px","20px"]}
+            fontSize={["12px","12px", "13px", "13px", "16.85px", "20px"]}
             fontWeight={[300, 300, 400, 400]}
             color={"black"}
             fontStyle={"normal"}

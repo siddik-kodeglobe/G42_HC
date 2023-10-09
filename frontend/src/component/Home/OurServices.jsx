@@ -269,7 +269,7 @@ const OurServices = () => {
     <>
       <Box
         overflow={"hidden"}
-        display={["none", "none", "block"]}
+        display={["none", "none", "none"]}
         position={"relative"}
         bgImage={`url(${process.env.REACT_APP_BACKEND_URL}${firstImg})`}
         height={["629px", "629px", "800px"]}

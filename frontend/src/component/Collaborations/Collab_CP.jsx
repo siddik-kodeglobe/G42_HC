@@ -17,6 +17,8 @@ import style from "../AboutUs/OurPartner_Slider.module.css";
 
 import style1 from "./Collab_CP.module.css";
 import Marquee from "react-fast-marquee";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import greenMotionVideo from '../../assets/backgroundVideo/greenMotionVideo.mp4'
 
 const Collab_CP = () => {
   const [data, setData] = useState([]);
@@ -37,21 +39,25 @@ const Collab_CP = () => {
 
   return (
     <>
-      <Box w={"100vw"} maxW={"100%"} background={"linear-gradient(0deg, #F5F5F5 0%, rgba(245, 245, 245, 0.00) 100%)"} paddingTop={"74px"}>
+    <Box position={"relative"}>
+    <Box zIndex={-10} position={"relative"} >
+      <BackgroundVideoContainer videosrc={greenMotionVideo} height={"641px"}/>
+    </Box>
+    <Box position={"absolute"} zIndex={2} top={0} bottom={0} left={0} right={0} background={"linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)"} height={"339px"} w={"100vw"} maxW={"100%"}></Box>
+      <Box position={"absolute"} zIndex={2} top={0} bottom={0} left={0} right={0} w={"100vw"} maxW={"100%"} paddingTop={"74px"}>
         <Text
-        fontFamily={"Bossa-ExtendedBold"}
-        color={"black"}
-          fontSize={["32px", "32px", "60px"]}
+          fontFamily={"Bossa-ExtendedBold"}
+          fontSize={["32px", "32px", "60px", "60px"]}
           fontWeight={700}
           className={style1.text}
         >
           Clients & Partners
         </Text>
         <Text
-        fontFamily={"Bossa-Regular"}
+          fontFamily={"Bossa-Regular"}
           padding={["5px 20px"]}
-          w={["800px"]}
-          maxW={"100%"}
+          w={["600px"]}
+          maxW={"100vw"}
           margin={"auto"}
           textAlign={"center"}
           fontSize={["18px", "18px", "24px"]}
@@ -59,7 +65,7 @@ const Collab_CP = () => {
           className={style1.text}
         >
           Please provide a subheading for a brief introduction consisting of 1-2
-          lines.
+          lines
         </Text>
 
         <Box mt={"101px"} paddingBottom={"95px"}>
@@ -88,7 +94,8 @@ const Collab_CP = () => {
                 {data?.map((el) => (
                   // <SwiperSlide className={style.swipe_slide}>
                   <Image
-                    w={"100px"}
+                    w={["125px","125px","177px","177px"]}
+                    height={["49px","49px","106px","106px"]}
                     objectFit={"cover"}
                     marginLeft={"105px"}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.logo.data.attributes.url}`}
@@ -100,6 +107,7 @@ const Collab_CP = () => {
             </Marquee>
           </Swiper>
         </Box>
+      </Box>
       </Box>
     </>
   );

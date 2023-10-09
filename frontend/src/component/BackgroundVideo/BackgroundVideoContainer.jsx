@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/react'
 const BackgroundVideoContainer = ({videosrc, height}) => {
   return (
     <>
-    <Box height={height} className={style.backgroundVideoContainer}>
+    <Box height={height} w={"100vw"} maxWidth={"100%"} className={style.backgroundVideoContainer}>
       <video autoPlay loop muted className={style.backgroundVideo}>
         <source src={videosrc} type="video/mp4" />
         Your browser does not support the video tag.

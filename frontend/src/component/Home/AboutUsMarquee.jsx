@@ -8,18 +8,18 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { GSDevTools } from "gsap/GSDevTools";
-import FontFaceObserver from 'fontfaceobserver';
+import FontFaceObserver from "fontfaceobserver";
 
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
 const AboutUsMarquee = () => {
   gsap.registerPlugin(GSDevTools, SplitText, ScrollTrigger);
 
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const sectionRef1 = useRef(null);
   const sectionRef2 = useRef(null);
-  
 
   useEffect(() => {
     gsap.registerPlugin(SplitText);
@@ -31,7 +31,7 @@ const AboutUsMarquee = () => {
     let t2;
 
     const sectionElement1 = sectionRef1.current;
-  const sectionElement2 = sectionRef2.current;
+    const sectionElement2 = sectionRef2.current;
 
     function init() {
       gsap.set(".fullScreen", { autoAlpha: 1 });
@@ -47,7 +47,7 @@ const AboutUsMarquee = () => {
       tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionElement1,
-          start: 'bottom center+=50%', // Adjust this as needed
+          start: "bottom center+=50%", // Adjust this as needed
           // end: 'bottom center', // Adjust this as needed
           scrub: false, // Smoothly transition the animation
           markers: false, // Remove this in production
@@ -79,7 +79,7 @@ const AboutUsMarquee = () => {
       t2 = gsap.timeline({
         scrollTrigger: {
           trigger: sectionElement2,
-          start: 'bottom center+=50%',
+          start: "bottom center+=50%",
           // end: 'bottom center',
           scrub: false, // Smoothly transition the animation
           markers: false, // Remove this in production
@@ -123,8 +123,8 @@ const AboutUsMarquee = () => {
       }, 250)
     );
 
-     // Window resize event listener with debounce
-     window.addEventListener(
+    // Window resize event listener with debounce
+    window.addEventListener(
       "resize",
       debounce(() => {
         gsap.set(".aboutUsText2", { autoAlpha: 0 });
@@ -133,15 +133,18 @@ const AboutUsMarquee = () => {
       }, 250)
     );
 
-    const font = new FontFaceObserver('Bossa-Light');
-    
-    font.load().then(() => {
-      // Font is loaded, you can run your code here
-      // Initial call to init
-      init();
-    }).catch((error) => {
-      console.error('Font could not be loaded:', error);
-    });
+    const font = new FontFaceObserver("Bossa-Light");
+
+    font
+      .load()
+      .then(() => {
+        // Font is loaded, you can run your code here
+        // Initial call to init
+        init();
+      })
+      .catch((error) => {
+        console.error("Font could not be loaded:", error);
+      });
   }, []);
 
   // Function to toggle visibility
@@ -151,7 +154,7 @@ const AboutUsMarquee = () => {
 
   return (
     <>
-      <Box mt={["0px", "0px", "111px", "111px"]}>
+      <Box mt={["0px", "0px", "21px", "21px"]}>
         <Marquee autoFill>
           <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
             <hr
@@ -183,15 +186,21 @@ const AboutUsMarquee = () => {
         <Flex
           flexDirection={["column", "column", "row"]}
           mt={["0px", "0px", "100px", "100px"]}
-          padding={["0px 20px", "0px 20px", "0px 151px"]}
+          padding={["0px 20px", "0px 20px", "0px 151px", "0px 225px"]}
           gap={["33px", "33px", "90px"]}
-          alignItems={["self-start", "self-start", "self-start", "start"]}
+          alignItems={["self-start", "self-start", "start", "start"]}
         >
           <Box
+          w={["100vw", "100vw", "50%", "50%", "50%"]}
+            maxW={["100%", "100%", "100%", "100%", "100%"]}
+             position={"relative"}>
+            <BackgroundVideoContainer videosrc={g42Video} height={"377px"} />
+          </Box>
+          {/* <Box
             pos={"relative"}
             // paddingTop={"56.25%"}
             height={["214px", "214px", "377px"]}
-            w={["352px", "352px", "619px"]}
+            w={["352px", "352px", "50%"]}
           >
             <ReactPlayer
               style={{
@@ -207,11 +216,11 @@ const AboutUsMarquee = () => {
               url={g42Video}
               muted
             />
-          </Box>
+          </Box> */}
           <Flex
             mt={["50px", "50px", "25px"]}
-            w={["100vw", "100vw", "453px", "453px"]}
-            maxW={["100%", "100%", "453px", "453px"]}
+            w={["100vw", "100vw", "50%", "50%", "50%"]}
+            maxW={["100%", "100%", "100%", "100%", "100%"]}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
@@ -229,6 +238,7 @@ const AboutUsMarquee = () => {
                 color={"#747272"}
                 letterSpacing={"-0.42px"}
                 className="title"
+                
                 // onClick={toggleVisibility}
               >
                 About G42 Healthcare in 2 paragraphs not more than 60-70 words.
@@ -241,25 +251,28 @@ const AboutUsMarquee = () => {
             <Box
               w={"100%"}
               ref={sectionRef2}
-              className={`aboutUsText2 demo ${isVisible ? "visible" : "hidden"}`}
+              className={`aboutUsText2 demo ${
+                isVisible ? "visible" : "hidden"
+              }`}
             >
-            <Text
-              mt={["15px"]}
-              fontFamily={"Bossa-Light"}
-              fontSize={["12px", "12px", "18px", "18px"]}
-              fontStyle={"normal"}
-              fontWeight={300}
-              lineHeight={"24px"}
-              color={"#747272"}
-              letterSpacing={"-0.42px"}
-              // visibility={"hidden"}
-              className="text2"
-            >
-              We built Biogenix Labs, the first COVID-19 accredited large-scale
-              throughput lab in the UAE, and facilitated the world's first phase
-              three inactivated COVID-19 vaccine trial, 4Humanity, with over
-              43,000 participants from 125+ nationalities.
-            </Text>
+              <Text
+                mt={["15px"]}
+                fontFamily={"Bossa-Light"}
+                fontSize={["12px", "12px", "18px", "18px"]}
+                fontStyle={"normal"}
+                fontWeight={300}
+                lineHeight={"24px"}
+                color={"#747272"}
+                letterSpacing={"-0.42px"}
+                // visibility={"hidden"}
+                className="text2"
+              >
+                We built Biogenix Labs, the first COVID-19 accredited
+                large-scale throughput lab in the UAE, and facilitated the
+                world's first phase three inactivated COVID-19 vaccine trial,
+                4Humanity, with over 43,000 participants from 125+
+                nationalities.
+              </Text>
             </Box>
             <Link href="/about">
               <Button

@@ -83,7 +83,7 @@ const SocialMedia = () => {
     <>
       <Box>
         <Flex
-          padding={["40px 15px 0px 15px","95px 60px 20px 150px"]}
+          padding={["40px 15px 0px 15px","125px 60px 20px 150px"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
@@ -161,11 +161,11 @@ const SocialMedia = () => {
             {data?.map((el) => (
               <SwiperSlide className={style.swipe_slide}>
                   <Link _hover={{textDecoration: "none"}} href={el.attributes.link} isExternal>
-                <Box w={["285px", "285px", "451px"]}>
+                <Box  w={["285px", "285px", "451px","451px","672px"]}>
                   <Image
                   
-                  w={["285px", "285px", "451px"]}
-                  h={["268px", "268px", "411px"]}
+                  w={["100%"]}
+                  h={["268px", "268px", "411px","411px","600px"]}
                   objectFit={"cover"}
                   src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />

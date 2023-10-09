@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
@@ -25,6 +25,10 @@ import style from "../AboutUs/OurPartner_Slider.module.css";
 
 const SocialMedia = () => {
   const [data, setData] = useState([]);
+
+  const [hoverArrowColor, setHoverArrowColor] = useState("black");
+    const [hoverArrowColorR, setHoverArrowColorR] = useState("black");
+
   // const swiper = useSwiper();
   const swiperRef = React.useRef(null);
 
@@ -81,90 +85,101 @@ const SocialMedia = () => {
   }, []);
   return (
     <>
-      <Box>
-        <Flex
-          padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-        >
+      <Box w={"100vw"}
+            maxW={"100%"} >
+        <Flex>
           <Flex
-            flexDirection={["column", "column", "row", "row"]}
-            gap={["11px", "11px", "25px", "25px"]}
-            alignItems={["start", "start", "center", "center"]}
+          flexDirection={["column","column","row","row"]}
+            w={"100%"}
+            alignItems={["start","start","center","center"]}
+            justifyContent={"space-between"}
+            padding={["80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","81px 3.94% 0% 3.94%","105px 3.94% 0% 3.94%","125px 3.94% 0% 3.94%"]}
+            gap={["15px","15px","0px","0px"]}
           >
-            <Text
-              fontFamily={"Bossa-ExtendedBold"}
-              color={"black"}
-              fontSize={["24px", "24px", "60px", "60px"]}
-              fontWeight={700}
-              lineHeight={"normal"}
-              textTransform={"capitalize"}
-            >
-              Social Media
-            </Text>
-            <Flex
-              cursor={"pointer"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              backgroundColor={"#00D2AA"}
-              color={"white"}
-              // w={["128px", "128px", "182px", "182px"]}
-              // h={["40px", "40px", "55px", "55px"]}
-              borderRadius={"80px"}
-            >
+            <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
-                fontFamily={"Bossa-ExtendedMedium"}
-                lineHeight={["11px", "11px", "22px", "22px"]}
-                textAlign={"center"}
-                fontSize={["12px", "12px", "16px", "16px"]}
+              fontFamily={"Bossa-ExtendedBold"}
+                color={"black"}
+                fontSize={["24px", "24px", "30px", "39px", "50px", "60px"]}
+                fontWeight={700}
+                lineHeight={"normal"}
                 textTransform={"capitalize"}
-                fontWeight={[400, 400, 500, 500]}
-                padding={"11px 21px"}
-                flexShrink={0}
               >
-                All Social Media
+                Social Media
               </Text>
+              <Flex
+                cursor={"pointer"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                backgroundColor={"#00D2AA"}
+                color={"white"}
+                borderRadius={"80px"}
+              >
+                <Text
+                color={"white"}
+                fontFamily={"Bossa-ExtendedMedium"}
+                  lineHeight={["11px", "11px", "22px", "22px"]}
+                  textAlign={"center"}
+                  fontSize={["12px", "12px", "12px", "10px", "13px", "16px"]}
+                  textTransform={"capitalize"}
+                  fontWeight={[400, 400, 500, 500]}
+                  padding={["12.55px 12px", "12.55px 12px", "", "10.44px 14px", "13.48px 18.53px", "16px 22px"]}
+                  flexShrink={0}
+                >
+                  All Social Media
+                </Text>
+              </Flex>
             </Flex>
-          </Flex>
-          <Flex alignItems={"center"} gap={5}>
-            <Flex
-              onClick={() => goPrev()}
-              _hover={{ backgroundColor: "#00D2AA" }}
-              alignItems={"center"}
-              justifyContent={"center"}
-              border={"1px solid black"}
-              borderStyle={"dashed"}
-              borderRadius={"50%"}
-              cursor={"pointer"}
-            >
-              <BsArrowLeft
-                style={{
-                  color: "black",
-                  height: "52px",
-                  width: "52px",
-                  padding: "11px",
-                  cursor: "pointer",
-                }}
-              />
-            </Flex>
-            <Flex
-              onClick={() => goNext()}
-              _hover={{ backgroundColor: "#00D2AA" }}
-              alignItems={"center"}
-              justifyContent={"center"}
-              border={"1px solid black"}
-              borderStyle={"dashed"}
-              borderRadius={"50%"}
-              cursor={"pointer"}
-            >
-              <BsArrowRight
-                style={{
-                  color: "black",
-                  height: "52px",
-                  width: "52px",
-                  padding: "11px",
-                }}
-              />
+            <Flex alignItems={"center"} gap={[2,2,5,5]}>
+              <Button
+                onClick={() => goPrev()}
+                // onClick={() => swiperRef.current.swiper.slidePrev()}
+                _hover={{ backgroundColor: "#00D2AA" }}
+                backgroundColor={"white"}
+                onMouseOver={() => setHoverArrowColor("white")}
+                onMouseOut={() => setHoverArrowColor("black")}
+                alignItems={"center"}
+                justifyContent={"center"}
+                border={"1px solid black"}
+                borderStyle={"dashed"}
+                w={["45px", "45px", "52px", "52px"]}
+                h={["45px", "45px", "52px", "52px"]}
+                margin={0}
+                padding={"11px"}
+                borderRadius={"50%"}
+              >
+                <BsArrowLeft
+                  style={{
+                    color: hoverArrowColor,
+                    height: "52px",
+                    width: "52px",
+                  }}
+                />
+              </Button>
+              <Button
+                onClick={() => goNext()}
+                _hover={{ backgroundColor: "#00D2AA" }}
+                backgroundColor={"white"}
+                onMouseOver={() => setHoverArrowColorR("white")}
+                onMouseOut={() => setHoverArrowColorR("black")}
+                alignItems={"center"}
+                justifyContent={"center"}
+                border={"1px solid black"}
+                borderStyle={"dashed"}
+                w={["45px", "45px", "52px", "52px"]}
+                h={["45px", "45px", "52px", "52px"]}
+                margin={0}
+                padding={"11px"}
+                borderRadius={"50%"}
+              >
+                <BsArrowRight
+                  style={{
+                    color: hoverArrowColorR,
+                    height: "52px",
+                    width: "52px",
+                  }}
+                />
+              </Button>
             </Flex>
           </Flex>
         </Flex>
@@ -173,21 +188,31 @@ const SocialMedia = () => {
           <Swiper
             speed={750}
             breakpoints={{
-              390: {
+              380: {
                 slidesOffsetBefore: 21,
                 slidesPerView: 1.25,
-                spaceBetween: 11,
+                spaceBetween: 15,
               },
-              768: {
-                slidesOffsetBefore: 66,
-                slidesPerView: 2,
-                spaceBetween: 22,
+              750: {
+                slidesOffsetBefore: 21,
+                slidesPerView: 1.95,
+                spaceBetween: 24,
               },
-              1024: {
-                slidesOffsetBefore: 66,
+              990: {
+                slidesOffsetBefore: 39,
+                slidesPerView: 2.5,
+                spaceBetween: 31,
+              },
+              1250: {
+                slidesOffsetBefore: 51,
+                slidesPerView: 2.65,
+                spaceBetween: 40,
+              },
+              1530: {
+                slidesOffsetBefore: 60,
                 slidesPerView: 2.75,
-                spaceBetween: 22,
-              },
+                spaceBetween: 60,
+              }
             }}
             ref={swiperRef}
             // navigation={true}
@@ -195,19 +220,21 @@ const SocialMedia = () => {
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide className={style.swipe_slide}>
-                <Box w={["285px", "285px", "451px"]}>
+              <SwiperSlide style={{width: "30.61%"}} className={style.swipe_slide}>
+                <Box>
                   <Image
-                    w={["285px", "285px", "451px"]}
-                    h={["238px", "238px", "411px"]}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                     w={"100%"}
+                     height={"auto"}
+                     maxH={["275px","275px","214px","276px","357px","428px"]}
+                     objectFit={"cover"}
+                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
                     fontFamily={"Bossa-Regular"}
                     mt={"30px"}
                     noOfLines={2}
                     color={"#747272"}
-                    fontSize={"14px"}
+                    fontSize={["9px", "9px", "9.14px", "14px", "11.8px", "17.68px"]}
                     fontWeight={400}
                     textTransform={"capitalize"}
                     lineHeight={"normal"}
@@ -216,13 +243,15 @@ const SocialMedia = () => {
                   </Text>
 
                   <Text
-                  fontFamily={"Bossa-ExtendedBold"}
+                   w={"100%"}
+                   maxW={"100%"}
+                   fontFamily={"Bossa-ExtendedBold"}
                     textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontSize={"20px"}
+                    fontSize={["12px","12px", "12px", "13px", "16px", "25px"]}
                     fontWeight={700}
-                    lineHeight={"normal"}
+                    lineHeight={["18px","18px","18px","20px","26px","31px"]}
                     overflow={"hidden"}
                     noOfLines={2}
                     textTransform={"capitalize"}

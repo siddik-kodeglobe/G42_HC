@@ -39,16 +39,16 @@ const Footer = () => {
             gap={7}
           >
             <Flex gap={"7px"} flexDir={"column"}>
-              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href={"/about"}>About G42 Healthcare</Link>
-              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/news">News</Link>
-              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/whatwedo">What We Do</Link>
-              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="casestudy">Case Studies</Link>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href={"/about"}>About G42 Healthcare</Link>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/news">News</Link>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/whatwedo">What We Do</Link>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="casestudy">Case Studies</Link>
             </Flex>
 
             <Flex gap={"7px"} flexDir={"column"}>
-              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/career">Careers</Link>
-              <Link fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/contactus">Contact Us</Link>
-              <Text fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"}>Cookies Policy</Text>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/career">Careers</Link>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="/contactus">Contact Us</Link>
+              <Link _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}} fontSize={["14px"]} fontFamily={"Bossa-ExtendedBold"} href="">Cookies Policy</Link>
             </Flex>
           </Flex>
         </Flex>

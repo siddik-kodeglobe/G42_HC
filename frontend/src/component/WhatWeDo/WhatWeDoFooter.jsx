@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 const WhatWeDoFooter = () => {
   return (
     <div>
-      <Box style={{ margin: "-80px 10% 0px 10%" }}>
+      <Box style={{ margin: "5.16% 11.71% 0px 11.71%" }}>
         <Flex
           flexDirection={["column", "column", "row"]}
           alignItems={["start", "start", "start", "start"]}

@@ -14,24 +14,60 @@ import OurServices from "./OurServices";
 import LatestInitiative from "./LatestInitiative";
 import Footer_AU from "../AboutUs_New/Footer_AU";
 
+import LazyLoad from 'react-lazy-load';
 
 const Home = () => {
   return (
     <>
       <Box>
-        <Navbar/>
-        <VideoSection />
-        <News/>
-        <AboutUsMarquee/>
-        <PioneeringHC/>
-        <OurServices/>
-        <ClientnPartner/>
-        <LatestInitiative/>
-        <Resources/> 
-        <SocialMedia/>
-        <MeetUs/>
-        <Footer_AU/>
-        <TopScroll/>
+        <LazyLoad>
+          <Navbar />
+        </LazyLoad>
+
+        <LazyLoad>
+          <VideoSection />
+        </LazyLoad>
+
+        <LazyLoad>
+          <News />
+        </LazyLoad>
+
+        <LazyLoad>
+          <AboutUsMarquee />
+        </LazyLoad>
+
+        <LazyLoad>
+          <PioneeringHC />
+        </LazyLoad>
+
+        <LazyLoad>
+          <OurServices />
+        </LazyLoad>
+
+        <LazyLoad>
+          <ClientnPartner />
+        </LazyLoad>
+
+        <LazyLoad>
+          <LatestInitiative />
+        </LazyLoad>
+
+        <LazyLoad>
+          <Resources />
+        </LazyLoad>
+
+        <LazyLoad>
+          <SocialMedia />
+        </LazyLoad>
+
+        <LazyLoad>
+          <MeetUs />
+        </LazyLoad>
+
+        <LazyLoad>
+          <Footer_AU />
+        </LazyLoad>
+        <TopScroll />
       </Box>
     </>
   );

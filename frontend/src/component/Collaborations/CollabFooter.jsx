@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer";
 const CollabFooter = () => {
   return (
     <>
-        <Box margin={["80px 20px 0px 20px", "125px 175px 0px 175px"]}>
+        <Box w={"100%"} padding={"8.24% 11.71% 2.36% 11.71%"}>
         <Flex flexDirection={["column", "column", "row"]} justifyContent={"space-between"} alignItems={"start"}>
           <Box w={["100%", "100%", "65%"]}>
             <Text

@@ -153,12 +153,15 @@ const CEO_msg_AU = () => {
         borderBottom={"1px solid rgba(0, 0, 0, 0.10)"}
         flexDirection={["column", "column", "column", "row"]}
         gap={9}
-        margin={[
-          "39px 0px 0px 0px",
-          "39px 0px 0px 0px",
-          "39px 100px 0px 100px",
-          "0px 0px 0px 158px",
-        ]}
+        w={"100vw"}
+        maxW={"100%"}
+        // margin={[
+        //   "39px 0px 0px 0px",
+        //   "39px 0px 0px 0px",
+        //   "39px 100px 0px 100px",
+        //   "0px 0px 0px 158px",
+        // ]}
+        padding={["0px 0px 0px 10.4%"]}
         justifyContent={"space-between"}
         alignItems={["", "", "start"]}
       >

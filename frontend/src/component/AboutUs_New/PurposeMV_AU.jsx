@@ -201,7 +201,10 @@ const PurposeMV_AU = () => {
 
   return (
     <>
-    <Box mt={5} border={"1px solid rgba(0, 0, 0, 0.10)"} padding={["39px 20px 79px 20px","39px 20px 79px 20px","78px 100px 95px 100px","78px 148px 95px 148px","78px 148px 95px 148px"]} >
+    <Box mt={5} border={"1px solid rgba(0, 0, 0, 0.10)"}
+    //  padding={["39px 20px 79px 20px","39px 20px 79px 20px","78px 100px 95px 100px","78px 148px 95px 148px","78px 225px 95px 225px"]} 
+     padding={["4% 11.718% "]}
+     >
       <Flex
         flexDirection={["column", "column", "row"]}
         padding={["0px", "0px", "0px 25px"]}

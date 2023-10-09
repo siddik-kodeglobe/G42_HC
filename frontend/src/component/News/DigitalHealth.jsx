@@ -202,7 +202,8 @@ const DigitalHealth = () => {
             }}
             ref={swiperRef}
             // navigation={true}
-            freeMode={true}
+            observeParents
+            observer
             modules={[Navigation, FreeMode]}
             className={style.swiper}
           >

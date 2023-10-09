@@ -7,9 +7,9 @@ const CollabPoints = () => {
       <Box>
         <Box
           margin={"auto"}
-          mt={["124px"]}
-          h={["114px"]}
-          w={["100%", "100%", "793px", "793px"]}
+          mt={"8.19%"}
+          // h={["114px"]}
+          w={["100%", "100%", "52.12%", "52.12%"]}
         >
           <Text
             fontFamily={"Bossa-ExtendedBold"}
@@ -24,7 +24,10 @@ const CollabPoints = () => {
         </Box>
 
         {/* Points  */}
-        <Box w={["85vw","85vw","76vw","76vw"]} maxW={"100%"} margin={"auto"} mt={"60px"} >
+        <Box 
+        margin={"3.94% 11.71% 0% 11.71%"}
+        // w={["85vw","85vw","76vw","76vw"]}
+         maxW={"100%"}  >
           {/* 1st Point  */}
           <Flex
             flexDir={["column", "column", "row", "row"]}

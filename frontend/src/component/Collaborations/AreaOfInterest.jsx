@@ -9,8 +9,10 @@ const AreaOfInterest = () => {
         <Text
         fontFamily={"Bossa-ExtendedBold"}
           margin={"auto"}
-          mt={["125px"]}
-          w={["80%", "80%", "867px", "867px"]}
+          mt={"8.22%"}
+          // mt={["125px"]}
+          w={"57.07%"}
+          // w={["80%", "80%", "867px", "867px"]}
           fontSize={["24px", "24px", "40px", "40px"]}
           fontWeight={[700]}
           lineHeight={"normal"}
@@ -25,15 +27,16 @@ const AreaOfInterest = () => {
 
         <SimpleGrid
           gap={["21px"]}
-          columns={[1, 1, 2, 2]}
-          margin={["25px 20px 0px 20px","25px 20px 0px 20px", "81px 60px 0px 60px", "81px 60px 0px 60px"]}
+          columns={[1, 1, 1, 2, 2, 2]}
+          margin={"5.36% 3.94% 0% 3.94%"}
+          // margin={["25px 20px 0px 20px","25px 20px 0px 20px", "81px 60px 0px 60px", "81px 60px 0px 60px"]}
         >
           {/* 1st Box  */}
           <Box
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["286px"]}
+            height={["90.37px","90.37px","144px","186px","241px","361px"]}
           >
             <Text
             fontFamily={"Bossa-ExtendedBold"}
@@ -70,7 +73,7 @@ const AreaOfInterest = () => {
             // opacity={"0.2"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["286px"]}
+            height={["90.37px","90.37px","144px","186px","241px","361px"]}
           >
             <Text
             fontFamily={"Bossa-ExtendedBold"}
@@ -106,7 +109,7 @@ const AreaOfInterest = () => {
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["286px"]}
+            height={["90.37px","90.37px","144px","186px","241px","361px"]}
           >
             <Text
             fontFamily={"Bossa-ExtendedBold"}
@@ -142,7 +145,7 @@ const AreaOfInterest = () => {
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["286px"]}
+            height={["90.37px","90.37px","144px","186px","241px","361px"]}
           >
             <Text
             fontFamily={"Bossa-ExtendedBold"}

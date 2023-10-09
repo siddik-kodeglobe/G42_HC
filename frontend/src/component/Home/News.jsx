@@ -14,9 +14,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
-import {isMobile} from 'react-device-detect';
-import doubleSideArrow from '../../assets/icons/doubleSidedArrow.png'
-import playBtn from '../../assets/icons/playBtn.svg'
+import { isMobile } from "react-device-detect";
+import doubleSideArrow from "../../assets/icons/doubleSidedArrow.png";
+import playBtn from "../../assets/icons/playBtn.svg";
 
 const News = () => {
   const [data, setData] = useState([]);
@@ -79,22 +79,32 @@ const News = () => {
   }, []);
   return (
     <>
-      <Box style={{cursor: `url(${doubleSideArrow}), auto`}} paddingBottom={["80px", "80px", "90px", "103px"]}>
+      <Box
+        style={{ cursor: `url(${doubleSideArrow}), auto` }}
+        paddingBottom={["80px", "80px", "90px", "103px"]}
+        bgGradient={
+          "linear-gradient(180deg, #00D2AA 28.96%, rgba(0, 210, 170, 0.00) 100%);"
+        }
+      >
         <Box
-          w={["100vw", "100vw", "98.7vw"]}
-          bgGradient={
-            "linear-gradient(180deg, #00D2AA 28.96%, rgba(0, 210, 170, 0.00) 100%);"
-          }
+          w={["100vw", "100vw", "100vw"]}
+          maxW={"100%"}
+          
         >
           <Flex
             alignItems={"center"}
             justifyContent={"space-between"}
-            padding={["40px 15px 0px 15px", "40px 15px 0px 15px", "72px 60px 0px 20px", "72px 60px 0px 178px"]}
+            padding={[
+              "40px 15px 0px 15px",
+              "40px 15px 0px 15px",
+              "69px 60px 0px 72px",
+              "69px 60px 0px 72px",
+            ]}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
               color={"white"}
-              fontSize={["22px","22px","32px","32px"]}
+              fontSize={["22px", "22px", "32px", "32px"]}
               fontWeight={700}
             >
               News
@@ -111,31 +121,35 @@ const News = () => {
                 justifyContent={"center"}
                 border={"1px solid white"}
                 borderStyle={"dashed"}
-                w={["32px","32px","42px","52px"]}
-                h={["32px","32px","42px","52px"]}
-               
+                w={["32px", "32px", "42px", "52px"]}
+                h={["32px", "32px", "42px", "52px"]}
                 margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
-                cursor={swiperRef.current?.swiper.isBeginning ? "not-allowed" : "pointer"}
+                cursor={
+                  swiperRef.current?.swiper.isBeginning
+                    ? "not-allowed"
+                    : "pointer"
+                }
                 // disabled={swiperRef.current?.swiper.isBeginning}
               >
-                {isMobile ? 
-                <BsArrowLeft style={{
-                    color: hoverArrowColor,
-                    height: "21px",
-                    width: "21px",
-                  }}
-                />
-                  :
-
-                  <BsArrowLeft style={{
-                    color: hoverArrowColor,
-                    height: "52px",
-                    width: "52px",
-                  }}
-                />
-              }
+                {isMobile ? (
+                  <BsArrowLeft
+                    style={{
+                      color: hoverArrowColor,
+                      height: "21px",
+                      width: "21px",
+                    }}
+                  />
+                ) : (
+                  <BsArrowLeft
+                    style={{
+                      color: hoverArrowColor,
+                      height: "52px",
+                      width: "52px",
+                    }}
+                  />
+                )}
               </Button>
               <Button
                 onClick={() => goNext()}
@@ -147,12 +161,14 @@ const News = () => {
                 justifyContent={"center"}
                 border={"1px solid white"}
                 borderStyle={"dashed"}
-                w={["32px","32px","42px","52px"]}
-                h={["32px","32px","42px","52px"]}
+                w={["32px", "32px", "42px", "52px"]}
+                h={["32px", "32px", "42px", "52px"]}
                 margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
-                cursor={swiperRef.current?.swiper.isEnd ? "not-allowed" : "pointer"}
+                cursor={
+                  swiperRef.current?.swiper.isEnd ? "not-allowed" : "pointer"
+                }
               >
                 <BsArrowRight
                   style={{
@@ -167,80 +183,98 @@ const News = () => {
 
           <Box  mt={["-27px", "-27px", "-25px"]}>
             <Swiper
-            
-            speed={750}
+              speed={750}
               breakpoints={{
-                390: {
+                389: {
                   slidesPerView: 1.5,
                   slidesOffsetBefore: 15,
                   spaceBetween: 24,
                 },
-                1024: {
+                1021: {
                   slidesOffsetBefore: 20,
                   slidesPerView: 2,
                   spaceBetween: 22,
                 },
-                1280: {
-                  slidesOffsetBefore: 178,
+                1150: {
+                  slidesOffsetBefore: 72,
+                  slidesPerView: 2.5,
+                  // spaceBetween: 22,
+                },
+                1250: {
+                  slidesOffsetBefore: 72,
                   slidesPerView: 2.75,
                   spaceBetween: 22,
                 },
+                1900: {
+                  slidesOffsetBefore: 72,
+                  slidesPerView: 2.95,
+                  spaceBetween: 22
+                }
               }}
               ref={swiperRef}
               // navigation={true}
-              freeMode={true}
+              // freeMode={true}
               observeParents={true}
               observer={true}
               modules={[Navigation, FreeMode]}
               className={style.swiper}
-              
             >
               {data?.map((el) => (
                 <SwiperSlide className={style.swipe_slide}>
                   <Link href={`/news/${el.id}`}>
-                  <Box backgroundSize={"cover"} 
-                  w={["238px", "238px", "451px", "451px"]}
-                   h={["179px", "179px", "338px", "338px"]} backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`} position={"relative"}>
-                    {/* <Image
+                    <Box
+                      backgroundSize={"cover"}
+                      w={["238px", "238px", "238px", "294px", "380px", "570px"]}
+                      h={["179px", "179px", "179px", "338px", "338px", "427px"]}
+                      backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`}
+                      position={"relative"}
+                    >
+                      {/* <Image
                       w={["238px", "238px", "451px"]}
                       src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
                     /> */}
-                  </Box>
-                  
-                  <Box
-                    w={["238px", "238px", "451px", "451px"]}
-                    paddingRight={[8, 8, 9]}
-                    position={"absolute"}
-                    bottom={["-50px", "-50px", 1.5, 1.5]}
-                    left={5}
-                  >
-                    <Text
-                    fontFamily={"Bossa-Regular"}
-                      noOfLines={2}
-                      color={"white"}
-                      fontSize={["7px", "7px", "14px"]}
-                      fontWeight={500}
-                      lineHeight={"normal"}
-                      textOverflow={"ellipsis"}
+                    </Box>
+
+                    <Box
+                     w={["238px", "238px", "238px", "294px", "380px", "570px"]}
+                    
+                      paddingRight={[8, 8, 9]}
+                      position={"absolute"}
+                      bottom={["-50px", "-50px", 1.5, 1.5]}
+                      left={5}
                     >
-                      {convertData(el.attributes.createdAt)}
-                    </Text>
-                    <Text
-                    fontFamily={"Bossa-Medium"}
-                    noOfLines={3}
-                      mt={"5px"}
-                      h={"96px"}
-                      maxHeight={"96px"}
-                      marginBottom={"15px"}
-                      color={"white"}
-                      fontSize={["10px", "10px", "15px", "20px"]}
-                      fontWeight={500}
-                      lineHeight={"normal"}
-                      textOverflow={"ellipsis"}
-                    >
-                      {el.attributes.info}
-                    </Text>
-                  </Box>
+                      <Text
+                        fontFamily={"Bossa-Regular"}
+                        noOfLines={2}
+                        color={"white"}
+                        fontSize={["7px", "7px", "14px"]}
+                        fontWeight={500}
+                        lineHeight={"normal"}
+                        textOverflow={"ellipsis"}
+                      >
+                        {convertData(el.attributes.createdAt)}
+                      </Text>
+                      <Flex
+                      alignItems={"start"}
+
+                        h={"96px"}
+                        >
+                      <Text
+                        fontFamily={"Bossa-Medium"}
+                        noOfLines={[2,2,3,3]}
+                        mt={"5px"}
+                        maxHeight={"96px"}
+                        marginBottom={"15px"}
+                        color={"white"}
+                        fontSize={["10px", "10px", "15px", "20px"]}
+                        fontWeight={500}
+                        lineHeight={"normal"}
+                        textOverflow={"ellipsis"}
+                      >
+                        {el.attributes.info}
+                      </Text>
+                      </Flex>
+                    </Box>
                   </Link>
                 </SwiperSlide>
               ))}
