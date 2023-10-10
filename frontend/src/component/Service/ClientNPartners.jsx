@@ -1,4 +1,4 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -15,7 +15,13 @@ import "swiper/css/navigation";
 
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
-import style1 from './ClientNPartner.module.css'
+import style1 from "../Home/ClientnPartner.module.css";
+import Marquee from "react-fast-marquee";
+
+import Vimeo from "@u-wave/react-vimeo";
+import greenMotionVideo from "../../assets/backgroundVideo/greenMotionVideo.mp4";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import { isMobile, isTablet } from "react-device-detect";
 
 const ClientNPartner = () => {
   const [data, setData] = useState([]);
@@ -36,47 +42,52 @@ const ClientNPartner = () => {
 
   return (
     <>
-    <Box mt={"123px"} bgColor={"#F5F5F5"} paddingTop={"74px"}>
-      <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["32px", "32px", "60px"]} fontWeight={700} className={style1.text}>Clients & Partners</Text>
-      <Text fontFamily={"Bossa-Regular"} padding={["5px 20px"]} fontSize={["18px", "18px", "24px"]} fontWeight={400} className={style1.text}>
-        Please provide a subheading for a brief introduction consisting of 1-2
-        lines.
-      </Text>
-
-      <Box mt={"101px"} paddingBottom={"95px"}>
-        <Swiper
-          breakpoints={{
-            1024: {
-              slidesPerView: 5.5,              
-              spaceBetween:44,
-            },
-            390: {
-              slidesPerView: 3,
-              spaceBetween:22,
-            },
-          }}
-          ref={swiperRef}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay]}
-          className={style.swiper}
+    <Box w={"100vw"} maxW={"100%"} position={"relative"}>
+    <Box height={isMobile ? "400px" : isTablet ? "450px" : "539px"} zIndex={-10} position={"relative"} mt={["79px","79px","79px","81px", "105px", "126px"]}>
+      <BackgroundVideoContainer videosrc={greenMotionVideo} height={"100%"}/>
+    </Box>
+    <Box position={"absolute"} zIndex={2} top={0} bottom={0} left={0} right={0} background={"linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)"} height={"339px"} w={"100vw"} maxW={"100%"}></Box>
+      <Box position={"absolute"} zIndex={2} top={0} bottom={0} left={0} right={0} w={"100vw"} maxW={"100%"} paddingTop={"74px"}>
+        <Text
+          fontFamily={"Bossa-ExtendedBold"}
+          fontSize={["32px", "32px", "32px", "39px", "50px", "60px"]}
+          fontWeight={700}
+          className={style1.text}
         >
-          {data?.map((el) => (
-            <SwiperSlide className={style.swipe_slide}>
-              <Box w={"fit-content"}>
-                <Image
-                w={"100px"}
-                  src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.logo.data.attributes.url}`}
-                />
-               
-              </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </Box>
+          Clients & Partners
+        </Text>
+        <Text
+          fontFamily={"Bossa-Regular"}
+          padding={["5px 20px"]}
+          margin={"auto"}
+          textAlign={"center"}
+          fontSize={["14px", "14px", "14px", "15px", "20px", "24px"]}
+          fontWeight={400}
+          className={style1.text}
+        >
+          Please provide a subheading for a brief introduction consisting of 1-2
+          lines
+        </Text>
 
+        <Box mt={["60px","60px","60px", "60px", "72px", "72px"]} 
+        paddingBottom={["78px", "78px", "78px", "91px", "118px", "141px"]}
+        >
+          
+            <Marquee autoplay autoFill speed={35}>
+              <Flex alignItems={"center"}>
+                {data?.map((el) => (
+                  <Image
+                  w={"fit-content"}
+                  h={["49px","49px","49px", "56px", "72px", "87px"]}
+                    objectFit={"cover"}
+                    marginLeft={["40px","40px","40px", "105px","105px","105px"]}
+                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.logo.data.attributes.url}`}
+                  />
+                ))}
+              </Flex>
+            </Marquee>
+        </Box>
+      </Box>
       </Box>
     </>
   );

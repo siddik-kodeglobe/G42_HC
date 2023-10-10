@@ -31,9 +31,13 @@ const USP = () => {
 
   return (
     <>
-      <Box margin={"0px 60px"} mt={"125px"}>
+      <Box
+        w={"100vw"}
+        maxW={"100%"}
+        mt={["80px", "80px", "80px", "81px", "105px", "126px"]}
+      >
         <Text
-        fontFamily={"Bossa-ExtendedBold"}
+          fontFamily={"Bossa-ExtendedBold"}
           textAlign={"center"}
           fontSize={["32px", "32px", "60px"]}
           fontWeight={700}
@@ -43,14 +47,28 @@ const USP = () => {
           USPs
         </Text>
         <Flex
+          padding={[
+            "44px 20px 0px 20px",
+            "44px 20px 0px 20px",
+            "44px 20px 0px 20px",
+            "44px 3.94% 0px 3.94%",
+            "51px 3.94% 0px 3.94%",
+            "61px 3.94% 0px 3.94%",
+          ]}
           flexDirection={["column", "column", "row"]}
-          mt={["44pxpx", "44pxpx", "61px"]}
+          // mt={["44pxpx", "44pxpx", "61px"]}
           alignItems={"start"}
+          gap={["48px", "48px", "48px", "52px", "67px", "80px"]}
         >
           {/* <Box border={"1px"} w={"50%"}> */}
-          <Image w={["350px", "350px", "628px"]} h={["394px", "394px", "708px"]} src={uspImg} />
+          <Image
+            objectFit={"cover"}
+            w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+            h={["394px", "394px", "394px", "462px", "596px", "715px"]}
+            src={uspImg}
+          />
           {/* </Box> */}
-          <Box margin={["0px", "0px", "0px 80px"]} w={["100%", "100%", "50%"]}>
+          <Box w={["100%", "100%", "100%", "50%", "50%", "50%"]}>
             {data?.map((el) => (
               <Box>
                 <Accordion _hover={{ backgroundColor: "white" }} allowToggle>
@@ -60,7 +78,19 @@ const USP = () => {
                         <h2>
                           <AccordionButton>
                             <Box as="span" flex="1" textAlign="left">
-                              <Text fontFamily={"Bossa-Medium"} fontWeight={isExpanded ? 700 : 400} w={"80%"}>
+                              <Text
+                                fontSize={[
+                                  "16px",
+                                  "16px",
+                                  "16px",
+                                  "20px",
+                                  "27px",
+                                  "32px",
+                                ]}
+                                fontFamily={"Bossa-Medium"}
+                                fontWeight={isExpanded ? 700 : 400}
+                                w={"80%"}
+                              >
                                 {el.attributes.shortHeading}
                               </Text>
                             </Box>
@@ -71,15 +101,24 @@ const USP = () => {
                             )}
                           </AccordionButton>
                         </h2>
-                        <AccordionPanel fontFamily={"Bossa-Light"} pb={4}>
+                        <AccordionPanel
+                          fontSize={[
+                            "16px",
+                            "16px",
+                            "16px",
+                            "20px",
+                            "27px",
+                            "32px",
+                          ]}
+                          fontFamily={"Bossa-Light"}
+                          pb={4}
+                        >
                           {el.attributes.subStatement}
                         </AccordionPanel>
                       </>
                     )}
                   </AccordionItem>
                 </Accordion>
-
-                <hr style={{ margin: "44px 0px" }} />
               </Box>
             ))}
           </Box>

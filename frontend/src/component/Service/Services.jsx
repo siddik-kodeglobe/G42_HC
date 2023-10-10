@@ -12,24 +12,64 @@ import TopScroll from "../TopScroll/TopScroll";
 import CaseStudies from "./CaseStudies";
 import Companies from "./Companies";
 import MeetTeam_AU from "../AboutUs_New/MeetTeam_AU";
+import LazyLoad from "react-lazy-load";
+import { Box } from "@chakra-ui/react";
 
 const Services = () => {
   return (
-    <div>
-      <Navbar/>
-      <Home_VideoSection />
-      <ImageSubHeading/>
-      <Offering/>
-      <USP/>
-      <ClientNPartner bgColor={"#F5F5F5"}/>
-      <Impact/>
-      <CaseStudies/>
-      <LatestNews/>
-      <MeetTeam_AU/>
-      <Companies/>
-      <ServicesFooter/>
-      <TopScroll/>
-    </div>
+    <>
+    <Box>
+      <LazyLoad>
+        <Navbar />
+      </LazyLoad>
+
+      <LazyLoad>
+        <Home_VideoSection />
+      </LazyLoad>
+
+      <LazyLoad>
+        <ImageSubHeading />
+      </LazyLoad>
+
+      <LazyLoad>
+        <Offering />
+      </LazyLoad>
+
+      <LazyLoad>
+        <USP />
+      </LazyLoad>
+
+      <LazyLoad>
+        <ClientNPartner />
+      </LazyLoad>
+
+      <LazyLoad>
+        <Impact />
+      </LazyLoad>
+
+      <LazyLoad>
+        <CaseStudies />
+      </LazyLoad>
+
+      <LazyLoad>
+        <LatestNews />
+      </LazyLoad>
+
+      <LazyLoad>
+        <MeetTeam_AU />
+      </LazyLoad>
+
+      <LazyLoad>
+        <Companies />
+      </LazyLoad>
+
+      <LazyLoad>
+        <ServicesFooter />
+      </LazyLoad>
+      <TopScroll />
+
+      </Box>
+    </>
   );
 };
 

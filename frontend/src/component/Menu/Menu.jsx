@@ -48,7 +48,12 @@ const Menu = () => {
             color={"#00D2AA"}
           />
         ) : (
-          <CloseIcon color={"black"} />
+          <CloseIcon
+            onClick={onClose}
+            height={["8px", "8px", "16px", "16px"]}
+            width={["8px", "8px", "16px", "16px"]}
+            color={"#00D2AA"}
+          />
         )}
       </Flex>
       <Drawer
@@ -76,10 +81,37 @@ const Menu = () => {
             <BackgroundVideoContainer videosrc={g42Video} height={"371px"} />
           </Box>
 
-          <DrawerBody >
+          <DrawerBody>
+          <Flex
+        alignItems={"center"}
+        justifyContent={"center"}
+        cursor={"pointer"}
+        position={"fixed"}
+        zIndex={10}
+        top={["24px", "24px", "30%", "30%"]}
+        right={["45%", "45%", "36px", "36px"]}
+        borderRadius={"50%"}
+        border={"1px solid #00D2AA"}
+        ref={btnRef}
+        height={["32px", "32px", "65px", "85px"]}
+        width={["32px", "32px", "65px", "85px"]}
+        _hover={{ backgroundColor: "white" }}
+        backgroundColor={"transparent"}
+        onClick={onClose}
+      >
+              <CloseIcon
+                height={["8px", "8px", "16px", "16px"]}
+                width={["8px", "8px", "16px", "16px"]}
+                color={"#00D2AA"}
+              />
+              
+              </Flex>
             <Flex gap={"22px"} flexDirection={"column"}>
               <Link
-              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                _hover={{
+                  textDecor: "none",
+                  color: "var(--Emergent-Green, #00D2AA)",
+                }}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/about"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -90,7 +122,10 @@ const Menu = () => {
                 About G42 Healthcare
               </Link>
               <Link
-              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                _hover={{
+                  textDecor: "none",
+                  color: "var(--Emergent-Green, #00D2AA)",
+                }}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/whatwedo"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -100,7 +135,10 @@ const Menu = () => {
                 What we do
               </Link>
               <Link
-              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                _hover={{
+                  textDecor: "none",
+                  color: "var(--Emergent-Green, #00D2AA)",
+                }}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/collaborations"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -110,7 +148,10 @@ const Menu = () => {
                 Partnerships
               </Link>
               <Link
-              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                _hover={{
+                  textDecor: "none",
+                  color: "var(--Emergent-Green, #00D2AA)",
+                }}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/resources"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -120,7 +161,10 @@ const Menu = () => {
                 Resources
               </Link>
               <Link
-              _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                _hover={{
+                  textDecor: "none",
+                  color: "var(--Emergent-Green, #00D2AA)",
+                }}
                 fontFamily={"Bossa-ExtendedBold"}
                 href="/news"
                 fontSize={["20px", "20px", "30px", "30px"]}
@@ -132,7 +176,10 @@ const Menu = () => {
 
               <Flex gap={"46px"}>
                 <Link
-                _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                  _hover={{
+                    textDecor: "none",
+                    color: "var(--Emergent-Green, #00D2AA)",
+                  }}
                   fontFamily={"Bossa-Regular"}
                   href="/contactus"
                   fontSize={["16px", "16px", "20px", "20px"]}
@@ -142,7 +189,10 @@ const Menu = () => {
                   Contact
                 </Link>
                 <Link
-                _hover={{textDecor: "none", color: "var(--Emergent-Green, #00D2AA)"}}
+                  _hover={{
+                    textDecor: "none",
+                    color: "var(--Emergent-Green, #00D2AA)",
+                  }}
                   fontFamily={"Bossa-Regular"}
                   href="/career"
                   fontSize={["16px", "16px", "20px", "20px"]}

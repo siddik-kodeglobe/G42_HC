@@ -5,7 +5,10 @@ import Footer from "../Footer/Footer";
 const ServicesFooter = () => {
   return (
     <>
-      <Box margin={["80px 20px 0px 20px", "125px 175px 0px 175px"]}>
+      <Box w={"100vw"} maxW={"100%"} 
+     padding={["53px 11.71%  32px 11.71%"]}
+     mt={["30px","30px","30px","71px","71px","71px"]}
+      >
         <Flex flexDirection={["column", "column", "row"]} justifyContent={"space-between"} alignItems={"start"}>
           <Box w={["100%", "100%", "60%"]}>
             <Text

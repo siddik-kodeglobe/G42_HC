@@ -5,27 +5,29 @@ import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 const ImageSubHeading = () => {
   return (
     <>
-    <Box margin={["33px 14px", "0px 180px"]}>
-      <Image src={omicsImg} alt="Img" />
-      <Flex margin={["0px 22px", "0px 22px", "78px 0px"]} mt={"78px"} flexDirection={["column", "column", "row"]} justifyContent={"space-between"}>
-        <Box w={"50%"}>
+    <Box w={"100vw"} maxW={"100%"} 
+    padding={["33.7px 20px 0px 20px","33.7px 20px 0px 20px" ,"33.7px 20px 0px 20px", "52px 11.71% 0px 11.71%", "52px 11.71% 0px 11.71%", "52px 11.71% 0px 11.71%" ]}
+    >
+      <Image w={"100%"} src={omicsImg} alt="Img" />
+      <Flex mt={["21px","21px","21px", "50px", "65px", "78px"]} flexDirection={["column", "column", "row"]} justifyContent={"space-between"}>
+        <Box w={["100%","100%","100%","50%","50%", "50%"]}>
           <Text
           fontFamily={"Bossa-ExtendedBold"}
             fontStyle={"normal"}
             fontWeight={"700"}
-            fontSize={["24px", "24px", "45px"]}
+            fontSize={["24px", "24px", "24px", "39px", "50px", "60px"]}
           >
             Sub Heading
           </Text>
         </Box>
-        <Box mt={["14px", 0, 0]} w={["100%","100%", "50%"]}>
+        <Box  w={["100%","100%", "100%", "50%","50%","50%"]}>
           <Text
           fontFamily={"Bossa-Light"}
             color={"#747272"}
             fontStyle={"normal"}
             fontWeight={300}
             lineHeight={"22px"}
-            fontSize={["12px", "12px", "16px"]}
+            fontSize={["12px", "12px", "12px", "12px", "13.5px", "16px"]}
           >
             The Omics Centre of Excellence is invested in the accentuated power
             of Wellness genomic, clinical, precision medicine and

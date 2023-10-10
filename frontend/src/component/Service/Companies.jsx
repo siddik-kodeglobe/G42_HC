@@ -35,48 +35,66 @@ const Companies = () => {
     <>
       <Box
         backgroundColor={"#174042"}
-        padding={[
-          "80px 20px 80px 20px",
-          "80px 20px 80px 20px",
-          "125px 60px 93px 60px",
-        ]}
+        w={"100vw"}
+        maxW={"100%"}
+        borderTop={"1px solid #00D2AA"}
       >
+        <Box padding={"5.26% 2.64% 0% 4.27%"}>
         <Text
         fontFamily={"Bossa-ExtendedBold"}
           color={"white"}
-          fontSize={["24px", "24px", "48px"]}
+          fontSize={["24px", "24px", "24px", "31px", "40px", "48px"]}
           fontWeight={400}
           lineHeight={"normal"}
         >
           Companies
         </Text>
+        </Box>
 
-        <Box>
+        <Box paddingTop={["20px", "29px"]} paddingBottom={["80px", "92px"]}>
           <Swiper
           speed={750}
-            breakpoints={{
-              1024: {
-                slidesOffsetBefore: 0,
-                slidesPerView: 2.75,
-                spaceBetween: 44,
-              },
-              390: {
-                slidesPerView: 1.5,
-                slidesOffsetBefore: 15,
-                // spaceBetween:22,
-              },
-            }}
+          breakpoints={{
+            1900: {
+              slidesOffsetBefore: 75.83,
+              slidesPerView: 3.5,
+              spaceBetween: 121.34,
+            },
+            1250: {
+              slidesOffsetBefore: 50.55,
+              slidesPerView: 3,
+              spaceBetween: 80.89,
+            },
+            990: {
+              slidesOffsetBefore: 39.18,
+              slidesPerView: 3,
+              spaceBetween: 62.69,
+            },
+            740: {
+              slidesOffsetBefore: 30.33,
+              slidesPerView: 2,
+              spaceBetween: 48.43,
+            },
+            390: {
+              slidesOffsetBefore: 18.95,
+              slidesPerView: 1.25,
+              spaceBetween: 30.33,
+            },
+          }}
+          observeParents
+          observer
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide className={style.swipe_slide}>
+              <SwiperSlide style={{w: "30%"}} className={style.swipe_slide}>
                 <Box
                   position={"relative"}
                   backgroundColor={"#396767"}
-                  w={["292px", "292px", "433px"]}
+                  // border={"1px solid cyan"}
+                  w={"100%"}
                   h={["378px", "378px", "561px"]}
                 ></Box>
 
@@ -84,12 +102,11 @@ const Companies = () => {
                 fontFamily={"Bossa-Bold"}
                   position={"absolute"}
                   bottom={"64px"}
-                  left={"25px"}
-                  w={"100%"}
+                  left={"25%"}
+                  right={"25%"}
                   textAlign={"center"}
-                  noOfLines={2}
                   color={"white"}
-                  fontSize={["15px", "15px", "30px"]}
+                  fontSize={["20px", "20px", "20px", "20px", "25px", "30px"]}
                   fontWeight={700}
                   lineHeight={"normal"}
                 >

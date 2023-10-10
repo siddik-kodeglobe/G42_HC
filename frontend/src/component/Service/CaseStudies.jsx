@@ -88,89 +88,134 @@ const CaseStudies = () => {
 
   return (
     <>
-      <Box
-        padding={[
-          "80px 20px 0px 20px",
-          "80px 20px 0px 20px",
-          "125px 60px 0px 60px",
-        ]}
-      >
-        <Text
-        fontFamily={"Bossa-ExtendedBold"}
-          fontSize={["24px", "24px", "48px"]}
-          fontWeight={700}
-          lineHeight={"normal"}
+      <Box>
+        <Box
+          mt={["80px", "80px", "80px", "115px", "115px", "115px"]}
+          w={"100vw"}
+          maxw={"100%"}
+          borderTop={"1px solid rgba(0, 0, 0, 0.10)"}
+          padding={[
+            "80px 20px 0px 20px",
+            "80px 20px 0px 20px",
+            "80px 20px 0px 20px",
+            "87px 11.71% 0px 11.71%",
+            "87px 11.71% 0px 11.71%",
+            "87px 11.71% 0px 11.71%",
+          ]}
         >
-          Case Studies
-        </Text>
-        <Text
-        fontFamily={"Bossa-Light"}
-          w={["100%", "100%", "808px"]}
-          fontSize={["7px", "7px", "14px"]}
-          fontWeight={300}
-          lineHeight={"normal"}
-        >
-          Harness data, develop artificial super intelligence and deliver
-          innovative health solutions that leverage advanced technology and
-          precision medicine to shape the future of healthcare
-        </Text>
+          <Text
+            fontFamily={"Bossa-ExtendedBold"}
+            fontSize={["24px", "24px", "24px", "31px", "40px", "48px"]}
+            fontWeight={700}
+            lineHeight={"normal"}
+          >
+            Case Studies
+          </Text>
+          <Text
+            fontFamily={"Bossa-Light"}
+            w={["100%", "100%", "808px"]}
+            fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
+            fontWeight={300}
+            lineHeight={"normal"}
+          >
+            Harness data, develop artificial super intelligence and deliver
+            innovative health solutions that leverage advanced technology and
+            precision medicine to shape the future of healthcare
+          </Text>
+        </Box>
 
         <Swiper
           breakpoints={{
-            1024: {
-              slidesOffsetBefore: 0,
-              slidesPerView: 2.75,
-              spaceBetween: 44,
+            380: {
+              slidesOffsetBefore: 21,
+              slidesPerView: 1.25,
+              spaceBetween: 11,
             },
-            390: {
-              slidesPerView: 1.5,
-              slidesOffsetBefore: 0,
-              // spaceBetween:22,
+            750: {
+              slidesOffsetBefore: 21,
+              slidesPerView: 1.75,
+              spaceBetween: 11,
+            },
+            990: {
+              slidesOffsetBefore: 116,
+              slidesPerView: 2.25,
+              spaceBetween: 13,
+            },
+            1250: {
+              slidesOffsetBefore: 149,
+              slidesPerView: 2.5,
+              spaceBetween: 18,
+            },
+            1530: {
+              slidesOffsetBefore: 178,
+              slidesPerView: 2.75,
+              spaceBetween: 21,
             },
           }}
           ref={swiperRef}
-          // navigation={true}
+          observeParents
+          observer
           modules={[Navigation]}
           className={style.swiper}
         >
           {data?.map((el) => (
-            <SwiperSlide className={style.swipe_slide}>
-              <Box>
-                <Box position={"relative"} w={["240px", "240px", "451px"]}>
+            <SwiperSlide
+              style={{ width: "29.6%" }}
+              className={style.swipe_slide}
+            >
+              <Box w={"100%"}>
+                <Box w={"100%"} position={"relative"}>
                   <Image
                     w={"100%"}
+                    height={[
+                      "208px",
+                      "208px",
+                      "218px",
+                      "218px",
+                      "282px",
+                      "338px",
+                    ]}
+                    objectFit={"cover"}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
                   />
                 </Box>
 
-                <Box
+                {/* <Box
                   top={5}
                   left={5}
                   w={["12px", "12px", "32px"]}
                   position={"absolute"}
                 >
                   <Image cursor={"pointer"} src={linkIcon} />
-                </Box>
+                </Box> */}
 
                 <Box position={"absolute"} bottom={1} left={5}>
                   <Text
-                  fontFamily={"Bossa-Regular"}
+                    fontFamily={"Bossa-Regular"}
                     noOfLines={2}
                     color={"white"}
-                    fontSize={["7px", "7px", "14px"]}
+                    fontSize={[
+                      "7.5px",
+                      "7.5px",
+                      "7.5px",
+                      "9px",
+                      "12px",
+                      "14px",
+                    ]}
                     fontWeight={400}
                     lineHeight={"normal"}
                   >
                     {convertDate(el.attributes.createdAt)}
                   </Text>
                   <Text
-                  fontFamily={"Bossa-Medium"}
+                    fontFamily={"Bossa-Medium"}
                     noOfLines={2}
                     color={"white"}
-                    fontSize={["11px", "11px", "20px"]}
+                    fontSize={["12px", "12px", "12px", "14px", "16px", "20px"]}
                     fontWeight={500}
                     lineHeight={"normal"}
-                    height={"96px"}
+                    textOverflow={"ellipsis"}
+                    height={["60px", "60px", "60px", "62px", "80px", "96px"]}
                   >
                     {el.attributes.title}
                   </Text>

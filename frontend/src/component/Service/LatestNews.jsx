@@ -18,7 +18,6 @@ const LatestNews = () => {
   // const swiper = useSwiper();
   const swiperRef = React.useRef(null);
 
-
   const getData = async () => {
     // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`);
     const res = await axios.get(
@@ -46,7 +45,7 @@ const LatestNews = () => {
     ];
 
     const day = inputDate.getUTCDate();
-    const formattedDay = (day < 10) ? `0${day}` : day;
+    const formattedDay = day < 10 ? `0${day}` : day;
     const month = months[inputDate.getUTCMonth()];
     const year = inputDate.getUTCFullYear();
 
@@ -59,73 +58,130 @@ const LatestNews = () => {
   }, []);
   return (
     <>
-      <Text
-      fontFamily={"Bossa-ExtendedBold"}
-      fontSize={["24px", "24px", "48px"]}
-      fontWeight={700}
-      lineHeight={"normal"}
-      fontStyle={"normal"}
-      margin={["40px 20px", "40px 20px", "72px 60px"]}>Latest News</Text>
-      <Box marginBottom={"125px"}>
-        <Swiper
-          breakpoints={{
-            1024: {
-              slidesOffsetBefore: 0,
-              // slidesOffsetBefore: 150,
-              slidesPerView: 2.75,
-              spaceBetween:44,
-            },
-            390: {
-              slidesPerView: 1.5,
-              slidesOffsetBefore: 0,
-              // slidesOffsetBefore: 15,
-              // spaceBetween:22,
-            },
-          }}
-          ref={swiperRef}
-          // navigation={true}
-          modules={[Navigation]}
-          className={style.swiper}
-        >
-          {data?.filter((el) => el.attributes.category == "Omics")?.map((el) => (
-            <SwiperSlide className={style.swipe_slide}>
-              <Box position={"relative"}>
-                <Image
-                  w={["238px", "238px", "451px"]}
-                  src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
-                />
-              </Box>
-              <Box
-                w={["238px", "238px", "451px"]}
-                paddingRight={[8, 8, 9]}
-                position={"absolute"}
-                bottom={1.5}
-                left={5}
-              >
-                <Text
-                fontFamily={"Bossa-Regular"}
-                  noOfLines={2}
-                  color={"white"}
-                  fontSize={["7px", "7px", "14px"]}
-                  fontWeight={400}
-                  lineHeight={"normal"}
+      <Box
+        mt={["80px", "80px", "80px", "88px", "88px", "88px"]}
+        w={"100vw"}
+        maxw={"100%"}
+        
+      >
+        <Box 
+        paddingTop={["72px"]}
+        borderTop={"1px solid #747272"}
+        margin={[
+          "80px 20px 0px 20px",
+          "80px 20px 0px 20px",
+          "80px 20px 0px 20px",
+          "72px 11.71% 0px 11.71%",
+          "72px 11.71% 0px 11.71%",
+          "72px 11.71% 0px 11.71%",
+        ]}>
+          <Text
+            fontFamily={"Bossa-ExtendedBold"}
+            fontSize={["24px", "24px", "48px"]}
+            fontWeight={700}
+            lineHeight={"normal"}
+            fontStyle={"normal"}
+          >
+            Latest News
+          </Text>
+        </Box>
+        <Box w={"100%"} marginBottom={"125px"}>
+          <Swiper
+            breakpoints={{
+              380: {
+                slidesOffsetBefore: 21,
+                slidesPerView: 1.25,
+                spaceBetween: 11,
+              },
+              750: {
+                slidesOffsetBefore: 21,
+                slidesPerView: 1.75,
+                spaceBetween: 11,
+              },
+              990: {
+                slidesOffsetBefore: 116,
+                slidesPerView: 2.25,
+                spaceBetween: 13,
+              },
+              1250: {
+                slidesOffsetBefore: 149,
+                slidesPerView: 2.5,
+                spaceBetween: 18,
+              },
+              1530: {
+                slidesOffsetBefore: 178,
+                slidesPerView: 2.75,
+                spaceBetween: 21,
+              },
+            }}
+            observeParents
+            observer
+            ref={swiperRef}
+            modules={[Navigation, FreeMode]}
+            className={style.swiper}
+          >
+            {data
+              ?.filter((el) => el.attributes.category == "Omics")
+              ?.map((el) => (
+                <SwiperSlide
+                  style={{ width: "29.69%" }}
+                  className={style.swipe_slide}
                 >
-                  {convertDate(el.attributes.createdAt)}
-                </Text>
-                <Text
-                fontFamily={"Bossa-Medium"}
-                  noOfLines={2}
-                  color={"white"}
-                  fontSize={["10px", "10px", "20px"]}
-                  fontWeight={500}
-                  lineHeight={"normal"}
-                >
-                  {el.attributes.info}
-                </Text>
-              </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                  <Box w={"100%"} position={"relative"}>
+                    <Image
+                      w={"100%"}
+                      height={[
+                        "208px",
+                        "208px",
+                        "218px",
+                        "218px",
+                        "282px",
+                        "338px",
+                      ]}
+                      objectFit={"cover"}
+                      src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
+                    />
+                  </Box>
+                  <Box
+                    w={"100%"}
+                    paddingRight={[8, 8, 9]}
+                    position={"absolute"}
+                    bottom={1.5}
+                    left={5}
+                  >
+                    <Text
+                      fontFamily={"Bossa-Regular"}
+                      noOfLines={2}
+                      color={"white"}                      
+                      fontSize={[
+                        "7.5px",
+                        "7.5px",
+                        "7.5px",
+                        "9px",
+                        "12px",
+                        "14px",
+                      ]}
+                      fontWeight={400}
+                      lineHeight={"normal"}
+                    >
+                      {convertDate(el.attributes.createdAt)}
+                    </Text>
+                    <Text
+                      fontFamily={"Bossa-Medium"}
+                      noOfLines={2}
+                      color={"white"}
+                    fontSize={["12px", "12px", "12px", "14px", "16px", "20px"]}
+                      fontWeight={500}
+                      lineHeight={"normal"}
+                    height={["60px", "60px", "60px", "62px", "80px", "96px"]}
+                    >
+                      {el.attributes.info}
+                    </Text>
+                  </Box>
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        </Box>
       </Box>
     </>
   );

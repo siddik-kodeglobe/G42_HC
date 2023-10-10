@@ -263,14 +263,7 @@ const SocialMedia = () => {
             ))}
           </Swiper>
         </Box>
-        <hr
-          style={{
-            marginBottom: "54px",
-            width: "98vw",
-            maxWidth: "100%",
-            border: "1px solid #D9D9D9",
-          }}
-        />
+        
       </Box>
     </>
   );

@@ -12,63 +12,59 @@ import playBtn from "../../assets/icons/playBtn.svg";
 import omicsImg from "../../assets/temp/services/omicsImg.svg";
 import VideoModal from "../VideoModal/VideoModal";
 
-import g42Video from '../../assets/temp/Video/G42 Video.mp4'
+import g42Video from "../../assets/temp/Video/G42 Video.mp4";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import { isMobile, isTablet } from "react-device-detect";
 
 const Home_VideoSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Box position={"relative"}>
-        <Box onClick={onOpen} style={{cursor: `url(${playBtn}) 45 45, auto`}} position={"relative"}>
-          <ReactPlayer
-            style={{ position: "position" }}
-            width={"100%"}
-            height={"100%"}
-            playing={true}
-            loop={true}
-            url={g42Video}
-            muted={true}
+      <Box w={"100vw"} maxW={"100%"} pos={"relative"}>
+        <Box
+          maxH={isMobile ? "589px" : isTablet ? "589px" : "100%"}
+          position={"relative"}
+        >
+          <BackgroundVideoContainer
+            videosrc={g42Video}
+            height={isMobile ? "589px" : isTablet ? "589px" : "100vh"}
           />
         </Box>
 
         <Box
-          w={"98.7vw"}
-          h={["25vh","25vh","50vh"]}
+          // border={"2px"}
+          w="100%"
+          h={["25vh", "25vh", "50vh"]}
           position={"absolute"}
           bgGradient={
             "linear-gradient(0deg, #00AFFF 0%, rgba(0, 175, 255, 0.00) 100%);"
           }
           bottom={0}
+          right={0}
+          left={0}
           margin={0}
+        ></Box>
+
+        <Box
+          position={"absolute"}
+          backgroundColor={"white"}
+          bottom={-1}
+          left={"1%"}
+          right={"1%"}
+          w="98%"
+          h={["67px", "67px", "67px", "108px", "139px", "180px", "216px"]}
         >
-          {/* TAGLINE  */}
-          
-          <Box position={"absolute"} bottom={[-2, -2, -9]} left={[9,9,0]} w="90%" h="35%">
-            <Box
-              position={"absolute"}
-              bottom={0}
-              left={[-8,-8,5]}
-              right={[1,1,5]}
-              height={["50px", "50px","214px"]}
-              w={"96vw"}
-              padding={["15px 50px","75px 148px"]}
-              mt={5}
-              justifyContent={"space-between"}
-              alignItems={"center"}
-              backgroundColor={"white"}
-            >
-              <Text
-                fontFamily={"Bossa-ExtendedBold"}
-                w={"50%"}
-                fontSize={["24px", "24px", "48px"]}
-                textTransform={"capitalize"}
-                fontWeight={700}
-              >
-                Omics
-              </Text>
-            </Box>
-          </Box>
+          <Text
+            mt={["37px", "37px", "37px", "56px", "72px", "86px"]}
+            marginLeft={["24px","24px","24px","96px", "124px", "149px"]}
+            fontFamily={"Bossa-ExtendedBold"}
+            fontSize={["24px", "24px", "24px", "39px", "50px", "60px"]}
+            textTransform={"capitalize"}
+            fontWeight={700}
+          >
+            Omics
+          </Text>
         </Box>
 
         <VideoModal
