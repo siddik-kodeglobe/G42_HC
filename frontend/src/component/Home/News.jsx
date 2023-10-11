@@ -80,32 +80,31 @@ const News = () => {
   return (
     <>
       <Box
+        w={"100vw"}
+        maxW={"100%"}
         style={{ cursor: `url(${doubleSideArrow}), auto` }}
-        paddingBottom={["80px", "80px", "90px", "103px"]}
+        paddingBottom={["68px", "68px", "68px", "73px", "94px", "112px"]}
         bgGradient={
           "linear-gradient(180deg, #00D2AA 28.96%, rgba(0, 210, 170, 0.00) 100%);"
         }
       >
-        <Box
-          w={["100vw", "100vw", "100vw"]}
-          maxW={"100%"}
-          
-        >
+        <Box w={"100%"}>
           <Flex
             alignItems={"center"}
             justifyContent={"space-between"}
             padding={[
-              "40px 15px 0px 15px",
-              "40px 15px 0px 15px",
-              "69px 60px 0px 72px",
-              "69px 60px 0px 72px",
+              "90px 20px 27px 20px",
+              "90px 20px 27px 20px",
+              "90px 20px 27px 20px",
+              "47px 3.95% 29px 47px ",
+              "47px 3.95% 29px 60px ",
+              "47px 3.95% 29px 72px ",
             ]}
           >
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               color={"white"}
-              fontSize={["22px", "22px", "32px", "32px"]}
-              fontWeight={700}
+              fontSize={["22px", "22px", "22px", "22px", "26px", "32px"]}
             >
               News
             </Text>
@@ -181,35 +180,31 @@ const News = () => {
             </Flex>
           </Flex>
 
-          <Box  mt={["-27px", "-27px", "-25px"]}>
+          <Box mt={["27px", "27px", "27px", "29px", "38px", "45px"]}>
             <Swiper
               speed={750}
+              slidesPerView={"auto"}
               breakpoints={{
                 389: {
-                  slidesPerView: 1.5,
-                  slidesOffsetBefore: 15,
+                  slidesOffsetBefore: 20,
                   spaceBetween: 24,
                 },
-                1021: {
+                768: {
                   slidesOffsetBefore: 20,
-                  slidesPerView: 2,
-                  spaceBetween: 22,
+                  spaceBetween: 26,
                 },
-                1150: {
-                  slidesOffsetBefore: 72,
-                  slidesPerView: 2.5,
-                  // spaceBetween: 22,
+                992: {
+                  slidesOffsetBefore: 47,
+                  spaceBetween: 28,
                 },
-                1250: {
-                  slidesOffsetBefore: 72,
-                  slidesPerView: 2.75,
-                  spaceBetween: 22,
+                1280: {
+                  slidesOffsetBefore: 60,
+                  spaceBetween: 37,
                 },
-                1900: {
+                1536: {
                   slidesOffsetBefore: 72,
-                  slidesPerView: 2.95,
-                  spaceBetween: 22
-                }
+                  spaceBetween: 44,
+                },
               }}
               ref={swiperRef}
               // navigation={true}
@@ -220,34 +215,28 @@ const News = () => {
               className={style.swiper}
             >
               {data?.map((el) => (
-                <SwiperSlide className={style.swipe_slide}>
+                <SwiperSlide className={style.swiper_slide}>
                   <Link href={`/news/${el.id}`}>
                     <Box
                       backgroundSize={"cover"}
-                      w={["238px", "238px", "238px", "294px", "380px", "570px"]}
-                      h={["179px", "179px", "179px", "338px", "338px", "427px"]}
+                      w={["238px", "238px", "238px", "294px", "380px", "451px"]}
+                      h={["179px", "179px", "179px", "220px", "284px", "338px"]}
                       backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`}
                       position={"relative"}
-                    >
-                      {/* <Image
-                      w={["238px", "238px", "451px"]}
-                      src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
-                    /> */}
-                    </Box>
+                    ></Box>
 
                     <Box
-                     w={["238px", "238px", "238px", "294px", "380px", "570px"]}
-                    
+                      w={["238px", "238px", "238px", "294px", "380px", "451px"]}
                       paddingRight={[8, 8, 9]}
                       position={"absolute"}
-                      bottom={["-50px", "-50px", 1.5, 1.5]}
+                      bottom={["0px", "0px", "0px", 1.5, 1.5]}
                       left={5}
                     >
                       <Text
                         fontFamily={"Bossa-Regular"}
                         noOfLines={2}
                         color={"white"}
-                        fontSize={["7px", "7px", "14px"]}
+                        fontSize={["7px", "7px", "7px", "10px", "12px", "14px"]}
                         fontWeight={500}
                         lineHeight={"normal"}
                         textOverflow={"ellipsis"}
@@ -255,24 +244,37 @@ const News = () => {
                         {convertData(el.attributes.createdAt)}
                       </Text>
                       <Flex
-                      alignItems={"start"}
-
-                        h={"96px"}
-                        >
-                      <Text
-                        fontFamily={"Bossa-Medium"}
-                        noOfLines={[2,2,3,3]}
-                        mt={"5px"}
-                        maxHeight={"96px"}
-                        marginBottom={"15px"}
-                        color={"white"}
-                        fontSize={["10px", "10px", "15px", "20px"]}
-                        fontWeight={500}
-                        lineHeight={"normal"}
-                        textOverflow={"ellipsis"}
+                        alignItems={"start"}
+                        h={["50px", "50px", "50px", "62px", "80px", "96px"]}
                       >
-                        {el.attributes.info}
-                      </Text>
+                        <Text
+                          fontFamily={"Bossa-Medium"}
+                          noOfLines={[2, 2, 2, 2, 3, 3]}
+                          mt={"5px"}
+                          maxHeight={"96px"}
+                          marginBottom={"15px"}
+                          color={"white"}
+                          fontSize={[
+                            "10.57px",
+                            "10.57px",
+                            "10.57px",
+                            "13px",
+                            "16.85px",
+                            "20px",
+                          ]}
+                          lineHeight={"normal"}
+                          w={[
+                            "238px",
+                            "238px",
+                            "238px",
+                            "294px",
+                            "380px",
+                            "451px",
+                          ]}
+                          textOverflow={"ellipsis"}
+                        >
+                          {el.attributes.info}
+                        </Text>
                       </Flex>
                     </Box>
                   </Link>

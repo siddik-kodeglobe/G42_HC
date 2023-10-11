@@ -21,7 +21,7 @@ const Impact = () => {
     <>
       <Box
       w={"100vw"}
-      maxw={"100%"}
+      maxW={"100%"}
       padding={["80px 20px 0px 20px", "80px 20px 0px 20px", "80px 20px 0px 20px", "125px 11.71% 0px 11.71%","125px 11.71% 0px 11.71%","125px 11.71% 0px 11.71%"]}
       >
         <Text

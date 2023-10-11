@@ -24,8 +24,9 @@ import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
 import bgImg from "../../assets/MeetUs/background.png";
-import blueMotionVideo from '../../assets/backgroundVideo/blueMotionVideo.mp4';
+import blueMotionVideo from "../../assets/backgroundVideo/blueMotionVideo.mp4";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import { isMobile, isTablet } from "react-device-detect";
 
 const MeetUs = () => {
   const [data, setData] = useState([]);
@@ -85,22 +86,38 @@ const MeetUs = () => {
   }, []);
   return (
     <>
-      <Box mt={"95px"} position={"relative"}>
-        <Box height={"815px"} zIndex={-10} position={"relative"} mt={["80px"]}>
+      <Box
+        w={"100vw"}
+        maxW={"100%"}
+        mt={["80px", "80px", "80px", "88px", "114px", "137px"]}
+        position={"relative"}
+      >
+        <Box
+          height={isMobile ? "492px" : isTablet ? "500px" : "815px"}
+          zIndex={-10}
+          position={"relative"}
+          mt={["80px"]}
+        >
           <BackgroundVideoContainer
             videosrc={blueMotionVideo}
-            height={"815px"}
+            height={"100%"}
           />
         </Box>
 
-        <Box height={"390px"} position={"absolute"} zIndex={1} top={0}  left={0} right={0}
- background={"linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)"}></Box>
         <Box
-        position={"absolute"} zIndex={2} top={0}  left={0} right={0}
-          
-        >
+          height={"390px"}
+          position={"absolute"}
+          zIndex={1}
+          top={0}
+          left={0}
+          right={0}
+          background={
+            "linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)"
+          }
+        ></Box>
+        <Box position={"absolute"} zIndex={2} top={0} left={0} right={0}>
           <Flex
-            padding={["40px 15px 20px 15px", "55px 60px 20px 150px"]}
+        padding={["40px 20px 25px 20px", "40px 20px 25px 20px", "40px 20px 25px 20px", "47px 3.94% 42px 11.71%", "60px 3.94% 42px 11.71%", "72px 3.94% 42px 11.71%"]}
             alignItems={"center"}
             justifyContent={"space-between"}
           >
@@ -159,34 +176,34 @@ const MeetUs = () => {
             </Flex>
           </Flex>
 
-          <Box mt={["-45px", "-45px", "-45px", "-45px"]}>
+          <Box>
             <Swiper
               speed={750}
+              slidesPerView={'auto'}
               breakpoints={{
                 390: {
-                  slidesPerView: 1.25,
-                  slidesOffsetBefore: 15,
-                  // spaceBetween: 24,
+                  // slidesPerView: 1.25,
+                  slidesOffsetBefore: 20,
+                  spaceBetween: 24,
                 },
-                1021: {
-                  slidesPerView: 2.25,
-                  slidesOffsetBefore: 150,
-                  spaceBetween: 27,
+                768: {
+                  slidesOffsetBefore: 20,
+                  spaceBetween: 24,
                 },
-                1150: {
+                992: {
+                  // slidesPerView: 2.25,
                   slidesOffsetBefore: 150,
-                  slidesPerView: 2.25,
-                  spaceBetween: 5,
+                  spaceBetween: 22,
                 },
-                1250: {
+                1280: {
                   slidesOffsetBefore: 150,
-                  slidesPerView: 2.5,
-                  spaceBetween: 44,
+                  // slidesPerView: 2.5,
+                  spaceBetween: 25,
                 },
-                1250: {
-                  slidesOffsetBefore: 150,
-                  slidesPerView: 2.75,
-                  spaceBetween: 44,
+                1536: {
+                  slidesOffsetBefore: 178,
+                  // slidesPerView: 2.75,
+                  spaceBetween: 30,
                 }
               }}
               ref={swiperRef}
@@ -195,15 +212,15 @@ const MeetUs = () => {
               className={style.swiper}
             >
               {data?.map((el) => (
-                <SwiperSlide className={style.swipe_slide}>
+                <SwiperSlide className={style.swiper_slide}>
                   <Link
                     href={el.attributes.linkedin_link}
                     _hover={{ textDecoration: "none" }}
                     isExternal
                   >
                     <Box
-                      w={["306px", "306px", "516px","516px","652px"]}
-                      h={["285px", "285px", "450px","450px","491px"]}
+                      w={["306px", "306px", "306px", "336px", "434px", "521px"]}
+                     h={["325px","325px","325px","358px", "462px", "555px"]}
                       backgroundColor={"white"}
                     >
                       <Text
@@ -221,7 +238,7 @@ const MeetUs = () => {
                       <Image
                         padding={["8px", "8px", "0px 14px"]}
                         w={["100%", "100%", "100%"]}
-                        h={["172px", "172px", "291px"]}
+                        height={["172px","172px","172px","190px", "245px", "294px"]}
                         src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                       />
 
@@ -231,7 +248,7 @@ const MeetUs = () => {
                         textOverflow={"ellipsis"}
                         color={"black"}
                         fontStyle={"normal"}
-                        fontSize={["12px", "12px", "20px", "20px"]}
+                        fontSize={["12px","12px","12px","14px", "16px", "20px"]}
                         fontWeight={700}
                         lineHeight={"normal"}
                         overflow={"hidden"}

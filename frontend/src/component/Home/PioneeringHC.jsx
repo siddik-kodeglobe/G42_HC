@@ -243,17 +243,18 @@ const PioneeringHC = () => {
 
   return (
     <>
-      <Box mt={["87px", "87px", "125px", "125px"]}>
+      <Box w={"100vw"} maxW={"100%"} mt={["79px", "79px","79px", "81px", "105px", "125px"]}>
         <Text
           fontFamily={"Bossa-ExtendedBold"}
-          fontSize={["32px", "32px", "48px", "48px"]}
+          fontSize={["32px", "32px","32px", "32px", "40px", "48px"]}
+          lineHeight={"normal"}
           className={style.heading}
         >
           Pioneering Healthcare
         </Text>
-        <Box padding={["59px 20px 20px 20px", "20px", "56px 151px", "56px 225px"]}>
+        <Box  padding={["60px 20px 0px 20px","60px 20px 0px 20px","60px 20px 0px 20px", "60px 11.71% 0px 11.71%","50px 11.71% 0px 11.71%","60px 11.71% 0px 11.71%",]}>
           <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]}>
-            <Box w={"100%"} padding={"0px 0px"}>
+            <Box w={["100%","100%","100%", "50%","50%","50%"]} padding={"0px 0px"}>
               <Text className={style.text1}>
                 1<sup>st</sup> COVID Lab
               </Text>
@@ -262,7 +263,7 @@ const PioneeringHC = () => {
             <Box
               ref={sectionRef1}
               className={`box1_phc demo ${isVisible ? "visible" : "hidden"}`}
-              w={"100%"}
+              w={["100%","100%","100%", "50%","50%","50%"]}
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text1_phc`}>

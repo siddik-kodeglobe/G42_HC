@@ -68,33 +68,33 @@ const Offering = () => {
           >
             Offerings
           </Text>
-          <Box paddingBottom={"15px"}>
+          <Box mt={["40px", "57px"]} paddingBottom={"15px"}>
             <Swiper
-              // slidesPerView={2.75}
+              slidesPerView={'auto'}
               breakpoints={{
                 380: {
                   slidesOffsetBefore: 21,
-                  slidesPerView: 1.25,
+                  // slidesPerView: 1.25,
                   spaceBetween: 11,
                 },
                 750: {
                   slidesOffsetBefore: 21,
-                  slidesPerView: 1.5,
+                  // slidesPerView: 1.5,
                   spaceBetween: 11,
                 },
                 990: {
                   slidesOffsetBefore: 116,
-                  slidesPerView: 2.25,
+                  // slidesPerView: 2.25,
                   spaceBetween: 13,
                 },
                 1250: {
                   slidesOffsetBefore: 149,
-                  slidesPerView: 2.5,
+                  // slidesPerView: 2.5,
                   spaceBetween: 18,
                 },
                 1530: {
                   slidesOffsetBefore: 178,
-                  slidesPerView: 2.75,
+                  // slidesPerView: 2.75,
                   spaceBetween: 21,
                 },
               }}
@@ -105,12 +105,11 @@ const Offering = () => {
             >
               {data?.map((el) => (
                 <SwiperSlide
-                  className={style.swipe_slide}
-                  style={{ width: "30.74%" }}
+                  className={style.swiper_slide}
                 >
                   <Box
                     backgroundColor={"white"}
-                    w={"100%"}
+                    w={["338px", "338px", "338px", "338px", "393px", "472px"]}
                     h={["338px","338px", "338px", "338px", "385px", "463px"]}
                     position={"relative"}
                   ></Box>
@@ -122,6 +121,7 @@ const Offering = () => {
                       noOfLines={2}
                       fontSize={["32px", "32px", "32px", "31px", "40px", "48px"]}
                       fontWeight={700}
+                      w={["338px", "338px", "338px", "338px", "393px", "472px"]}
                       lineHeight={"normal"}
                       fontStyle={"normal"}
                     >

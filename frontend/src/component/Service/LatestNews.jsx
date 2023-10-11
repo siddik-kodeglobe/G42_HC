@@ -61,7 +61,7 @@ const LatestNews = () => {
       <Box
         mt={["80px", "80px", "80px", "88px", "88px", "88px"]}
         w={"100vw"}
-        maxw={"100%"}
+        maxW={"100%"}
         
       >
         <Box 
@@ -85,32 +85,34 @@ const LatestNews = () => {
             Latest News
           </Text>
         </Box>
-        <Box w={"100%"} marginBottom={"125px"}>
+        <Box w={"100%"} mt={["13px", "15px"]} marginBottom={"125px"}>
           <Swiper
+          speed={750}
+          slidesPerView={'auto'}
             breakpoints={{
               380: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.25,
+                // slidesPerView: 1.25,
                 spaceBetween: 11,
               },
               750: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.75,
+                // slidesPerView: 1.75,
                 spaceBetween: 11,
               },
               990: {
                 slidesOffsetBefore: 116,
-                slidesPerView: 2.25,
+                // slidesPerView: 2.25,
                 spaceBetween: 13,
               },
-              1250: {
+              1220: {
                 slidesOffsetBefore: 149,
-                slidesPerView: 2.5,
+                // slidesPerView: 2.5,
                 spaceBetween: 18,
               },
-              1530: {
+              1510: {
                 slidesOffsetBefore: 178,
-                slidesPerView: 2.75,
+                // slidesPerView: 2.75,
                 spaceBetween: 21,
               },
             }}
@@ -124,10 +126,9 @@ const LatestNews = () => {
               ?.filter((el) => el.attributes.category == "Omics")
               ?.map((el) => (
                 <SwiperSlide
-                  style={{ width: "29.69%" }}
-                  className={style.swipe_slide}
+                  className={style.swiper_slide}
                 >
-                  <Box w={"100%"} position={"relative"}>
+                  <Box w={["240px","240px","240px", "294px", "380px", "456px"]} position={"relative"}>
                     <Image
                       w={"100%"}
                       height={[

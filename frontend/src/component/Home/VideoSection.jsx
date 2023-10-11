@@ -40,23 +40,10 @@ const VideoSection = () => {
         style={{ cursor: `url(${playBtn}) 45 45, auto` }}
         position={"relative"}
       >
-        {/* <Box position={"relative"} w={"100vw"} maxW={"100%"}>
-
-          <ReactPlayer
-            style={{ position: "position", border: "1px" }}
-            width={"100%"}
-            height={"90%"}
-            playing={true}
-            loop={true}
-            url={videoUrl}
-            muted={true}
-          />
-
-        </Box> */}
-
+       
       <LazyLoad>
-        <Box maxH={"100%"} position={"relative"}>
-          <BackgroundVideoContainer videosrc={videoUrl} height={"95vh"} />
+        <Box height={isMobile ? "589px" : isTablet ? "589px" : "100vh"} position={"relative"}>
+          <BackgroundVideoContainer videosrc={videoUrl} height={"100%"} />
         </Box>
         </LazyLoad>
 
@@ -65,26 +52,27 @@ const VideoSection = () => {
           w={"100vw"}
           maxW={"100%"}
           position={"absolute"}
-          bottom={"0px"}
+          bottom={"-1px"}
           margin={"0px"}
         >
           <Flex
             position={"relative"}
-            h={["125px", "125px", "250px", "431px"]}
+            h={["372px", "372px", "372px", "272px", "278px", "334px"]}
             flexDirection={["column", "column", "row"]}
             alignItems={["start", "start", "center"]}
-            paddingLeft={["20px", "20px", "25px", "72px"]}
+            paddingLeft={["20px", "20px", "20px", "47px","60px", "72px"]}
             paddingBottom={["0px", "0px", "0px", "50px"]}
+            paddingRight={["20px", "20px", "20px", "0px", "0px", "0px"]}
             bgGradient={
               "linear-gradient(0deg, #00D2AA 0%, rgba(0, 210, 170, 0.00) 100%);"
             }
             gap={[0, 0, "14px"]}
           >
-            <Box position={"absolute"} bottom={0}>
+            <Box position={"absolute"} bottom={"0px"}>
               <Text
                 fontFamily={"Bossa-Regular"}
                 color={"white"}
-                fontSize={["16px", "16px", "20px", "24px"]}
+                fontSize={["18px", "18px", "18px", "18px", "20px", "24px"]}
                 fontWeight={400}
                 fontStyle={"normal"}
                 letterSpacing={"-0.72px"}
@@ -93,10 +81,10 @@ const VideoSection = () => {
               </Text>
               <Text
                 fontFamily={"Bossa-ExtendedBold"}
-                w={["100%", "100%", "75%", "66%"]}
+                w={["100%", "100%","100%", "75%", "75%", "75%"]}
                 textShadow={"0px 4px 30px rgba(0, 65, 65, 0.27)"}
                 color={"white"}
-                fontSize={["28px", "28px", "50px", "65px"]}
+                fontSize={["32px", "32px", "32px", "52px", "67px", "80px"]}
                 fontWeight={700}
                 fontStyle={"normal"}
                 letterSpacing={"-0.72px"}

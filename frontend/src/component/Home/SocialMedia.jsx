@@ -81,15 +81,15 @@ const SocialMedia = () => {
   }, []);
   return (
     <>
-      <Box>
+      <Box w={"100vw"} maxW={"100%"}>
         <Flex
-          padding={["40px 15px 0px 15px","125px 60px 20px 150px"]}
+        padding={["40px 20px 25px 20px", "40px 20px 25px 20px", "40px 20px 25px 20px", "47px 3.94% 42px 11.71%", "60px 3.94% 42px 11.71%", "72px 3.94% 42px 11.71%"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
           <Text
           fontFamily={"Bossa-ExtendedBold"}
-            fontSize={["24px", "24px", "32px", "32px"]}
+            fontSize={["24px", "24px","24px", "24px", "26px", "32px"]}
             fontWeight={700}
             fontStyle={"normal"}
           >
@@ -138,44 +138,61 @@ const SocialMedia = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["-20px"]}>
+        <Box w={"100%"}>
           <Swiper
           speed={750}
-            breakpoints={{
-              1024: {
-                slidesOffsetBefore: 150,
-                slidesPerView: 2.75,
-                spaceBetween:44,
-              },
-              390: {
-                slidesPerView: 1.25,
-                slidesOffsetBefore: 15
-                // spaceBetween:22,
-              },
-            }}
+          slidesPerView={'auto'}
+          breakpoints={{
+            390: {
+              // slidesPerView: 1.25,
+              slidesOffsetBefore: 20,
+              spaceBetween: 24,
+            },
+            768: {
+              slidesOffsetBefore: 20,
+              spaceBetween: 24,
+            },
+            992: {
+              // slidesPerView: 2.25,
+              slidesOffsetBefore: 150,
+              spaceBetween: 22,
+            },
+            1280: {
+              slidesOffsetBefore: 150,
+              // slidesPerView: 2.5,
+              spaceBetween: 25,
+            },
+            1536: {
+              slidesOffsetBefore: 178,
+              // slidesPerView: 2.75,
+              spaceBetween: 30,
+            }
+          }}
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
+            observeParents
+            observer
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide className={style.swipe_slide}>
+              <SwiperSlide className={style.swiper_slide}>
                   <Link _hover={{textDecoration: "none"}} href={el.attributes.link} isExternal>
-                <Box  w={["285px", "285px", "451px","451px","672px"]}>
+                <Box  w={["285px", "285px","285px", "294px","380px","456px"]}>
                   <Image
                   
                   w={["100%"]}
-                  h={["268px", "268px", "411px","411px","600px"]}
+                  h={["268px", "268px", "268px", "268px","346px","415px"]}
                   objectFit={"cover"}
                   src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
                   w={"100%"}
                   fontFamily={"Bossa-Regular"}
-                    mt={"30px"}
+                    mt={["15px", "30px"]}
                     noOfLines={2}
                     color={"#747272"}
-                    fontSize={"14px"}
+                    fontSize={["10px","10px","10px","11px", "12px", "14px"]}
                     fontWeight={400}
                     textTransform={"capitalize"}
                     lineHeight={"normal"}
@@ -190,7 +207,7 @@ const SocialMedia = () => {
                   textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontSize={["12px", "12px", "20px", "20px"]}
+                    fontSize={["12px", "12px","12px", "14px", "16px", "20px"]}
                     fontWeight={700}
                     lineHeight={"normal"}
                     overflow={"hidden"}

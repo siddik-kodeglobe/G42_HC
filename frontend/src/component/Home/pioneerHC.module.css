@@ -16,7 +16,7 @@
 .text2{
     font-family: Bossa-ExtendedBold;
     color: #00D2AA;
-    font-size: 20px;
+    font-size: 30px;
     font-style: normal;
     line-height: normal;
     font-weight: 700;
@@ -25,7 +25,7 @@
 .desc{
     font-family: Bossa-Light;
     color: #747272;
-    font-size: 15px;
+    font-size: 18px;
     font-style: normal;
     line-height: normal;
     font-weight: 300;
@@ -38,19 +38,73 @@ hr{
     margin-top: 51px;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width: 370px) {
     .text1{
-        font-size: 20px;
+        font-size: 24px;
     }
     .text2{
-        font-size: 15px;
+        font-size: 18px;
     }
     .desc{
-        font-size: 9px;
+        font-size: 12px;
+        line-height: 18px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .text1{
+        font-size: 24px;
+    }
+    .text2{
+        font-size: 18px;
+    }
+    .desc{
+        font-size: 12px;
+        line-height: 18px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    .text1{
+        font-size: 24px;
+    }
+    .text2{
+        font-size: 18px;
+    }
+    .desc{
+        font-size: 12px;
         line-height: 18px;
         color: black;
     }
 }
 
 
+@media only screen and (min-width: 990px) {
+    .text1{
+        font-size: 26px;
+    }
+    .text2{
+        font-size: 20px;
+    }
+    .desc{
+        font-size: 12px;
+        line-height: 18px;
+        color: black;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .text1{
+        font-size: 33px;
+    }
+    .text2{
+        font-size: 25px;
+    }
+    .desc{
+        font-size: 15px;
+        color: black;
+    }
+}

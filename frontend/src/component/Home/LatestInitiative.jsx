@@ -58,7 +58,6 @@ const LatestInitiative = () => {
     setFirstInfo(res.data.data[0].attributes.info);
     setSecondInfo(res.data.data[1].attributes.info);
     setThirdInfo(res.data.data[2].attributes.info);
-  
   };
 
   const scrollLeft = () => {
@@ -75,7 +74,7 @@ const LatestInitiative = () => {
     setFirstImg(data[0].attributes.image.data.attributes.url);
     setSecondImg(data[1].attributes.image.data.attributes.url);
     setThirdImg(data[2].attributes.image.data.attributes.url);
-    animL2R()
+    animL2R();
 
     // initial title
     setFirstTitle(data[0].attributes.name);
@@ -92,7 +91,7 @@ const LatestInitiative = () => {
     const temp = data;
     temp.push(temp.shift());
     setData(temp);
-    
+
     // Change Outer Image
     firstImgRef.current = firstImg;
     secondImgRef.current = secondImg;
@@ -142,12 +141,12 @@ const LatestInitiative = () => {
 
     var tl = new TimelineMax();
 
-    tl.to(outer, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0).to(
-      inner,
+    tl.to(
+      outer,
       1.5,
       { xPercent: 0, force3D: true, ease: Sine.easeInOut },
       0
-    );
+    ).to(inner, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0);
 
     // 2nd Box Animation
     TweenLite.set(outerRef2.current, { xPercent: 100, autoAlpha: 1 });
@@ -196,12 +195,12 @@ const LatestInitiative = () => {
 
     var tl = new TimelineMax();
 
-    tl.to(outer, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0).to(
-      inner,
+    tl.to(
+      outer,
       1.5,
       { xPercent: 0, force3D: true, ease: Sine.easeInOut },
       0
-    );
+    ).to(inner, 1.5, { xPercent: 0, force3D: true, ease: Sine.easeInOut }, 0);
 
     // 2nd Box Animation
     TweenLite.set(outerRef2.current, { xPercent: -100, autoAlpha: 1 });
@@ -244,15 +243,29 @@ const LatestInitiative = () => {
 
   return (
     <>
-      <Box display={["none", "none", "block"]} overflow={"hidden"} backgroundColor={"#174042"}>
+      <Box
+        w={"100vw"}
+        maxW={"100%"}
+        display={["none", "none", "block", "block", "block", "block"]}
+        overflow={"hidden"}
+        backgroundColor={"#174042"}
+      >
         {/* heading  */}
         <Flex
-          padding={["40px 15px 20px 15px", "95px 60px 20px 108px"]}
+          w={"100%"}
+          padding={[
+            "",
+            "",
+            "",
+            "61px 3.94% 0px 11.71%",
+            "79px 3.94% 0px 11.71%",
+            "94px 3.94% 0px 11.71%",
+          ]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
           <Text
-          fontFamily={"Bossa-ExtendedBold"}
+            fontFamily={"Bossa-ExtendedBold"}
             color={"white"}
             fontSize={"48px"}
             fontWeight={700}
@@ -304,53 +317,70 @@ const LatestInitiative = () => {
         </Flex>
 
         {/* slider  */}
-        <Flex padding={"0px 30px 73px 108px"} w={"fit-content"} gap={["60px","60px","60px","60px","96px"]}>
-          
+        <Flex
+          w={"100%"}
+          padding={[
+            "",
+            "",
+            "36px 3.94% 48px 11.71%",
+            "36px 3.94% 48px 11.71%",
+            "47px 3.94% 62px 11.71%",
+            "56px 3.94% 74px 11.71%",
+          ]}
+          gap={"5.26%"}
+        >
           {/* first container  */}
-          <Box pos={"relative"} w={["406px","406px","406px","406px","576px"]} mt={"136px"}>
+          <Box
+            pos={"relative"}
+            w={"35.59"}
+            // w={"30%"}
+            mt={["", "", "51px", "51px", "66px", "79px"]}
+          >
             <Box id="wrapper">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${firstImgRef.current}`}
                 alt="img1"
-
                 width={"100%"}
-                height={["336px"]}
+                height={["", "", "", "219px", "284px", "336px"]}
                 objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer" ref={outerRef}
-            pos={"absolute"}
-            top={0}
-            overflow={"hidden"}
-            w={["100%"]}
-            h={["336px"]}
-            visibility={"hidden"}
-            opacity={0}
-            >
-              <Box id="inner" ref={innerRef}
+            <Box
+              id="outer"
+              ref={outerRef}
+              pos={"absolute"}
+              top={0}
+              overflow={"hidden"}
               w={["100%"]}
-              h={["336px"]}
-              objectFit={"cover"}
+              height={["", "", "", "219px", "284px", "336px"]}
               visibility={"hidden"}
               opacity={0}
+            >
+              <Box
+                id="inner"
+                ref={innerRef}
+                w={["100%"]}
+                height={["", "", "", "219px", "284px", "336px"]}
+                objectFit={"cover"}
+                visibility={"hidden"}
+                opacity={0}
               >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${firstImg}`}
                   id="top"
-
                   width={["100%"]}
-                  h={["336px"]}
+                  height={["", "", "", "219px", "284px", "336px"]}
                   objectFit={"cover"}
                 />
               </Box>
             </Box>
 
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
               mt={"0px"}
               color={"white"}
-              fontSize={["16px", "16px", "32px"]}
+              fontSize={["16px", "16px", "16px", "20px", "26px", "32px"]}
               fontWeight={700}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -361,7 +391,7 @@ const LatestInitiative = () => {
               mt={"2.5px"}
               color={"white"}
               fontFamily={"Bossa-Regular"}
-              fontSize={["8px", "8px", "16px"]}
+              fontSize={["8px", "8px", "8px", "10px", "14px", "16px"]}
               fontWeight={400}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -380,40 +410,46 @@ const LatestInitiative = () => {
           </Box>
 
           {/* second container  */}
-          <Box position={"relative"} mt={"56px"} w={["307px","307px","307px","307px","487px"]}>
+          <Box
+          w={"30.21%"} 
+          // w={"25.47%"} 
+          position={"relative"}>
             <Box id="wrapper2">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${secondImgRef.current}`}
                 alt=""
-
                 w={["100%"]}
-                h={["352px"]}
+                h={["", "", "229px", "229px", "296px", "356px"]}
                 objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer2" ref={outerRef2}
-            pos={["absolute"]}
-            top={0}
-            overflow={"hidden"}
-            w={"100%"}
-            h={["352px"]}
-            objectFit={"cover"}
-            visibility={"hidden"}
-            opacity={0}
-            >
-              <Box id="inner2" ref={innerRef2}
-              w={["100%"]}
-              h={["352px"]}
+            <Box
+              id="outer2"
+              ref={outerRef2}
+              pos={["absolute"]}
+              top={0}
+              overflow={"hidden"}
+              w={"100%"}
+              h={["", "", "229px", "229px", "296px", "356px"]}
               objectFit={"cover"}
               visibility={"hidden"}
               opacity={0}
+            >
+              <Box
+                id="inner2"
+                ref={innerRef2}
+                w={["100%"]}
+                h={["", "", "229px", "229px", "296px", "356px"]}
+                objectFit={"cover"}
+                visibility={"hidden"}
+                opacity={0}
               >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${secondImg}`}
                   id="top2"
                   w={["100%"]}
-                  h={["352px"]}
+                  h={["", "", "229px", "229px", "296px", "356px"]}
                   objectFit={"cover"}
                 />
               </Box>
@@ -423,7 +459,7 @@ const LatestInitiative = () => {
               mt={"7px"}
               color={"white"}
               fontFamily={"Bossa-ExtendedBold"}
-              fontSize={["16px", "16px", "32px"]}
+              fontSize={["16px", "16px", "16px", "16px", "20px", "24px"]}
               fontWeight={700}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -434,7 +470,7 @@ const LatestInitiative = () => {
               mt={"2.5px"}
               color={"white"}
               fontFamily={"Bossa-Regular"}
-              fontSize={["8px", "8px", "16px"]}
+              fontSize={["8px", "8px", "10px", "10px", "14px", "16px"]}
               fontWeight={400}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -453,41 +489,48 @@ const LatestInitiative = () => {
           </Box>
 
           {/* third container  */}
-          <Box position={"relative"} mt={"247px"} w={["275px","275px","275px","275px","384px"]}>
+          <Box
+            position={"relative"}
+            // w={"19.74%"}
+            w={"23.41%"}
+            mt={["", "", "122px", "122px", "157px", "187px"]}
+          >
             <Box id="wrapper3">
               <Image
                 src={`${process.env.REACT_APP_BACKEND_URL}${thirdImgRef.current}`}
                 alt=""
-
                 w={["100%"]}
-                h={["273px"]}
+                h={["", "", "178px", "178px", "230px", "276px"]}
                 objectFit={"cover"}
               />
             </Box>
 
-            <Box id="outer3" ref={outerRef3}
-            pos={"absolute"}
-            top={0}
-            w={"100%"}
-            h={["273px"]}
-            objectFit={"cover"}
-            visibility={"hidden"}
-            opacity={0}
-            overflow={"hidden"}
-            >
-              <Box id="inner3" ref={innerRef3}
+            <Box
+              id="outer3"
+              ref={outerRef3}
+              pos={"absolute"}
+              top={0}
               w={"100%"}
-              h={["273px"]}
+              h={["", "", "178px", "178px", "230px", "276px"]}
               objectFit={"cover"}
               visibility={"hidden"}
               opacity={0}
+              overflow={"hidden"}
+            >
+              <Box
+                id="inner3"
+                ref={innerRef3}
+                w={"100%"}
+                h={["", "", "178px", "178px", "230px", "276px"]}
+                objectFit={"cover"}
+                visibility={"hidden"}
+                opacity={0}
               >
                 <Image
                   src={`${process.env.REACT_APP_BACKEND_URL}${thirdImg}`}
                   id="top3"
-
                   w={["100%"]}
-                  h={["273px"]}
+                  h={["", "", "178px", "178px", "230px", "276px"]}
                   objectFit={"cover"}
                 />
               </Box>
@@ -497,7 +540,7 @@ const LatestInitiative = () => {
               mt={"7px"}
               color={"white"}
               fontFamily={"Bossa-ExtendedBold"}
-              fontSize={["16px", "16px", "32px"]}
+              fontSize={["16px", "16px", "15px", "15px", "20px", "24px"]}
               fontWeight={700}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -508,7 +551,7 @@ const LatestInitiative = () => {
               mt={"2.5px"}
               color={"white"}
               fontFamily={"Bossa-Regular"}
-              fontSize={["8px", "8px", "16px"]}
+              fontSize={["8px", "8px", "8px", "10px", "14px", "16px"]}
               fontWeight={400}
               lineHeight={"normal"}
               fontStyle={"normal"}

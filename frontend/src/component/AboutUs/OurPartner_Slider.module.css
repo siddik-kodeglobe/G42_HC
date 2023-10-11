@@ -1,10 +1,13 @@
 .swiper {
   width: 100%;
-  margin-top: 52px;
+  height: 100%;
+  /* margin-top: 52px; */
   /* margin: 78px 10% 0px 10%; */
 }
 
 .swiper_slide {
+  width: auto;
+  /* border: 2px solid red; */
   /* text-align: center;
   font-size: 18px;
   background: #fff; */

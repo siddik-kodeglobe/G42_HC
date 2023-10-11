@@ -12,6 +12,7 @@ import FontFaceObserver from "fontfaceobserver";
 
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import { isMobile, isTablet } from "react-device-detect";
 
 const AboutUsMarquee = () => {
   gsap.registerPlugin(GSDevTools, SplitText, ScrollTrigger);
@@ -154,9 +155,9 @@ const AboutUsMarquee = () => {
 
   return (
     <>
-      <Box mt={["0px", "0px", "21px", "21px"]}>
+      <Box w={"100vw"} maxW={"100%"} mt={["18px", "18px","18px", "18px", "20px", "21px"]}>
         <Marquee autoFill>
-          <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
+          <Flex alignItems={"center"} gap={["29px", "29px", "29px", "34px", "34px", "34px"]}>
             <hr
               style={{
                 width: "88px",
@@ -168,7 +169,7 @@ const AboutUsMarquee = () => {
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               textAlign={"center"}
-              fontSize={["32px", "32px", "50px", "60px"]}
+              fontSize={["32px", "32px","32px", "39px", "50px", "60px"]}
               fontWeight={700}
             >
               About G42 Healthcare
@@ -184,43 +185,21 @@ const AboutUsMarquee = () => {
         </Marquee>
 
         <Flex
-          flexDirection={["column", "column", "row"]}
-          mt={["0px", "0px", "100px", "100px"]}
-          padding={["0px 20px", "0px 20px", "0px 151px", "0px 225px"]}
-          gap={["33px", "33px", "90px"]}
+          flexDirection={["column", "column", "column", "row", "row", "row"]}
+          mt={["60px", "60px", "60px", "65px", "84px", "101px"]}
+          padding={["0px 20px", "0px 20px", "0px 20px", "0px 11.71%", "0px 11.71%", "0px 11.71%"]}
+          gap={["60px", "60px", "60px", "60px", "75px", "90px"]}
           alignItems={["self-start", "self-start", "start", "start"]}
         >
           <Box
-          w={["100vw", "100vw", "50%", "50%", "50%"]}
-            maxW={["100%", "100%", "100%", "100%", "100%"]}
+          w={["100%", "100%","100%", "50%", "50%", "50%"]}
+          height={isMobile ? "214px" : isTablet ? "220px" : "337px"}
              position={"relative"}>
-            <BackgroundVideoContainer videosrc={g42Video} height={"377px"} />
+            <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
           </Box>
-          {/* <Box
-            pos={"relative"}
-            // paddingTop={"56.25%"}
-            height={["214px", "214px", "377px"]}
-            w={["352px", "352px", "50%"]}
-          >
-            <ReactPlayer
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                objectFit: "cover",
-              }}
-              width={"100%"}
-              height={"377px"}
-              playing={true}
-              loop={true}
-              url={g42Video}
-              muted
-            />
-          </Box> */}
           <Flex
-            mt={["50px", "50px", "25px"]}
-            w={["100vw", "100vw", "50%", "50%", "50%"]}
-            maxW={["100%", "100%", "100%", "100%", "100%"]}
+            w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+            // mt={["33px", "33px", "33px", "0px", "0px", "0px"]}
             flexDirection={"column"}
             justifyContent={"space-between"}
           >
@@ -230,11 +209,10 @@ const AboutUsMarquee = () => {
               className={`fullScreen demo ${isVisible ? "visible" : "hidden"}`}
             >
               <Text
-                // visibility={"hidden"}
                 fontFamily={"Bossa-Light"}
-                fontSize={["12px", "12px", "18px", "18px"]}
+                fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
                 fontStyle={"normal"}
-                lineHeight={"24px"}
+                lineHeight={["18px","18px","18px","24px","24px","24px"]}
                 color={"#747272"}
                 letterSpacing={"-0.42px"}
                 className="title"
@@ -258,10 +236,9 @@ const AboutUsMarquee = () => {
               <Text
                 mt={["15px"]}
                 fontFamily={"Bossa-Light"}
-                fontSize={["12px", "12px", "18px", "18px"]}
+                fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
                 fontStyle={"normal"}
-                fontWeight={300}
-                lineHeight={"24px"}
+                lineHeight={["18px","18px","18px","24px","24px","24px"]}
                 color={"#747272"}
                 letterSpacing={"-0.42px"}
                 // visibility={"hidden"}
@@ -277,18 +254,18 @@ const AboutUsMarquee = () => {
             <Link href="/about">
               <Button
                 fontFamily={"Bossa-ExtendedMedium"}
-                mt={"15px"}
+                mt={"16px"}
                 _hover={{ bgColor: "#00D2AA" }}
                 bgColor={"#00D2AA"}
                 borderRadius={"80px"}
-                fontSize={["14px", "14px", "16px", "16px"]}
+                fontSize={["14px", "14px","14px", "14px", "15px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={500}
                 textTransform={"capitalize"}
                 textAlign={"center"}
                 color={"white"}
-                w={["167px", "167px", "219px", "219px"]}
-                h={["40px", "40px", "55px", "55px"]}
+                w={["167px", "167px","167px", "167px",  "184px", "219px"]}
+                h={["40px", "40px","40px", "40px", "46px", "55px"]}
               >
                 About Us
               </Button>

@@ -88,7 +88,7 @@ const Companies = () => {
             modules={[Navigation]}
             className={style.swiper}
           >
-            {data?.map((el) => (
+            {data?.map((el, ind) => (
               <SwiperSlide style={{w: "30%"}} className={style.swipe_slide}>
                 <Box
                   position={"relative"}
@@ -125,7 +125,7 @@ const Companies = () => {
                   fontWeight={700}
                   lineHeight={"normal"}
                 >
-                  {el.id}
+                  {ind+1}
                 </Text>
               </SwiperSlide>
             ))}

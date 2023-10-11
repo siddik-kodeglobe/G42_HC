@@ -27,7 +27,7 @@ const SocialMedia = () => {
   const [data, setData] = useState([]);
 
   const [hoverArrowColor, setHoverArrowColor] = useState("black");
-    const [hoverArrowColorR, setHoverArrowColorR] = useState("black");
+  const [hoverArrowColorR, setHoverArrowColorR] = useState("black");
 
   // const swiper = useSwiper();
   const swiperRef = React.useRef(null);
@@ -85,20 +85,30 @@ const SocialMedia = () => {
   }, []);
   return (
     <>
-      <Box w={"100vw"}
-            maxW={"100%"} >
+      <Box w={"100vw"} maxW={"100%"}>
         <Flex>
           <Flex
-          flexDirection={["column","column","row","row"]}
+            flexDirection={["column", "column", "row", "row"]}
             w={"100%"}
-            alignItems={["start","start","center","center"]}
+            alignItems={["start", "start", "center", "center"]}
             justifyContent={"space-between"}
-            padding={["80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","81px 3.94% 0% 3.94%","105px 3.94% 0% 3.94%","125px 3.94% 0% 3.94%"]}
-            gap={["15px","15px","0px","0px"]}
+            padding={[
+              "80px 3.94% 0% 3.94%",
+              "80px 3.94% 0% 3.94%",
+              "80px 3.94% 0% 3.94%",
+              "81px 3.94% 0% 3.94%",
+              "105px 3.94% 0% 3.94%",
+              "125px 3.94% 0% 3.94%",
+            ]}
+            gap={["15px", "15px", "0px", "0px"]}
           >
-            <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
+            <Flex
+              flexDirection={["column", "column", "row", "row"]}
+              gap={["11px", "11px", "25px", "25px"]}
+              alignItems={["start", "start", "center", "center"]}
+            >
               <Text
-              fontFamily={"Bossa-ExtendedBold"}
+                fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
                 fontSize={["24px", "24px", "30px", "39px", "50px", "60px"]}
                 fontWeight={700}
@@ -116,21 +126,28 @@ const SocialMedia = () => {
                 borderRadius={"80px"}
               >
                 <Text
-                color={"white"}
-                fontFamily={"Bossa-ExtendedMedium"}
+                  color={"white"}
+                  fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}
                   fontSize={["12px", "12px", "12px", "10px", "13px", "16px"]}
                   textTransform={"capitalize"}
                   fontWeight={[400, 400, 500, 500]}
-                  padding={["12.55px 12px", "12.55px 12px", "", "10.44px 14px", "13.48px 18.53px", "16px 22px"]}
+                  padding={[
+                    "12.55px 12px",
+                    "12.55px 12px",
+                    "",
+                    "10.44px 14px",
+                    "13.48px 18.53px",
+                    "16px 22px",
+                  ]}
                   flexShrink={0}
                 >
                   All Social Media
                 </Text>
               </Flex>
             </Flex>
-            <Flex alignItems={"center"} gap={[2,2,5,5]}>
+            <Flex alignItems={"center"} gap={[2, 2, 5, 5]}>
               <Button
                 onClick={() => goPrev()}
                 // onClick={() => swiperRef.current.swiper.slidePrev()}
@@ -184,35 +201,36 @@ const SocialMedia = () => {
           </Flex>
         </Flex>
 
-        <Box>
+        <Box mt={["15px", "15px", "15px", "52px","52px","52px"]}>
           <Swiper
             speed={750}
+            slidesPerView={"auto"}
             breakpoints={{
               380: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.25,
+                // slidesPerView: 1.25,
                 spaceBetween: 15,
               },
-              750: {
+              768: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.95,
+                // slidesPerView: 1.95,
                 spaceBetween: 24,
               },
-              990: {
+              992: {
                 slidesOffsetBefore: 39,
-                slidesPerView: 2.5,
+                // slidesPerView: 2.5,
                 spaceBetween: 31,
               },
-              1250: {
+              1280: {
                 slidesOffsetBefore: 51,
-                slidesPerView: 2.65,
+                // slidesPerView: 2.65,
                 spaceBetween: 40,
               },
-              1530: {
+              1536: {
                 slidesOffsetBefore: 60,
-                slidesPerView: 2.75,
+                // slidesPerView: 2.75,
                 spaceBetween: 60,
-              }
+              },
             }}
             ref={swiperRef}
             // navigation={true}
@@ -220,21 +238,35 @@ const SocialMedia = () => {
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide style={{width: "30.61%"}} className={style.swipe_slide}>
+              <SwiperSlide className={style.swiper_slide}>
                 <Box>
                   <Image
-                     w={"100%"}
-                     height={"auto"}
-                     maxH={["275px","275px","214px","276px","357px","428px"]}
-                     objectFit={"cover"}
-                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                  w={["301px", "301px", "301px", "304px", "391px", "470px"]}
+                    height={"auto"}
+                    maxH={[
+                      "275px",
+                      "275px",
+                      "214px",
+                      "276px",
+                      "357px",
+                      "428px",
+                    ]}
+                    objectFit={"cover"}
+                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
                   />
                   <Text
                     fontFamily={"Bossa-Regular"}
                     mt={"30px"}
                     noOfLines={2}
                     color={"#747272"}
-                    fontSize={["9px", "9px", "9.14px", "14px", "11.8px", "17.68px"]}
+                    fontSize={[
+                      "9px",
+                      "9px",
+                      "9.14px",
+                      "14px",
+                      "11.8px",
+                      "14px",
+                    ]}
                     fontWeight={400}
                     textTransform={"capitalize"}
                     lineHeight={"normal"}
@@ -243,15 +275,21 @@ const SocialMedia = () => {
                   </Text>
 
                   <Text
-                   w={"100%"}
-                   maxW={"100%"}
-                   fontFamily={"Bossa-ExtendedBold"}
+                  w={["301px", "301px", "301px", "304px", "391px", "470px"]}
+                    fontFamily={"Bossa-ExtendedBold"}
                     textOverflow={"ellipsis"}
                     color={"black"}
                     fontStyle={"normal"}
-                    fontSize={["12px","12px", "12px", "13px", "16px", "25px"]}
+                    fontSize={["12px", "12px", "12px", "13px", "16px", "20px"]}
                     fontWeight={700}
-                    lineHeight={["18px","18px","18px","20px","26px","31px"]}
+                    lineHeight={[
+                      "18px",
+                      "18px",
+                      "18px",
+                      "20px",
+                      "26px",
+                      "31px",
+                    ]}
                     overflow={"hidden"}
                     noOfLines={2}
                     textTransform={"capitalize"}
@@ -263,7 +301,6 @@ const SocialMedia = () => {
             ))}
           </Swiper>
         </Box>
-        
       </Box>
     </>
   );

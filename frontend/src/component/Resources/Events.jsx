@@ -181,33 +181,34 @@ const Events = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["", "", "-25px"]}>
+        <Box mt={["15px", "15px", "15px", "52px","52px","52px"]}>
           <Swiper
             speed={750}
+            slidesPerView={'auto'}
             breakpoints={{
               380: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.25,
+                // slidesPerView: 1.25,
                 spaceBetween: 15,
               },
-              750: {
+              768: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.95,
+                // slidesPerView: 1.95,
                 spaceBetween: 24,
               },
-              990: {
+              992: {
                 slidesOffsetBefore: 39,
-                slidesPerView: 2.5,
+                // slidesPerView: 2.5,
                 spaceBetween: 31,
               },
-              1250: {
+              1280: {
                 slidesOffsetBefore: 51,
-                slidesPerView: 2.65,
+                // slidesPerView: 2.65,
                 spaceBetween: 40,
               },
-              1530: {
+              1536: {
                 slidesOffsetBefore: 60,
-                slidesPerView: 2.75,
+                // slidesPerView: 2.75,
                 spaceBetween: 60,
               }
             }}
@@ -219,10 +220,10 @@ const Events = () => {
             observer={true}
           >
             {data?.map((el) => (
-              <SwiperSlide style={{width: "30.61%"}} key={el.id} className={style.swipe_slide}>
+              <SwiperSlide key={el.id} className={style.swiper_slide}>
                 <Box>
                   <Image
-                   w={"100%"}
+                  w={["301px", "301px", "301px", "304px", "391px", "470px"]}
                    height={["275px","275px","214px","276px","357px","428px"]}
                     objectFit={"cover"}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
@@ -231,7 +232,7 @@ const Events = () => {
                   fontFamily={"Bossa-Regular"}
                     noOfLines={1}
                     color={"#747272"}
-                    fontSize={["9px", "9px", "9.14px", "14px", "11.8px", "17.68px"]}
+                    fontSize={["9px", "9px", "9.14px", "14px", "11.8px", "14px"]}
                     fontWeight={500}
                     lineHeight={"31px"}
                     textTransform={"capitalize"}
@@ -242,10 +243,10 @@ const Events = () => {
                   <Text
                   fontFamily={"Bossa-ExtendedBold"}
                     noOfLines={2}
-                    w={["306px", "306px", "473px", "473px"]}
+                  w={["301px", "301px", "301px", "304px", "391px", "470px"]}
                     maxW={"100%"}
                     color={"black"}
-                    fontSize={["12px","12px", "12px", "13px", "16px", "25px"]}
+                    fontSize={["12px","12px", "12px", "13px", "16px", "20px"]}
                     lineHeight={["18px","18px","18px","20px","26px","31px"]}
                     
                     textTransform={"capitalize"}
