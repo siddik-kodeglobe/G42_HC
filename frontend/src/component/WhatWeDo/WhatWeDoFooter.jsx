@@ -5,9 +5,9 @@ import Footer from '../Footer/Footer'
 const WhatWeDoFooter = () => {
   return (
     <div>
-      <Box style={{ margin: "5.16% 11.71% 0px 11.71%" }}>
+      <Box w={"100vw"} maxW={"100%"}>
         <Flex
-          flexDirection={["column", "column", "row"]}
+          flexDirection={["column", "column","column", "row", "row", "row", ]}
           alignItems={["start", "start", "start", "start"]}
           gap={["12px", "12px", ""]}
           justifyContent={"space-between"}

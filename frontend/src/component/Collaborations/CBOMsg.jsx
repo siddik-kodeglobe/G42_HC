@@ -6,30 +6,35 @@ const CBOMsg = () => {
   return (
     <>
       <Box
-        mt={["8.2%"]}
+        mt={["80px", "125px"]}
         backgroundColor={"#004141"}
-        padding={"3.71% 11.71% 3.71% 11.71%"}
-
-        // h={["fit-content", "fit-content", "814px", "814px"]}
-        w={["100%"]}
-        // maxW={"100%"}
+        w={"100%"}
+        padding={[
+          "40px 20px 82px 20px",
+          "40px 11.71% 82px 11.71%",
+          "40px 11.71% 82px 11.71%",
+          "56px 11.71% 56px 11.71%",
+          "56px 11.71% 56px 11.71%",
+          "56px 11.71% 56px 11.71%",
+        ]}
       >
         <Flex
-          flexDir={["column", "column", "row", "row"]}
+          flexDir={["column", "row", "row", "row", "row", "row"]}
           alignItems={"start"}
           justifyContent={"space-between"}
+          gap={["50px", "10.26%", "10.26%", "10.26%", "10.26%", "10.26%"]}
         >
           <Flex
+            mt={["0px", "0px", "0px", "46px", "46px", "46px"]}
             flexDirection={["column"]}
-            w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             alignItems={"start"}
           >
             <Text
               fontFamily={"Bossa-ExtendedBold"}
-              w={["250px", "25px", "267px", "267px"]}
-              maxW={"100%"}
+              w={["80%", "80%", "80%", "48%", "48%", "48%"]}
               color={"white"}
-              fontSize={["18px"]}
+              fontSize={["16px", "18px"]}
               fontWeight={700}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -38,9 +43,9 @@ const CBOMsg = () => {
             </Text>
             <Text
               fontFamily={"Bossa-ExtendedBold"}
-              mt={["45px"]}
+              mt={["12px", "14px", "22px","30px","37px","45px"]}
               color={"#00D2AA"}
-              fontSize={["35px", "35px", "60px", "60px"]}
+              fontSize={["24px", "30px","35px", "40px", "50px", "60px"]}
               fontWeight={700}
               lineHeight={"normal"}
               fontStyle={"normal"}
@@ -49,9 +54,9 @@ const CBOMsg = () => {
             </Text>
             <Text
               fontFamily={"Bossa-Light"}
-              w={["392px"]}
-              maxW={"100%"}
-              mt={["33px"]}
+             
+              w={"100%"}
+              mt={["12px", "20px", "25px", "33px", "33px", "33px"]}
               color={"white"}
               fontSize={["14px"]}
               fontWeight={300}
@@ -90,17 +95,16 @@ const CBOMsg = () => {
             </Box>
           </Flex>
           <Flex
-            mt={["50px", "50px", "0px", "0px"]}
+            mt={["50px", "0px","0px","0px", "0px", "0px"]}
             flexDirection={["column"]}
-            w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%","50%","50%", "50%", "50%"]}
+            // h={["477px", "fit-content", "353px", "457px", "589px", "700px"]}
+            h={["477px", "fit-content","fit-content","fit-content","fit-content","fit-content",]}
             alignItems={"start"}
           >
             <Image
-            w={"100%"}
-            // w={["100%","100%","100%","50%","50%","50%"]}
-              // w={["351px", "351px", "468px", "468px"]}
-              maxW={"100%"}
-              h={["221px", "221px","353px","457px","589px","884px"]}
+              w={"100%"}
+              h={"100%"}
               flexShrink={0}
               objectFit={"cover"}
               src={CBO}

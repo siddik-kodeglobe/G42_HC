@@ -5,8 +5,8 @@ import img1 from "../../assets/Collaboration/Img1.svg";
 const CollabImg = () => {
   return (
     <>
-      <Box w={"100%"} padding={"3.75% 0% 0% 0%"}>
-        <Image w={"100%"} height={"auto"} objectFit={"cover"} src={img1} alt="collabImg" />
+      <Box mt={["32px", "60px"]} w={"100vw"} maxW={"100%"}>
+        <Image w={"100%"} height={["315px", "407px", "407px", "525px", "678px", "815px"]} objectFit={"cover"} src={img1} alt="collabImg" />
       </Box>
     </>
   );

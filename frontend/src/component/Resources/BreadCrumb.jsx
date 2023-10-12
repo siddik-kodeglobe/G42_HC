@@ -20,7 +20,7 @@ const BreadCrumb = () => {
             <BreadcrumbLink _hover={{textDecor: "none"}} fontFamily={"Bossa-Light"} fontSize={["12px","12px","16px","16px", "18px", "16px"]} href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
 
-          <BreadcrumbItem>
+          <BreadcrumbItem isCurrentPage>
             <BreadcrumbLink _hover={{textDecor: "none"}} fontFamily={"Bossa-Light"} fontSize={["12px","12px","16px","16px", "18px", "16px"]} href="#">Resources</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>

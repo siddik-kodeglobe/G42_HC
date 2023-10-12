@@ -9,14 +9,14 @@ import {
 const NewsBreadcrumb = () => {
   return (
     <>
-      <Box padding={"115px 60px 0px 60px"}>
+      <Box padding={["114px 0px 0px 20px", "114px 0px 0px 20px", "114px 0px 0px 20px", "107px 0px 0px 3.94%", "138px 0px 0px 3.94%", "165px 0px 0px 3.94%"]}>
         <Breadcrumb>
           <BreadcrumbItem>
-            <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
+            <BreadcrumbLink _hover={{textDecor: "none"}} fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]} fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
 
           <BreadcrumbItem>
-            <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">News</BreadcrumbLink>
+            <BreadcrumbLink fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]} fontFamily={"Bossa-Light"} href="#">News</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       </Box>

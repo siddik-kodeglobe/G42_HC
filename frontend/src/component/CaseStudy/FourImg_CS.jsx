@@ -27,12 +27,12 @@ const FourImg_CS = () => {
 
   return (
     <>
-      <Box margin={["36px 20px 0px 20px", "36px 20px 0px 20px", "118px 60px 0px 60px", "118px 60px 0px 60px"]}>
-        <SimpleGrid gap={["20px"]} columns={[1,1,2,2]}>
-            <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${first}`}/>
-            <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${second}`}/>
-            <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${third}`}/>
-            <Image w={"100%"} maxW={["100%"]} h={["505px"]} maxH={"100%"} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${fourth}`}/>
+      <Box w={"100vw"} maxW={"100%"} padding={["36px 20px 0px 20px", "36px 20px 0px 20px", "36px 20px 0px 20px", "81px 4.01% 0px 4.01%", "105px 4.01% 0px 4.01%", "125px 4.01% 0px 4.01%", ]}>
+        <SimpleGrid gap={["20px"]} columns={[1,1,1,2,2,2]}>
+            <Image w={"100%"} maxW={["100%"]} h={["315px", "315px", "315px", "329px", "425px", "510px"]} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${first}`}/>
+            <Image w={"100%"} maxW={["100%"]} h={["315px", "315px", "315px", "329px", "425px", "510px"]} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${second}`}/>
+            <Image w={"100%"} maxW={["100%"]} h={["315px", "315px", "315px", "329px", "425px", "510px"]} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${third}`}/>
+            <Image w={"100%"} maxW={["100%"]} h={["315px", "315px", "315px", "329px", "425px", "510px"]} objectFit={"cover"} src={`${process.env.REACT_APP_BACKEND_URL}${fourth}`}/>
         </SimpleGrid>
       </Box>
     </>

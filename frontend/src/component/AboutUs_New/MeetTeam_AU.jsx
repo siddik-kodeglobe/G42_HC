@@ -73,7 +73,7 @@ const MeetTeam_AU = () => {
           >
             <Text
               fontFamily={"Bossa-ExtendedBold"}
-            fontSize={["24px", "24px", "24px", "31px", "40px", "48px"]}
+              fontSize={["24px", "24px", "24px", "31px", "40px", "48px"]}
               fontWeight={700}
               color={"white"}
             >
@@ -139,30 +139,28 @@ const MeetTeam_AU = () => {
 
         <Swiper
           speed={750}
+          slidesPerView={'auto'}
           breakpoints={{
-            1900: {
+            1920: {
               slidesOffsetBefore: 75.83,
-              slidesPerView: 3.5,
+
               spaceBetween: 121.34,
             },
-            1250: {
+            1280: {
               slidesOffsetBefore: 50.55,
-              slidesPerView: 3,
               spaceBetween: 80.89,
             },
             990: {
               slidesOffsetBefore: 39.18,
-              slidesPerView: 3,
               spaceBetween: 62.69,
             },
             740: {
               slidesOffsetBefore: 30.33,
-              slidesPerView: 3,
               spaceBetween: 48.43,
             },
             390: {
               slidesOffsetBefore: 18.95,
-              slidesPerView: 1.25,
+
               spaceBetween: 30.33,
             },
           }}
@@ -175,14 +173,11 @@ const MeetTeam_AU = () => {
         >
           {data?.map((el) => (
             <SwiperSlide
-              style={{
-                width: "30%",
-              }}
-              className={style.swipe_slide}
+              className={style.swiper_slide}
             >
               <Box w={"fit-content"}>
                 <Image
-                  // w={["267px","267px","100%","100%"]}
+                // w={[""]}
                   height={["387px", "387px", "387px", "500px"]}
                   src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.avatar.data.attributes.url}`}
                   objectFit={"cover"}

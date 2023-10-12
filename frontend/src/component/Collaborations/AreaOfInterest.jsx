@@ -7,14 +7,16 @@ const AreaOfInterest = () => {
     <>
       <Box>
         <Text
-        fontFamily={"Bossa-ExtendedBold"}
-          margin={"auto"}
-          mt={"8.22%"}
-          // mt={["125px"]}
-          w={"57.07%"}
-          // w={["80%", "80%", "867px", "867px"]}
-          fontSize={["24px", "24px", "40px", "40px"]}
-          fontWeight={[700]}
+          fontFamily={"Bossa-ExtendedBold"}
+          w={"100%"}
+          padding={[
+            "80px 20px 0px 20px",
+            "63px 11.71% 0px 11.71%",
+            "81px 11.71% 0px 11.71%",
+            "105px 11.71% 0px 11.71%",
+            "125px 11.71% 0px 11.71%",
+          ]}
+          fontSize={["24px", "24px", "24px", "26px", "33px", "40px"]}
           lineHeight={"normal"}
           textAlign={"center"}
         >
@@ -27,8 +29,15 @@ const AreaOfInterest = () => {
 
         <SimpleGrid
           gap={["21px"]}
-          columns={[1, 1, 1, 2, 2, 2]}
-          margin={"5.36% 3.94% 0% 3.94%"}
+          columns={[1, 2, 2, 2, 2, 2]}
+          padding={[
+            "25px 20px 0px 20px",
+            "25px 11.71% 0px 11.71%",
+            "40px 11.71% 0px 11.71%",
+            "52px 11.71% 0px 11.71%",
+            "67px 11.71% 0px 11.71%",
+            "80px 11.71% 0px 11.71%",
+          ]}
           // margin={["25px 20px 0px 20px","25px 20px 0px 20px", "81px 60px 0px 60px", "81px 60px 0px 60px"]}
         >
           {/* 1st Box  */}
@@ -36,15 +45,15 @@ const AreaOfInterest = () => {
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["90.37px","90.37px","144px","186px","241px","361px"]}
+            height={["240px", "240px", "144px", "186px", "241px", "289px"]}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["24px", "24px", "32px", "32px"]}
+              fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -70,18 +79,17 @@ const AreaOfInterest = () => {
           {/* 2nd Box  */}
           <Box
             position={"relative"}
-            // opacity={"0.2"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["90.37px","90.37px","144px","186px","241px","361px"]}
+            height={["240px", "240px", "144px", "186px", "241px", "289px"]}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["24px", "24px", "32px", "32px"]}
+              fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -109,15 +117,15 @@ const AreaOfInterest = () => {
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["90.37px","90.37px","144px","186px","241px","361px"]}
+            height={["240px", "240px", "144px", "186px", "241px", "289px"]}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["24px", "24px", "32px", "32px"]}
+              fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}
@@ -145,15 +153,15 @@ const AreaOfInterest = () => {
             position={"relative"}
             backgroundColor={"#ccf6ee"}
             w={["100%"]}
-            height={["90.37px","90.37px","144px","186px","241px","361px"]}
+            height={["240px", "240px", "144px", "186px", "241px", "289px"]}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
               bottom={["27px"]}
               left={["40px"]}
               color={"var(--Emergent-Green, #004141)"}
-              fontSize={["24px", "24px", "32px", "32px"]}
+              fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
               fontWeight={[700]}
               lineHeight={"normal"}

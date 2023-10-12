@@ -20,12 +20,11 @@ const MainImg_CS = () => {
   }, []);
   return (
     <>
-      <Box mt={"71.64px"}>
+      <Box w={"100vw"} maxW={"100%"} padding={["36px 20px 0px 20px", "36px 20px 0px 20px", "36px 20px 0px 20px", "66px 4.01% 0px 4.01%", "85px 4.01% 0px 4.01%", "102px 4.01% 0px 4.01%", ]}>
         <Image
+        w={"100%"}
         margin={"auto"}
-          w={["90vw"]}
-          maxW={"100%"}
-          height={["400px"]}
+        height={["151px", "390px", "390px", "390px", "504px", "598px"]}
           objectFit={"cover"}
           src={`${process.env.REACT_APP_BACKEND_URL}${rdata}`}
         />

@@ -10,20 +10,19 @@ const Video_AU = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
-      <Box mt={["38px"]} position={"relative"}>
+      <Box w={"100vw"} maxW={"100%"} mt={["40px"]} position={"relative"}>
         <Box
           onClick={onOpen}
           style={{ cursor: `url(${playBtn}) 45 45, auto` }}
           position={"relative"}
-          mt={"-1.5px"}
+          height={["287px", "400px", "426px", "100vh","100vh","100vh"]}
         >
-          <BackgroundVideoContainer videosrc={g42Video} height={"100vh"} />
+          <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
         </Box>
 
         <Box
-          w={"100vw"}
-          maxW={"100%"}
-          h={["15vh", "15vh", "25vh", "50vh"]}
+        w="100%"
+        h={["106px", "106px", "30vh", "30vh", "40vh", "50vh"]}
           position={"absolute"}
           bgGradient={
             "linear-gradient(0deg, #00AFFF 0%, rgba(0, 175, 255, 0.00) 100%);"
@@ -31,29 +30,22 @@ const Video_AU = () => {
           bottom={0}
           margin={0}
         >
-          <Box
-            position={"absolute"}
-            bottom={[-2, -2, -9]}
-            left={[9, 9, 0]}
-            w="90%"
-            h="35%"
-          >
             <Box
               position={"absolute"}
-              bottom={0}
-              left={[-8, -8, 5]}
-              right={[1, 1, 5]}
-              height={["50px", "50px", "214px"]}
-              w={"96vw"}
+              height={"fit-content"}
+              // height={["100px", "100px","100px","139px", "180px", "214px"]}
+              bottom={["-90%", "-0.5px"]}
+              left={"2%"}
+              right={"2%"}
+              // w="96%"
               padding={[
                 "15px 46px",
                 "15px 46px",
                 "15px 74px",
-                "75px 96px",
-                "75px 124px",
-                "75px 187px",
+                "35px 96px",
+                "45px 124px",
+                "45px 148px",
               ]}
-              mt={5}
               justifyContent={"space-between"}
               alignItems={"center"}
               backgroundColor={"white"}
@@ -65,7 +57,7 @@ const Video_AU = () => {
                 <Text
                   fontFamily={"Bossa-ExtendedBold"}
                   w={["100%", "100%", "100%", "100%", "50%", "50%"]}
-                  fontSize={["24px", "24px", "45px", "45px"]}
+                  fontSize={["24px", "24px","24px", "31px",  "40px", "48px"]}
                   textTransform={"capitalize"}
                   fontWeight={700}
                 >
@@ -76,7 +68,7 @@ const Video_AU = () => {
                   fontFamily={"Bossa-Light"}
                   color={"#747272"}
                   w={["100%", "100%", "100%", "50%", "50%"]}
-                  fontSize={["9px", "9px", "18px", "18px"]}
+                  fontSize={["9px", "9px","9px", "14px","16px", "18px"]}
                   fontWeight={300}
                   letterSpacing={["-0.42px"]}
                 >
@@ -87,7 +79,6 @@ const Video_AU = () => {
                   preventive care.
                 </Text>
               </Flex>
-            </Box>
           </Box>
         </Box>
 

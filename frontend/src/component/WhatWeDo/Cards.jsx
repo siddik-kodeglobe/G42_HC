@@ -15,36 +15,45 @@ const Cards = () => {
       <Box
         w={"100vw"}
         maxW={"100%"}
-        padding={"4.68% 4.04% 0px 6.84%"}
-        // padding={["40px 20px 78px 18px","40px 20px 78px 18px", "71px 61px 182px 50px", "71px 61px 182px 50px"]}
+        padding={[
+          "40px 20px 67px 20px",
+          "40px 20px 67px 20px",
+          "40px 20px 67px 20px",
+          "46px 4.01% 80px 5.52%",
+          "59px 4.01% 104px 5.52%",
+          "71px 4.01% 125px 5.52%",
+        ]}
       >
         {/* 1st 2nd  */}
-        <Flex flexDirection={["column", "column", "row", "row"]} gap={["40px"]}>
+        <Flex
+          flexDirection={["column", "row", "row", "row", "row", "row"]}
+          gap={["40px", "20px", "20px", "20px", "40px", "40px"]}
+        >
           {/* 1st Box */}
           <Flex
             flexShrink={0}
-            w={["100%", "100%", "50%", "50%"]}
-            maxW={"100%"}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
+            // maxW={"100%"}
+            h={"100%"}
             alignItems={"start"}
             gap={"2.27%"}
             // gap={["9.5px", "9.5px", "19px", "19px"]}
           >
             <Text
-            paddingLeft={"2.5%"}
+              paddingLeft={["2.5%", "2.5%", "2.5%"]}
               w={"fit-content"}
               fontFamily={"Bossa-Bold"}
-              fontSize={["24px", "24px", "80px", "80px"]}
+              fontSize={["24px", "24px","24px","52px",  "67px", "80px"]}
               fontWeight={700}
               lineHeight={"68px"}
             >
               01
             </Text>
-            <Box w={"66.16%"}>
+            <Box w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
               <Image
-                w={"100%"}
-                height={"auto"}
-                // maxH={["100%"]}
-                //   h={["233px","233px","387px","387px"]}
+                // border={"2px"}
+                w={["302px", "302px", "302px", "327px", "425px", "507px"]}
+                h={["233px", "233px", "233px", "252px", "326px", "391px"]}
                 objectFit={"cover"}
                 src={Omics}
               />
@@ -52,7 +61,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px", "5px", "18px", "18px"]}
                 color={"black"}
-                fontSize={["20px", "2 0px", "30px", "30px"]}
+                fontSize={["20px", "20px","20px", "20px", "25px", "30px"]}
                 fontStyle={"normal"}
                 fontWeight={[400, 400, 700, 700]}
                 lineHeight={"38px"}
@@ -63,12 +72,13 @@ const Cards = () => {
               <Text
                 fontFamily={"Bossa-Light"}
                 mt={["5px"]}
-                fontSize={["12px", "12px", "16px", "16px"]}
+                fontSize={["12px", "12px","12px", "14px","14px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={300}
                 lineHeight={["18px", "18px", "21px", "21px"]}
                 letterSpacing={"-0.42px"}
                 color={"#747272"}
+                w={"100%"}
               >
                 Need content for these services: Max 3-4 lines. consectetur
                 enim. adipiscing commodo urna elit. nisl. massa placerat. Morbi
@@ -97,7 +107,8 @@ const Cards = () => {
           {/* 2nd Box */}
           <Flex
             flexShrink={0}
-            w={["100%", "100%", "50%", "50%"]}
+            // w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             maxW={"100%"}
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
@@ -105,18 +116,16 @@ const Cards = () => {
             <Text
               w={"fit-content"}
               fontFamily={"Bossa-Bold"}
-              fontSize={["24px", "24px", "80px", "80px"]}
+              fontSize={["24px", "24px","24px","52px",  "67px", "80px"]}
               fontWeight={700}
               lineHeight={"68px"}
             >
               02
             </Text>
-            <Box w={"66.08%"}>
+            <Box w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
               <Image
-              w={"100%"}
-                // w={["302px", "302px", "502px", "502px"]}
-                // maxW={"100%"}
-                height={"auto"}
+                w={["302px", "302px", "302px", "327px", "425px", "507px"]}
+                height={["233px", "233px", "233px", "252px", "326px", "391px"]}
                 objectFit={"cover"}
                 src={DigitalHealth}
               />
@@ -124,7 +133,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px", "5px", "18px", "18px"]}
                 color={"black"}
-                fontSize={["20px", "2 0px", "30px", "30px"]}
+                fontSize={["20px", "20px","20px", "20px", "25px", "30px"]}
                 fontStyle={"normal"}
                 fontWeight={[400, 400, 700, 700]}
                 lineHeight={"38px"}
@@ -135,7 +144,7 @@ const Cards = () => {
               <Text
                 fontFamily={"Bossa-Light"}
                 mt={["5px"]}
-                fontSize={["12px", "12px", "16px", "16px"]}
+                fontSize={["12px", "12px","12px", "14px","14px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={300}
                 lineHeight={["18px", "18px", "21px", "21px"]}
@@ -178,36 +187,32 @@ const Cards = () => {
         {/* 3rd 4th  */}
 
         <Flex
-          flexDirection={["column", "column", "row", "row"]}
+          flexDirection={["column", "row", "row", "row", "row", "row"]}
+          gap={["40px", "20px", "20px", "20px", "40px", "40px"]}
           mt={["72px"]}
-          gap={["40px"]}
         >
           {/* 3rd Box */}
           <Flex
             flexShrink={0}
-            w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             maxW={"100%"}
             alignItems={"start"}
             gap={"2.27%"}
             // gap={["9.5px", "9.5px", "19px", "19px"]}
           >
             <Text
-            w={"fit-content"}
               // w={["42px", "42px", "fit-content", "fit-content"]}
               fontFamily={"Bossa-Bold"}
-              fontSize={["24px", "24px", "80px", "80px"]}
+              fontSize={["24px", "24px","24px","52px",  "67px", "80px"]}
               fontWeight={700}
               lineHeight={"68px"}
             >
               03
             </Text>
-            <Box width={"66.16%"}>
+            <Box>
               <Image
-              w={"100%"}
-              maxW={"100%"}
-              height={"auto"}
-                // maxH={["100%"]}
-                // h={["233px", "233px", "387px", "387px"]}
+                w={["302px", "302px", "302px", "327px", "425px", "507px"]}
+                h={["233px", "233px", "233px", "252px", "326px", "391px"]}
                 objectFit={"cover"}
                 src={AdvancedDiagnostics}
               />
@@ -215,7 +220,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px", "5px", "18px", "18px"]}
                 color={"black"}
-                fontSize={["20px", "2 0px", "30px", "30px"]}
+                fontSize={["20px", "20px","20px", "20px", "25px", "30px"]}
                 fontStyle={"normal"}
                 fontWeight={[400, 400, 700, 700]}
                 lineHeight={"38px"}
@@ -224,9 +229,10 @@ const Cards = () => {
                 Advanced Diagnostics
               </Text>
               <Text
+                w={["302px", "302px", "302px", "327px", "425px", "507px"]}
                 fontFamily={"Bossa-Light"}
                 mt={["5px"]}
-                fontSize={["12px", "12px", "16px", "16px"]}
+                fontSize={["12px", "12px","12px", "14px","14px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={300}
                 lineHeight={["18px", "18px", "21px", "21px"]}
@@ -260,26 +266,25 @@ const Cards = () => {
           {/* 4th Box */}
           <Flex
             flexShrink={0}
-            w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             maxW={"100%"}
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
             <Text
-            w={"fit-content"}
+              w={"fit-content"}
               // w={["42px", "42px", "fit-content", "fit-content"]}
               fontFamily={"Bossa-Bold"}
-              fontSize={["24px", "24px", "80px", "80px"]}
+              fontSize={["24px", "24px","24px","52px",  "67px", "80px"]}
               fontWeight={700}
               lineHeight={"68px"}
             >
               04
             </Text>
-            <Box w={"66.08%"}>
+            <Box w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
               <Image
-              w={"100%"}
-            height={"auto"}
-                // h={["233px", "233px", "387px", "387px"]}
+                w={["302px", "302px", "302px", "327px", "425px", "507px"]}
+                height={["233px", "233px", "233px", "252px", "326px", "391px"]}
                 objectFit={"cover"}
                 src={Pharma}
               />
@@ -287,7 +292,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px", "5px", "18px", "18px"]}
                 color={"black"}
-                fontSize={["20px", "2 0px", "30px", "30px"]}
+                fontSize={["20px", "20px","20px", "20px", "25px", "30px"]}
                 fontStyle={"normal"}
                 fontWeight={[400, 400, 700, 700]}
                 lineHeight={"38px"}
@@ -298,7 +303,7 @@ const Cards = () => {
               <Text
                 fontFamily={"Bossa-Light"}
                 mt={["5px"]}
-                fontSize={["12px", "12px", "16px", "16px"]}
+                fontSize={["12px", "12px","12px", "14px","14px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={300}
                 lineHeight={["18px", "18px", "21px", "21px"]}
@@ -341,40 +346,40 @@ const Cards = () => {
         {/* 5th 6th  */}
 
         <Flex
-          flexDirection={["column", "column", "row", "row"]}
+          flexDirection={["column", "row", "row", "row", "row", "row"]}
+          gap={["40px", "20px", "20px", "20px", "40px", "40px"]}
           mt={["72px"]}
-          gap={["40px"]}
         >
           {/* 5th Box */}
           <Flex
             flexShrink={0}
-            w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             maxW={"100%"}
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
             <Text
-            w={"fit-content"}
+              w={"fit-content"}
               // w={["42px", "42px", "fit-content", "fit-content"]}
               fontFamily={"Bossa-Bold"}
-              fontSize={["24px", "24px", "80px", "80px"]}
+              fontSize={["24px", "24px","24px","52px",  "67px", "80px"]}
               fontWeight={700}
               lineHeight={"68px"}
             >
               05
             </Text>
-            <Box w={"66.16%"}>
+            <Box w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
               <Image
-              w={"100%"}
-                height={"auto"}
-                objectFit={"cover"}
+               w={["302px", "302px", "302px", "327px", "425px", "507px"]}
+               h={["233px", "233px", "233px", "252px", "326px", "391px"]}
+               objectFit={"cover"}
                 src={IROS}
               />
               <Text
                 fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px", "5px", "18px", "18px"]}
                 color={"black"}
-                fontSize={["20px", "2 0px", "30px", "30px"]}
+                fontSize={["20px", "20px","20px", "20px", "25px", "30px"]}
                 fontStyle={"normal"}
                 fontWeight={[400, 400, 700, 700]}
                 lineHeight={"38px"}
@@ -385,12 +390,13 @@ const Cards = () => {
               <Text
                 fontFamily={"Bossa-Light"}
                 mt={["5px"]}
-                fontSize={["12px", "12px", "16px", "16px"]}
+                fontSize={["12px", "12px","12px", "14px","14px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={300}
                 lineHeight={["18px", "18px", "21px", "21px"]}
                 letterSpacing={"-0.42px"}
                 color={"#747272"}
+                w={"100%"}
               >
                 Need content for these services: Max 3-4 lines. consectetur
                 enim. adipiscing commodo urna elit. nisl. massa placerat. Morbi
@@ -419,25 +425,25 @@ const Cards = () => {
           {/* 6th Box */}
           <Flex
             flexShrink={0}
-            w={["100%", "100%", "50%", "50%"]}
+            w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             maxW={"100%"}
             alignItems={"start"}
             gap={["9.5px", "9.5px", "19px", "19px"]}
           >
             <Text
-            w={"fit-content"}
+              w={"fit-content"}
               // w={["42px", "42px", "fit-content", "fit-content"]}
               fontFamily={"Bossa-Bold"}
-              fontSize={["24px", "24px", "80px", "80px"]}
+              fontSize={["24px", "24px","24px","52px",  "67px", "80px"]}
               fontWeight={700}
               lineHeight={"68px"}
             >
               06
             </Text>
-            <Box w={"66.08%"}>
+            <Box  w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
               <Image
-               w={"100%"}
-               height={"auto"}
+                w={["302px", "302px", "302px", "327px", "425px", "507px"]}
+                height={["233px", "233px", "233px", "252px", "326px", "391px"]}
                 objectFit={"cover"}
                 src={EnvironmentalScience}
               />
@@ -445,7 +451,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedBold"}
                 mt={["5px", "5px", "18px", "18px"]}
                 color={"black"}
-                fontSize={["20px", "2 0px", "30px", "30px"]}
+               fontSize={["20px", "20px","20px", "20px", "25px", "30px"]}
                 fontStyle={"normal"}
                 fontWeight={[400, 400, 700, 700]}
                 lineHeight={"38px"}
@@ -456,12 +462,13 @@ const Cards = () => {
               <Text
                 fontFamily={"Bossa-Light"}
                 mt={["5px"]}
-                fontSize={["12px", "12px", "16px", "16px"]}
+                fontSize={["12px", "12px","12px", "14px","14px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={300}
                 lineHeight={["18px", "18px", "21px", "21px"]}
                 letterSpacing={"-0.42px"}
                 color={"#747272"}
+                w={"100%"}
               >
                 Need content for these services: Max 3-4 lines. consectetur
                 enim. adipiscing commodo urna elit. nisl. massa placerat. Morbi
@@ -488,8 +495,7 @@ const Cards = () => {
           </Flex>
         </Flex>
 
-      
-          <Box mt={"8.21%"} borderBottom={"1px solid #D9D9D9"} w={"100%"} ></Box>
+        <Box mt={"8.21%"} borderBottom={"1px solid #D9D9D9"} w={"100%"}></Box>
         {/* <hr
           style={{
             width: "100vw",

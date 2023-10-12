@@ -4,12 +4,15 @@ import React from "react";
 const CareerText = () => {
   return (
     <>
-      <Box ml={["20px", "20px", "60px", "60px"]} mt={["30px", "30px", "58px", "58px"]}>
+      <Box
+      w={"100vw"}
+      maxW={"100%"}
+      >
         <Text
-fontFamily={"Bossa-ExtendedBold"}
-        color={"black"}
-          fontSize={["30px", "30px", "60px", "60px"]}
-          fontWeight={700}
+        padding={["66px 0px 0px 3.94%", ""]}
+          fontFamily={"Bossa-ExtendedBold"}
+          color={"black"}
+          fontSize={["30px", "30px", "40px", "50px", "60px"]}
           lineHeight={["81px"]}
           letterSpacing={["-0.72px"]}
         >

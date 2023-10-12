@@ -4,17 +4,22 @@ import React from "react";
 const CollabPoints = () => {
   return (
     <>
-      <Box>
+      <Box w={"100vw"} maxW={"100%"}>
         <Box
-          margin={"auto"}
-          mt={"8.19%"}
-          // h={["114px"]}
-          w={["100%", "100%", "52.12%", "52.12%"]}
+          padding={[
+            "80px 20px 12px 20px",
+            "80px 20px 12px 20px",
+            "80px 20px 12px 20px",
+            "81px 11.71% 0px 11.71%",
+            "105px 11.71% 0px 11.71%",
+            "125px 11.71% 0px 11.71%",
+          ]}
+          w={"100%"}
         >
           <Text
             fontFamily={"Bossa-ExtendedBold"}
             textAlign={"center"}
-            fontSize={["24px", "24px", "48px", "48px"]}
+            fontSize={["24px", "24px", "24px", "48px", "48px"]}
             fontWeight={700}
             lineHeight={"normal"}
           >
@@ -24,20 +29,42 @@ const CollabPoints = () => {
         </Box>
 
         {/* Points  */}
-        <Box 
-        margin={"3.94% 11.71% 0% 11.71%"}
-        // w={["85vw","85vw","76vw","76vw"]}
-         maxW={"100%"}  >
+        <Box
+          w={"100%"}
+          padding={[
+            "50px 20px 80px 20px",
+            "50px 11.71% 80px 11.71%",
+            "50px 11.71% 80px 11.71%",
+            "81px 11.71% 0px 11.71%",
+            "105px 11.71% 0px 11.71%",
+            "125px 11.71% 0px 11.71%",
+          ]}
+        >
           {/* 1st Point  */}
           <Flex
-            flexDir={["column", "column", "row", "row"]}
+            flexDir={["column", "row", "row", "row", "row", "row"]}
             w={"100%"}
-            alignItems={["start", "start", "center", "center"]}
+            alignItems={[
+              "start",
+              "start",
+              "start",
+              "center",
+              "center",
+              "center",
+            ]}
             justifyContent={"space-between"}
           >
             <Text
+              w={[
+                "fit-content",
+                "16%",
+                "16%",
+                "16%",
+                "16%",
+                "16%",
+              ]}
               fontFamily={"Bossa-ExtendedBold"}
-              fontSize={["32px", "32px", "90px", "90px"]}
+              fontSize={["32px", "32px", "45px", "58px", "75px", "90px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
               color={"black"}
@@ -46,9 +73,10 @@ const CollabPoints = () => {
               01
             </Text>
             <Text
+              w={["100%", "28.37%", "28.37%", "28.37%", "28.37%", "28.37%"]}
               fontFamily={"Bossa-ExtendedBold"}
               marginLeft={["0px", "0px", "16px", "16px"]}
-              fontSize={["24px", "24px", "32px", "32px"]}
+              fontSize={["24px", "24px", "24px", "20px", "26px", "32px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
               color={"black"}
@@ -57,9 +85,10 @@ const CollabPoints = () => {
               Benefit 2-3 words
             </Text>
             <Text
+              w={["100%", "29.82%", "29.82%", "29.82%", "29.82%", "29.82%"]}
               fontFamily={"Bossa-Light"}
               marginLeft={["0px", "0px", "61px", "61px"]}
-              fontSize={["12px", "12px", "18px", "18px"]}
+              fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
               fontWeight={300}
               letterSpacing={"-0.42px"}
               color={"#747272"}
@@ -75,15 +104,30 @@ const CollabPoints = () => {
           {/* 2nd Point  */}
 
           <Flex
-          
-            flexDir={["column", "column", "row", "row"]}
-            alignItems={["start", "start", "center", "center"]}
+          mt={["50px", "50px", "50px", "40px", "50px", "60px"]}
+            flexDir={["column", "row", "row", "row", "row", "row"]}
+            alignItems={[
+              "start",
+              "start",
+              "center",
+              "center",
+              "center",
+              "center",
+            ]}
             w={"100%"}
             justifyContent={"space-between"}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
-              fontSize={["32px", "32px", "90px", "90px"]}
+              w={[
+                "fit-content",
+                "16%",
+                "16%",
+                "16%",
+                "16%",
+                "16%",
+              ]}
+              fontFamily={"Bossa-ExtendedBold"}
+              fontSize={["32px", "32px", "45px", "58px", "75px", "90px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
               color={"black"}
@@ -92,9 +136,10 @@ const CollabPoints = () => {
               02
             </Text>
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+            w={["100%", "28.37%", "28.37%", "28.37%", "28.37%", "28.37%"]}
+              fontFamily={"Bossa-ExtendedBold"}
               marginLeft={["0px", "0px", "16px", "16px"]}
-              fontSize={["24px", "24px", "32px", "32px"]}
+              fontSize={["24px", "24px", "24px", "20px", "26px", "32px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
               color={"black"}
@@ -103,9 +148,10 @@ const CollabPoints = () => {
               Benefit 2-3 words
             </Text>
             <Text
-            fontFamily={"Bossa-Light"}
+              w={["100%", "29.82%", "29.82%", "29.82%", "29.82%", "29.82%"]}
+              fontFamily={"Bossa-Light"}
               marginLeft={["0px", "0px", "61px", "61px"]}
-              fontSize={["12px", "12px", "18px", "18px"]}
+              fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
               fontWeight={300}
               letterSpacing={"-0.42px"}
               color={"#747272"}
@@ -121,14 +167,30 @@ const CollabPoints = () => {
           {/* 3rd Point  */}
 
           <Flex
-            flexDir={["column", "column", "row", "row"]}
-            w={"100%"}
-            alignItems={["start", "start", "center", "center"]}
+             mt={["50px", "50px", "50px", "40px", "50px", "60px"]}
+             flexDir={["column", "row", "row", "row", "row", "row"]}
+             alignItems={[
+               "start",
+               "start",
+               "center",
+               "center",
+               "center",
+               "center",
+             ]}
+             w={"100%"}
             justifyContent={"space-between"}
           >
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
-              fontSize={["32px", "32px", "90px", "90px"]}
+            w={[
+              "fit-content",
+              "16%",
+              "16%",
+              "16%",
+              "16%",
+              "16%",
+            ]}
+              fontFamily={"Bossa-ExtendedBold"}
+              fontSize={["32px", "32px", "45px", "58px", "75px", "90px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
               color={"black"}
@@ -137,10 +199,10 @@ const CollabPoints = () => {
               03
             </Text>
             <Text
-            fontFamily={"Bossa-ExtendedBold"}
+             w={["100%", "28.37%", "28.37%", "28.37%", "28.37%", "28.37%"]}
+              fontFamily={"Bossa-ExtendedBold"}
               marginLeft={["0px", "0px", "16px", "16px"]}
-              fontSize={["24px", "24px", "32px", "32px"]}
-              // fontWeight={700}
+              fontSize={["24px", "24px", "24px", "20px", "26px", "32px"]}
               letterSpacing={"-0.42px"}
               color={"black"}
               flexShrink={0}
@@ -148,9 +210,10 @@ const CollabPoints = () => {
               Benefit 2-3 words
             </Text>
             <Text
-            fontFamily={"Bossa-Light"}
+              w={["100%", "29.82%", "29.82%", "29.82%", "29.82%", "29.82%"]}
+              fontFamily={"Bossa-Light"}
               marginLeft={["0px", "0px", "61px", "61px"]}
-              fontSize={["12px", "12px", "18px", "18px"]}
+              fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
               fontWeight={300}
               letterSpacing={"-0.42px"}
               color={"#747272"}
@@ -162,7 +225,6 @@ const CollabPoints = () => {
           </Flex>
 
           <hr />
-
         </Box>
       </Box>
     </>

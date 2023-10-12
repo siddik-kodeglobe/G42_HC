@@ -5,32 +5,33 @@ const Partnership = () => {
   return (
     <>
       <Flex
-      
+      w={"100vw"}
+      maxW={"100%"}
         alignItems={"start"}
         justifyContent={"space-between"}
-        padding={"4.40% 11.71% 0% 4.01%"}
-        // margin={["14px 12% 29px 20px", "66px 12% 57px 5%", "66px 9% 57px 5%"]}
+        padding={["14px 20px 0px 20px", "14px 20px 0px 20px", "14px 20px 0px 20px", "66px 4.01% 0px 4.01%", "66px 4.01% 0px 4.01%", "66px 4.01% 0px 4.01%"]}
         flexDir={["column", "column", "row", "row"]}
       >
         <Text
         fontFamily={"Bossa-ExtendedBold"}
           alignItems={"start"}
-          fontSize={["24px", "24px", "60px", "60px"]}
+          fontSize={["24px", "24px","24px","40px", "50px", "60px"]}
           lineHeight={["81px"]}
           letterSpacing={["-0.72px"]}
           fontStyle={["normal"]}
           color={"black"}
+          w={["100%","100%","100%","50%","50%","50%"]}
           // fontWeight={700}
         >
           Partnerships
         </Text>
         <Text
         fontFamily={"Bossa-Light"}
-          w={"452px"}
+        w={["100%","100%","100%","50%","50%","50%"]}
           maxW={"100%"}
           alignItems={"start"}
           color={"#747272"}
-          fontSize={"14px"}
+          fontSize={["12px","12px","12px","14px","14px","14px"]}
           fontWeight={300}
           letterSpacing={"-0.42px"}
           lineHeight={["24px"]}

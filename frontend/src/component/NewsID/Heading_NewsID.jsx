@@ -22,7 +22,9 @@ const Heading_NewsID = () => {
 
   return (
     <>
-      <Box fontFamily={"Bossa-Light"} margin={["20px 20px 0px 20px", "119px 414px 0px 178px", "119px 414px 0px 178px"]}>
+      <Box
+      padding={["20px 20px 0px 20px", "20px 20px 0px 20px", "20px 20px 0px 20px", "42px 27.71% 0px 11.71%", "52px 27.71% 0px 11.71%", "62px 27.71% 0px 11.71%"]}
+      fontFamily={"Bossa-Light"} w={"1000vw"} maxW={"100%"} >
         <ReactMarkdown children={data} />
       </Box>
     </>

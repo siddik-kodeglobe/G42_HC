@@ -82,12 +82,12 @@ const Omics = () => {
        <Box>
         <Flex>
           <Flex
-          flexDirection={["column","column","row","row"]}
+           flexDirection={["column", "row", "row", "row", "row", "row"]}
             w={"100vw"}
             maxW={"100%"}
             alignItems={["start","start","center","center"]}
             justifyContent={"space-between"}
-            padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
+            padding={["40px 20px 0px  20px", "125px 3.94% 0px 3.94%"]}
             gap={["15px","15px","0px","0px"]}
           >
             <Flex flexDirection={["row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
@@ -179,36 +179,35 @@ const Omics = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["", "", "-25px"]}>
+        <Box mt={["20px", "20px", "20px", "33px", "44px", "52px"]}>
           <Swiper
             speed={750}
+            slidesPerView={"auto"}
             breakpoints={{
               380: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.25,
-                spaceBetween: 0,
-              },
-              765: {
-                slidesOffsetBefore: 66,
-                slidesPerView: 2,
-                spaceBetween: 0,
-              },
-              990: {
-                slidesOffsetBefore: 66,
-                slidesPerView: 2.75,
-                spaceBetween: 0
-              },
-              1250:{
-                slidesOffsetBefore: 66,
-                slidesPerView: 2.75,
-                spaceBetween: 0
-              },
-              1900:{
-                slidesOffsetBefore: 66,
-                slidesPerView: 2.75,
-                spaceBetween: 0
 
-              }
+                spaceBetween: 0,
+              },
+              768: {
+                slidesOffsetBefore: 30,
+                spaceBetween: 0,
+              },
+              992: {
+                slidesOffsetBefore: 39,
+
+                spaceBetween: 0,
+              },
+              1280: {
+                slidesOffsetBefore: 50,
+
+                spaceBetween: 0,
+              },
+              1536: {
+                slidesOffsetBefore: 60,
+
+                spaceBetween: 0,
+              },
             }}
             ref={swiperRef}
             // navigation={true}
@@ -218,22 +217,22 @@ const Omics = () => {
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide key={el.id} className={style.swipe_slide}>
+              <SwiperSlide key={el.id} className={style.swiper_slide}>
                 <Box _first={{padding: "40px 48px 52px 24px"}} textDecor={"none"} padding={["40px 24px 52px 24px"]} border={"1px solid #D9D9D9"}>
                 
-                <Link href={`/news/${el.id}`}>
+                <Link _hover={{textDecor: "none"}} href={`/news/${el.id}`}>
                   <Image
-                    w={["301px", "301px", "465px", "465px"]}
-                    h={["275px", "275px", "424px", "424px"]}
+                   w={["301px", "301px","301px", "465px", "465px"]}
+                   h={["275px", "275px", "275px", "424px", "424px"]}
                     objectFit={"cover"}
                     maxW={"100%"}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
                   />
                   <Text
                   fontFamily={"Bossa-Regular"}
-                    noOfLines={1}
+                    noOfLines={[2,2,2,3,3,3]}
                     color={"#747272"}
-                    fontSize={["9px", "9px", "14px", "14px"]}
+                    fontSize={["9px", "9px", "9px", "11px", "12px", "14px"]}
                     fontWeight={500}
                     lineHeight={"31px"}
                     textTransform={"capitalize"}
@@ -243,11 +242,18 @@ const Omics = () => {
 
                   <Text
                   fontFamily={"Bossa-ExtendedBold"}
-                    noOfLines={2}
-                    w={["306px", "306px", "473px", "473px"]}
+                  noOfLines={[2, 2, 2, 3, 3, 3]}
+                    w={["301px", "301px", "301px", "465px", "465px"]}
                     maxW={"100%"}
                     color={"black"}
-                    fontSize={["12px", "12px", "20px", "20px"]}
+                    fontSize={[
+                      "12px",
+                      "12px",
+                      "12px",
+                      "14px",
+                      "18px",
+                      "20px",
+                    ]}
                     fontWeight={700}
                     lineHeight={"31px"}
                     textTransform={"capitalize"}

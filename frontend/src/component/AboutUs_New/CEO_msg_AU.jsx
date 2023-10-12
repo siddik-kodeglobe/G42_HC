@@ -155,28 +155,24 @@ const CEO_msg_AU = () => {
         gap={9}
         w={"100vw"}
         maxW={"100%"}
-        // margin={[
-        //   "39px 0px 0px 0px",
-        //   "39px 0px 0px 0px",
-        //   "39px 100px 0px 100px",
-        //   "0px 0px 0px 158px",
-        // ]}
-        padding={["0px 0px 0px 10.4%"]}
+        
         justifyContent={"space-between"}
         alignItems={["", "", "start"]}
       >
-        <Box margin={[
+        <Box padding={[
           "39px 20px 0px 20px",
           "39px 20px 0px 20px",
-          "39px 100px 0px 0px",
-          "0px 0px 0px 0px",
-        ]} w={["100%", "100%", "100%", "35%"]}>
+          "39px 20px 0px 20px",
+          "0px 11.71%",
+          "0px 11.71%",
+          "0px 11.71%",
+        ]} 
+        w={["100%", "100%", "100%", "50%", "50%", "50%"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}
             mt={["0px", "0px", "105px"]}
             fontWeight={700}
-            fontSize={["24px", "24px", "30px"]}
-            w={["90%", "90%", "100%"]}
+            fontSize={["24px",  "30px"]}
           >
             Message from Our CEO
           </Text>
@@ -186,7 +182,7 @@ const CEO_msg_AU = () => {
             fontFamily={"Bossa-Light"}
             mt={["14px", "14px", "14px"]}
             fontWeight={300}
-            fontSize={["12px", "12px", "14px"]}
+            fontSize={["12px", "14px"]}
             color={"#747272"}
             className={`text1_ceomsg`}
           >
@@ -201,7 +197,7 @@ const CEO_msg_AU = () => {
             fontFamily={"Bossa-Light"}
             mt={["14px", "14px", "14px"]}
             fontWeight={300}
-            fontSize={["12px", "12px", "14px"]}
+            fontSize={["12px", "14px"]}
             color={"#747272"}
             className={`text2_ceomsg`}
           >
@@ -230,6 +226,9 @@ const CEO_msg_AU = () => {
         <Image
           src={avatar}
           w={["100%", "100%", "100%", "50%"]}
+          objectFit={"cover"}
+          height={"auto"}
+          // maxH={["527px","527px", "700px", "700px", "758px", "910px" ]}
           alt="CEO Avatar"
         />
       </Flex>

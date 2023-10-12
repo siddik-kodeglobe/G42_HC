@@ -21,12 +21,12 @@ const ThumbnailImg_NewsID = () => {
 
   return (
     <>
-      <Box w={["100vw"]} maxW={"100%"} mt={"71.64px"}>
+      <Box w={["100vw"]} maxW={"100%"} mt={["40px", "40px", "40px", "45px", "55px", "71px"]}>
         
         <Image
-          w={["100vw"]}
-          maxW={"100%"}
-          height={["684px"]}
+         w={"100%"}
+        //  border={"1px"}
+          height={["367px","367px","367px", "446px", "576px", "691px"]}
           objectFit={"cover"}
           src={`${process.env.REACT_APP_BACKEND_URL}${data}`}
         />

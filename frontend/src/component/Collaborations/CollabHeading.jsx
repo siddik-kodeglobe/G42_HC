@@ -4,20 +4,20 @@ import React from "react";
 const CollabHeading = () => {
   return (
     <>
-    <Box>
+    <Box w={"100vw"} maxW={"100%"}>
       <Flex
-      padding={"3.81% 11.71% 3.98% 11.71%"}
+      padding={["25px 20px 40px 20px", "25px 20px 40px 20px", "25px 20px 40px 20px", "40px 11.71% 40px 11.71%", "50px 11.71% 50px 11.71%", "60px 11.71% 60px 11.71%"]}
       borderBottom={"1px solid #D9D9D9"}
         alignItems={"start"}
         justifyContent={"space-between"}
-        // margin={["23px 20px 0px 20px","23px 20px 0px 20px","66px 12% 57px 5%","66px 12% 57px 5%"]}
         flexDir={["column", "column", "row", "row"]}
       >
-        <Box w={["100%", "100%", "448px", "448px"]} maxW={"100%"}>
+        <Box w={["100%", "100%", "50%", "50%"]} maxW={"100%"}>
           <Text
+          w={"100%"}
           fontFamily={"Bossa-ExtendedBold"}
             alignItems={"start"}
-            fontSize={["24px", "24px", "60px","60px"]}
+            fontSize={["24px", "24px","24px","40px", "50px","60px"]}
             lineHeight={["81px"]}
             letterSpacing={["-0.72px"]}
             fontStyle={["normal"]}
@@ -26,14 +26,14 @@ const CollabHeading = () => {
             Opening Headline 1
           </Text>
         </Box>
-        <Box>
+        <Box w={["100%", "100%", "50%", "50%"]}>
           <Text
           fontFamily={"Bossa-Light"}
-            w={["100%", "100%", "453px", "453px"]}
-            maxW={"100%"}
+            
+            w={"100%"}
             alignItems={"start"}
             color={"#747272"}
-            fontSize={["12px", "12px", "14px", "14px"]}
+            fontSize={["12px", "12px","12px","14px", "16px", "18px"]}
             fontWeight={300}
             letterSpacing={"-0.42px"}
             lineHeight={["24px"]}
@@ -46,11 +46,10 @@ const CollabHeading = () => {
 
           <Text
           fontFamily={"Bossa-Light"}
-            w={["100%", "100%", "453px", "453px"]}
-            maxW={"100%"}
+            w={"100%"}
             alignItems={"start"}
             color={"#747272"}
-            fontSize={"14px"}
+            fontSize={["12px", "12px","12px","14px", "16px", "18px"]}
             fontWeight={300}
             letterSpacing={"-0.42px"}
             lineHeight={["24px"]}

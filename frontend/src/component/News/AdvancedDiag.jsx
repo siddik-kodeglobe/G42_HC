@@ -14,89 +14,90 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
-
 const AdvancedDiag = () => {
+  const [data, setData] = useState([]);
+  const [hoverArrowColor, setHoverArrowColor] = useState("black");
+  const [hoverArrowColorR, setHoverArrowColorR] = useState("black");
+  // const swiper = useSwiper();
+  const swiperRef = React.useRef(null);
 
+  const goNext = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slideNext();
+    }
+    // console.log(swiperRef.current.swiper);
+  };
 
-    const [data, setData] = useState([]);
-    const [hoverArrowColor, setHoverArrowColor] = useState("black");
-    const [hoverArrowColorR, setHoverArrowColorR] = useState("black");
-    // const swiper = useSwiper();
-    const swiperRef = React.useRef(null);
-  
-    const goNext = () => {
-      if (swiperRef.current && swiperRef.current.swiper) {
-        swiperRef.current.swiper.slideNext();
-      }
-      // console.log(swiperRef.current.swiper);
-    };
-  
-    const goPrev = () => {
-      if (swiperRef.current && swiperRef.current.swiper) {
-        swiperRef.current.swiper.slidePrev();
-      }
-    };
-  
-    const getData = async () => {
-      // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`);
-      const res = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/api/news-plural?populate=*`
-      );
+  const goPrev = () => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
+  const getData = async () => {
+    // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/teams?populate=*`);
+    const res = await axios.get(
+      `${process.env.REACT_APP_BACKEND_URL}/api/news-plural?populate=*`
+    );
     //   console.log(res.data.data);
-      let temp = await (res.data.data)?.filter((el) => el.attributes.category == "Advanced Diagnostics");
+    let temp = await res.data.data?.filter(
+      (el) => el.attributes.category == "Advanced Diagnostics"
+    );
     //   console.log(temp);
-      setData(temp);
-    };
-  
-    const convertData = (inputDateString) => {
-      const inputDate = new Date(inputDateString);
-  
-      const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
-  
-      const day = inputDate.getUTCDate();
-      const formattedDay = day < 10 ? `0${day}` : day;
-      const month = months[inputDate.getUTCMonth()];
-      const year = inputDate.getUTCFullYear();
-      const customFormattedDate = `${formattedDay} ${month},${year}`;
-      return customFormattedDate;
-    };
-  
-    useEffect(() => {
-      getData();
-    }, []);
+    setData(temp);
+  };
 
-    
+  const convertData = (inputDateString) => {
+    const inputDate = new Date(inputDateString);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    const day = inputDate.getUTCDate();
+    const formattedDay = day < 10 ? `0${day}` : day;
+    const month = months[inputDate.getUTCMonth()];
+    const year = inputDate.getUTCFullYear();
+    const customFormattedDate = `${formattedDay} ${month},${year}`;
+    return customFormattedDate;
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <>
-       <Box>
+      <Box w={"100vw"} maxW={"100%"}>
         <Flex>
           <Flex
-          flexDirection={["column","column","row","row"]}
-            w={"100vw"}
-            maxW={"100%"}
-            alignItems={["start","start","center","center"]}
+            flexDirection={["column", "row", "row", "row", "row", "row"]}
+            w={"100%"}
+            alignItems={["start", "start", "center", "center"]}
             justifyContent={"space-between"}
-            padding={["40px 15px 0px 15px", "124px 60px 0px 66px"]}
-            gap={["15px","15px","0px","0px"]}
+            padding={["40px 20px 0px  20px", "125px 3.94% 0px 3.94%"]}
+            gap={["15px", "15px", "0px", "0px"]}
           >
-            <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
+            <Flex
+              flexDirection={["column", "column", "row", "row"]}
+              gap={["11px", "11px", "25px", "25px"]}
+              alignItems={["start", "start", "center", "center"]}
+            >
               <Text
-              fontFamily={"Bossa-ExtendedBold"}
+                fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
-                fontSize={["24px", "24px", "45px", "45px"]}
+                fontSize={["24px", "24px", "60px", "60px"]}
                 fontWeight={700}
                 lineHeight={"normal"}
                 textTransform={"capitalize"}
@@ -127,7 +128,7 @@ const AdvancedDiag = () => {
                 </Text>
               </Flex>
             </Flex>
-            <Flex alignItems={"center"} gap={[2,2,5,5]}>
+            <Flex alignItems={"center"} gap={[2, 2, 5, 5]}>
               <Button
                 onClick={() => goPrev()}
                 // onClick={() => swiperRef.current.swiper.slidePrev()}
@@ -181,23 +182,33 @@ const AdvancedDiag = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["", "", "-25px"]}>
+        <Box mt={["20px", "20px", "20px", "33px", "44px", "52px"]}>
           <Swiper
             speed={750}
+            slidesPerView={"auto"}
             breakpoints={{
-              390: {
+              380: {
                 slidesOffsetBefore: 21,
-                slidesPerView: 1.25,
+
                 spaceBetween: 0,
               },
               768: {
-                slidesOffsetBefore: 66,
-                slidesPerView: 2,
+                slidesOffsetBefore: 30,
                 spaceBetween: 0,
               },
-              1024: {
-                slidesOffsetBefore: 66,
-                slidesPerView: 2.75,
+              992: {
+                slidesOffsetBefore: 39,
+
+                spaceBetween: 0,
+              },
+              1280: {
+                slidesOffsetBefore: 50,
+
+                spaceBetween: 0,
+              },
+              1536: {
+                slidesOffsetBefore: 60,
+
                 spaceBetween: 0,
               },
             }}
@@ -209,43 +220,53 @@ const AdvancedDiag = () => {
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide key={el.id} className={style.swipe_slide}>
-                <Box textDecor={"none"} padding={["40px 24px 52px 24px"]} border={"1px solid #D9D9D9"}>
-                
-                <Link href={`/news/${el.id}`}>
-                  <Image
-                    w={["301px", "301px", "465px", "465px"]}
-                    h={["275px", "275px", "424px", "424px"]}
-                    objectFit={"cover"}
-                    maxW={"100%"}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
-                  />
-                  <Text
-fontFamily={"Bossa-ExtendedMedium"}
-                    noOfLines={1}
-                    color={"#747272"}
-                    fontSize={["9px", "9px", "14px", "14px"]}
-                    fontWeight={500}
-                    lineHeight={"31px"}
-                    textTransform={"capitalize"}
-                  >
-                    {convertData(el.attributes.createdAt)}
-                  </Text>
+              <SwiperSlide key={el.id} className={style.swiper_slide}>
+                <Box
+                  textDecor={"none"}
+                  padding={["40px 24px 52px 24px"]}
+                  border={"1px solid #D9D9D9"}
+                >
+                  <Link _hover={{ textDecor: "none" }} href={`/news/${el.id}`}>
+                    <Image
+                      w={["301px", "301px", "301px", "465px", "465px"]}
+                      h={["275px", "275px", "275px", "424px", "424px"]}
+                      objectFit={"cover"}
+                      maxW={"100%"}
+                      src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
+                    />
+                    <Text
+                      fontFamily={"Bossa-ExtendedMedium"}
+                      noOfLines={1}
+                      color={"#747272"}
+                      fontSize={["9px", "9px", "9px", "11px", "12px", "14px"]}
+                      fontWeight={500}
+                      lineHeight={"31px"}
+                      textTransform={"capitalize"}
+                    >
+                      {convertData(el.attributes.createdAt)}
+                    </Text>
 
-                  <Text
-                  fontFamily={"Bossa-ExtendedBold"}
-                    noOfLines={2}
-                    w={["306px", "306px", "473px", "473px"]}
-                    maxW={"100%"}
-                    color={"black"}
-                    fontSize={["12px", "12px", "20px", "20px"]}
-                    fontWeight={700}
-                    lineHeight={"31px"}
-                    textTransform={"capitalize"}
-                  >
-                    {el.attributes.title}
-                  </Text>
-                </Link>
+                    <Text
+                      fontFamily={"Bossa-ExtendedBold"}
+                      noOfLines={2}
+                      w={["301px", "301px", "301px", "465px", "465px"]}
+                      maxW={"100%"}
+                      color={"black"}
+                      fontSize={[
+                        "12px",
+                        "12px",
+                        "12px",
+                        "14px",
+                        "18px",
+                        "20px",
+                      ]}
+                      fontWeight={700}
+                      lineHeight={"31px"}
+                      textTransform={"capitalize"}
+                    >
+                      {el.attributes.title}
+                    </Text>
+                  </Link>
                 </Box>
               </SwiperSlide>
             ))}
@@ -253,7 +274,7 @@ fontFamily={"Bossa-ExtendedMedium"}
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 
-export default AdvancedDiag
+export default AdvancedDiag;

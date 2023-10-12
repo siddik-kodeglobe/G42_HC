@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import style from "../AboutUs/AU_Slider.module.css";
+import style from "../AboutUs/OurPartner_Slider.module.css";
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
@@ -32,121 +32,140 @@ const Slider_AU = () => {
       <Box
       w={"100vw"}
       maxW={"100%"}
-      padding={"5% 11.718%"}
-        // margin={
-        //   ["62px 225px",
-        //   "62px 56.24px",
-        //   "62px 89px",
-        //   "62px 116px",
-        //   "62px 150px",
-        //   "62px 225px"]
-        // }
+      mt={["100px", "50px", "50px", "50px", "65px", "78px"]}
+      padding={["0px 20px","0px 11.71%","0px 11.71%", "0px 11.718%"]}
         pos={"relative"}
       >
         <Swiper
+        speed={750}
+        slidesPerView={'auto'}
           breakpoints={{
-            390: {
-              slidesPerView: 1,
-              slidesOffsetBefore: 0,
-              // spaceBetween:22,
+            380: {
+              // slidesOffsetBefore: 21,
+              // slidesPerView: 1.25,
+              spaceBetween: 5,
             },
-            1024: {
-              slidesOffsetBefore: 0,
-              slidesPerView: 1.25,
-              spaceBetween: 22,
+            768: {
+              // slidesOffsetBefore: 89,
+              // slidesPerView: 1.95,
+              spaceBetween: 20,
             },
-            1900: {
-              slidesOffsetBefore: 0,
-              slidesPerView: 1.25,
-              spaceBetween: 22,
+            992: {
+              // slidesOffsetBefore: 116,
+              // slidesPerView: 2.5,
+              spaceBetween: 15,
             },
-
-          
+            1280: {
+              // slidesOffsetBefore: 149,
+              // slidesPerView: 2.65,
+              spaceBetween: 18,
+            },
+            1536: {
+              // slidesOffsetBefore: 178,
+              // slidesPerView: 2.75,
+              spaceBetween: 20,
+            }
           }}
           pagination={{
             clickable: true,
           }}
           modules={[FreeMode]}
-          // className={style.swiper}
+          className={style.swiper}
         >
           {/* slides  */}
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
-              // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />
           </SwiperSlide>
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Image
               objectFit={"cover"}
               // w={["0px", "351px", "768px", "1152px"]}
-              h={"576px"}
+             h={["225px", "225px", "225px", "304px", "392px", "471px"]}
+              w={["351px", "351px", "351px", "604px", "780px", "936px"]}
+
               src={img1}
               alt="Img1"
             />

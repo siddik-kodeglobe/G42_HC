@@ -88,7 +88,7 @@ const Footer = () => {
         f
       >
         <Text>{new Date().getFullYear()} G42. All right reserved</Text>
-        <Text>Terms&Conditions | Privacy Policy</Text>
+        <Text>Terms & Conditions | Privacy Policy</Text>
       </Flex>
     </>
   );

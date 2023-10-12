@@ -108,24 +108,24 @@ const WhoWeAre_AU = () => {
         alignItems={"start"}
         w={"100vw"}
         maxW={"100%"}
-        padding={["0px 11.718% 0px 11.718%"]}
+        padding={["0px 20px", "0px 11.718% 0px 11.718%"]}
         // margin={["51px 56px 40px 56px", "51px 89px 40px 89px","51px 116px 0px 116px", "78px 148px 0px 148px", "78px 225px 0px 225px"]}
-        mt={["45px"]}
+        mt={["52px", "56px"]}
         justifyContent={"space-between"}
-        gap={["20px","20px","0px","20px","20px"]}
+        gap={["20px","20px","20px","20px","20px"]}
       >
         <Box w={["100%", "100%", "100%", "50%", "50%"]}>
-          <Text fontFamily={"Bossa-ExtendedBold"} fontWeight={700} fontSize={["24px", "24px", "48px", "48px", "48px"]}>
+          <Text fontFamily={"Bossa-ExtendedBold"} fontWeight={700} fontSize={["24px", "24px","24px", "31px", "40px", "48px"]}>
             Who we are
           </Text>
         </Box>
         <Box w={["100%", "100%", "100%", "50%", "50%"]}>
-          <Text fontFamily={"Bossa-ExtendedBold"} fontWeight={700} fontSize={["24px", "24px", "41px", "41px", "41px"]}>
+          <Text fontFamily={"Bossa-ExtendedBold"} fontWeight={700} fontSize={["24px", "24px", "24px", "24px", "25px", "30px"]}>
             G42 Healthcare - Health Tech Company
           </Text>
-          <Box ref={sectionRef1}
+          <Box  w={"100%"} ref={sectionRef1}
               className={`box1_wwa demo ${isVisible ? "visible" : "hidden"}`}>
-          <Text className="text1_wwa" fontFamily={"Bossa-Light"} mt={5} fontSize={14} color={"#747272"} fontWeight={300}>
+          <Text className="text1_wwa" fontFamily={"Bossa-Light"} mt={5} fontSize={["12px", "12px", "12px", "14px", "14px", "14px"]} color={"#747272"}>
             G42 Healthcare, a leading AI-powered healthcare company, is on a
             mission to develop a world-class healthcare sector in the UAE and
             beyond, by harnessing data and emerging technologies in healthcare
@@ -133,7 +133,7 @@ const WhoWeAre_AU = () => {
             and futuristic, we have created a transformative shift in the
             traditional healthcare paradigm. 
             </Text>
-            <Text className="text1_wwa" fontFamily={"Bossa-Light"} mt={5} fontSize={14} color={"#747272"} fontWeight={300}>
+            <Text className="text1_wwa" fontFamily={"Bossa-Light"} mt={5} fontSize={["12px", "12px", "12px", "14px", "14px", "14px"]} color={"#747272"}>
             As a visionary health tech company,
             we partner with governments, leading international entities,
             scientists and researchers and the wider medical community who

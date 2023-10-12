@@ -5,16 +5,11 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 const PartnerWithUs = () => {
   return (
     <>
-      <Box mt={["125px"]}>
+      <Box w={"100%"} mt={["80px", "80px", "80px", "81px", "105px", "125px"]}>
         <Marquee autoFill>
-          <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
-            <hr
-              style={{
-                width: "88px",
-                border: "1px solid black",
-                margin: "auto",
-              }}
-            />
+          <Flex alignItems={"center"} gap={"31px"}>
+            
+            <Box border={"1px solid black"} w={["88px", "88px", "88px", "109px", "140px", "166px"]}></Box>
 
             <Text
             fontFamily={"Bossa-ExtendedBold"}
@@ -26,13 +21,8 @@ const PartnerWithUs = () => {
             >
                 Partner with us
             </Text>
-            <hr
-              style={{
-                width: "88px",
-                border: "1px solid black",
-                margin: "auto",
-              }}
-            />
+            <Box border={"1px solid black"} w={["88px", "88px", "88px", "109px", "140px", "166px"]}></Box>
+
           </Flex>
         </Marquee>
       </Box>

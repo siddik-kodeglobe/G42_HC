@@ -184,7 +184,7 @@ const Resources = () => {
               <SwiperSlide className={style.swiper_slide}>
                 <Box
                   // border={"5px solid red"}
-                  h={["214px", "214px", "338px", "338px","480px"]}
+                  h={["214px", "214px","214px", "220px", "284px","351px"]}
                   // maxH={["214px", "214px", "338px"]}
                   w={["285px", "285px", "285px", "294px","380px","456px"]}
                   // maxW={["285px", "285px", "425px"]}

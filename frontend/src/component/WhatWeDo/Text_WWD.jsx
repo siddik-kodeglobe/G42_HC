@@ -8,10 +8,9 @@ const Text_WWD = () => {
         w={"100vw"}
         maxW={"100%"}
         borderBottom={["1px solid #D9D9D9"]} 
-        padding={"2.16% 0% 7.95% 4.01%"}
-        // padding={["14px 0px 39px 20px", "14px 0px 39px 20px", "32px 0px 120px 61px", "32px 0px 120px 61px"]}
+        padding={["14px 0px 40px 20px", "14px 0px 40px 20px", "14px 0px 40px 20px", "32px 0px 78px 3.94%", "32px 0px 101px 3.94%", "32px 0px 121px 3.94%", ]}
         >
-            <Text fontFamily={"Bossa-ExtendedBold"} color={"black"} fontSize={["24px","24px","60px","60px"]} fontStyle={"normal"} fontWeight={[700]} lineHeight={["68px"]} textTransform={"capitalize"}>What we do</Text>
+            <Text fontFamily={"Bossa-ExtendedBold"} color={"black"} fontSize={["24px","24px","24px","39px", "50px","60px"]} fontStyle={"normal"} fontWeight={[700]} lineHeight={["68px"]} textTransform={"capitalize"}>What we do</Text>
         </Box>
     </>
   )

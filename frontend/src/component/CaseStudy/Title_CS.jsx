@@ -20,8 +20,8 @@ const Title_CS = () => {
     }, []);
   return (
     <>
-        <Box w={"70%"} margin={["67px 0px 0px 61px"]}>
-            <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px", "60px", "60px"]} fontStyle={"normal"} fontWeight={[700]} color={"black"} textTransform={"capitalize"}>{data.title}</Text>
+        <Box w={"100vw"} maxW={"100%"} padding={["14px 20px 0px 20px", "14px 20px 0px 20px", "14px 20px 0px 20px", "44px 3.94% 0px 3.94%", "55px 3.94% 0px 3.94%", "66px 3.94% 0px 3.94%", ]}>
+            <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px","24px","24px","40px","50px","60px",]} fontStyle={"normal"} fontWeight={[700]} color={"black"} textTransform={"capitalize"}>{data.title}</Text>
             
         </Box>
         

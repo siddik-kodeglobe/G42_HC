@@ -4,32 +4,21 @@ import { Box, Text, useDisclosure } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
 import playBtn from "../../assets/icons/playBtn.svg";
 import VideoModal from "../VideoModal/VideoModal";
+import { isMobile, isTablet } from "react-device-detect";
+import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
 const Video = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Box
-      onClick={onOpen}
-        pos={"relative"}
-        paddingTop={"56.25%"}
-        // border={"4px solid red"}
-        h={["392px", "392px","604px","604px"]}
-        maxH={"100%"}
-        w={"100vw"}
-        maxW={"100%"}
+    
+        <Box
         style={{ cursor: `url(${playBtn}), auto` }}
-      >
-        <ReactPlayer
-          style={{ position: "absolute", top: "0px", left: "0px" }}
-          width={"100%"}
-          height={"100%"}
-          playing={true}
-          loop={true}
-          url={g42Video}
-          muted
-        />
+          height={isMobile ? "450px" : isTablet ? "550px" : "604px"}
+          position={"relative"}
+        >
+          <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
 
         <Box
           background={
@@ -40,18 +29,19 @@ const Video = () => {
           left={"0px"}
           w={"100vw"}
           maxW={"100%"}
-          h={"341px"}
+          h={["375px","375px","375px","344px","344px","344px"]}
+          // h={["164px","164px","164px", "222px", "287px", "344px"]}
         >
           <Text
-          fontFamily={"Bossa-ExtendedBold"}
+            fontFamily={"Bossa-ExtendedBold"}
             position={"absolute"}
-            bottom={["22px","22px","45px","45px"]}
-            left={["24px","24px","60px","60px"]}
-            w={["353px","353px","946px","946px"]}
+            bottom={["22px", "22px", "45px", "45px"]}
+            left={["24px", "24px", "60px", "60px"]}
+            w={["95%", "65%"]}
             color={"white"}
             fontWeight={700}
             letterSpacing={"-0.352px"}
-            fontSize={["24px","24px","32px","32px"]}
+            fontSize={["22px", "20px","20px","22px",  "24px", "32px"]}
             fontStyle={"normal"}
           >
             Emirati Genome Program: Region’s largest and most advanced Omics
@@ -59,15 +49,14 @@ const Video = () => {
           </Text>
         </Box>
 
-        <VideoModal 
-          url={
-            g42Video
-          }
+        <VideoModal
+          url={g42Video}
           isOpen={isOpen}
           onOpen={onOpen}
           onClose={onClose}
         />
       </Box>
+
     </>
   );
 };

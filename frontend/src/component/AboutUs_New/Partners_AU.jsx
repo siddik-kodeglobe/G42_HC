@@ -34,7 +34,7 @@ const Partners_AU = () => {
     <Box w={"100vw"} maxW={"100%"}
     >
       <Text
-      margin={"8.68% 0px 3.47% 6.97%"}
+      padding={["25px 20px 39px 20px", "25px 20px 39px 20px", "25px 20px 39px 20px", "86px 0% 34px 6.97%","111px 0% 43px 6.97%","132px 0% 52px 6.97%"]}
       // margin={["65px 20px 0px 20px", "65px 20px 0px 20px","78px 106px 0px 106px","78px 106px 0px 106px"]}
         fontFamily={"Bossa-ExtendedBold"}
         fontWeight={700}
@@ -44,44 +44,39 @@ const Partners_AU = () => {
       </Text>
 
       <Swiper
+      speed={750}
+      slidesPerView={'auto'}
         breakpoints={{
-          1900: {
-            slidesOffsetBefore: 138.21,
-            slidesPerView: 2.75,
-            spaceBetween: 25,
+          1556: {
+            slidesOffsetBefore: 107,
+            spaceBetween: 20,
           },
-          1250: {
-            slidesOffsetBefore: 92.14,
-            slidesPerView: 2.75,
-            spaceBetween: 16,
+          1280: {
+            slidesOffsetBefore: 89,
+            spaceBetween: 16.85,
           },
-          900: {
-            slidesOffsetBefore: 71.4,
-            slidesPerView: 2.25,
-            spaceBetween: 13,
+          992: {
+            slidesOffsetBefore: 69,
+            spaceBetween: 14,
           },
-          760: {
-            slidesOffsetBefore: 55.28,
-            slidesPerView: 1.25,
-            spaceBetween: 10,
+          768: {
+            slidesOffsetBefore: 54,
+            spaceBetween: 11,
           },
           390: {
-            slidesPerView: 1.2,
-            slidesOffsetBefore: 34.5,
-            spaceBetween:6,
+            slidesOffsetBefore: 33,
+            spaceBetween:11,
           },
         }}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[FreeMode]}
+        // modules={[FreeMode]}
         className={style.swiper}
       >
         {data?.map((el) => (
-          <SwiperSlide className={style.swipe_slide}>
+          <SwiperSlide className={style.swiper_slide}>
             <Box
+            w={["338px", "338px", "338px", "385px", "498px", "591px"]}
+            h={["338px", "338px", "338px", "385px", "498px", "591px"]}
               backgroundColor={"#00D2AA"}
-              height={["338px", "338px", "338px","35vw"]}
               position={"relative"}
             >
               <Flex

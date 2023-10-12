@@ -9,18 +9,23 @@ import {
 const Breadcrumb_AU = () => {
   return (
     <Box
+    w={"100vw"}
+    maxW={"100%"}
       zIndex={-14}
       padding={[
-        "115px 0px 0px 20px",
-        "115px 0px 0px 20px",
-        "115px 60px 0px 60px",
-        "115px 60px 0px 60px",
+        "115px 20px 0px 20px",
+        "115px 20px 0px 20px",
+        "115px 20px 0px 20px",
+        "107px 11.71% 0px 3.94%",
+        "138px 11.71% 0px 3.94%",
+        "165px 11.71% 0px 3.94%",
       ]}
     >
       <Breadcrumb>
         <BreadcrumbItem>
           <BreadcrumbLink
-            fontSize={["12px", "12px", "16px", "16px"]}
+          _hover={{textDecor: "none"}}
+            fontSize={["12px", "12px","12px", "12px", "14px", "16px"]}
             fontFamily={"Bossa-Light"}
             href="/"
           >
@@ -30,7 +35,8 @@ const Breadcrumb_AU = () => {
 
         <BreadcrumbItem isCurrentPage>
           <BreadcrumbLink
-            fontSize={["12px", "12px", "16px", "16px"]}
+          _hover={{textDecor: "none"}}
+          fontSize={["12px", "12px","12px", "12px", "14px", "16px"]}
             fontFamily={"Bossa-Light"}
             href="/about"
           >

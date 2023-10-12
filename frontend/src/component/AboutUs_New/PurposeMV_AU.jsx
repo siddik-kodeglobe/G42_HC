@@ -201,9 +201,9 @@ const PurposeMV_AU = () => {
 
   return (
     <>
-    <Box mt={5} border={"1px solid rgba(0, 0, 0, 0.10)"}
-    //  padding={["39px 20px 79px 20px","39px 20px 79px 20px","78px 100px 95px 100px","78px 148px 95px 148px","78px 225px 95px 225px"]} 
-     padding={["4% 11.718% "]}
+    <Box w={"100vw"} maxW={"100%"} mt={5} border={"1px solid rgba(0, 0, 0, 0.10)"}
+   
+   padding={["40px 20px", "40px 20px", "40px 20px", "41px 11.71% 56px 11.71%","54px 11.71% 73px 11.71%","64px 11.71% 87px 11.71%"]}
      >
       <Flex
         flexDirection={["column", "column", "row"]}
@@ -211,7 +211,7 @@ const PurposeMV_AU = () => {
         justifyContent={"space-between"}
         alignItems={["start", "start","center"]}
       >
-        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px", "48px", "48px"]} fontWeight={700}>
+        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px","24px", "31px", "40px", "48px"]} fontWeight={700}>
           Our Purpose
         </Text>
         <Box w={["100%", "100%", "50%"]} ref={sectionRef1} className={`box1_pmv demo ${isVisible ? "visible" : "hidden"}`}>
@@ -229,7 +229,7 @@ const PurposeMV_AU = () => {
         </Box>
       </Flex>
 
-      <hr style={{ border: "1px solid black", margin: "64px 0px" }} />
+      <Box border={"1px solid black"} margin={["20px 0px 50px 0px","30px 0px 50px 0px","30px 0px 50px 0px", "64px 0px", "64px 0px", "64px 0px"]}></Box>
       
       <Flex
       flexDirection={["column", "column", "row"]}
@@ -237,7 +237,7 @@ const PurposeMV_AU = () => {
         justifyContent={"space-between"}
         alignItems={["start", "start","center"]}
       >
-        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px", "48px"]} fontWeight={700}>
+        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px","24px", "31px", "40px", "48px"]} fontWeight={700}>
           Our Mission
         </Text>
         <Box w={["100%", "100%", "50%"]} ref={sectionRef2} className={`box2_pmv demo ${isVisible ? "visible" : "hidden"}`}>
@@ -255,7 +255,7 @@ const PurposeMV_AU = () => {
         </Box>
       </Flex>
 
-      <hr style={{ border: "1px solid black", margin: "64px 0px" }} />
+      <Box border={"1px solid black"} margin={["20px 0px 50px 0px","30px 0px 50px 0px","30px 0px 50px 0px", "64px 0px", "64px 0px", "64px 0px"]}></Box>
 
       <Flex
       flexDirection={["column", "column", "row"]}
@@ -263,7 +263,7 @@ const PurposeMV_AU = () => {
         justifyContent={"space-between"}
         alignItems={["start", "start","center"]}
       >
-        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px", "48px"]} fontWeight={700}>
+        <Text fontFamily={"Bossa-ExtendedBold"} fontSize={["24px", "24px","24px", "31px", "40px", "48px"]} fontWeight={700}>
           Our Vision
         </Text>
         <Box w={["100%", "100%", "50%"]} ref={sectionRef3} className={`box2_pmv demo ${isVisible ? "visible" : "hidden"}`}>
