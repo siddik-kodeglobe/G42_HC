@@ -21,9 +21,7 @@ const Career = () => {
             <CareerVideo/>
             <Img1Career/>
             <LifeAtG42/>
-            <hr style={{width:"99.8%", border: "1px solid #D9D9D9"}}/>
             <Benefits/>
-            <hr style={{width:"99.8%", border: "1px solid #D9D9D9"}}/>
             <FeaturedJobs/>
             <JoinUsMarquee/>
             <FooterCareer/>

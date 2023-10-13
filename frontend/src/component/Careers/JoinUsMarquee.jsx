@@ -12,17 +12,11 @@ const JoinUsMarquee = () => {
 
   return (
     <>
-      <Box mt={["91px", "91px", "111px", "111px"]}>
+      <Box w={"100%"} mt={["80px", "80px", "80px", "81px", "105px", "125px"]}>
         <Marquee autoFill>
-          <Flex alignItems={"center"} gap={["16px", "16px", "34px"]}>
-            <hr
-              style={{
-                width: "88px",
-                border: "1px solid black",
-                margin: "auto",
-              }}
-            />
-
+          <Flex alignItems={"center"} gap={["29px",  "32px"]}>
+            
+            <Box w={["88px", "166px"]} border={"1px solid black"}></Box>
             <Text
             fontFamily={"Bossa-ExtendedBold"}
 
@@ -33,13 +27,8 @@ const JoinUsMarquee = () => {
             >
               Join Us
             </Text>
-            <hr
-              style={{
-                width: "88px",
-                border: "1px solid black",
-                margin: "auto",
-              }}
-            />
+            <Box w={["88px", "166px"]} border={"1px solid black"}></Box>
+
           </Flex>
         </Marquee>
       </Box>

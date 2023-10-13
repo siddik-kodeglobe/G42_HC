@@ -14,31 +14,44 @@ const IconDiv = () => {
     <>
       <Flex
         flexWrap={"wrap"}
-        gap={["0px", "0px", "100px", "100px"]}
-        margin={[
-          "39px 20px 40px 20px",
-          "39px 20px 40px 20px",
-          "68px 115px 100px 108px",
-          "68px 115px 100px 108px",
+        w={"100%"}
+        padding={[
+          "40px 20px 40px 20px",
+          "40px 4.01% 40px 4.01%",
+          "40px 4.01% 40px 4.01%",
+          "45px 11.71% 65px 11.71%",
+          "59px 11.71% 85px 11.71%",
+          "70px 11.71% 99px 11.71%",
         ]}
+        gap={[""]}
       >
-        <Box w={["168px", "168px", "fit-content", "fit-content"]}>
-          <Image mb={["14px"]} src={emailIcon} />
-          <Text fontFamily={"Bossa-Regular"} fontSize={["24px"]} mb={["6px"]}>
+        {/* Email Container */}
+        <Box w={["168px", "168px", "168px", "218px", "282px", "338px"]}>
+          <Image
+            h={["80px", "80px", "80px", "80px", "80px", "93px"]}
+            w={["93px", "93px", "93px", "115px", "115px", "115px"]}
+            src={emailIcon}
+          />
+          <Text
+            fontFamily={"Bossa-Regular"}
+            fontSize={["16px", "18px", "20px", "20px", "24px", "24px"]}
+            mt={["14px"]}
+          >
             Email
           </Text>
           <Text
             fontFamily={"Bossa-Regular"}
-            fontSize={["16px"]}
+            fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             fontWeight={[400]}
             lineHeight={["normal"]}
             color={["#747272"]}
+            mt={["3px", "6px"]}
           >
             Drop us a line for general enquiry:
           </Text>
           <Text
             fontFamily={"Bossa-Regular"}
-            fontSize={["16px"]}
+            fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             fontWeight={[400]}
             lineHeight={["normal"]}
             color={"var(--Emergent-Green, #00D2AA)"}
@@ -47,25 +60,33 @@ const IconDiv = () => {
           </Text>
         </Box>
 
-        <Box>
-          <Image mb={["14px"]} src={mapIcon} />
-          <Text fontFamily={"Bossa-Regular"} fontSize={["24px"]} mb={["6px"]}>
+        {/* Main Container */}
+        <Box w={["168px", "168px", "168px", "218px", "282px", "338px"]}>
+          <Image
+            h={["80px", "80px", "80px", "80px", "80px", "93px"]}
+            w={["93px", "93px", "93px", "115px", "115px", "115px"]}
+            src={mapIcon}
+          />
+          <Text fontFamily={"Bossa-Regular"} 
+                      fontSize={["16px", "18px", "20px", "20px", "24px", "24px"]}
+
+           mt={["14px"]}>
             Main Office
           </Text>
           <Text
             fontFamily={"Bossa-Regular"}
-            fontSize={["16px"]}
+            fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             fontWeight={[400]}
             lineHeight={["normal"]}
             color={["#747272"]}
-            w={["168px", "168px", "335px", "335px"]}
+            mt={["3px", "6px"]}
           >
             G42, Capital Gate, 12 Floor Al Khaleej Al Arabi Street Abu Dhabi,
             United Arab Emirates.
           </Text>
           <Text
             fontFamily={"Bossa-Regular"}
-            fontSize={["16px"]}
+            fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             fontWeight={[400]}
             lineHeight={["normal"]}
             color={"var(--Emergent-Green, #00D2AA)"}
@@ -74,17 +95,27 @@ const IconDiv = () => {
           </Text>
         </Box>
 
-        <Box>
-          <Image mb={["14px"]} src={infoIcon} />
-          <Text fontFamily={"Bossa-Regular"} fontSize={["24px"]} mb={["6px"]}>
+        {/* Follow Container */}
+        <Box w={["168px", "168px", "168px", "218px", "282px", "338px"]}>
+          <Image
+            h={["80px", "80px", "80px", "80px", "80px", "93px"]}
+            w={["93px", "93px", "93px", "115px", "115px", "115px"]}
+            src={infoIcon}
+          />
+          <Text
+            fontFamily={"Bossa-Regular"}
+            fontSize={["16px", "18px", "20px", "20px", "24px", "24px"]}
+            mt={["14px"]}
+          >
             Follow
           </Text>
           <Text
             fontFamily={"Bossa-Regular"}
-            fontSize={["16px"]}
+            fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             fontWeight={[400]}
             lineHeight={["normal"]}
             color={["#747272"]}
+            mt={["3px", "6px"]}
           >
             Follow us on social media
           </Text>

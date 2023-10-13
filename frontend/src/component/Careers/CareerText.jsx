@@ -9,10 +9,10 @@ const CareerText = () => {
       maxW={"100%"}
       >
         <Text
-        padding={["66px 0px 0px 3.94%", ""]}
+        padding={["15px 0px 0px 20px","15px 0px 0px 4.01%","15px 0px 0px 4.01%", "66px 0px 0px 4.01%", "66px 0px 0px 4.01%", "66px 0px 0px 4.01%", ]}
           fontFamily={"Bossa-ExtendedBold"}
           color={"black"}
-          fontSize={["30px", "30px", "40px", "50px", "60px"]}
+          fontSize={["30px","30px", "30px", "40px", "50px", "60px"]}
           lineHeight={["81px"]}
           letterSpacing={["-0.72px"]}
         >

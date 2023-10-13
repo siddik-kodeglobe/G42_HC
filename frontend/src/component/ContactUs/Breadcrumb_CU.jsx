@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -10,16 +11,38 @@ import { useParams } from "react-router-dom";
 const Breadcrumb_CU = () => {
   return (
     <>
-      <Breadcrumb mt={["114px", "114px", "164px", "164px"]} marginLeft={["20px", "20px", "61px", "61px"]}>
-        <BreadcrumbItem fontSize={["12px", "12px", "16px", "16px"]}>
-          <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">Home</BreadcrumbLink>
-        </BreadcrumbItem>
+      <Box
+        w={"100%"}
+        maxW={"100%"}
+        padding={[
+          "115px 20px 0px 20px",
+          "115px 4.01% 0px 4.01%",
+          "115px 4.01% 0px 4.01%",
+          "115px 4.01% 0px 4.01%",
+          "140px 4.01% 0px 4.01%",
+          "165px 4.01% 0px 4.01%",
+        ]}
+      >
+        <Breadcrumb>
+          <BreadcrumbItem 
+          _hover={{textDecor: "none"}}
+          fontSize={["12px", "14px","14px","14px", "15px", "16px"]}>
+            <BreadcrumbLink fontFamily={"Bossa-Light"} href="/">
+              Home
+            </BreadcrumbLink>
+          </BreadcrumbItem>
 
-       
-        <BreadcrumbItem fontSize={["12px", "12px", "16px", "16px"]} isCurrentPage>
-          <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">Contact Us</BreadcrumbLink>
-        </BreadcrumbItem>
-      </Breadcrumb>
+          <BreadcrumbItem
+          _hover={{textDecor: "none"}}
+          fontSize={["12px", "14px","14px","14px", "15px", "16px"]}
+            isCurrentPage
+          >
+            <BreadcrumbLink fontFamily={"Bossa-Light"} href="#">
+              Contact Us
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </Breadcrumb>
+      </Box>
     </>
   );
 };

@@ -8,17 +8,13 @@ const LifeAtG42 = () => {
         flexDir={["column", "column", "row", "row"]}
         alignItems={"start"}
         justifyContent={"space-between"}
-        margin={[
-          "40px 20px 0px 20px",
-          "40px 20px 0px 20px",
-          "70px 178px 64px 178px",
-          "70px 178px 64px 178px",
-        ]}
+        w={"100%"}
+        padding={["40px 20px 40px 20px", "40px 4.01% 40px 4.01%", "40px 4.01% 40px 4.01%", "45px 11.71% 41px 11.71%", "59px 11.71% 54px 11.71%", "70px 11.71% 64px 11.71%"]}
       >
         <Box w={["100%", "100%", "50%", "50%"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}
-            fontSize={["24px", "24px", "48px", "48px"]}
+            fontSize={["24px", "24px","24px", "31px","40px", "48px"]}
             color={"black"}
             fontWeight={[700]}
             fontStyle={"normal"}
@@ -31,7 +27,7 @@ const LifeAtG42 = () => {
           <Text
             fontFamily={"Bossa-ExtendedBold"}
             mt={["21px"]}
-            fontSize={["15px", "15px", "30px", "30px"]}
+            fontSize={["16px", "16px","16px", "19px",  "25px", "30px"]}
             letterSpacing={["-0.9px"]}
             color={"black"}
             fontWeight={[700]}
@@ -43,7 +39,7 @@ const LifeAtG42 = () => {
           <Text
             fontFamily={"Bossa-Light"}
             mt={["21px"]}
-            fontSize={["14px"]}
+            fontSize={["12px", "12px", "12px", "14px", "14px", "14px"]}
             color={"#747272"}
             fontWeight={[300]}
             lineHeight={["21px"]}

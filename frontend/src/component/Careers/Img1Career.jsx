@@ -5,9 +5,15 @@ import img1 from '../../assets/Careers/Img1_FullWidth.svg'
 const Img1Career = () => {
   return (
     <>
-        <Box margin={["10px 22px 0px 22px", "10px 22px 0px 22px", "111px 178px 0px 178px", "111px 178px 0px 178px"]}>
-            <Image w={"100%"} h={["194px","194px","100%","100%"]} objectFit={"cover"} src={img1} alt='Image 1'/>
-        </Box>
+    <Box w={"100vw"} maxW={"100%"} 
+    padding={["100px 20px 0px 20px","33.7px 4.01% 0px 4.01%" ,"33.7px 4.01% 0px 4.01%", "52px 11.71% 0px 11.71%", "52px 11.71% 0px 11.71%", "52px 11.71% 0px 11.71%" ]}
+    >
+      <Image w={"100%"} objectFit={"cover"} 
+      h={'auto'}
+      // h={["200px", "206px", "330px", "427px", "551px", "661"]} 
+      src={img1} alt="Img" />
+      </Box>
+       
     </>
   )
 }

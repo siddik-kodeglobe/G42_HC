@@ -4,18 +4,30 @@ import React from "react";
 const EnquiryForm = () => {
   return (
     <>
-      <Flex justifyContent={"space-between"}>
+      <Flex
+        flexWrap={"wrap"}
+        w={"100vw"}
+        maxW={"100%"}
+        padding={[
+          "0px 20px 0px 20px",
+          "0px 20px 0px 20px",
+          "0px 20px 0px 20px",
+          "0px 11.71% 0px 4.01%",
+          "0px 11.71% 0px 4.01%",
+          "0px 11.71% 0px 4.01%",
+        ]}
+        justifyContent={"space-between"}
+        borderTop={"1px solid #D9D9D9"}
+        borderBottom={"1px solid #D9D9D9"}
+      >
         <Box
-          border={"1px solid #D9D9D9"}
-          w={["35%"]}
-          paddingLeft={["26px"]}
-          paddingTop={["90px"]}
-        >
-          {" "}
+          // padding={["29px 0px 40px 0px", "29px 0px 40px 0px", "29px 0px 40px 0px", "0px", "0px", "0px"]}
+        
+         mt={["79px", "79px", "79px", "90px", "90px", "90px"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}
-            w={["326px"]}
-            fontSize={["32px"]}
+            w={["100%","100%","100%", "326px", "326px", "326px"]}
+            fontSize={["24px", "24px", "24px", "24px", "26px", "32px"]}
             fontWeight={[700]}
             lineHeight={"normal"}
             textTransform={"capitalize"}
@@ -25,8 +37,9 @@ const EnquiryForm = () => {
             Did not find what you are Looking for?
           </Text>
           <Text
-          fontFamily={"Bossa-Regular"}
-            fontSize={["18px"]}
+          mt={["20px", "7px"]}
+            fontFamily={"Bossa-Regular"}
+            fontSize={["16px", "18px"]}
             fontWeight={[400]}
             lineHeight={"normal"}
             fontStyle={"normal"}
@@ -36,18 +49,20 @@ const EnquiryForm = () => {
           </Text>
         </Box>
 
-        <Box w={["65%"]} border={"1px solid #D9D9D9"}>
+        <Box
+          w={["100%", "100%", "100%", "63%", "63%", "63%"]}
+          borderLeft={["0px", "0px", "0px", "1px solid #D9D9D9","1px solid #D9D9D9","1px solid #D9D9D9" ]}
+        >
           <Flex
-            paddingTop={["90px"]}
-            paddingBottom={["80px"]}
+          padding={["29px 0px 40px 0px", "29px 0px 40px 0px", "29px 0px 40px 0px", "90px 0px 80px 97px", "90px 0px 80px 97px", "90px 0px 80px 97px"]}
             flexDir={"column"}
             gap={"22px"}
             margin={"auto"}
-            w={["710px"]}
+            // w={"100%"}
           >
             <Text
-            fontFamily={"Bossa-Regular"}
-              fontSize={["18px"]}
+              fontFamily={"Bossa-Regular"}
+              fontSize={["16px", "18px"]}
               lineHeight={"normal"}
               fontStyle={["normal"]}
               fontWeight={[400]}
@@ -76,7 +91,7 @@ const EnquiryForm = () => {
               placeholder="Message"
             />
             <Text
-            fontFamily={"Bossa-Regular"}
+              fontFamily={"Bossa-Regular"}
               fontSize={["12px"]}
               color={"#747272"}
               fontWeight={[400]}
@@ -87,7 +102,7 @@ const EnquiryForm = () => {
               and Terms of Service apply.
             </Text>
             <Button
-            fontFamily={"Bossa-ExtendedMedium"}
+              fontFamily={"Bossa-ExtendedMedium"}
               fontSize={["16px"]}
               fontWeight={[500]}
               lineHeight={["22px"]}
