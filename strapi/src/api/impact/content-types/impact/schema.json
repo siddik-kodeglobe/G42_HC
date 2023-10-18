@@ -4,7 +4,8 @@
   "info": {
     "singularName": "impact",
     "pluralName": "impacts",
-    "displayName": "Impact"
+    "displayName": "Impact",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,19 +13,27 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "title": {
       "type": "string",
       "required": true
     },
     "tag": {
-      "type": "string",
+      "type": "enumeration",
+      "enum": [
+        "Omics",
+        "Digital Health",
+        "Advanced Diagnostics",
+        "Pharma & Therapeutics",
+        "IROS",
+        "Environmental Sciences"
+      ],
       "required": true
     }
   }

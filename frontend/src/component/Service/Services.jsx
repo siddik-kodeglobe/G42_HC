@@ -14,8 +14,11 @@ import Companies from "./Companies";
 import MeetTeam_AU from "../AboutUs_New/MeetTeam_AU";
 import LazyLoad from "react-lazy-load";
 import { Box } from "@chakra-ui/react";
+import { useParams } from 'react-router-dom';
 
 const Services = () => {
+  const {name} = useParams();
+  
   return (
     <>
     <Box>
@@ -24,10 +27,10 @@ const Services = () => {
       </LazyLoad>
 
       <LazyLoad>
-        <Home_VideoSection />
+        <Home_VideoSection name={name}/>
       </LazyLoad>
 
-      <LazyLoad>
+       <LazyLoad>
         <ImageSubHeading />
       </LazyLoad>
 
@@ -43,7 +46,7 @@ const Services = () => {
         <ClientNPartner />
       </LazyLoad>
 
-      <LazyLoad>
+     <LazyLoad>
         <Impact />
       </LazyLoad>
 
@@ -51,7 +54,7 @@ const Services = () => {
         <CaseStudies />
       </LazyLoad>
 
-      <LazyLoad>
+       <LazyLoad>
         <LatestNews />
       </LazyLoad>
 
@@ -65,7 +68,7 @@ const Services = () => {
 
       <LazyLoad>
         <ServicesFooter />
-      </LazyLoad>
+      </LazyLoad> 
       <TopScroll />
 
       </Box>

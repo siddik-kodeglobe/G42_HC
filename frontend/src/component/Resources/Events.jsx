@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -222,11 +222,12 @@ const Events = () => {
             {data?.map((el) => (
               <SwiperSlide key={el.id} className={style.swiper_slide}>
                 <Box>
+                  <Link _hover={{textDecor: "none"}} href={`/events/${el.id}`}>
                   <Image
                   w={["301px", "301px", "301px", "304px", "391px", "470px"]}
                    height={["275px","275px","214px","276px","357px","428px"]}
                     objectFit={"cover"}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.top_full_width_img.data.attributes.url}`}
                   />
                   <Text
                   fontFamily={"Bossa-Regular"}
@@ -253,6 +254,7 @@ const Events = () => {
                   >
                     {el.attributes.heading}
                   </Text>
+                  </Link>
                 </Box>
               </SwiperSlide>
             ))}

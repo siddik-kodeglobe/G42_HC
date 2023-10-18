@@ -9,10 +9,10 @@ const MainImg_CS = () => {
 
   const getData = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/case-studies/${caseStudyId}?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/resources/${caseStudyId}?populate=*`
     );
     // console.log(res.data.data.attributes.image_FullWidth.data.attributes.url);
-    setData(res.data.data.attributes.image_FullWidth.data.attributes.url);
+    setData(res.data.data.attributes.full_width_img_CS.data.attributes.url);
   };
 
   useEffect(() => {

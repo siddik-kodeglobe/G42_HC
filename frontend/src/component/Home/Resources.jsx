@@ -45,7 +45,7 @@ const Resources = () => {
     const res = await axios.get(
       `${process.env.REACT_APP_BACKEND_URL}/api/resources?populate=*`
     );
-    console.log(res.data.data);
+    // console.log("RESources", res.data.data);
     setData(res.data.data);
   };
 
@@ -83,22 +83,32 @@ const Resources = () => {
     <>
       <Box>
         <Flex
-        w={"100vw"}
-        maxW={"100%"}
-        
-        padding={["80px 20px 25px 20px", "80px 20px 25px 20px", "80px 20px 25px 20px", "84px 3.94% 41px 11.71%", "108px 3.94% 41px 11.71%", "130px 3.94% 41px 11.71%"]}
+          w={"100vw"}
+          maxW={"100%"}
+          padding={[
+            "80px 20px 25px 20px",
+            "80px 20px 25px 20px",
+            "80px 20px 25px 20px",
+            "84px 3.94% 41px 11.71%",
+            "108px 3.94% 41px 11.71%",
+            "130px 3.94% 41px 11.71%",
+          ]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
           <Text
-          fontFamily={"Bossa-ExtendedBold"}
-            fontSize={["24px", "24px","24px", "24px", "27px", "32px"]}
+            fontFamily={"Bossa-ExtendedBold"}
+            fontSize={["24px", "24px", "24px", "24px", "27px", "32px"]}
             fontWeight={700}
             fontStyle={"normal"}
           >
             Resources
           </Text>
-          <Flex display={["none", "none", "flex", "flex"]} alignItems={"center"} gap={5}>
+          <Flex
+            display={["none", "none", "flex", "flex"]}
+            alignItems={"center"}
+            gap={5}
+          >
             <Flex
               onClick={() => goPrev()}
               _hover={{ backgroundColor: "#00D2AA" }}
@@ -146,7 +156,7 @@ const Resources = () => {
         <Box>
           <Swiper
             speed={750}
-            slidesPerView={'auto'}
+            slidesPerView={"auto"}
             breakpoints={{
               390: {
                 // slidesPerView: 1.25,
@@ -171,32 +181,38 @@ const Resources = () => {
                 slidesOffsetBefore: 178,
                 // slidesPerView: 2.75,
                 spaceBetween: 22,
-              }
+              },
             }}
             ref={swiperRef}
+            observer={true}
+            observeParents={true}
             // navigation={true}
             modules={[Navigation]}
             className={style.swiper}
-            observer={true}
-            observeParents={true}
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swiper_slide}>
+                {console.log("SIDDIK ID", el.id, el.attributes.top_full_width_img.data.attributes.url)}
                 <Box
                   // border={"5px solid red"}
-                  h={["214px", "214px","214px", "220px", "284px","351px"]}
+                  h={["214px", "214px", "214px", "220px", "284px", "351px"]}
                   // maxH={["214px", "214px", "338px"]}
-                  w={["285px", "285px", "285px", "294px","380px","456px"]}
+                  w={["285px", "285px", "285px", "294px", "380px", "456px"]}
                   // maxW={["285px", "285px", "425px"]}
-                  backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url})`}
+                  backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.top_full_width_img.data.attributes.url})`}
                   // objectFit={"cover"}
                   backgroundSize={"cover"}
                   position={"relative"}
                 ></Box>
-                  
-                <Box w={["285px", "285px", "285px", "294px","380px","456px"]} position={"absolute"} bottom={5} left={5}>
+
+                <Box
+                  w={["285px", "285px", "285px", "294px", "380px", "456px"]}
+                  position={"absolute"}
+                  bottom={5}
+                  left={5}
+                >
                   <Text
-                  fontFamily={"Bossa-Regular"}
+                    fontFamily={"Bossa-Regular"}
                     color={"white"}
                     fontSize={["10px", "10px", "14px"]}
                     fontWeight={500}
@@ -205,14 +221,14 @@ const Resources = () => {
                     {convertData(el.attributes.createdAt)}
                   </Text>
                   <Text
-                  fontFamily={"Bossa-Medium"}
+                    fontFamily={"Bossa-Medium"}
                     mt={"5px"}
                     maxHeight={"96px"}
                     color={"white"}
                     fontSize={["12px", "12px", "20px"]}
                     fontWeight={500}
                     lineHeight={"normal"}
-                    noOfLines={[2,2,2,3,3,3]}
+                    noOfLines={[2, 2, 2, 3, 3, 3]}
                     w={"90%"}
                     textOverflow={"ellipsis"}
                   >
@@ -224,7 +240,16 @@ const Resources = () => {
           </Swiper>
         </Box>
 
-        <Box padding={["38px 0px 0px 15px", "38px 0px 0px 15px", "38px 0px 0px 15px", "55px 100px 0px 150px", "55px 100px 0px 150px", "55px 100px 0px 150px"]}>
+        <Box
+          padding={[
+            "38px 0px 0px 15px",
+            "38px 0px 0px 15px",
+            "38px 0px 0px 15px",
+            "55px 100px 0px 150px",
+            "55px 100px 0px 150px",
+            "55px 100px 0px 150px",
+          ]}
+        >
           <hr style={{ width: "100%", background: "#004141" }} />
         </Box>
       </Box>

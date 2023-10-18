@@ -12,12 +12,12 @@ const FourImg_CS = () => {
 
   const getData = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/case-studies/${caseStudyId}?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/resources/${caseStudyId}?populate=*`
     );
-    setFirst(res.data.data.attributes.img1_50percentW.data.attributes.url);
-    setSecond(res.data.data.attributes.img2_50percentW.data.attributes.url);
-    setThird(res.data.data.attributes.img3_50percentW.data.attributes.url);
-    setFourth(res.data.data.attributes.img4_50percentW.data.attributes.url);
+    setFirst(res.data.data.attributes.img1_CS.data.attributes.url);
+    setSecond(res.data.data.attributes.img2_CS.data.attributes.url);
+    setThird(res.data.data.attributes.img3_CS.data.attributes.url);
+    setFourth(res.data.data.attributes.img4_CS.data.attributes.url);
     
   };
 

@@ -16,14 +16,17 @@ import plus from "../../assets/Services/icons/plus.svg";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 import blueMotionVideo from "../../assets/backgroundVideo/blueMotionVideo.mp4";
 import { isMobile, isTablet } from "react-device-detect";
+import { useParams } from "react-router-dom";
 
 const Offering = () => {
   const swiperRef = React.useRef(null);
   const [data, setData] = useState([]);
 
+  const {name} = useParams();
+
   const getData = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/offering-services?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/offering-services?filters[tag][$eq]=${name}&populate=*`
     );
     console.log(res.data.data);
     setData(res.data.data);

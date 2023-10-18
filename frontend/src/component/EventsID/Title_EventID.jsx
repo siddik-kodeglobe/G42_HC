@@ -3,13 +3,13 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
-const Title_CS = () => {
-    const {caseStudyId} = useParams();
+const Title_EventID = () => {
+    const {id} = useParams();
     const [data, setData] = useState([]);
     
     const getData = async () => {
         const res = await axios.get(
-          `${process.env.REACT_APP_BACKEND_URL}/api/resources/${caseStudyId}?populate=*`
+          `${process.env.REACT_APP_BACKEND_URL}/api/resources/${id}?populate=*`
         );
         // console.log(res.data.data);
         setData(res.data.data.attributes);
@@ -29,4 +29,4 @@ const Title_CS = () => {
   )
 }
 
-export default Title_CS
+export default Title_EventID

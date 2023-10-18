@@ -13,13 +13,15 @@ import React, { useEffect, useState } from "react";
 import uspImg from "../../assets/temp/services/uspImg.svg";
 import axios from "axios";
 import { MinusIcon, AddIcon } from "@chakra-ui/icons";
+import { useParams } from "react-router-dom";
 
 const USP = () => {
   const [data, setData] = useState([]);
 
+  const {name} = useParams();
   const getData = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/usp-services?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/usp-services?filters[tag][$eq]=${name}&populate=*`
     );
     console.log(res.data.data);
     setData(res.data.data);
@@ -32,6 +34,7 @@ const USP = () => {
   return (
     <>
       <Box
+      display={data.length > 0 ? "block": "none"}
         w={"100vw"}
         maxW={"100%"}
         mt={["80px", "80px", "80px", "81px", "105px", "126px"]}
@@ -84,8 +87,8 @@ const USP = () => {
                                   "16px",
                                   "16px",
                                   "20px",
-                                  "27px",
-                                  "32px",
+                                  "22px",
+                                  "24px",
                                 ]}
                                 fontFamily={"Bossa-Medium"}
                                 fontWeight={isExpanded ? 700 : 400}
@@ -103,12 +106,12 @@ const USP = () => {
                         </h2>
                         <AccordionPanel
                           fontSize={[
+                            "12px",
+                            "12px",
+                            "12px",
+                            "14px",
                             "16px",
-                            "16px",
-                            "16px",
-                            "20px",
-                            "27px",
-                            "32px",
+                            "18px",
                           ]}
                           fontFamily={"Bossa-Light"}
                           pb={4}

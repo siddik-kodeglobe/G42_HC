@@ -13,6 +13,7 @@ import Career from "../component/Careers/Career";
 import AboutUs from "../component/AboutUs_New/AboutUs";
 import Search from "../component/Search/Search";
 import Temp from "../Temp";
+import EventsID from "../component/EventsID/EventsID";
 
 const AllRoutes = () => {
   
@@ -21,10 +22,11 @@ const AllRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services/:name" element={<Services />} />
         <Route path="/news" element={<News/>}/>
         <Route path="/whatwedo" element={<WhatWeDo/>}/>
         <Route path="/resources" element={<Resources/>}/>
+        <Route path="/events/:id" element={<EventsID/>} />
         <Route path="/collaborations" element={<Collaborations/>}/>
         <Route path="/caseStudy/:caseStudyId" element={<CaseStudy/>}/>
         <Route path="/news/:newsId" element={<NewsID/>}/>

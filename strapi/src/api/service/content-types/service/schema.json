@@ -20,11 +20,7 @@
         "images"
       ]
     },
-    "heading": {
-      "type": "string",
-      "required": true
-    },
-    "subHeading": {
+    "desc": {
       "type": "richtext",
       "required": true
     },
@@ -53,6 +49,22 @@
       ]
     },
     "info": {
+      "type": "string",
+      "required": true
+    },
+    "heading": {
+      "type": "enumeration",
+      "enum": [
+        "Omics",
+        "Digital Health",
+        "Advanced Diagnostics",
+        "Pharma & Therapeutics",
+        "IROS",
+        "Environmental Sciences"
+      ],
+      "required": true
+    },
+    "subHeading": {
       "type": "string",
       "required": true
     }

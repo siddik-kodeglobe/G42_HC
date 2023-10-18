@@ -139,37 +139,35 @@ const MeetTeam_AU = () => {
 
         <Swiper
           speed={750}
-          slidesPerView={'auto'}
+          slidesPerView={"auto"}
           breakpoints={{
-            1920: {
-              slidesOffsetBefore: 75.83,
-
-              spaceBetween: 121.34,
+            389: {
+              slidesOffsetBefore: 20,
+              spaceBetween: 24,
+            },
+            768: {
+              slidesOffsetBefore: 20,
+              spaceBetween: 26,
+            },
+            992: {
+              slidesOffsetBefore: 47,
+              spaceBetween: 69,
             },
             1280: {
-              slidesOffsetBefore: 50.55,
-              spaceBetween: 80.89,
+              slidesOffsetBefore: 60,
+              spaceBetween: 89,
             },
-            990: {
-              slidesOffsetBefore: 39.18,
-              spaceBetween: 62.69,
-            },
-            740: {
-              slidesOffsetBefore: 30.33,
-              spaceBetween: 48.43,
-            },
-            390: {
-              slidesOffsetBefore: 18.95,
-
-              spaceBetween: 30.33,
+            1536: {
+              slidesOffsetBefore: 72,
+              spaceBetween: 106,
             },
           }}
           ref={swiperRef}
           // navigation={true}
-          modules={[Navigation]}
-          className={style.swiper}
           observeParents={true}
           observer={true}
+          modules={[Navigation]}
+          className={style.swiper}
         >
           {data?.map((el) => (
             <SwiperSlide

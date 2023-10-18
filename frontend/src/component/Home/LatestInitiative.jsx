@@ -319,7 +319,7 @@ const LatestInitiative = () => {
         {/* slider  */}
         <Flex
           w={"100%"}
-          padding={[
+          margin={[
             "",
             "",
             "36px 3.94% 48px 11.71%",
@@ -332,7 +332,7 @@ const LatestInitiative = () => {
           {/* first container  */}
           <Box
             pos={"relative"}
-            w={"35.59"}
+            w={"30.1%"}
             // w={"30%"}
             mt={["", "", "51px", "51px", "66px", "79px"]}
           >
@@ -411,8 +411,8 @@ const LatestInitiative = () => {
 
           {/* second container  */}
           <Box
-          w={"30.21%"} 
-          // w={"25.47%"} 
+          // w={"30.21%"} 
+          w={["25.47%"]} 
           position={"relative"}>
             <Box id="wrapper2">
               <Image
@@ -491,8 +491,8 @@ const LatestInitiative = () => {
           {/* third container  */}
           <Box
             position={"relative"}
-            // w={"19.74%"}
-            w={"23.41%"}
+            w={"19.74%"}
+            // w={"23.41%"}
             mt={["", "", "122px", "122px", "157px", "187px"]}
           >
             <Box id="wrapper3">

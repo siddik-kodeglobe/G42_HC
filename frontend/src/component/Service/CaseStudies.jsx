@@ -15,16 +15,19 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
+import { useParams } from "react-router-dom";
 
 const CaseStudies = () => {
   const [data, setData] = useState([]);
   const swiperRef = React.useRef(null);
 
+  const {name} = useParams();
+
   const getData = async () => {
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/case-studies?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/resources?filters[tag][$eq]=${name}&filters[category][$eq]=Case%20Studies&populate=*`
     );
-    console.log(res.data.data);
+    console.log("DATA", res.data.data);
     setData(res.data.data);
   };
 
@@ -88,7 +91,7 @@ const CaseStudies = () => {
 
   return (
     <>
-      <Box>
+      <Box display={data.length > 0 ? "block" :"none"}>
         <Box
           mt={["80px", "80px", "80px", "115px", "115px", "115px"]}
           w={"100vw"}
@@ -178,7 +181,7 @@ const CaseStudies = () => {
                       "338px",
                     ]}
                     objectFit={"cover"}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url}`}
+                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.top_full_width_img.data.attributes.url}`}
                   />
                 </Box>
 
@@ -220,7 +223,7 @@ const CaseStudies = () => {
                     textOverflow={"ellipsis"}
                     height={["60px", "60px", "60px", "62px", "80px", "96px"]}
                   >
-                    {el.attributes.title}
+                    {el.attributes.heading}
                   </Text>
                 </Box>
               </Box>

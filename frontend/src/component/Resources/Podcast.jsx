@@ -1,4 +1,4 @@
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -196,10 +196,10 @@ const Podcast = () => {
           </Flex>
         </Flex>
 
-        <Box mt={["15px", "15px", "15px", "52px","52px","52px"]}>
+        <Box mt={["15px", "15px", "15px", "52px", "52px", "52px"]}>
           <Swiper
             speed={750}
-            slidesPerView={'auto'}
+            slidesPerView={"auto"}
             breakpoints={{
               380: {
                 slidesOffsetBefore: 21,
@@ -225,7 +225,7 @@ const Podcast = () => {
                 slidesOffsetBefore: 60,
                 // slidesPerView: 2.75,
                 spaceBetween: 60,
-              }
+              },
             }}
             ref={swiperRef}
             observeParents={true}
@@ -234,51 +234,71 @@ const Podcast = () => {
             className={style.swiper}
           >
             {data?.map((el) => (
-              <SwiperSlide
-                key={el.id}
-                className={style.swiper_slide}
-              >
-                <Box>
-                  <Image
-                  w={["301px", "301px", "301px", "304px", "391px", "470px"]}
-                    height={[
-                      "275px",
-                      "275px",
-                      "214px",
-                      "276px",
-                      "357px",
-                      "428px",
-                    ]}
-                    objectFit={"cover"}
-                    maxW={"100%"}
-                    src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.image.data.attributes.url}`}
-                  />
-                  <Text
-                    fontFamily={"Bossa-Regular"}
-                    noOfLines={1}
-                    color={"#747272"}
-                    fontSize={["9px", "9px", "9.14px", "14px", "11.8px", "14px"]}
-                    fontWeight={500}
-                    lineHeight={"31px"}
-                    textTransform={"capitalize"}
-                  >
-                    {convertData(el.attributes.createdAt)}
-                  </Text>
+              <SwiperSlide key={el.id} className={style.swiper_slide}>
+                <Link _hover={{textDecor: "none"}} target={el.attributes.podcast_link ? "_blank" : null} href={el.attributes.podcast_link ? el.attributes.podcast_link : "#"}>
+                  <Box>
+                    <Image
+                      w={["301px", "301px", "301px", "304px", "391px", "470px"]}
+                      height={[
+                        "275px",
+                        "275px",
+                        "214px",
+                        "276px",
+                        "357px",
+                        "428px",
+                      ]}
+                      objectFit={"cover"}
+                      maxW={"100%"}
+                      src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.top_full_width_img.data.attributes.url}`}
+                    />
+                    <Text
+                      fontFamily={"Bossa-Regular"}
+                      noOfLines={1}
+                      color={"#747272"}
+                      fontSize={[
+                        "9px",
+                        "9px",
+                        "9.14px",
+                        "14px",
+                        "11.8px",
+                        "14px",
+                      ]}
+                      fontWeight={500}
+                      lineHeight={"31px"}
+                      textTransform={"capitalize"}
+                    >
+                      {convertData(el.attributes.createdAt)}
+                    </Text>
 
-                  <Text
-                    fontFamily={"Bossa-ExtendedBold"}
-                    noOfLines={2}
-                  w={["301px", "301px", "301px", "304px", "391px", "470px"]}
-                    maxW={"100%"}
-                    color={"black"}
-                    fontSize={["12px","12px", "12px", "13px", "16px", "20px"]}
-                    fontWeight={700}
-                    lineHeight={["18px","18px","18px","20px","26px","31px"]}
-                    textTransform={"capitalize"}
-                  >
-                    {el.attributes.heading}
-                  </Text>
-                </Box>
+                    <Text
+                      fontFamily={"Bossa-ExtendedBold"}
+                      noOfLines={2}
+                      w={["301px", "301px", "301px", "304px", "391px", "470px"]}
+                      maxW={"100%"}
+                      color={"black"}
+                      fontSize={[
+                        "12px",
+                        "12px",
+                        "12px",
+                        "13px",
+                        "16px",
+                        "20px",
+                      ]}
+                      fontWeight={700}
+                      lineHeight={[
+                        "18px",
+                        "18px",
+                        "18px",
+                        "20px",
+                        "26px",
+                        "31px",
+                      ]}
+                      textTransform={"capitalize"}
+                    >
+                      {el.attributes.heading}
+                    </Text>
+                  </Box>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

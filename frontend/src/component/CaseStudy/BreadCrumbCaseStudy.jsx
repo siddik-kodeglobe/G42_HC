@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Breadcrumb,
@@ -7,9 +7,23 @@ import {
   BreadcrumbSeparator,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const BreadCrumbCaseStudy = () => {
-  const { caseStudyId } = useParams();
+  const {caseStudyId} = useParams();
+    const [data, setData] = useState([]);
+    
+    const getData = async () => {
+        const res = await axios.get(
+          `${process.env.REACT_APP_BACKEND_URL}/api/resources/${caseStudyId}?populate=*`
+        );
+        // console.log(res.data.data);
+        setData(res.data.data.attributes);
+      };
+
+    useEffect(() => {
+        getData();
+    }, []);
   return (
     <>
       <Box w={"100vw"} maxW={"100%"}>
@@ -38,7 +52,7 @@ const BreadCrumbCaseStudy = () => {
             fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             isCurrentPage
           >
-            <BreadcrumbLink href="#">Title</BreadcrumbLink>
+            <BreadcrumbLink href="#">{data.heading}</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       </Box>

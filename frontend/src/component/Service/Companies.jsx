@@ -13,17 +13,19 @@ import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const Companies = () => {
   const [data, setData] = useState([]);
   const swiperRef = React.useRef(null);
 
+  const {name} = useParams();
   const getData = async () => {
     // console.log(`${process.env.REACT_APP_BACKEND_URL}/api/services-companies?populate=*`);
     const res = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/api/services-companies?populate=*`
+      `${process.env.REACT_APP_BACKEND_URL}/api/services-companies?filters[tag][$eq]=${name}&populate=*`
     );
-    console.log(res.data.data);
+    // console.log(res.data.data);
     setData(res.data.data);
   };
 
@@ -34,72 +36,69 @@ const Companies = () => {
   return (
     <>
       <Box
+      display={data.length > 0 ? "block" : "none"}
         backgroundColor={"#174042"}
         w={"100vw"}
         maxW={"100%"}
         borderTop={"1px solid #00D2AA"}
       >
         <Box padding={"5.26% 2.64% 0% 4.27%"}>
-        <Text
-        fontFamily={"Bossa-ExtendedBold"}
-          color={"white"}
-          fontSize={["24px", "24px", "24px", "31px", "40px", "48px"]}
-          fontWeight={400}
-          lineHeight={"normal"}
-        >
-          Companies
-        </Text>
+          <Text
+            fontFamily={"Bossa-ExtendedBold"}
+            color={"white"}
+            fontSize={["24px", "24px", "24px", "31px", "40px", "48px"]}
+            fontWeight={400}
+            lineHeight={"normal"}
+          >
+            Companies
+          </Text>
         </Box>
 
         <Box paddingTop={["20px", "29px"]} paddingBottom={["80px", "92px"]}>
           <Swiper
-          speed={750}
-          breakpoints={{
-            1900: {
-              slidesOffsetBefore: 75.83,
-              slidesPerView: 3.5,
-              spaceBetween: 121.34,
-            },
-            1250: {
-              slidesOffsetBefore: 50.55,
-              slidesPerView: 3,
-              spaceBetween: 80.89,
-            },
-            990: {
-              slidesOffsetBefore: 39.18,
-              slidesPerView: 3,
-              spaceBetween: 62.69,
-            },
-            740: {
-              slidesOffsetBefore: 30.33,
-              slidesPerView: 2,
-              spaceBetween: 48.43,
-            },
-            390: {
-              slidesOffsetBefore: 18.95,
-              slidesPerView: 1.25,
-              spaceBetween: 30.33,
-            },
-          }}
-          observeParents
-          observer
+            speed={750}
+            slidesPerView={"auto"}
+            breakpoints={{
+              1536: {
+                slidesOffsetBefore: 65,
+                spaceBetween: 121.34,
+              },
+              1280: {
+                slidesOffsetBefore: 50.55,
+                spaceBetween: 80.89,
+              },
+              992: {
+                slidesOffsetBefore: 39.18,
+                spaceBetween: 62.69,
+              },
+              768: {
+                slidesOffsetBefore: 30.33,
+                spaceBetween: 48.43,
+              },
+              390: {
+                slidesOffsetBefore: 18.95,
+                spaceBetween: 30.33,
+              },
+            }}
+            observeParents
+            observer
             ref={swiperRef}
             // navigation={true}
             modules={[Navigation]}
             className={style.swiper}
           >
             {data?.map((el, ind) => (
-              <SwiperSlide style={{w: "30%"}} className={style.swipe_slide}>
+              <SwiperSlide className={style.swiper_slide}>
                 <Box
                   position={"relative"}
                   backgroundColor={"#396767"}
                   // border={"1px solid cyan"}
-                  w={"100%"}
-                  h={["378px", "378px", "561px"]}
+                  w={["292px", "292px", "292px", "289px", "373px", "443px"]}
+                  h={["378px", "378px","378px","366px", "472px", "561px"]}
                 ></Box>
 
                 <Text
-                fontFamily={"Bossa-Bold"}
+                  fontFamily={"Bossa-Bold"}
                   position={"absolute"}
                   bottom={"64px"}
                   left={"25%"}
@@ -114,7 +113,7 @@ const Companies = () => {
                 </Text>
 
                 <Text
-                fontFamily={"Bossa-Regular"}
+                  fontFamily={"Bossa-Regular"}
                   position={"absolute"}
                   top={"15px"}
                   left={"25px"}
@@ -125,7 +124,7 @@ const Companies = () => {
                   fontWeight={700}
                   lineHeight={"normal"}
                 >
-                  {ind+1}
+                  {ind + 1}
                 </Text>
               </SwiperSlide>
             ))}

@@ -93,7 +93,7 @@ const MeetUs = () => {
         position={"relative"}
       >
         <Box
-          height={isMobile ? "492px" : isTablet ? "500px" : "815px"}
+          height={isMobile ? "475px" : isTablet ? "500px" : "815px"}
           zIndex={-10}
           position={"relative"}
           mt={["80px"]}

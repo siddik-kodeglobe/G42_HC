@@ -16,7 +16,7 @@ import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 import { isMobile, isTablet } from "react-device-detect";
 
-const Home_VideoSection = () => {
+const Home_VideoSection = ({name}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -63,7 +63,7 @@ const Home_VideoSection = () => {
             textTransform={"capitalize"}
             fontWeight={700}
           >
-            Omics
+            {name}
           </Text>
         </Box>
 

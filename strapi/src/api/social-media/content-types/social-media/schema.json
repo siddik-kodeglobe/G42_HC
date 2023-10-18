@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
     "image": {
       "type": "media",
       "multiple": false,

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "resource",
     "pluralName": "resources",
-    "displayName": "Resource"
+    "displayName": "Resource",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,9 +16,9 @@
       "type": "string",
       "required": true
     },
-    "content": {
+    "content_1": {
       "type": "richtext",
-      "required": true
+      "required": false
     },
     "category": {
       "type": "enumeration",
@@ -30,13 +31,72 @@
       ],
       "required": true
     },
-    "image": {
-      "allowedTypes": [
-        "images"
-      ],
+    "top_full_width_img": {
       "type": "media",
       "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "Omics",
+        "Digital Health",
+        "Advanced Diagnostics",
+        "Pharma & Therapeutics",
+        "IROS",
+        "Environmental Sciences",
+        "NA"
+      ],
       "required": true
+    },
+    "content_2_CS": {
+      "type": "richtext"
+    },
+    "full_width_img_CS": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img1_CS": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img2_CS": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img3_CS": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "img4_CS": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "podcast_link": {
+      "type": "string"
     }
   }
 }

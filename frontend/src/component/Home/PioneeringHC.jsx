@@ -18,6 +18,12 @@ const PioneeringHC = () => {
   const sectionRef3 = useRef(null);
   const sectionRef4 = useRef(null);
 
+  // Animation L2R
+  const sectionRef1_L2R = useRef(null);
+  const sectionRef2_L2R = useRef(null);
+  const sectionRef3_L2R = useRef(null);
+  const sectionRef4_L2R = useRef(null);
+
   useEffect(() => {
     gsap.registerPlugin(SplitText);
 
@@ -33,10 +39,29 @@ const PioneeringHC = () => {
     let split4;
     let t4;
 
+    // Animation L2R
+    let split1_L2R;
+    let t1_L2R;
+
+    let split2_L2R;
+    let t2_L2R;
+
+    let split3_L2R;
+    let t3_L2R;
+
+    let split4_L2R;
+    let t4_L2R;
+
     const sectionElement1 = sectionRef1.current;
     const sectionElement2 = sectionRef2.current;
     const sectionElement3 = sectionRef3.current;
     const sectionElement4 = sectionRef4.current;
+
+    // Animation L2R
+    const sectionElement1_L2R = sectionRef1_L2R.current;
+    const sectionElement2_L2R = sectionRef2_L2R.current;
+    const sectionElement3_L2R = sectionRef3_L2R.current;
+    const sectionElement4_L2R = sectionRef4_L2R.current;
 
     function init() {
       gsap.set(".box1_phc", { autoAlpha: 1 });
@@ -147,7 +172,7 @@ const PioneeringHC = () => {
 
       t4 = gsap.timeline({
         scrollTrigger: {
-          trigger: sectionElement4,
+          trigger: sectionElement1,
           start: "bottom center+=50%",
           // end: 'bottom center',
           scrub: false, // Smoothly transition the animation
@@ -164,6 +189,118 @@ const PioneeringHC = () => {
         );
         t4.to(chars4, { duration: 0.3, yPercent: 7, stagger: 0.005 }, ">-40%");
       });
+
+      // ================  Text1 L2R Fade ================
+      gsap.set(".box1_L2R", { autoAlpha: 1 }); //remove fouc
+      split1_L2R = new SplitText(".text1_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+      const split1a_L2R = new SplitText(".text1a_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+
+      t1_L2R = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionElement1_L2R,
+          start: "bottom center+=50%",
+          // end: 'bottom center',
+          scrub: false, // Smoothly transition the animation
+          markers: false, // Remove this in production
+        },
+      });
+
+      const a = gsap.timeline();
+      a.from(split1_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      const b = gsap.timeline();
+      b.from(split1a_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      t1_L2R.add([a, b]);
+      // GSDevTools.create({ animation: t2_L2R });
+
+      // ================ Text2 L2R Fade ================
+      gsap.set(".box2_L2R", { autoAlpha: 1 }); //remove fouc
+      split2_L2R = new SplitText(".text2_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+      const split2a_L2R = new SplitText(".text2a_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+
+      t2_L2R = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionElement2_L2R,
+          start: "bottom center+=50%",
+          // end: 'bottom center',
+          scrub: false, // Smoothly transition the animation
+          markers: false, // Remove this in production
+        },
+      });
+
+      const c = gsap.timeline();
+      c.from(split2_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      const d = gsap.timeline();
+      d.from(split2a_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      t2_L2R.add([c, d]);
+      // GSDevTools.create({ animation: t2_L2R });
+
+      // ================ Text3 L2R Fade ================
+      gsap.set(".box3_L2R", { autoAlpha: 1 }); //remove fouc
+      split3_L2R = new SplitText(".text3_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+      const split3a_L2R = new SplitText(".text3a_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+
+      t3_L2R = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionElement3_L2R,
+          start: "bottom center+=50%",
+          // end: 'bottom center',
+          scrub: false, // Smoothly transition the animation
+          markers: false, // Remove this in production
+        },
+      });
+
+      const e = gsap.timeline();
+      e.from(split3_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      const f = gsap.timeline();
+      f.from(split3a_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      t3_L2R.add([e, f]);
+      // GSDevTools.create({ animation: t2_L2R });
+
+      // ================ Text4 L2R Fade ================
+      gsap.set(".box4_L2R", { autoAlpha: 1 }); //remove fouc
+      split4_L2R = new SplitText(".text4_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+      const split4a_L2R = new SplitText(".text4a_L2R", {
+        charsClass: "chars",
+        linesClass: "lines",
+      });
+
+      t4_L2R = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionElement4_L2R,
+          start: "bottom center+=50%",
+          // end: 'bottom center',
+          scrub: false, // Smoothly transition the animation
+          markers: false, // Remove this in production
+        },
+      });
+
+      const g = gsap.timeline();
+      g.from(split4_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      const h = gsap.timeline();
+      h.from(split4a_L2R.chars, { duration: 1, opacity: 0, stagger: 0.05 });
+      t4_L2R.add([g, h]);
+      // GSDevTools.create({ animation: t4_L2R });
     }
 
     let timeout; // holder for timeout id
@@ -243,27 +380,48 @@ const PioneeringHC = () => {
 
   return (
     <>
-      <Box w={"100vw"} maxW={"100%"} mt={["79px", "79px","79px", "81px", "105px", "125px"]}>
+      <Box
+        w={"100vw"}
+        maxW={"100%"}
+        mt={["79px", "79px", "79px", "81px", "105px", "125px"]}
+      >
         <Text
           fontFamily={"Bossa-ExtendedBold"}
-          fontSize={["32px", "32px","32px", "32px", "40px", "48px"]}
+          fontSize={["32px", "32px", "32px", "32px", "40px", "48px"]}
           lineHeight={"normal"}
           className={style.heading}
         >
           Pioneering Healthcare
         </Text>
-        <Box  padding={["60px 20px 0px 20px","60px 20px 0px 20px","60px 20px 0px 20px", "60px 11.71% 0px 11.71%","50px 11.71% 0px 11.71%","60px 11.71% 0px 11.71%",]}>
-          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]}>
-            <Box w={["100%","100%","100%", "50%","50%","50%"]} padding={"0px 0px"}>
-              <Text className={style.text1}>
+        <Box
+          padding={[
+            "60px 20px 0px 20px",
+            "60px 20px 0px 20px",
+            "60px 20px 0px 20px",
+            "60px 11.71% 0px 11.71%",
+            "50px 11.71% 0px 11.71%",
+            "60px 11.71% 0px 11.71%",
+          ]}
+        >
+          <Flex
+            gap={["20px", "20px", "10px", "0px"]}
+            flexDirection={["column", "column", "row"]}
+          >
+            <Box
+              ref={sectionRef1_L2R}
+              className={`box1_L2R ${isVisible ? "visible" : "hidden"}`}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+              padding={"0px 0px"}
+            >
+              <Text w={"100%"} className={`${style.text1} text1_L2R`}>
                 1<sup>st</sup> COVID Lab
               </Text>
-              <Text className={style.text2}>Biogenix</Text>
+              <Text className={`${style.text2} text1a_L2R`}>Biogenix</Text>
             </Box>
             <Box
               ref={sectionRef1}
               className={`box1_phc demo ${isVisible ? "visible" : "hidden"}`}
-              w={["100%","100%","100%", "50%","50%","50%"]}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text1_phc`}>
@@ -274,17 +432,29 @@ const PioneeringHC = () => {
             </Box>
           </Flex>
           <hr />
-          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]} marginTop={"41px"}>
-            <Box w={"100%"} padding={"0px 0px"}>
-              <Text className={style.text1}>
+          <Flex
+            gap={["20px", "20px", "10px", "0px"]}
+            flexDirection={["column", "column", "row"]}
+            marginTop={"41px"}
+          >
+            <Box
+              ref={sectionRef2_L2R}
+              className={`box2_L2R ${isVisible ? "visible" : "hidden"}`}
+              section={sectionRef2_L2R}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+              padding={"0px 0px"}
+            >
+              <Text w={"100%"} className={`${style.text1} text2_L2R`}>
                 1<sup>st</sup> Omics Facility in the Region
               </Text>
-              <Text className={style.text2}>Omics Center of Intelligence</Text>
+              <Text w={"100%"} className={`${style.text2} text2a_L2R`}>
+                Omics Center of Intelligence
+              </Text>
             </Box>
             <Box
               ref={sectionRef2}
               className={`box2_phc demo ${isVisible ? "visible" : "hidden"}`}
-              w={"100%"}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text2_phc`}>
@@ -296,17 +466,27 @@ const PioneeringHC = () => {
           </Flex>
           <hr />
 
-          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]} marginTop={"41px"}>
-            <Box w={"100%"} padding={"0px 0px"}>
-              <Text className={style.text1}>
+          <Flex
+            gap={["20px", "20px", "10px", "0px"]}
+            flexDirection={["column", "column", "row"]}
+            marginTop={"41px"}
+          >
+            <Box
+              ref={sectionRef3_L2R}
+              className={`box3_L2R ${isVisible ? "visible" : "hidden"}`}
+              section={sectionRef3_L2R}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+              padding={"0px 0px"}
+            >
+              <Text className={`${style.text1} text3_L2R`}>
                 1<sup>st</sup> Waste Water Lab
               </Text>
-              <Text className={style.text2}>RASID</Text>
+              <Text className={`${style.text2} text3a_L2R`}>RASID</Text>
             </Box>
             <Box
               ref={sectionRef3}
               className={`box3_phc demo ${isVisible ? "visible" : "hidden"}`}
-              w={"100%"}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text3_phc`}>
@@ -318,17 +498,29 @@ const PioneeringHC = () => {
           </Flex>
           <hr />
 
-          <Flex gap={["20px", "20px", "10px","0px"]} flexDirection={["column", "column", "row"]} marginTop={"41px"}>
-            <Box w={"100%"} padding={"0px 0px"}>
-              <Text className={style.text1}>
+          <Flex
+            gap={["20px", "20px", "10px", "0px"]}
+            flexDirection={["column", "column", "row"]}
+            marginTop={"41px"}
+          >
+            <Box
+              ref={sectionRef4_L2R}
+              className={`box4_L2R ${isVisible ? "visible" : "hidden"}`}
+              // section={sectionRef4_L2R}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+              padding={"0px 0px"}
+            >
+              <Text className={`${style.text1} text4_L2R`}>
                 1<sup>st</sup> clinical trial pan MENA region
               </Text>
-              <Text className={style.text2}>4Humanity trial Diagnostics</Text>
+              <Text className={`${style.text2} text4a_L2R`}>
+                4Humanity trial Diagnostics
+              </Text>
             </Box>
             <Box
               ref={sectionRef4}
               className={`box4_phc demo ${isVisible ? "visible" : "hidden"}`}
-              w={"100%"}
+              w={["100%", "100%", "100%", "50%", "50%", "50%"]}
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text4_phc`}>

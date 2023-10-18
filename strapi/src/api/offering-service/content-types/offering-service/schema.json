@@ -21,7 +21,15 @@
       "required": true
     },
     "tag": {
-      "type": "string",
+      "type": "enumeration",
+      "enum": [
+        "Omics",
+        "Digital Health",
+        "Advanced Diagnostics",
+        "Pharma & Therapeutics",
+        "IROS",
+        "Environmental Sciences"
+      ],
       "required": true
     }
   }

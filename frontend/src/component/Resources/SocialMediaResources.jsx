@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
@@ -240,6 +240,7 @@ const SocialMedia = () => {
             {data?.map((el) => (
               <SwiperSlide className={style.swiper_slide}>
                 <Box>
+                  <Link _hover={{textDecor: "none"}} target={el.attributes.link ? "_blank" : null} href={el.attributes.link ? el.attributes.link : null}>
                   <Image
                   w={["301px", "301px", "301px", "304px", "391px", "470px"]}
                     height={"auto"}
@@ -296,6 +297,7 @@ const SocialMedia = () => {
                   >
                     {el.attributes.Heading}
                   </Text>
+                  </Link>
                 </Box>
               </SwiperSlide>
             ))}

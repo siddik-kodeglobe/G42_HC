@@ -15,6 +15,7 @@ import LatestInitiative from "./LatestInitiative";
 import Footer_AU from "../AboutUs_New/Footer_AU";
 
 import LazyLoad from 'react-lazy-load';
+import NewOurServices from "./NewOurServices";
 
 const Home = () => {
   return (
@@ -41,7 +42,8 @@ const Home = () => {
         </LazyLoad>
 
         <LazyLoad>
-          <OurServices />
+          {/* <OurServices /> */}
+          <NewOurServices/>
         </LazyLoad>
 
         <LazyLoad>
