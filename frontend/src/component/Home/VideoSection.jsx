@@ -81,7 +81,7 @@ const VideoSection = () => {
               </Text>
               <Text
                 fontFamily={"Bossa-ExtendedBold"}
-                w={["100%", "100%","100%", "75%", "75%", "75%"]}
+                w={["100%", "100%","100%", "90%", "90%", "90%"]}
                 textShadow={"0px 4px 30px rgba(0, 65, 65, 0.27)"}
                 color={"white"}
                 fontSize={["32px", "32px", "32px", "52px", "67px", "80px"]}
@@ -90,7 +90,7 @@ const VideoSection = () => {
                 letterSpacing={"-0.72px"}
                 lineHeight={"normal"}
               >
-                Company Tagline max 3-4 words
+                	Invent better healthcare every day
               </Text>
             </Box>
           </Flex>

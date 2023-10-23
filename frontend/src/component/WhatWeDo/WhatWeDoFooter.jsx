@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 const WhatWeDoFooter = () => {
   return (
     <div>
-      <Box w={"100vw"} maxW={"100%"}>
+      <Box padding={["29px 20px 18px 20px","29px 20px 18px 20px","29px 20px 18px 20px", "0px 11.71% 35px 11.71%","0px 11.71% 35px 11.71%","0px 11.71% 35px 11.71%"]} w={"100vw"} maxW={"100%"}>
         <Flex
           flexDirection={["column", "column","column", "row", "row", "row", ]}
           alignItems={["start", "start", "start", "start"]}
@@ -38,15 +38,8 @@ const WhatWeDoFooter = () => {
           </Button>
         </Flex>
 
-        <hr
-          style={{
-            width: "100vw",
-            maxWidth: "100%",
-            border: "1px solid #D9D9D9",
-            marginBottom:"67px"
-          }}
-        />
-
+      <Box marginBottom={"67px"} border={"1px solid #D9D9D9"} w={"100%"}></Box>
+       
 
         <Footer />  
       </Box>

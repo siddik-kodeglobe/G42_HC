@@ -2,6 +2,7 @@ import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
 // "swiper": "^10.0.4",
 
 // Import GSAP
@@ -28,6 +29,7 @@ const NewOurServices = () => {
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
+      animR2L();
     }
     // console.log(swiperRef.current.swiper);
   };
@@ -35,6 +37,7 @@ const NewOurServices = () => {
   const goPrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
+      animL2R();
     }
   };
 
@@ -376,31 +379,40 @@ const NewOurServices = () => {
       thirdImgRef.current = thirdImg;
 
       // initial Image
-      setFirstImg(data[previousSlideIndex].attributes.thumbnail.data.attributes.url);
-      setSecondImg(data[activeSlideIndex].attributes.thumbnail.data.attributes.url);
-      setThirdImg(data[nextSlideIndex].attributes.thumbnail.data.attributes.url);
-      
-      if(swiperRef.current.swiper.touches.diff < 0){
-        animR2L()
-      }
-      else{
-        animL2R()
-      }
+      setFirstImg(
+        data[previousSlideIndex].attributes.thumbnail.data.attributes.url
+      );
+      setSecondImg(
+        data[activeSlideIndex].attributes.thumbnail.data.attributes.url
+      );
+      setThirdImg(
+        data[nextSlideIndex].attributes.thumbnail.data.attributes.url
+      );
 
+      if (swiperRef.current.swiper.touches.diff < 0) {
+        animR2L();
+      } else {
+        animL2R();
+      }
 
       setSecondInfo(data[activeSlideIndex].attributes.info);
     }
   };
 
+  // const swiper = useSwiper();
+  // const swiperRef = React.useRef(null);
+
+
   return (
     <>
       <Box
-      display={["none","none","none","none","block","block"]}
+        position={"relative"}
         mt={"125px"}
         backgroundColor={"#F8F8F8"}
         overflow={"hidden"}
         w={"100vw"}
         maxW={"100%"}
+        h={["650px", "800px", "800px", "800px", "800px", "800px"]}
       >
         {/* OUR SERVICES TITLE  */}
 
@@ -413,12 +425,12 @@ const NewOurServices = () => {
           Our Services
         </Text>
         {/* slider container  */}
-        <Box position={"relative"} w={"100%"} h={["800px"]} mt={["57px"]}>
+        <Box position={"relative"} w={"100%"} h={["100%"]} mt={["57px"]}>
           <Swiper
             loop={true}
             // loopedSlides={50}
             speed={750}
-            spaceBetween={"1px"}
+            spaceBetween={"25px"}
             slidesPerView={"auto"}
             ref={swiperRef}
             onSlideChange={handleSlideChange}
@@ -427,28 +439,39 @@ const NewOurServices = () => {
             observer={true}
             modules={[Navigation, FreeMode]}
             className={style.swiper}
-            initialSlide={1}
+            // initialSlide={1}
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swiper_slide}>
-                <Link _hover={{textDecor: "none"}} href={`/services/${el.attributes.heading}`}>
-                <Box
-                  margin={"auto"}
-                  //   border={"1px"}
-                  backgroundSize={"cover"}
-                  w={["40vw"]}
-                  h={["auto"]}
-                  //   backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`}
-                  position={"relative"}
+                <Link
+                  _hover={{ textDecor: "none" }}
+                  href={`/services/${el.attributes.heading}`}
                 >
-                  <Text
-                    fontSize={["48px"]}
-                    fontFamily={"Bossa-ExtendedBold"}
-                    textAlign={"center"}
+                  <Box
+                    margin={"auto"}
+                    //   border={"1px"}
+                    backgroundSize={"cover"}
+                    w={["100vw", "100vw", "100vw", "45vw", "45vw", "45vw"]}
+                    maxW={"100%"}
+                    h={["auto"]}
+                    //   backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`}
+                    position={"relative"}
                   >
-                    {el.attributes.heading}
-                  </Text>
-                </Box>
+                    <Text
+                      fontSize={[
+                        "32px",
+                        "32px",
+                        "32px",
+                        "31px",
+                        "40px",
+                        "48px",
+                      ]}
+                      fontFamily={"Bossa-ExtendedBold"}
+                      textAlign={"center"}
+                    >
+                      {el.attributes.heading}
+                    </Text>
+                  </Box>
                 </Link>
               </SwiperSlide>
             ))}
@@ -456,19 +479,22 @@ const NewOurServices = () => {
 
           {/* fixed images and title container */}
           <Flex
+            // border={"1px solid red"}
             flexWrap={"nowrap"}
             position={"absolute"}
             left={0}
             right={0}
-            top={"125px"}
+            top={["29px", "40px", "50px", "125px", "125px", "125px"]}
+            bottom={0}
             w={"100%"}
-            gap={"10%"}
+            gap={["0px", "10%", "5%", "10%", "12%", "16%"]}
             padding={["0px 0px 46px 0px"]}
           >
             {/* 1st Image  */}
             <Box
+              display={["none", "none", "none", "block", "block", "block"]}
               marginTop={"-51px"}
-              marginLeft={"-3.29%"}
+              marginLeft={["0px", "0px", "0px", "-11.5%", "-11.5%", "-11.5%"]}
               overflow={"hidden"}
               backgroundColor={"#F8F8F8"}
               pos={"relative"}
@@ -482,7 +508,14 @@ const NewOurServices = () => {
                   alt=""
                   borderRadius={["14px"]}
                   width={["100%"]}
-                  height={["331px"]}
+                  height={[
+                    "235px",
+                    "235px",
+                    "235px",
+                    "216px",
+                    "278px",
+                    "331px",
+                  ]}
                   objectFit={"cover"}
                 />
               </Box>
@@ -515,7 +548,14 @@ const NewOurServices = () => {
                     id="top"
                     w={["100%"]}
                     objectFit={"cover"}
-                    h={["331px"]}
+                    height={[
+                      "235px",
+                      "235px",
+                      "235px",
+                      "216px",
+                      "278px",
+                      "331px",
+                    ]}
                     borderRadius={"14px"}
                   />
                 </Box>
@@ -524,11 +564,19 @@ const NewOurServices = () => {
 
             {/* 2nd Container  */}
             <Box
+              // top={["29px", "125px"]}
               pos={"relative"}
               mt={"25.65px"}
-              // padding={"10px"}
+              padding={[
+                "0px 20px 0px 20px",
+                "0px 20px 0px 20px",
+                "0px 20px 0px 20px",
+                "0px",
+                "0px",
+                "0px",
+              ]}
+              w={["100%", "100%", "100%", "34.49%", "34.49%", "34.49%"]}
               borderRadius={"20px"}
-              w={"34.49%"}
               // h={"316px"}
             >
               <Box id="wrapper2">
@@ -537,7 +585,7 @@ const NewOurServices = () => {
                   alt=""
                   borderRadius={["14px"]}
                   w={["100%"]}
-                  height={["350px"]}
+                  height={["235px", "350px"]}
                   objectFit={"cover"}
                 />
               </Box>
@@ -547,8 +595,12 @@ const NewOurServices = () => {
                 ref={outerRef2}
                 pos={"absolute"}
                 top={"0px"}
+                left={0}
+                right={0}
                 overflow={"hidden"}
                 w={["100%"]}
+                // padding={["20px", "20px", "20px", "0px", "0px", "0px"]}
+
                 // h={["206px"]}
                 objectFit={"cover"}
                 visibility={"hidden"}
@@ -558,6 +610,14 @@ const NewOurServices = () => {
                   id="inner2"
                   ref={innerRef2}
                   w={["100%"]}
+                  padding={[
+                    "0px 20px 0px 20px",
+                    "0px 20px 0px 20px",
+                    "0px 20px 0px 20px",
+                    "0px",
+                    "0px",
+                    "0px",
+                  ]}
                   // h={["206px"]}
                   objectFit={"cover"}
                   visibility={"hidden"}
@@ -569,7 +629,7 @@ const NewOurServices = () => {
                     id="top2"
                     borderRadius={["14px"]}
                     w={["100%"]}
-                    h={["350px"]}
+                    h={["235px", "350px"]}
                     objectFit={"cover"}
                   />
                 </Box>
@@ -592,8 +652,9 @@ const NewOurServices = () => {
 
             {/* 3rd Container  */}
             <Box
+              display={["none", "none", "none", "block", "block", "block"]}
               mt={"121px"}
-              marginRight={"-3.29%"}
+              marginRight={"-11.5%"}
               // overflow={"hidden"}
               pos={"relative"}
               // padding={"10px"}
@@ -646,6 +707,27 @@ const NewOurServices = () => {
             </Box>
           </Flex>
         </Box>
+        {/* Mobile Nav BTN  */}
+        <Flex
+          w={"100vw"}
+          maxW={"100%"}
+          gap={"6px"}
+          position={"absolute"}
+          bottom={"15px"}
+          left={0}
+          right={0}
+          justifyContent={"center"}
+          zIndex={2}
+          alignItems={"center"}
+          display={["flex", "flex", "flex", "none", "none", "none"]}
+        >
+          <Box onClick={() => goPrev()} borderRadius={"50%"} border={"1px dashed black"}>
+            <ArrowBackIcon color={"black"} w={12} h={12} padding={"10px"} />
+          </Box>
+          <Box  onClick={() => goNext()} borderRadius={"50%"} border={"1px dashed black"}>
+            <ArrowForwardIcon color={"black"} w={12} h={12} padding={"10px"} />
+          </Box>
+        </Flex>
       </Box>
     </>
   );

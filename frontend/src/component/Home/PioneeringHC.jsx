@@ -414,9 +414,10 @@ const PioneeringHC = () => {
               padding={"0px 0px"}
             >
               <Text w={"100%"} className={`${style.text1} text1_L2R`}>
-                1<sup>st</sup> COVID Lab
+                {/* 1<sup>st</sup> COVID Lab */}
+                Part of a Global Tech enabled healthcare company
               </Text>
-              <Text className={`${style.text2} text1a_L2R`}>Biogenix</Text>
+              {/* <Text className={`${style.text2} text1a_L2R`}>Biogenix</Text> */}
             </Box>
             <Box
               ref={sectionRef1}
@@ -425,9 +426,11 @@ const PioneeringHC = () => {
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text1_phc`}>
-                venenatis efficitur. elementum sollicitudin. ex. varius
-                facilisis turpis Nullam vitae elit. vel quis sodales. risus
-                massa volutpat nulla, non non nulla, lacus vel quis
+                G42 Healthcare’s unique medical and data-centric technologies
+                with Mubadala Health’s world-class patient services and
+                state-of-the-art facilities have come together under M42, to
+                provide the highest level of personalized, precise, and
+                preventative care
               </Text>
             </Box>
           </Flex>
@@ -445,11 +448,12 @@ const PioneeringHC = () => {
               padding={"0px 0px"}
             >
               <Text w={"100%"} className={`${style.text1} text2_L2R`}>
-                1<sup>st</sup> Omics Facility in the Region
+                {/* 1<sup>st</sup> Omics Facility in the Region */}
+                Digital Innovation
               </Text>
-              <Text w={"100%"} className={`${style.text2} text2a_L2R`}>
+              {/* <Text w={"100%"} className={`${style.text2} text2a_L2R`}>
                 Omics Center of Intelligence
-              </Text>
+              </Text> */}
             </Box>
             <Box
               ref={sectionRef2}
@@ -458,9 +462,12 @@ const PioneeringHC = () => {
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text2_phc`}>
-                venenatis efficitur. elementum sollicitudin. ex. varius
-                facilisis turpis Nullam vitae elit. vel quis sodales. risus
-                massa volutpat nulla, non non nulla, lacus vel quis
+              Our digital innovation sparks a revolutionary step in patient experience by develop
+applications accessible to better public health. The launch of M42’s X-ray screening
+machine, cutting-edge pharmacogenomics report, HealthSight analytics platform,
+and first-open-sourced Clinical LLM has firmly positioned M42 as a global pioneer in
+the generative AI domain while improving accuracy and efficiency in clinical
+workflow.
               </Text>
             </Box>
           </Flex>
@@ -479,9 +486,10 @@ const PioneeringHC = () => {
               padding={"0px 0px"}
             >
               <Text className={`${style.text1} text3_L2R`}>
-                1<sup>st</sup> Waste Water Lab
+                {/* 1<sup>st</sup> Waste Water Lab */}
+                Leading Omics facility in the region
               </Text>
-              <Text className={`${style.text2} text3a_L2R`}>RASID</Text>
+              {/* <Text className={`${style.text2} text3a_L2R`}>RASID</Text> */}
             </Box>
             <Box
               ref={sectionRef3}
@@ -490,9 +498,10 @@ const PioneeringHC = () => {
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text3_phc`}>
-                venenatis efficitur. elementum sollicitudin. ex. varius
-                facilisis turpis Nullam vitae elit. vel quis sodales. risus
-                massa volutpat nulla, non non nulla, lacus vel quis
+              Our Omics Centre of Excellence democratizes access to population genomic
+sequencing and proteomics. By leveraging world-class technology and AI, we
+transform biological samples into insightful, actionable data, advancing healthcare
+and population health programs.
               </Text>
             </Box>
           </Flex>
@@ -511,11 +520,12 @@ const PioneeringHC = () => {
               padding={"0px 0px"}
             >
               <Text className={`${style.text1} text4_L2R`}>
-                1<sup>st</sup> clinical trial pan MENA region
+                {/* 1<sup>st</sup> clinical trial pan MENA region */}
+                Pioneering Waste Water Lab
               </Text>
-              <Text className={`${style.text2} text4a_L2R`}>
+              {/* <Text className={`${style.text2} text4a_L2R`}>
                 4Humanity trial Diagnostics
-              </Text>
+              </Text> */}
             </Box>
             <Box
               ref={sectionRef4}
@@ -524,9 +534,10 @@ const PioneeringHC = () => {
               padding={["0px", "0px", "0px 20px", "0px 20px"]}
             >
               <Text className={`${style.desc} text4_phc`}>
-                venenatis efficitur. elementum sollicitudin. ex. varius
-                facilisis turpis Nullam vitae elit. vel quis sodales. risus
-                massa volutpat nulla, non non nulla, lacus vel quis
+              RASID lab pioneers in wastewater surveillance, monitoring infectious diseases, and
+safeguarding public health. Through advanced AI applications, we predict outbreaks,
+optimising the allocation of national resources	, and supporting public health
+outcomes.
               </Text>
             </Box>
           </Flex>

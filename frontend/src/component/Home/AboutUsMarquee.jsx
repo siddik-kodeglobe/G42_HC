@@ -155,9 +155,16 @@ const AboutUsMarquee = () => {
 
   return (
     <>
-      <Box w={"100vw"} maxW={"100%"} mt={["18px", "18px","18px", "18px", "20px", "21px"]}>
+      <Box
+        w={"100vw"}
+        maxW={"100%"}
+        mt={["18px", "18px", "18px", "18px", "20px", "21px"]}
+      >
         <Marquee autoFill>
-          <Flex alignItems={"center"} gap={["29px", "29px", "29px", "34px", "34px", "34px"]}>
+          <Flex
+            alignItems={"center"}
+            gap={["29px", "29px", "29px", "34px", "34px", "34px"]}
+          >
             <hr
               style={{
                 width: "88px",
@@ -169,7 +176,7 @@ const AboutUsMarquee = () => {
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               textAlign={"center"}
-              fontSize={["32px", "32px","32px", "39px", "50px", "60px"]}
+              fontSize={["32px", "32px", "32px", "39px", "50px", "60px"]}
               fontWeight={700}
             >
               About G42 Healthcare
@@ -187,14 +194,22 @@ const AboutUsMarquee = () => {
         <Flex
           flexDirection={["column", "column", "column", "row", "row", "row"]}
           mt={["60px", "60px", "60px", "65px", "84px", "101px"]}
-          padding={["0px 20px", "0px 20px", "0px 20px", "0px 11.71%", "0px 11.71%", "0px 11.71%"]}
+          padding={[
+            "0px 20px",
+            "0px 20px",
+            "0px 20px",
+            "0px 11.71%",
+            "0px 11.71%",
+            "0px 11.71%",
+          ]}
           gap={["60px", "60px", "60px", "60px", "75px", "90px"]}
           alignItems={["self-start", "self-start", "start", "start"]}
         >
           <Box
-          w={["100%", "100%","100%", "50%", "50%", "50%"]}
-          height={isMobile ? "214px" : isTablet ? "220px" : "337px"}
-             position={"relative"}>
+            w={["100%", "100%", "100%", "50%", "50%", "50%"]}
+            height={isMobile ? "214px" : isTablet ? "220px" : "337px"}
+            position={"relative"}
+          >
             <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
           </Box>
           <Flex
@@ -212,21 +227,28 @@ const AboutUsMarquee = () => {
                 fontFamily={"Bossa-Light"}
                 fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
                 fontStyle={"normal"}
-                lineHeight={["18px","18px","18px","24px","24px","24px"]}
+                lineHeight={["18px", "18px", "18px", "24px", "24px", "24px"]}
                 color={"#747272"}
                 letterSpacing={"-0.42px"}
                 className="title"
-                
+
                 // onClick={toggleVisibility}
               >
-                About G42 Healthcare in 2 paragraphs not more than 60-70 words.
-                uses AI and data to create a world-class healthcare sector in
-                the UAE and beyond. We partner with governments, scientists, and
-                the medical community to future-proof nations' health.
+                G42 Healthcare, a leading health-tech company, is on a mission
+                to develop a world-class healthcare sector in the UAE and
+                beyond, by harnessing data and advanced medical technologies to
+                unlock the potential of personalized and preventive care. At the
+                cutting edge of innovation, G42 Healthcare spearheads
+                revolutionary healthcare at all stages of the value chain, from
+                clinical research, drug discovery, omics, precision diagnostics
+                to drug development and beyond. Our unwavering commitment to
+                future technologies such as artificial intelligence, drives
+                breakthrough therapies, cutting-edge diagnoses, and
+                transformative health system strategies
               </Text>
             </Box>
 
-            <Box
+            {/* <Box
               w={"100%"}
               ref={sectionRef2}
               className={`aboutUsText2 demo ${
@@ -238,7 +260,7 @@ const AboutUsMarquee = () => {
                 fontFamily={"Bossa-Light"}
                 fontSize={["12px", "12px", "12px", "12px", "15px", "18px"]}
                 fontStyle={"normal"}
-                lineHeight={["18px","18px","18px","24px","24px","24px"]}
+                lineHeight={["18px", "18px", "18px", "24px", "24px", "24px"]}
                 color={"#747272"}
                 letterSpacing={"-0.42px"}
                 // visibility={"hidden"}
@@ -250,7 +272,7 @@ const AboutUsMarquee = () => {
                 4Humanity, with over 43,000 participants from 125+
                 nationalities.
               </Text>
-            </Box>
+            </Box> */}
             <Link href="/about">
               <Button
                 fontFamily={"Bossa-ExtendedMedium"}
@@ -258,14 +280,14 @@ const AboutUsMarquee = () => {
                 _hover={{ bgColor: "#00D2AA" }}
                 bgColor={"#00D2AA"}
                 borderRadius={"80px"}
-                fontSize={["14px", "14px","14px", "14px", "15px", "16px"]}
+                fontSize={["14px", "14px", "14px", "14px", "15px", "16px"]}
                 fontStyle={"normal"}
                 fontWeight={500}
                 textTransform={"capitalize"}
                 textAlign={"center"}
                 color={"white"}
-                w={["167px", "167px","167px", "167px",  "184px", "219px"]}
-                h={["40px", "40px","40px", "40px", "46px", "55px"]}
+                w={["167px", "167px", "167px", "167px", "184px", "219px"]}
+                h={["40px", "40px", "40px", "40px", "46px", "55px"]}
               >
                 About Us
               </Button>

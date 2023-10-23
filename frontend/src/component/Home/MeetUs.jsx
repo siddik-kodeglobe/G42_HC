@@ -181,7 +181,7 @@ const MeetUs = () => {
               speed={750}
               slidesPerView={'auto'}
               breakpoints={{
-                390: {
+                300: {
                   // slidesPerView: 1.25,
                   slidesOffsetBefore: 20,
                   spaceBetween: 24,

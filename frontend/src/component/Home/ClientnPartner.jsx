@@ -86,25 +86,28 @@ const ClientnPartner = () => {
           <Text
             fontFamily={"Bossa-Regular"}
             padding={["5px 20px"]}
-            w={["600px"]}
+            w={["100%", "100%", "100%", "751px","751px","751px"]}
             maxW={"100vw"}
             margin={"auto"}
             textAlign={"center"}
-            fontSize={["14px", "14px","14px", "15px", "20px", "24px"]}
+            fontSize={["14px", "14px", "14px", "15px", "20px", "24px"]}
             fontWeight={400}
             className={style1.text}
           >
-            Please provide a subheading for a brief introduction consisting of
-            1-2 lines
+            visionary institutions that trust G42 Healthcare to drive their
+            healthcare initiatives forward.
           </Text>
 
-          <Box mt={["59px", "59px", "59px", "71px", "92px", "101px"]} paddingBottom={["78px", "78px", "78px", "133px", "171px", "205px"]}>
+          <Box
+            mt={["59px", "59px", "59px", "71px", "92px", "101px"]}
+            paddingBottom={["78px", "78px", "78px", "133px", "171px", "205px"]}
+          >
             <Marquee autoplay autoFill speed={35}>
               <Flex alignItems={"center"}>
                 {data?.map((el) => (
                   <Image
-                  w={"fit-content"}
-                    height={["49px", "49px","49px", "82px", "106px", "127px"]}
+                    w={"fit-content"}
+                    height={["49px", "49px", "49px", "82px", "106px", "127px"]}
                     objectFit={"cover"}
                     marginLeft={"105px"}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.logo.data.attributes.url}`}

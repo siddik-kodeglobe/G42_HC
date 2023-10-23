@@ -185,7 +185,7 @@ const News = () => {
               speed={750}
               slidesPerView={"auto"}
               breakpoints={{
-                389: {
+                300: {
                   slidesOffsetBefore: 20,
                   spaceBetween: 24,
                 },
