@@ -83,7 +83,7 @@ const SocialMedia = () => {
     <>
       <Box w={"100vw"} maxW={"100%"}>
         <Flex
-        padding={["40px 20px 25px 20px", "40px 20px 25px 20px", "40px 20px 25px 20px", "47px 3.94% 42px 11.71%", "60px 3.94% 42px 11.71%", "72px 3.94% 42px 11.71%"]}
+        padding={["40px 20px 25px 20px", "40px 20px 25px 20px", "40px 20px 25px 20px", "47px 3.94% 32px 11.71%", "60px 3.94% 32px 11.71%", "72px 3.94% 32px 11.71%"]}
           alignItems={"center"}
           justifyContent={"space-between"}
         >

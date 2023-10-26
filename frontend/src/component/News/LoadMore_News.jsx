@@ -1,25 +1,28 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 import React from "react";
 
 const LoadMore_News = ({ onChangeLoadStatus }) => {
   return (
     <>
       <Box
-
         onClick={onChangeLoadStatus}
-        fontSize={["16px"]}
-        textTransform={"capitalize"}
-        fontFamily={"Bossa-Regular"}
-        border={"1px solid black"}
-        padding={["21px 42px"]}
+        border={"2px solid black"}
         w={"fit-content"}
+        height={"fit-content"}
         margin={"auto"}
         mt={["56px"]}
-        mb={["165px"]}
+        marginBottom={["165px"]}
         borderRadius={"80px"}
         cursor={"pointer"}
       >
-        Load More
+        <Text
+          fontSize={["16px"]}
+          textTransform={"capitalize"}
+          fontFamily={"Bossa-Regular"}
+          padding={["15px 42px"]}
+        >
+          Load More
+        </Text>
       </Box>
     </>
   );

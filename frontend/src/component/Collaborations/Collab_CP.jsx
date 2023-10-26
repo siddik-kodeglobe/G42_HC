@@ -44,11 +44,12 @@ const Collab_CP = () => {
           height={["400px", "350px", "350px", "446px", "602px", "715px"]}
           zIndex={-10}
           position={"relative"}
+          background={"linear-gradient(180deg, #F5F5F5 0%, rgba(245, 245, 245, 0.00) 100%)"}
         >
-          <BackgroundVideoContainer
+          {/* <BackgroundVideoContainer
             videosrc={greenMotionVideo}
             height={"100%"}
-          />
+          /> */}
         </Box>
         <Box
           w={"100%"}
@@ -102,7 +103,7 @@ const Collab_CP = () => {
                 {data?.map((el) => (
                   <Image
                   w={"fit-content"}
-                    height={["49px", "49px","49px", "82px", "106px", "127px"]}
+                    height={["49px", "49px","49px", "56px", "72px", "86px"]}
                     objectFit={"cover"}
                     marginLeft={["40px","40px","40px","70px","80px","90px"]}
                     src={`${process.env.REACT_APP_BACKEND_URL}${el.attributes.logo.data.attributes.url}`}

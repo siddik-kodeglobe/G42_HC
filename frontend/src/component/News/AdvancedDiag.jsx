@@ -92,9 +92,12 @@ const AdvancedDiag = () => {
             <Flex
               flexDirection={["column", "column", "row", "row"]}
               gap={["11px", "11px", "25px", "25px"]}
-              alignItems={["start", "start", "center", "center"]}
+            //   alignItems={["start", "start", "center","center", "center", "center"]}
+            //  flexShrink={1}
             >
+              <Flex alignItems={"flex-start"} flexShrink={1} flexWrap={"nowrap"}>
               <Text
+               flexShrink={"auto"}
                 fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
                 fontSize={["24px", "24px", "60px", "60px"]}
@@ -104,14 +107,13 @@ const AdvancedDiag = () => {
               >
                 Advanced Diagnostics
               </Text>
+              </Flex>
               <Flex
                 cursor={"pointer"}
                 justifyContent={"center"}
                 alignItems={"center"}
                 backgroundColor={"#00D2AA"}
                 color={"white"}
-                // w={["128px", "128px", "182px", "182px"]}
-                // h={["40px", "40px", "55px", "55px"]}
                 borderRadius={"80px"}
               >
                 <Text

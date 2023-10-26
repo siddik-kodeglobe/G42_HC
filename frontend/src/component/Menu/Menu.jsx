@@ -43,8 +43,10 @@ const Menu = () => {
       >
         {onOpen ? (
           <HamburgerIcon
-            height={["8px", "8px", "16px", "16px"]}
-            width={["8px", "8px", "16px", "16px"]}
+          height={10}
+          width={20}
+            // height={["8px", "8px", "16px", "16px"]}
+            // width={["8px", "8px", "16px", "16px"]}
             color={"#00D2AA"}
           />
         ) : (

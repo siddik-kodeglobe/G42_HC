@@ -21,11 +21,13 @@ const AreaOfInterest = () => {
           textAlign={"center"}
         >
           Our Areas of{" "}
+          
           <span style={{ color: "var(--Emergent-Green, #00D2AA)" }}>
-            {" "}
-            Collaborations interests.
+            {""}
+            Collaborations <br /> interests.
           </span>
-        </Text>
+        </Text >
+        
 
         <SimpleGrid
           gap={["21px"]}

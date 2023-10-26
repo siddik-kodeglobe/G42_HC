@@ -6,6 +6,8 @@ import instaIcon from "../../assets/Footer/insta.svg";
 import linkedinIcon from "../../assets/Footer/linkedin.svg";
 import twitterIcon from "../../assets/Footer/twitter.svg";
 import ytIcon from "../../assets/Footer/yt.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import 'font-awesome/css/font-awesome.min.css';
 
 const Footer = () => {
   return (
@@ -62,8 +64,8 @@ const Footer = () => {
           <Box w={"fit-content"}>   
             <Text fontFamily={"Bossa-Bold"} fontSize={["14px"]}>SOCIAL MEDIA:</Text>
             <Flex mt={2} gap={"15px"}>
-              <Image w={18} src={instaIcon} />
-              <Image w={18} src={linkedinIcon} />
+            
+             <Image w={18} src={linkedinIcon} />
               <Image w={18} src={twitterIcon} />
               <Image w={18} src={ytIcon} />
             </Flex>

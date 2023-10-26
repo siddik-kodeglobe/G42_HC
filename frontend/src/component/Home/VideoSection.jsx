@@ -69,7 +69,7 @@ const VideoSection = () => {
             gap={[0, 0, "14px"]}
           >
             <Box position={"absolute"} bottom={"0px"}>
-              <Text
+              {/* <Text
                 fontFamily={"Bossa-Regular"}
                 color={"white"}
                 fontSize={["18px", "18px", "18px", "18px", "20px", "24px"]}
@@ -78,7 +78,7 @@ const VideoSection = () => {
                 letterSpacing={"-0.72px"}
               >
                 Supporting tagline: Max one line statement.
-              </Text>
+              </Text> */}
               <Text
                 fontFamily={"Bossa-ExtendedBold"}
                 w={["100%", "100%","100%", "90%", "90%", "90%"]}

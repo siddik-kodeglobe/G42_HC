@@ -57,12 +57,12 @@ const MeetTeam_AU = () => {
         maxW={"100%"}
         mt={["79px", "79px", "79px", "115px", "120px", "125px"]}
         backgroundColor={"#174042"}
-        padding={"80px 0px"}
+        // padding={"80px 0px"}
       >
         <Flex
           justifyContent={"space-between"}
           alignItems={"center"}
-          padding={"5.26% 2.64% 5.05% 4.27%"}
+          padding={["51px 20px 20px 20px", "51px 20px 20px 20px", "51px 20px 20px 20px", "80px 2.63% 80px 4.27%","80px 2.63% 80px 4.27%","80px 2.63% 80px 4.27%", ]}
           // margin={["51px 0px 0px 20px","51px 0px 0px 20px","78px 65px 0px 65px","78px 65px 0px 65px"]}
           gap={7}
         >
@@ -173,7 +173,7 @@ const MeetTeam_AU = () => {
             <SwiperSlide
               className={style.swiper_slide}
             >
-              <Box w={"fit-content"}>
+              <Box paddingBottom={["50px", "50px", "50px", "80px", "80px", "80px"]} w={"fit-content"}>
                 <Image
                 // w={[""]}
                   height={["387px", "387px", "387px", "500px"]}

@@ -14,7 +14,8 @@ const Video = () => {
     <>
     
         <Box
-        style={{ cursor: `url(${playBtn}), auto` }}
+        style={{ cursor: `url(${playBtn}) 45 45, auto` }}
+
           height={isMobile ? "450px" : isTablet ? "550px" : "604px"}
           position={"relative"}
         >

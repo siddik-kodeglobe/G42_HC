@@ -24,6 +24,7 @@ const CollabPoints = () => {
             lineHeight={"normal"}
           >
             Collaborate with{" "}
+            <br />
             <span style={{ color: "#00D2AA" }}>G42Healthcare?</span>
           </Text>
         </Box>

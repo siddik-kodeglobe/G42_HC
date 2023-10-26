@@ -21,7 +21,7 @@ const TopScroll = () => {
   }, [])
   return (
     <>
-    <Box cursor={"pointer"} onClick={() => scroll.scrollToTop()} zIndex={10} display={visible ? "block" : "none"} position={"fixed"} bottom={5} right={5}>
+    <Box color="black" cursor={"pointer"} onClick={() => scroll.scrollToTop()} zIndex={10} display={visible ? "block" : "none"} position={"fixed"} bottom={5} right={5}>
         <Image src={topScroll}/>
         </Box>
     </>

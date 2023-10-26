@@ -237,18 +237,11 @@ const AboutUsMarquee = () => {
                 G42 Healthcare, a leading health-tech company, is on a mission
                 to develop a world-class healthcare sector in the UAE and
                 beyond, by harnessing data and advanced medical technologies to
-                unlock the potential of personalized and preventive care. At the
-                cutting edge of innovation, G42 Healthcare spearheads
-                revolutionary healthcare at all stages of the value chain, from
-                clinical research, drug discovery, omics, precision diagnostics
-                to drug development and beyond. Our unwavering commitment to
-                future technologies such as artificial intelligence, drives
-                breakthrough therapies, cutting-edge diagnoses, and
-                transformative health system strategies
+                unlock the potential of personalized and preventive care.
               </Text>
             </Box>
 
-            {/* <Box
+            <Box
               w={"100%"}
               ref={sectionRef2}
               className={`aboutUsText2 demo ${
@@ -266,13 +259,15 @@ const AboutUsMarquee = () => {
                 // visibility={"hidden"}
                 className="text2"
               >
-                We built Biogenix Labs, the first COVID-19 accredited
-                large-scale throughput lab in the UAE, and facilitated the
-                world's first phase three inactivated COVID-19 vaccine trial,
-                4Humanity, with over 43,000 participants from 125+
-                nationalities.
+                At the cutting edge of innovation, G42 Healthcare spearheads
+                revolutionary healthcare at all stages of the value chain, from
+                clinical research, drug discovery, omics, precision diagnostics
+                to drug development and beyond. Our unwavering commitment to
+                future technologies such as artificial intelligence, drives
+                breakthrough therapies, cutting-edge diagnoses, and
+                transformative health system strategies.
               </Text>
-            </Box> */}
+            </Box>
             <Link href="/about">
               <Button
                 fontFamily={"Bossa-ExtendedMedium"}
