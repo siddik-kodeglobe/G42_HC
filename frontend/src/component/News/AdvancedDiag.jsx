@@ -95,7 +95,7 @@ const AdvancedDiag = () => {
             //   alignItems={["start", "start", "center","center", "center", "center"]}
             //  flexShrink={1}
             >
-              <Flex alignItems={"flex-start"} flexShrink={1} flexWrap={"nowrap"}>
+              <Flex alignItems={["start", "start", "center", "center"]} flexWrap={"wrap"}>
               <Text
                flexShrink={"auto"}
                 fontFamily={"Bossa-ExtendedBold"}
@@ -109,14 +109,15 @@ const AdvancedDiag = () => {
               </Text>
               </Flex>
               <Flex
+              w={"fit-content"}
                 cursor={"pointer"}
                 justifyContent={"center"}
                 alignItems={"center"}
                 backgroundColor={"#00D2AA"}
-                color={"white"}
                 borderRadius={"80px"}
               >
                 <Text
+                color={"white"}
                   fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}

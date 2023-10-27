@@ -115,6 +115,7 @@ const DigitalHealth = () => {
                 borderRadius={"80px"}
               >
                 <Text
+                color={"white"}
                   fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}

@@ -91,7 +91,9 @@ const Events = () => {
             padding={["80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","80px 3.94% 0% 3.94%","81px 3.94% 0% 3.94%","105px 3.94% 0% 3.94%","125px 3.94% 0% 3.94%"]}
             gap={["15px","15px","0px","0px"]}
           >
-            <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
+            <Flex 
+            // flexDirection={["column","column","row","row"]} 
+            gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
                 fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}

@@ -13,6 +13,7 @@ const IconDiv = () => {
   return (
     <>
       <Flex
+      // border={"1px solid red"}
         flexWrap={"wrap"}
         w={"100%"}
         padding={[
@@ -23,10 +24,15 @@ const IconDiv = () => {
           "59px 11.71% 85px 11.71%",
           "70px 11.71% 99px 11.71%",
         ]}
-        gap={[""]}
+        gap={["16px", "16px", "16px", "105px", "136px", "136px"]}
       >
         {/* Email Container */}
-        <Box w={["168px", "168px", "168px", "218px", "282px", "338px"]}>
+        <Box
+
+        w={"25%"}
+        // border={"1px"} 
+        // w={["168px", "168px", "168px", "218px", "282px", "338px"]}
+        >
           <Image
             h={["80px", "80px", "80px", "80px", "80px", "93px"]}
             w={["93px", "93px", "93px", "115px", "115px", "115px"]}
@@ -61,7 +67,11 @@ const IconDiv = () => {
         </Box>
 
         {/* Main Container */}
-        <Box w={["168px", "168px", "168px", "218px", "282px", "338px"]}>
+        <Box 
+        w={"25%"}
+        // border={"1px"}
+        // w={["168px", "168px", "168px", "218px", "282px", "338px"]}
+        >
           <Image
             h={["80px", "80px", "80px", "80px", "80px", "93px"]}
             w={["93px", "93px", "93px", "115px", "115px", "115px"]}
@@ -96,7 +106,11 @@ const IconDiv = () => {
         </Box>
 
         {/* Follow Container */}
-        <Box w={["168px", "168px", "168px", "218px", "282px", "338px"]}>
+        <Box 
+        w={"25%"}
+        // border={"1px"}
+        // w={["168px", "168px", "168px", "218px", "282px", "338px"]}
+        >
           <Image
             h={["80px", "80px", "80px", "80px", "80px", "93px"]}
             w={["93px", "93px", "93px", "115px", "115px", "115px"]}

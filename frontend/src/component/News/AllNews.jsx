@@ -111,6 +111,7 @@ const AllNews = () => {
                 borderRadius={"80px"}
               >
                 <Text
+                color={"white"}
                   fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}
@@ -222,7 +223,7 @@ const AllNews = () => {
                   padding={["40px 24px 52px 24px"]}
                   border={"1px solid #D9D9D9"}
                 >
-                  <Link href={`/news/${el.id}`}>
+                  <Link _hover={{textDecor: "none"}} href={`/news/${el.id}`}>
                     <Image
                       w={["301px", "301px", "301px", "465px", "465px"]}
                       h={["275px", "275px", "275px", "424px", "424px"]}

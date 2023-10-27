@@ -95,7 +95,7 @@ const CBOMsg = () => {
             </Box>
           </Flex>
           <Flex
-            mt={["50px", "0px","0px","0px", "0px", "0px"]}
+            // mt={["50px", "0px","0px","0px", "0px", "0px"]}
             flexDirection={["column"]}
             w={["100%", "50%","50%","50%", "50%", "50%"]}
             // h={["477px", "fit-content", "353px", "457px", "589px", "700px"]}

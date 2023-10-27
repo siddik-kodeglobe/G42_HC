@@ -90,8 +90,8 @@ const Partners_AU = () => {
               slidesOffsetBefore: 54,
               spaceBetween: 11,
             },
-            390: {
-              slidesOffsetBefore: 33,
+            250: {
+              slidesOffsetBefore: 20,
               spaceBetween: 11,
             },
           }}
@@ -103,7 +103,7 @@ const Partners_AU = () => {
           {data?.map((el, ind) => (
             <SwiperSlide className={style.swiper_slide}>
               <Box
-                w={["338px", "338px", "338px", "385px", "498px", "591px"]}
+                w={["86vw", "338px", "338px", "385px", "498px", "591px"]}
                 h={["338px", "338px", "338px", "385px", "498px", "591px"]}
                 // backgroundColor={"#00D2AA"}
                 backgroundColor={mainContainerBackgroundColor[ind]}

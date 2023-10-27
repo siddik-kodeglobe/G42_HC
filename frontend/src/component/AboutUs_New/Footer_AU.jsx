@@ -75,12 +75,8 @@ const Footer_AU = () => {
           </Link>
         </Flex>
 
-        <hr
-          style={{
-            margin: "101px 0px 67px 0px",
-            border: "1px solid lightgray",
-          }}
-        />
+        <Box border={"1px solid #D9D9D9"} margin={["52px 0px 42px 0px", "52px 0px 42px 0px", "52px 0px 42px 0px", "102px 0px 67px 0px", "102px 0px 67px 0px", "102px 0px 67px 0px"]}></Box>       
+       
         <Footer />
       </Box>
     </>

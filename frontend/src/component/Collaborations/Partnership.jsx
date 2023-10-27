@@ -11,12 +11,13 @@ const Partnership = () => {
         justifyContent={"space-between"}
         padding={["14px 20px 0px 20px", "14px 20px 0px 20px", "14px 20px 0px 20px", "66px 4.01% 0px 4.01%", "66px 4.01% 0px 4.01%", "66px 4.01% 0px 4.01%"]}
         flexDir={["column", "column", "row", "row"]}
+        gap={["29px","29px","29px","0px", "0px", "0px"]}
       >
         <Text
         fontFamily={"Bossa-ExtendedBold"}
           alignItems={"start"}
           fontSize={["24px", "24px","24px","40px", "50px", "60px"]}
-          lineHeight={["81px"]}
+          // lineHeight={["81px"]}
           letterSpacing={["-0.72px"]}
           fontStyle={["normal"]}
           color={"black"}
@@ -35,6 +36,7 @@ const Partnership = () => {
           fontWeight={300}
           letterSpacing={"-0.42px"}
           lineHeight={["24px"]}
+          // mt={[]}
         >
           G42 Healthcare, a leading AI-powered healthcare company, is on a
           mission to develop a world-class healthcare sector in the UAE and

@@ -103,9 +103,10 @@ const SocialMedia = () => {
             gap={["15px", "15px", "0px", "0px"]}
           >
             <Flex
-              flexDirection={["column", "column", "row", "row"]}
+              // flexDirection={["column", "column", "row", "row"]}
               gap={["11px", "11px", "25px", "25px"]}
               alignItems={["start", "start", "center", "center"]}
+              flexWrap={"wrap"}
             >
               <Text
                 fontFamily={"Bossa-ExtendedBold"}
@@ -236,6 +237,8 @@ const SocialMedia = () => {
             // navigation={true}
             modules={[Navigation]}
             className={style.swiper}
+            observeParents
+            observer
           >
             {data?.map((el) => (
               <SwiperSlide className={style.swiper_slide}>

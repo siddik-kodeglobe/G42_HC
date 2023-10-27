@@ -141,7 +141,7 @@ const MeetTeam_AU = () => {
           speed={750}
           slidesPerView={"auto"}
           breakpoints={{
-            389: {
+            250: {
               slidesOffsetBefore: 20,
               spaceBetween: 24,
             },
@@ -164,10 +164,10 @@ const MeetTeam_AU = () => {
           }}
           ref={swiperRef}
           // navigation={true}
+          className={style.swiper}
+          modules={[Navigation]}
           observeParents={true}
           observer={true}
-          modules={[Navigation]}
-          className={style.swiper}
         >
           {data?.map((el) => (
             <SwiperSlide

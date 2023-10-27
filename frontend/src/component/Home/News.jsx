@@ -109,7 +109,8 @@ const News = () => {
               News
             </Text>
             <Flex alignItems={"center"} gap={5}>
-              <Button
+              <Box
+              margin={"auto"}
                 onClick={() => goPrev()}
                 // onClick={() => swiperRef.current.swiper.slidePrev()}
                 _hover={{ backgroundColor: "white" }}
@@ -122,7 +123,7 @@ const News = () => {
                 borderStyle={"dashed"}
                 w={["32px", "32px", "42px", "52px"]}
                 h={["32px", "32px", "42px", "52px"]}
-                margin={0}
+                // margin={0}
                 padding={"11px"}
                 borderRadius={"50%"}
                 cursor={
@@ -149,7 +150,7 @@ const News = () => {
                     }}
                   />
                 )}
-              </Button>
+              </Box>
               <Button
                 onClick={() => goNext()}
                 _hover={{ backgroundColor: "white" }}

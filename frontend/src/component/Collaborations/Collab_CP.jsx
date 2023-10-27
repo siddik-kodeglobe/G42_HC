@@ -84,7 +84,7 @@ const Collab_CP = () => {
           </Text>
           <Text
             fontFamily={"Bossa-Regular"}
-            padding={["5px 20px"]}
+            padding={["18px 20px 0px 20px"]}
             w={["600px"]}
             maxW={"100vw"}
             margin={"auto"}

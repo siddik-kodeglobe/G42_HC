@@ -52,8 +52,8 @@ const AreaOfInterest = () => {
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
-              bottom={["27px"]}
-              left={["40px"]}
+              bottom={["19px", "19px", "19px", "27px", "27px", "27px"]}
+              left={["14px", "14px", "14px", "40px","40px","40px"]}
               color={"var(--Emergent-Green, #004141)"}
               fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
@@ -88,8 +88,8 @@ const AreaOfInterest = () => {
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
-              bottom={["27px"]}
-              left={["40px"]}
+              bottom={["19px", "19px", "19px", "27px", "27px", "27px"]}
+              left={["14px", "14px", "14px", "40px","40px","40px"]}
               color={"var(--Emergent-Green, #004141)"}
               fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
@@ -124,8 +124,8 @@ const AreaOfInterest = () => {
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
-              bottom={["27px"]}
-              left={["40px"]}
+              bottom={["19px", "19px", "19px", "27px", "27px", "27px"]}
+              left={["14px", "14px", "14px", "40px","40px","40px"]}
               color={"var(--Emergent-Green, #004141)"}
               fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
@@ -160,8 +160,8 @@ const AreaOfInterest = () => {
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               position={"absolute"}
-              bottom={["27px"]}
-              left={["40px"]}
+              bottom={["19px", "19px", "19px", "27px", "27px", "27px"]}
+              left={["14px", "14px", "14px", "40px","40px","40px"]}
               color={"var(--Emergent-Green, #004141)"}
               fontSize={["24px", "24px","16px", "20px", "26px", "32px"]}
               fontStyle={"normal"}
@@ -175,7 +175,7 @@ const AreaOfInterest = () => {
               alignItems={"center"}
               position={"absolute"}
               borderRadius={["21px"]}
-              top={"15px"}
+              top={["15px"]}
               right={["15px"]}
               padding={["12px"]}
               backgroundColor={["var(--Emergent-Green, #00D2AA)"]}

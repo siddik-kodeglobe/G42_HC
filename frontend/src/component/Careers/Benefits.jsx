@@ -53,9 +53,10 @@ const Benefits = () => {
               "center",
               "center",
             ]}
-            justifyContent={"space-between"}
+            gap={["16px","16px","26px","34px", "44px", "53px"]}
           >
             <Text
+              w={["129px"]}
               fontFamily={"Bossa-ExtendedBold"}
               fontSize={["32px", "32px", "32px", "40px", "50px", "60px"]}
               fontWeight={700}
@@ -66,7 +67,7 @@ const Benefits = () => {
               01
             </Text>
             <Text
-            w={["100%", "35.15%", "35.15%", "35.15%", "35.15%", "35.15%"]}
+              w={["100%", "45.86%", "45.86%", "45.86%", "45.86%", "45.86%"]}
               fontFamily={"Bossa-ExtendedBold"}
               fontSize={["24px", "24px", "24px", "24px", "26px", "32px"]}
               fontWeight={700}
@@ -78,7 +79,7 @@ const Benefits = () => {
             </Text>
             <Text
               fontFamily={"Bossa-Light"}
-              w={["100%", "26%", "26%", "26%", "26%", "26%"]}
+              w={["100%", "33.82%", "33.82%", "33.82%", "33.82%", "33.82%"]}
               fontSize={["12px", "12px", "12px", "14px", "16px", "18px"]}
               fontWeight={300}
               letterSpacing={"-0.42px"}
@@ -95,20 +96,22 @@ const Benefits = () => {
           {/* 2nd Point  */}
 
           <Flex
-          mt={["50px","50px", "50px",  "50px", "50px", "60px"]}
+            mt={["50px", "50px", "50px", "50px", "50px", "60px"]}
             flexDir={["column", "row", "row", "row", "row", "row"]}
             w={"100%"}
             alignItems={[
-                "start",
-                "center",
-                "center",
-                "center",
-                "center",
-                "center",
-              ]}
-            justifyContent={"space-between"}
+              "start",
+              "center",
+              "center",
+              "center",
+              "center",
+              "center",
+            ]}
+            // justifyContent={"space-between"}
+            gap={["16px","16px","26px","34px", "44px", "53px"]}
           >
             <Text
+              w={["129px"]}
               fontFamily={"Bossa-ExtendedBold"}
               fontSize={["32px", "32px", "32px", "40px", "50px", "60px"]}
               fontWeight={700}
@@ -119,8 +122,8 @@ const Benefits = () => {
               02
             </Text>
             <Text
-            w={["100%", "35.15%", "35.15%", "35.15%", "35.15%", "35.15%"]}
-            fontFamily={"Bossa-ExtendedBold"}
+              w={["100%", "45.86%", "45.86%", "45.86%", "45.86%", "45.86%"]}
+              fontFamily={"Bossa-ExtendedBold"}
               fontSize={["24px", "24px", "24px", "24px", "26px", "32px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
@@ -131,7 +134,7 @@ const Benefits = () => {
             </Text>
             <Text
               fontFamily={"Bossa-Light"}
-              w={["100%", "26%", "26%", "26%", "26%", "26%"]}
+              w={["100%", "33.82%", "33.82%", "33.82%", "33.82%", "33.82%"]}
 
               fontSize={["18px"]}
               fontWeight={300}
@@ -149,20 +152,22 @@ const Benefits = () => {
           {/* 3rd Point  */}
 
           <Flex
-          mt={["50px","50px", "50px",  "50px", "50px", "60px"]}
-          flexDir={["column", "row", "row", "row", "row", "row"]}
+            gap={["16px","16px","26px","34px", "44px", "53px"]}
+            mt={["50px", "50px", "50px", "50px", "50px", "60px"]}
+            flexDir={["column", "row", "row", "row", "row", "row"]}
             w={"100%"}
             alignItems={[
-                "start",
-                "center",
-                "center",
-                "center",
-                "center",
-                "center",
-              ]}
-            justifyContent={"space-between"}
+              "start",
+              "center",
+              "center",
+              "center",
+              "center",
+              "center",
+            ]}
+            // justifyContent={"space-between"}
           >
             <Text
+              w={["129px"]}
               fontFamily={"Bossa-ExtendedBold"}
               fontSize={["32px", "32px", "32px", "40px", "50px", "60px"]}
               fontWeight={700}
@@ -173,8 +178,8 @@ const Benefits = () => {
               03
             </Text>
             <Text
-            w={["100%", "35.15%", "35.15%", "35.15%", "35.15%", "35.15%"]}
-            fontFamily={"Bossa-ExtendedBold"}
+              w={["100%", "45.86%", "45.86%", "45.86%", "45.86%", "45.86%"]}
+              fontFamily={"Bossa-ExtendedBold"}
               fontSize={["24px", "24px", "24px", "24px", "26px", "32px"]}
               fontWeight={700}
               letterSpacing={"-0.42px"}
@@ -185,7 +190,7 @@ const Benefits = () => {
             </Text>
             <Text
               fontFamily={"Bossa-Light"}
-              w={["100%", "26%", "26%", "26%", "26%", "26%"]}
+              w={["100%", "33.82%", "33.82%", "33.82%", "33.82%", "33.82%"]}
 
               fontSize={["18px"]}
               fontWeight={300}

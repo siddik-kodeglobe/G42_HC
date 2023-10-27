@@ -40,7 +40,7 @@ const Slider_AU = () => {
         speed={750}
         slidesPerView={'auto'}
           breakpoints={{
-            380: {
+            250: {
               // slidesOffsetBefore: 21,
               // slidesPerView: 1.25,
               spaceBetween: 5,
@@ -69,8 +69,10 @@ const Slider_AU = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode]}
           className={style.swiper}
+          modules={[FreeMode]}
+          observeParents
+          observer
         >
           {/* slides  */}
           <SwiperSlide className={style.swiper_slide}>
