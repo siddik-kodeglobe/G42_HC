@@ -189,7 +189,7 @@ const Publications = () => {
             speed={750}
             slidesPerView={'auto'}
             breakpoints={{
-              380: {
+              220: {
                 slidesOffsetBefore: 21,
                 // slidesPerView: 1.25,
                 spaceBetween: 15,

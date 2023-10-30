@@ -21,21 +21,22 @@ const WhatWeDoFooter = () => {
           >
             Partner with G42 Healthcare
           </Text>
-          <Button
+          <Flex
+          alignItems={"center"}
+          justifyContent={"center"}
           fontFamily={"Bossa-ExtendedMedium"}
-          height={["55px"]}
-          w={["219px"]}
+          height={["40px", "40px", "40px", "55px", "55px", "55px"]}
+          w={["167px", "167px", "167px", "219px", "219px", "219px"]}
             fontSize={["12px", "12px", "16px"]}
             fontWeight={500}
             textTransform={"capitalize"}
-            padding={"15px 40px"}
             backgroundColor={"#00D2AA"}
             _hover={{ backgroundColor: "#00D2AA" }}
             color={"white"}
-            borderRadius={80}
+            borderRadius={"80px"}
           >
             Contact Us
-          </Button>
+          </Flex>
         </Flex>
 
       <Box margin={["49px 0px 67px 0px", "49px 0px 67px 0px", "49px 0px 67px 0px", "51px 0px 72px 0px", "51px 0px 72px 0px", "51px 0px 72px 0px"]} border={"1px solid #D9D9D9"} w={"100%"}></Box>

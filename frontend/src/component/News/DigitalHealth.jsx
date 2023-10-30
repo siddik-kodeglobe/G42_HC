@@ -125,7 +125,7 @@ const DigitalHealth = () => {
                   padding={"11px 21px"}
                   flexShrink={0}
                 >
-                  All Webinars
+                  All Digital Health
                 </Text>
               </Flex>
             </Flex>

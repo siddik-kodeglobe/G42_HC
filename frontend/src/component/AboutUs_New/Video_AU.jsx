@@ -15,17 +15,17 @@ const Video_AU = () => {
           onClick={onOpen}
           style={{ cursor: `url(${playBtn}) 45 45, auto` }}
           position={"relative"}
-          height={["287px", "400px", "426px", "100vh","100vh","100vh"]}
+          height={["445px", "445px", "445px", "100vh","100vh","100vh"]}
         >
           <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
         </Box>
 
         <Box
         w="100%"
-        h={["106px", "106px", "30vh", "30vh", "40vh", "50vh"]}
+        h={["265px", "265px", "30vh", "30vh", "40vh", "50vh"]}
           position={"absolute"}
           bgGradient={
-            "linear-gradient(0deg, #00AFFF 0%, rgba(0, 175, 255, 0.00) 100%);"
+            "linear-gradient(0deg, #00D2AA 27.38%, rgba(0, 210, 170, 0.00) 100%)"
           }
           bottom={0}
           margin={0}
@@ -34,7 +34,7 @@ const Video_AU = () => {
               position={"absolute"}
               height={"fit-content"}
               // height={["100px", "100px","100px","139px", "180px", "214px"]}
-              bottom={["-90%", "-0.5px"]}
+              bottom={["-100px", "-0.5px"]}
               left={"2%"}
               right={"2%"}
               // w="96%"
@@ -51,7 +51,7 @@ const Video_AU = () => {
               backgroundColor={"white"}
             >
               <Flex
-                flexDir={["column", "column", "column", "row", "row"]}
+                flexDir={["column", "column", "column", "row","row", "row"]}
                 gap={["16px"]}
               >
                 <Text
@@ -68,7 +68,7 @@ const Video_AU = () => {
                   fontFamily={"Bossa-Light"}
                   color={"#747272"}
                   w={["100%", "100%", "100%", "50%", "50%"]}
-                  fontSize={["9px", "9px","9px", "14px","16px", "18px"]}
+                  fontSize={["12px", "12px","12px", "14px","16px", "18px"]}
                   fontWeight={300}
                   letterSpacing={["-0.42px"]}
                 >

@@ -93,12 +93,12 @@ const News = () => {
             alignItems={"center"}
             justifyContent={"space-between"}
             padding={[
-              "90px 20px 27px 20px",
-              "90px 20px 27px 20px",
-              "90px 20px 27px 20px",
-              "47px 3.95% 29px 47px ",
-              "47px 3.95% 29px 60px ",
-              "47px 3.95% 29px 72px ",
+              "90px 20px 0px 20px",
+              "90px 20px 0px 20px",
+              "90px 20px 0px 20px",
+              "47px 3.95% 0px 47px ",
+              "47px 3.95% 0px 60px ",
+              "47px 3.95% 0px 72px ",
             ]}
           >
             <Text
@@ -108,9 +108,9 @@ const News = () => {
             >
               News
             </Text>
-            <Flex alignItems={"center"} gap={5}>
-              <Box
-              margin={"auto"}
+            <Flex alignItems={"center"} gap={["6px","6px", "6px", "12px","12px","12px" ]}>
+              <Flex
+                // margin={"auto"}
                 onClick={() => goPrev()}
                 // onClick={() => swiperRef.current.swiper.slidePrev()}
                 _hover={{ backgroundColor: "white" }}
@@ -121,10 +121,10 @@ const News = () => {
                 justifyContent={"center"}
                 border={"1px solid white"}
                 borderStyle={"dashed"}
-                w={["32px", "32px", "42px", "52px"]}
-                h={["32px", "32px", "42px", "52px"]}
+                w={["32px", "32px", "32px", "42px", "42px", "52px"]}
+                h={["32px", "32px", "32px", "42px", "42px", "52px"]}
                 // margin={0}
-                padding={"11px"}
+                padding={"9.5px"}
                 borderRadius={"50%"}
                 cursor={
                   swiperRef.current?.swiper.isBeginning
@@ -137,21 +137,21 @@ const News = () => {
                   <BsArrowLeft
                     style={{
                       color: hoverArrowColor,
-                      height: "21px",
-                      width: "21px",
+                      height: "12px",
+                      width: "12px",
                     }}
                   />
                 ) : (
                   <BsArrowLeft
                     style={{
                       color: hoverArrowColor,
-                      height: "52px",
-                      width: "52px",
+                      height: "62px",
+                      width: "62px",
                     }}
                   />
                 )}
-              </Box>
-              <Button
+              </Flex>
+              <Flex
                 onClick={() => goNext()}
                 _hover={{ backgroundColor: "white" }}
                 onMouseOver={() => setHoverArrowColorR("black")}
@@ -163,30 +163,40 @@ const News = () => {
                 borderStyle={"dashed"}
                 w={["32px", "32px", "42px", "52px"]}
                 h={["32px", "32px", "42px", "52px"]}
-                margin={0}
-                padding={"11px"}
+                // margin={0}
+                padding={"9.5px"}
                 borderRadius={"50%"}
                 cursor={
                   swiperRef.current?.swiper.isEnd ? "not-allowed" : "pointer"
                 }
               >
-                <BsArrowRight
-                  style={{
-                    color: hoverArrowColorR,
-                    height: "52px",
-                    width: "52px",
-                  }}
-                />
-              </Button>
+                {isMobile ? (
+                  <BsArrowRight
+                    style={{
+                      color: hoverArrowColor,
+                      height: "12px",
+                      width: "12px",
+                    }}
+                  />
+                ) : (
+                  <BsArrowRight
+                    style={{
+                      color: hoverArrowColorR,
+                      height: "52px",
+                      width: "52px",
+                    }}
+                  />
+                )}
+              </Flex>
             </Flex>
           </Flex>
 
-          <Box mt={["27px", "27px", "27px", "29px", "38px", "45px"]}>
+          <Box mt={["25px", "25px", "25px", "25px", "27px", "33px"]}>
             <Swiper
               speed={750}
               slidesPerView={"auto"}
               breakpoints={{
-                300: {
+                250: {
                   slidesOffsetBefore: 20,
                   spaceBetween: 24,
                 },

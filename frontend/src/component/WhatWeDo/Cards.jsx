@@ -35,7 +35,7 @@ const Cards = () => {
             w={["100%", "50%", "50%", "50%", "50%", "50%"]}
             // maxW={"100%"}
             h={"100%"}
-            alignItems={"start"}
+            alignItems={"flex-start"}
             gap={"2.27%"}
             // gap={["9.5px", "9.5px", "19px", "19px"]}
           >
@@ -45,11 +45,11 @@ const Cards = () => {
               fontFamily={"Bossa-Bold"}
               fontSize={["24px", "24px", "24px", "52px", "67px", "80px"]}
               fontWeight={700}
-              lineHeight={"68px"}
+              lineHeight={[null, null, null, "68px","68px","68px"]}
             >
               01
             </Text>
-            <Box w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
+            <Box  w={["302px", "302px", "302px", "327px", "425px", "507px"]}>
               <Image
                 // border={"2px"}
                 w={["302px", "302px", "302px", "327px", "425px", "507px"]}
@@ -118,7 +118,7 @@ const Cards = () => {
               fontFamily={"Bossa-Bold"}
               fontSize={["24px", "24px", "24px", "52px", "67px", "80px"]}
               fontWeight={700}
-              lineHeight={"68px"}
+              lineHeight={[null, null, null, "68px","68px","68px"]}
             >
               02
             </Text>
@@ -211,7 +211,7 @@ const Cards = () => {
               fontFamily={"Bossa-Bold"}
               fontSize={["24px", "24px", "24px", "52px", "67px", "80px"]}
               fontWeight={700}
-              lineHeight={"68px"}
+              lineHeight={[null, null, null, "68px","68px","68px"]}
             >
               03
             </Text>
@@ -284,7 +284,7 @@ const Cards = () => {
               fontFamily={"Bossa-Bold"}
               fontSize={["24px", "24px", "24px", "52px", "67px", "80px"]}
               fontWeight={700}
-              lineHeight={"68px"}
+              lineHeight={[null, null, null, "68px","68px","68px"]}
             >
               04
             </Text>
@@ -378,7 +378,7 @@ const Cards = () => {
               fontFamily={"Bossa-Bold"}
               fontSize={["24px", "24px", "24px", "52px", "67px", "80px"]}
               fontWeight={700}
-              lineHeight={"68px"}
+              lineHeight={[null, null, null, "68px","68px","68px"]}
             >
               05
             </Text>
@@ -450,7 +450,7 @@ const Cards = () => {
               fontFamily={"Bossa-Bold"}
               fontSize={["24px", "24px", "24px", "52px", "67px", "80px"]}
               fontWeight={700}
-              lineHeight={"68px"}
+              lineHeight={[null, null, null, "68px","68px","68px"]}
             >
               06
             </Text>

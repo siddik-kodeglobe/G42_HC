@@ -138,6 +138,7 @@ const Podcast = () => {
                     "16px 22px",
                   ]}
                   flexShrink={0}
+                  color={"white"}
                 >
                   All Podcasts
                 </Text>
@@ -202,7 +203,7 @@ const Podcast = () => {
             speed={750}
             slidesPerView={"auto"}
             breakpoints={{
-              380: {
+              220: {
                 slidesOffsetBefore: 21,
                 // slidesPerView: 1.25,
                 spaceBetween: 15,

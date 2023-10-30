@@ -40,7 +40,7 @@ const Categories = () => {
       overflow={"scroll"}
         alignItems={"center"}
         backgroundColor={"#f5f5f5"}
-        paddingLeft={["37px","37px","37px", "44px","55x","66px"]}
+        paddingLeft={["20px","20px","20px", "44px","55x","66px"]}
         gap={["18px","18px","18px","24px","30px", "36px"]}
         height={["39px", "39px","39px","54px", "69px","82px"]}
         w={"100vw"}
@@ -53,6 +53,18 @@ const Categories = () => {
          }
        }
       >
+        <Text
+          fontFamily={"Bossa-Regular"}
+          flexShrink={0}
+            cursor={"pointer"}
+            fontSize={["12px","12px", "12px","16px", "18px","20px"]}
+            color={"black"}
+            fontStyle={"normal"}
+            lineHeight={"-0.42px"}
+            
+          >
+            All
+          </Text>
         {categoryArr?.map((el, ind) => (
           <Text
           fontFamily={"Bossa-Regular"}

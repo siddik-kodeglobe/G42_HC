@@ -8,7 +8,7 @@ const Footer_AU = () => {
       <Box 
       w={"100vw"}
       maxW={"100%"}
-      padding={"8.16% 11.77% 1.72% 11.77%"}
+      padding={["80px 20px 22px 20px","80px 20px 22px 20px","80px 20px 22px 20px", "125px 11.77% 25px 11.77%", "125px 11.77% 25px 11.77%", "125px 11.77% 25px 11.77%"]}
       // margin={["78px 10% 0px 10%","78px 10% 0px 10%","78px 10% 0px 10%","78px 225px 0px 225px"]}
       >
         <Flex

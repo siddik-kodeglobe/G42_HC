@@ -6,18 +6,19 @@ const LifeAtG42 = () => {
     <>
       <Flex
         flexDir={["column", "column", "row", "row"]}
-        alignItems={"start"}
+        alignItems={["start"]}
         justifyContent={"space-between"}
         w={"100%"}
         padding={["40px 20px 40px 20px", "40px 4.01% 40px 4.01%", "40px 4.01% 40px 4.01%", "45px 11.71% 41px 11.71%", "59px 11.71% 54px 11.71%", "70px 11.71% 64px 11.71%"]}
       >
-        <Box w={["100%", "100%", "50%", "50%"]}>
+        <Box w={["100%", "100%","100%","50%", "50%", "50%"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}
             fontSize={["24px", "24px","24px", "31px","40px", "48px"]}
             color={"black"}
             fontWeight={[700]}
             fontStyle={"normal"}
+            lineHeight={["normal","normal","normal","51px", "51px", "51px"]}
           >
             Life at G42 Healthcare
           </Text>
@@ -26,12 +27,12 @@ const LifeAtG42 = () => {
         <Box w={["100%", "100%", "50%", "50%"]}>
           <Text
             fontFamily={"Bossa-ExtendedBold"}
-            mt={["21px"]}
+            mt={["21px", "21px", "21px", "0px","0px","0px"]}
             fontSize={["16px", "16px","16px", "19px",  "25px", "30px"]}
             letterSpacing={["-0.9px"]}
             color={"black"}
             fontWeight={[700]}
-            lineHeight={["38px"]}
+            lineHeight={["normal", "normal", "normal", "38px","38px","38px" ]}
             fontStyle={"normal"}
           >
             G42 Healthcare - Health Tech Company
@@ -42,7 +43,7 @@ const LifeAtG42 = () => {
             fontSize={["12px", "12px", "12px", "14px", "14px", "14px"]}
             color={"#747272"}
             fontWeight={[300]}
-            lineHeight={["21px"]}
+            lineHeight={["18px", "18px", "18px", "21px", "21px", "21px"]}
             fontStyle={"normal"}
             letterSpacing={["0.42px"]}
           >
