@@ -4,7 +4,8 @@
   "info": {
     "singularName": "charting-triumph",
     "pluralName": "charting-triumphs",
-    "displayName": "Charting Triumph"
+    "displayName": "Charting Triumph",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,11 +20,16 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "link": {
+      "type": "string",
+      "required": false
     }
   }
 }
