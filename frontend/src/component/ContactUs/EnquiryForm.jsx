@@ -1,7 +1,17 @@
 import { Box, Button, Flex, Input, Text, Textarea } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 
 const EnquiryForm = () => {
+  const [formData, setFormData] = useState({name: "",organization: "", role: "", email: "",message: ""});
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData((val) => ({...formData, [name]: value}))
+  }
+
+  const handleSubmit = () => {
+    console.log("FORMDATA", formData);
+  }
   return (
     <>
       <Flex
@@ -73,22 +83,38 @@ const EnquiryForm = () => {
               backgroundColor={"#F5F5F5"}
               type="text"
               placeholder="Full Name*"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
             />
             <Input
               backgroundColor={"#F5F5F5"}
               type="text"
               placeholder="Organization"
+              name="organization"
+              value={formData.organization}
+              onChange={handleChange}
             />
-            <Input backgroundColor={"#F5F5F5"} type="text" placeholder="Role" />
+            <Input 
+            name="role"
+            value={formData.role}
+            onChange={handleChange}
+            backgroundColor={"#F5F5F5"} type="text" placeholder="Role" />
             <Input
               backgroundColor={"#F5F5F5"}
-              type="text"
+              type="email"
               placeholder="Email Address*"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
             />
             <Textarea
               height={"150px"}
               backgroundColor={"#F5F5F5"}
               placeholder="Message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
             />
             <Text
               fontFamily={"Bossa-Regular"}
@@ -114,6 +140,7 @@ const EnquiryForm = () => {
               backgroundColor={"#00D2AA"}
               _hover={{ backgroundColor: "#00D2AA" }}
               color={"white"}
+              onClick={handleSubmit}
             >
               Submit
             </Button>
