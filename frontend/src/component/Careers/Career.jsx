@@ -18,6 +18,7 @@ const Career = () => {
             <Navbar/>
             <BreadcrumbCareer/>
             <CareerText/>
+            {/* Remove video and add IMG */}
             <CareerVideo/>
             <Img1Career/>
             <LifeAtG42/>

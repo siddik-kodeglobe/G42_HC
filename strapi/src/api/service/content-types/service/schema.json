@@ -24,12 +24,12 @@
       "type": "richtext",
       "required": true
     },
-    "video": {
+    "topImgBanner": {
       "type": "media",
       "multiple": false,
       "required": true,
       "allowedTypes": [
-        "videos"
+        "images"
       ]
     },
     "image": {

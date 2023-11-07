@@ -27,6 +27,8 @@ const Services = () => {
       </LazyLoad>
 
       <LazyLoad>
+            {/* Remove video and add IMG */}
+
         <Home_VideoSection name={name}/>
       </LazyLoad>
 

@@ -28,6 +28,8 @@ const AboutUs = () => {
           <Intro_AU />
         </LazyLoad>
         <LazyLoad>
+            {/* Remove video and add IMG */}
+
           <Video_AU />
         </LazyLoad>
         <LazyLoad>

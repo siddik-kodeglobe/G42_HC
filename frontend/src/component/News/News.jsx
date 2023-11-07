@@ -28,6 +28,7 @@ const News = () => {
             <NewsBreadcrumb/>
             <NewsHeading/>
             <Categories/>
+            {/* Remove video and add IMG */}
             <Video/>
             <AllNews/>
             <Omics/>

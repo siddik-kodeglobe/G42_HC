@@ -399,9 +399,6 @@ const NewOurServices = () => {
     }
   };
 
-  // const swiper = useSwiper();
-  // const swiperRef = React.useRef(null);
-
 
   return (
     <>
@@ -413,6 +410,7 @@ const NewOurServices = () => {
         w={"100vw"}
         maxW={"100%"}
         h={["650px", "800px", "800px", "800px", "800px", "800px"]}
+        
       >
         {/* OUR SERVICES TITLE  */}
 
@@ -425,36 +423,43 @@ const NewOurServices = () => {
           Our Services
         </Text>
         {/* slider container  */}
-        <Box position={"relative"} w={"100%"} h={["100%"]} mt={["57px"]}>
+        <Box position={"relative"} w={"100%"} h={["100%"]} margin={"auto"} mt={["57px"]}>
           <Swiper
-            loop={true}
-            // loopedSlides={50}
-            speed={750}
-            spaceBetween={"25px"}
             slidesPerView={"auto"}
+            centeredSlides={true}
+            loop={true}
+            spaceBetween={0}
+            observer={true}
+            observeParents={true}
+            loopedSlides={50} 
+            speed={750}
+            initialSlide={2}
             ref={swiperRef}
             onSlideChange={handleSlideChange}
-            centeredSlides={true}
-            observeParents={true}
-            observer={true}
             modules={[Navigation, FreeMode]}
+            watchOverflow={true}
             className={style.swiper}
-            // initialSlide={1}
+            
+            onSwiper={(swiper) => swiper.update()}
+            
           >
             {data?.map((el) => (
-              <SwiperSlide className={style.swiper_slide}>
+              <SwiperSlide 
+              className={style.swiper_slide}
+              >
                 <Link
+                
                   _hover={{ textDecor: "none" }}
                   href={`/services/${el.attributes.heading}`}
                 >
                   <Box
                     margin={"auto"}
-                    //   border={"1px"}
-                    backgroundSize={"cover"}
+                      border={"1px"}
+                    zIndex={2}
                     w={["100vw", "100vw", "100vw", "45vw", "45vw", "45vw"]}
+                    // w={["100vw", "100vw", "100vw", "30vw", "30vw", "30vw"]}
                     maxW={"100%"}
-                    h={["auto"]}
-                    //   backgroundImage={`linear-gradient(0deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0.00) 100%), url(${process.env.REACT_APP_BACKEND_URL}${el.attributes.thumbnail.data.attributes.url})`}
+                    h={["600px"]}
                     position={"relative"}
                   >
                     <Text
@@ -489,6 +494,8 @@ const NewOurServices = () => {
             w={"100%"}
             gap={["0px", "10%", "5%", "10%", "12%", "16%"]}
             padding={["0px 0px 46px 0px"]}
+            
+            
           >
             {/* 1st Image  */}
             <Box

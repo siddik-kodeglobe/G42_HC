@@ -68,20 +68,12 @@ const Menu = () => {
       >
         <DrawerOverlay />
         <DrawerContent padding={0} margin={0}>
-          {/* fix the bug */}
-          {/* <Box w={"100%"} h={"294px"} border={"4px"}>
-            <ReactPlayer
-              width={"100%"}
-              height={"100%"}
-              playing={true}
-              loop={true}
-              url={g42Video}
-              muted
-            />
-          </Box> */}
-          <Box zIndex={-10} position={"relative"} mt={"-1.5px"}>
+          
+          {/* Remove video and add IMG */}
+          
+          {/* <Box zIndex={-10} position={"relative"} mt={"-1.5px"}>
             <BackgroundVideoContainer videosrc={g42Video} height={"371px"} />
-          </Box>
+          </Box> */}
 
           <DrawerBody>
           <Flex
