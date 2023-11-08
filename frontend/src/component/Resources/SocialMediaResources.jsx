@@ -123,6 +123,7 @@ const SocialMedia = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 backgroundColor={"#00D2AA"}
+                _hover={{bgColor: "#004141"}}
                 color={"white"}
                 borderRadius={"80px"}
               >
@@ -134,6 +135,7 @@ const SocialMedia = () => {
                   fontSize={["12px", "12px", "12px", "10px", "13px", "16px"]}
                   textTransform={"capitalize"}
                   fontWeight={[400, 400, 500, 500]}
+                  
                   padding={[
                     "12.55px 12px",
                     "12.55px 12px",

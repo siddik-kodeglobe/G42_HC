@@ -15,7 +15,7 @@ import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
 
 import { isMobile } from "react-device-detect";
-import doubleSideArrow from "../../assets/icons/doubleSidedArrow.png";
+import doubleSideArrow from "../../assets/icons/doubleSidedArrow.svg";
 import playBtn from "../../assets/icons/playBtn.svg";
 
 const News = () => {
@@ -82,7 +82,7 @@ const News = () => {
       <Box
         w={"100vw"}
         maxW={"100%"}
-        style={{ cursor: `url(${doubleSideArrow}), auto` }}
+        style={{ cursor: `url(${doubleSideArrow}) 45 45, auto` }}
         paddingBottom={["68px", "68px", "68px", "73px", "94px", "112px"]}
         bgGradient={
           "linear-gradient(180deg, #00D2AA 28.96%, rgba(0, 210, 170, 0.00) 100%);"

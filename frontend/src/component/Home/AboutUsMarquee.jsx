@@ -272,7 +272,7 @@ const AboutUsMarquee = () => {
               <Button
                 fontFamily={"Bossa-ExtendedMedium"}
                 mt={"16px"}
-                _hover={{ bgColor: "#00D2AA" }}
+                _hover={{ bgColor: "#004141" }}
                 bgColor={"#00D2AA"}
                 borderRadius={"80px"}
                 fontSize={["14px", "14px", "14px", "14px", "15px", "16px"]}

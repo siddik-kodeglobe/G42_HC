@@ -38,7 +38,7 @@ const Menu = () => {
         ref={btnRef}
         height={["32px", "32px", "65px", "85px"]}
         width={["32px", "32px", "65px", "85px"]}
-        _hover={{ backgroundColor: "white" }}
+        _hover={{ backgroundColor: "#00D2AA", borderColor: "white" }}
         backgroundColor={"transparent"}
         onClick={onOpen}
       >
@@ -49,6 +49,7 @@ const Menu = () => {
             // height={["8px", "8px", "16px", "16px"]}
             // width={["8px", "8px", "16px", "16px"]}
             color={"#00D2AA"}
+            _hover={{color: "white"}}
           />
         ) : (
           <CloseIcon
@@ -56,6 +57,7 @@ const Menu = () => {
             height={["8px", "8px", "16px", "16px"]}
             width={["8px", "8px", "16px", "16px"]}
             color={"#00D2AA"}
+            _hover={{color: "white"}}
           />
         )}
       </Flex>

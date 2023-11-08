@@ -89,16 +89,9 @@ const AdvancedDiag = () => {
             padding={["40px 20px 0px  20px", "125px 3.94% 0px 3.94%"]}
             gap={["15px", "15px", "0px", "0px"]}
           >
-            <Flex
-              flexDirection={["column", "column", "row", "row"]}
-              gap={["11px", "11px", "25px", "25px"]}
-            //   alignItems={["start", "start", "center","center", "center", "center"]}
-            //  flexShrink={1}
-            >
-              <Flex alignItems={["start", "start", "center", "center"]} flexWrap={"wrap"}>
+             <Flex flexDirection={["column","column","row","row"]} gap={["11px","11px","25px","25px"]} alignItems={["start","start","center","center"]}>
               <Text
-               flexShrink={"auto"}
-                fontFamily={"Bossa-ExtendedBold"}
+              fontFamily={"Bossa-ExtendedBold"}
                 color={"black"}
                 fontSize={["24px", "24px", "60px", "60px"]}
                 fontWeight={700}
@@ -107,18 +100,20 @@ const AdvancedDiag = () => {
               >
                 Advanced Diagnostics
               </Text>
-              </Flex>
               <Flex
-              w={"fit-content"}
                 cursor={"pointer"}
                 justifyContent={"center"}
                 alignItems={"center"}
                 backgroundColor={"#00D2AA"}
+                _hover={{bgColor: "#004141"}}
+                color={"white"}
+                // w={["128px", "128px", "182px", "182px"]}
+                // h={["40px", "40px", "55px", "55px"]}
                 borderRadius={"80px"}
               >
                 <Text
                 color={"white"}
-                  fontFamily={"Bossa-ExtendedMedium"}
+                fontFamily={"Bossa-ExtendedMedium"}
                   lineHeight={["11px", "11px", "22px", "22px"]}
                   textAlign={"center"}
                   fontSize={["12px", "12px", "16px", "16px"]}

@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import emailIcon from "../../assets/contact_us/email_icon.svg";
 import mapIcon from "../../assets/contact_us/map_icon.svg";
@@ -27,7 +27,9 @@ const SubCategory = ({ name, email, dropemail, desc }) => {
           >
             Looking to partner with {name}?
           </Text>
-          <Text
+          <Link
+          _hover={{textDecor: "none", color: "#004141"}}
+          href={`mailto:${email}`}
             fontFamily={"Bossa-Bold"}
             mt={["14px"]}
             fontSize={["24px"]}
@@ -37,7 +39,7 @@ const SubCategory = ({ name, email, dropemail, desc }) => {
             color={"var(--Emergent-Green, #00D2AA)"}
           >
             {email}
-          </Text>
+          </Link>
           <Text
             fontFamily={"Bossa-Regular"}
             fontSize={["12", "12", "12", "14", "16", "18px"]}
@@ -67,7 +69,9 @@ const SubCategory = ({ name, email, dropemail, desc }) => {
               >
                 Drop us a line for general enquiry:
               </Text>
-              <Text
+              <Link
+              _hover={{textDecor: "none", color: "#004141"}}
+              href={`mailto:${dropemail}`}
                 fontFamily={"Bossa-Bold"}
                 fontSize={["16px"]}
                 fontWeight={[400]}
@@ -75,7 +79,7 @@ const SubCategory = ({ name, email, dropemail, desc }) => {
                 color={"var(--Emergent-Green, #00D2AA)"}
               >
                 {dropemail}
-              </Text>
+              </Link>
             </Box>
 
             {/* map div  */}

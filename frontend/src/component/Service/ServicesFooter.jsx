@@ -32,9 +32,23 @@ const ServicesFooter = () => {
             </Text>
           </Box>
           <Box>
-            <Button fontFamily={"Bossa-ExtendedMedium"} borderRadius={"80px"} mt={["16px", 0,0]} padding={"15px 34px"} textTransform={"capitalize"} fontSize={["12px", "12px", "16px"]} _hover={{backgroundColor: "#004141"}} color={"white"} backgroundColor={"#004141"}>
+          <Flex
+            justifyContent={"center"}
+            alignItems={"center"}
+            // w={["219px"]}
+            // height={["55px"]}
+              fontFamily={"Bossa-ExtendedMedium"}
+              fontSize={["12px", "12px","12px", "16px", "16px", "16px"]}
+              fontWeight={500}
+              textTransform={"capitalize"}
+              padding={["15px 40px","15px 40px","15px 34px","15px 34px","15px 34px", "15px 34px", ]}
+              color={"white"}
+              _hover={{ backgroundColor: "#00D2AA" }}
+              backgroundColor={"#004141"}
+              borderRadius={80}
+            >
               Make Enquiry
-            </Button>
+            </Flex>
           </Box>
         </Flex>
         <hr style={{ margin: "35px 0px 54px 0px" }} />
@@ -52,19 +66,23 @@ const ServicesFooter = () => {
         >
           Partner with G42 Healthcare
         </Text>
-        <Button
-        fontFamily={"Bossa-ExtendedMedium"}
-          fontSize={["12px", "12px", "16px"]}
-          fontWeight={500}
-          textTransform={"capitalize"}
-          padding={"15px 40px"}
-          backgroundColor={"#00D2AA"}
-          _hover={{ backgroundColor: "#00D2AA" }}
-          color={"white"}
-          borderRadius={80}
-        >
-          Contact Us
-        </Button>
+        <Flex
+            justifyContent={"center"}
+            alignItems={"center"}
+            w={["219px"]}
+            height={["55px"]}
+              fontFamily={"Bossa-ExtendedMedium"}
+              fontSize={["12px", "12px", "16px"]}
+              fontWeight={500}
+              textTransform={"capitalize"}
+              padding={"15px 40px"}
+              backgroundColor={"#00D2AA"}
+              _hover={{ backgroundColor: "#004141" }}
+              color={"white"}
+              borderRadius={80}
+            >
+              Contact Us
+            </Flex>
       </Flex>
 
       <hr style={{ margin: "101px 0px 67px 0px", border: "1px solid lightgray" }} />

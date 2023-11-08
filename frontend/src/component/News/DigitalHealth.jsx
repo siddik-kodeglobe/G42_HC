@@ -109,6 +109,7 @@ const DigitalHealth = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 backgroundColor={"#00D2AA"}
+                _hover={{bgColor: "#004141"}}
                 color={"white"}
                 // w={["128px", "128px", "182px", "182px"]}
                 // h={["40px", "40px", "55px", "55px"]}

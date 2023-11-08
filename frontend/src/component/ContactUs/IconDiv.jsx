@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import emailIcon from "../../assets/contact_us/email_icon.svg";
 import infoIcon from "../../assets/contact_us/info_icon.svg";
@@ -55,7 +55,9 @@ const IconDiv = () => {
           >
             Drop us a line for general enquiry:
           </Text>
-          <Text
+          <Link
+          _hover={{textDecor: "none", color: "#004141"}}
+          href={`mailto:contact@g42.ai`}
             fontFamily={"Bossa-Regular"}
             fontSize={["12px", "12px", "12px", "14px", "15px", "16px"]}
             fontWeight={[400]}
@@ -63,7 +65,7 @@ const IconDiv = () => {
             color={"var(--Emergent-Green, #00D2AA)"}
           >
             contact@g42.ai
-          </Text>
+          </Link>
         </Box>
 
         {/* Main Container */}

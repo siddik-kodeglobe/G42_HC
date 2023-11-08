@@ -110,6 +110,7 @@ const CaseStudies = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
                 backgroundColor={"#00D2AA"}
+                _hover={{bgColor: "#004141"}}
                 color={"white"}
                 borderRadius={"80px"}
               >

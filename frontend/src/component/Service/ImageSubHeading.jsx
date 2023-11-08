@@ -69,10 +69,14 @@ const ImageSubHeading = () => {
             >
               {desc}
             </Text>
-            <Button
+            <Flex
+            justifyContent={"center"}
+            alignItems={"center"}
+            w={["219px"]}
+            height={["55px"]}
               fontFamily={"Bossa-ExtendedMedium"}
               mt={"15px"}
-              _hover={{ backgroundColor: "00D2AA" }}
+              _hover={{ backgroundColor: "#004141" }}
               backgroundColor={"#00D2AA"}
               color={"white"}
               fontSize={"16px"}
@@ -81,7 +85,7 @@ const ImageSubHeading = () => {
               padding={"15px 46px"}
             >
               Know More
-            </Button>
+            </Flex>
           </Box>
         </Flex>
       </Box>

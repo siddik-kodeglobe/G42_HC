@@ -71,16 +71,25 @@ const Category = () => {
 
   return (
     <>
-      <Flex flexDir={["column", "column", "column", "row","row", "row" ]} w={"100vw"} maxW={"100%"} border={"1px solid #D9D9D9"}>
-        
+      <Flex
+        flexDir={["column", "column", "column", "row", "row", "row"]}
+        w={"100vw"}
+        maxW={"100%"}
+        border={"1px solid #D9D9D9"}
+      >
         {/* Mobile View  */}
 
-        <Box
-        display={["block", "block", "block", "none", "none", "none"]}
-        >
+        <Box display={["block", "block", "block", "none", "none", "none"]}>
           <Box
-        padding={["79px 20px 24px 20px","79px 20px 24px 20px","79px 20px 24px 20px","","","" ]}
-        >
+            padding={[
+              "79px 20px 24px 20px",
+              "79px 20px 24px 20px",
+              "79px 20px 24px 20px",
+              "",
+              "",
+              "",
+            ]}
+          >
             <Text
               fontFamily={"Bossa-ExtendedBold"}
               fontSize={["32px"]}
@@ -91,38 +100,38 @@ const Category = () => {
               Lorem Ipsum
             </Text>
             <Text>We want to hear from you.</Text>
-            </Box>
-        <Flex
-          mt={["34px"]}
-          overflow={"scroll"}
-          alignItems={"center"}
-          backgroundColor={"#f5f5f5"}
-          paddingLeft={["37px", "37px", "37px", "44px", "55x", "66px"]}
-          gap={["18px", "18px", "18px", "24px", "30px", "36px"]}
-          height={["39px", "39px", "39px", "54px", "69px", "82px"]}
-          w={"100vw"}
-          maxW={"100%"}
-          sx={{
-            "::-webkit-scrollbar": {
-              display: "none",
-            },
-          }}
-        >
-          {categoryArr?.map((el, ind) => (
-            <Text
-              fontFamily={"Bossa-Regular"}
-              flexShrink={0}
-              cursor={"pointer"}
-              fontSize={["12px", "12px", "12px", "16px", "18px", "20px"]}
-              color={"black"}
-              fontStyle={"normal"}
-              lineHeight={"-0.42px"}
-              key={ind}
-            >
-              {el}
-            </Text>
-          ))}
-        </Flex>
+          </Box>
+          <Flex
+            mt={["34px"]}
+            overflow={"scroll"}
+            alignItems={"center"}
+            backgroundColor={"#f5f5f5"}
+            paddingLeft={["37px", "37px", "37px", "44px", "55x", "66px"]}
+            gap={["18px", "18px", "18px", "24px", "30px", "36px"]}
+            height={["39px", "39px", "39px", "54px", "69px", "82px"]}
+            w={"100vw"}
+            maxW={"100%"}
+            sx={{
+              "::-webkit-scrollbar": {
+                display: "none",
+              },
+            }}
+          >
+            {categoryArr?.map((el, ind) => (
+              <Text
+                fontFamily={"Bossa-Regular"}
+                flexShrink={0}
+                cursor={"pointer"}
+                fontSize={["12px", "12px", "12px", "16px", "18px", "20px"]}
+                color={"black"}
+                fontStyle={"normal"}
+                lineHeight={"-0.42px"}
+                key={ind}
+              >
+                {el}
+              </Text>
+            ))}
+          </Flex>
         </Box>
 
         {/* Desktop View  */}
@@ -153,11 +162,14 @@ const Category = () => {
           </Box>
 
           <Flex
-            alignItems={"center"}
+            
             mt={["54px"]}
             marginLeft={"35px"}
+            alignItems={"center"}
             flexDir={"column"}
           >
+
+            
             <Text
               fontFamily={"Bossa-Regular"}
               h={["54px"]}

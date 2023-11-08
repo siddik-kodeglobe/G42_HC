@@ -25,8 +25,12 @@ const Footer_AU = () => {
           >
             →Join Our Team
           </Text>
-          <Link href="/career">
-            <Button
+          <Link _hover={{textDecor: "none"}} href="/career">
+          <Flex
+            justifyContent={"center"}
+            alignItems={"center"}
+            w={["219px"]}
+            height={["55px"]}
               fontFamily={"Bossa-ExtendedMedium"}
               fontSize={["12px", "12px", "16px"]}
               fontWeight={500}
@@ -38,7 +42,7 @@ const Footer_AU = () => {
               borderRadius={80}
             >
               Learn More
-            </Button>
+            </Flex>
           </Link>
         </Flex>
 
@@ -58,20 +62,24 @@ const Footer_AU = () => {
           >
             Partner with G42 Healthcare
           </Text>
-          <Link href="/contactus">
-            <Button
+          <Link _hover={{textDecor: "none"}} href="/contactus">
+            <Flex
+            justifyContent={"center"}
+            alignItems={"center"}
+            w={["219px"]}
+            height={["55px"]}
               fontFamily={"Bossa-ExtendedMedium"}
               fontSize={["12px", "12px", "16px"]}
               fontWeight={500}
               textTransform={"capitalize"}
               padding={"15px 40px"}
               backgroundColor={"#00D2AA"}
-              _hover={{ backgroundColor: "#00D2AA" }}
+              _hover={{ backgroundColor: "#004141" }}
               color={"white"}
               borderRadius={80}
             >
               Contact Us
-            </Button>
+            </Flex>
           </Link>
         </Flex>
 

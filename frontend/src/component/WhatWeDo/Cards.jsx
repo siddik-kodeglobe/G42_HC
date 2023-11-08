@@ -89,7 +89,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px", "8px", "20px", "20px"]}
                 backgroundColor={"#00D2AA"}
-                _hover={{ backgroundColor: "#00D2AA" }}
+                _hover={{ backgroundColor: "#004141" }}
                 borderRadius={["48px", "48px", "80px", "80px"]}
                 height={["30px", "30px", "50px", "50px"]}
                 w={["120px", "120px", "200px", "200px"]}
@@ -160,7 +160,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px", "8px", "20px", "20px"]}
                 backgroundColor={"#00D2AA"}
-                _hover={{ backgroundColor: "#00D2AA" }}
+                _hover={{ backgroundColor: "#004141" }}
                 borderRadius={["48px", "48px", "80px", "80px"]}
                 height={["30px", "30px", "50px", "50px"]}
                 w={["120px", "120px", "200px", "200px"]}
@@ -255,7 +255,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px", "8px", "20px", "20px"]}
                 backgroundColor={"#00D2AA"}
-                _hover={{ backgroundColor: "#00D2AA" }}
+                _hover={{ backgroundColor: "#004141" }}
                 borderRadius={["48px", "48px", "80px", "80px"]}
                 height={["30px", "30px", "50px", "50px"]}
                 w={["120px", "120px", "200px", "200px"]}
@@ -326,7 +326,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px", "8px", "20px", "20px"]}
                 backgroundColor={"#00D2AA"}
-                _hover={{ backgroundColor: "#00D2AA" }}
+                _hover={{ backgroundColor: "#004141" }}
                 borderRadius={["48px", "48px", "80px", "80px"]}
                 height={["30px", "30px", "50px", "50px"]}
                 w={["120px", "120px", "200px", "200px"]}
@@ -421,7 +421,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px", "8px", "20px", "20px"]}
                 backgroundColor={"#00D2AA"}
-                _hover={{ backgroundColor: "#00D2AA" }}
+                _hover={{ backgroundColor: "#004141" }}
                 borderRadius={["48px", "48px", "80px", "80px"]}
                 height={["30px", "30px", "50px", "50px"]}
                 w={["120px", "120px", "200px", "200px"]}
@@ -493,7 +493,7 @@ const Cards = () => {
                 fontFamily={"Bossa-ExtendedRegular"}
                 mt={["8px", "8px", "20px", "20px"]}
                 backgroundColor={"#00D2AA"}
-                _hover={{ backgroundColor: "#00D2AA" }}
+                _hover={{ backgroundColor: "#004141" }}
                 borderRadius={["48px", "48px", "80px", "80px"]}
                 height={["30px", "30px", "50px", "50px"]}
                 w={["120px", "120px", "200px", "200px"]}
