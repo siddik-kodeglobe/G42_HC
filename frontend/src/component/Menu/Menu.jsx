@@ -19,6 +19,7 @@ import ReactPlayer from "react-player";
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
+
 const Menu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -70,13 +71,14 @@ const Menu = () => {
         <DrawerContent padding={0} margin={0}>
           
           {/* Remove video and add IMG */}
-          
+
           {/* <Box zIndex={-10} position={"relative"} mt={"-1.5px"}>
             <BackgroundVideoContainer videosrc={g42Video} height={"371px"} />
           </Box> */}
 
           <DrawerBody>
           <Flex
+         
         alignItems={"center"}
         justifyContent={"center"}
         cursor={"pointer"}
@@ -100,7 +102,7 @@ const Menu = () => {
               />
               
               </Flex>
-            <Flex gap={"22px"} flexDirection={"column"}>
+            <Flex  mt={["233px"]} gap={"22px"} flexDirection={"column"}>
               <Link
                 _hover={{
                   textDecor: "none",

@@ -129,9 +129,11 @@ const CaseStudies = () => {
 
           <Box w={"100%"} mt={["13px", "15px"]}>
         <Swiper
+          observer={true}
+        observeParents={true}
         speed={750}
         slidesPerView={'auto'}
-          breakpoints={{
+        breakpoints={{
             380: {
               slidesOffsetBefore: 21,
               // slidesPerView: 1.25,
@@ -159,9 +161,8 @@ const CaseStudies = () => {
             },
           }}
           ref={swiperRef}
-          observeParents
-          observer
-          modules={[Navigation]}
+          
+          modules={[Navigation, FreeMode]}
           className={style.swiper}
         >
           {data?.map((el) => (

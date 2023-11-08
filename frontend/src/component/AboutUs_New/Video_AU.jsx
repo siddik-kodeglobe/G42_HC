@@ -1,10 +1,11 @@
-import { Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import ReactPlayer from "react-player";
 import VideoModal from "../VideoModal/VideoModal";
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 import playBtn from "../../assets/icons/playBtn.svg";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
+import aboutBannerImg from '../../assets/aboutUs/aboutBannerImg.jpg'
 
 const Video_AU = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -17,7 +18,8 @@ const Video_AU = () => {
           position={"relative"}
           height={["445px", "445px", "445px", "100vh","100vh","100vh"]}
         >
-          <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
+          <Image w={"100%"} h={"100%"} objectFit={"cover"} src={aboutBannerImg} alt="aboutBannerImg"/>
+          {/* <BackgroundVideoContainer videosrc={g42Video} height={"100%"} /> */}
         </Box>
 
         <Box

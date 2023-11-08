@@ -1,9 +1,14 @@
 import { Box, Flex, Text, Image, Button, Link } from "@chakra-ui/react";
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './NewOurServices.css'
 // "swiper": "^10.0.4",
+import { useNavigate } from "react-router-dom";
 
 // Import GSAP
 import { TweenLite, TimelineMax, Linear, Back, Sine } from "gsap";
@@ -18,6 +23,11 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import style from "../AboutUs/OurPartner_Slider.module.css";
+
+/**
+ * Threshold from which mouse movement with pressed mouse button
+ * is considered a drag instead of a click.
+ */
 
 const NewOurServices = () => {
   //   const [data, setData] = useState([]);
@@ -187,6 +197,7 @@ const NewOurServices = () => {
     ];
     // console.log("ARR", arr);
     setData(arr);
+    // setData(res.data.data);
 
     // initial Image
     setFirstImg(res.data.data[0].attributes.thumbnail.data.attributes.url);
@@ -346,32 +357,90 @@ const NewOurServices = () => {
   // }, [swiperRef.current.activeIndex])
   // const activeSlideIndex = swiperRef.current.swiper.realIndex;
   // const [previousIndexTemp, setPreviousIndexTemp] = useState(activeSlideIndex === 0 ? data.length - 1 : activeSlideIndex - 1)
-  const handleSlideChange = () => {
-    const activeSlideIndex = swiperRef.current.swiper.realIndex;
-    const activeSlideDiv = document.querySelector(
-      `.swiper-slide[data-swiper-slide-index="${activeSlideIndex}"]`
-    );
+ 
+  // const handleSlideChange = () => {
+  //   const activeSlideIndex = swiperRef.current.swiper.realIndex;
+  //   const activeSlideDiv = document.querySelector(
+  //     `.swiper-slide[data-swiper-slide-index="${activeSlideIndex}"]`
+  //   );
+
+  //   const previousSlideIndex =
+  //     activeSlideIndex === 0 ? data.length - 1 : activeSlideIndex - 1;
+  //   const nextSlideIndex =
+  //     activeSlideIndex === data.length - 1 ? 0 : activeSlideIndex + 1;
+
+  //   const prevactiveSlideDiv = document.querySelector(
+  //     `.swiper-slide[data-swiper-slide-index="${previousSlideIndex}"]`
+  //   );
+  //   const nextactiveSlideDiv = document.querySelector(
+  //     `.swiper-slide[data-swiper-slide-index="${nextSlideIndex}"]`
+  //   );
+
+  //   if (activeSlideDiv) {
+  //     // Do something with the active slide div
+  //     // console.log(activeSlideDiv.textContent);
+  //     console.log(prevactiveSlideDiv.textContent);
+  //     console.log(activeSlideDiv.textContent);
+  //     console.log(nextactiveSlideDiv.textContent);
+
+  //     console.log(previousSlideIndex, activeSlideIndex, nextSlideIndex);
+
+  //     // change outer image
+  //     firstImgRef.current = firstImg;
+  //     secondImgRef.current = secondImg;
+  //     thirdImgRef.current = thirdImg;
+
+  //     // initial Image
+  //     setFirstImg(
+  //       data[previousSlideIndex].attributes.thumbnail.data.attributes.url
+  //     );
+  //     setSecondImg(
+  //       data[activeSlideIndex].attributes.thumbnail.data.attributes.url
+  //     );
+  //     setThirdImg(
+  //       data[nextSlideIndex].attributes.thumbnail.data.attributes.url
+  //     );
+
+  //     if (swiperRef.current.swiper.touches.diff < 0) {
+  //       animR2L();
+  //     } else {
+  //       animL2R();
+  //     }
+
+  //     setSecondInfo(data[activeSlideIndex].attributes.info);
+  //   }
+  // };
+
+  const handleSlideChange = (current, next) => {
+    // setDragging(true)
+    // handleBeforeChange()
+    console.log(next);
+    // console.log(current, next);
+    const activeSlideIndex = next;
+    // const activeSlideDiv = document.querySelector(
+    //   `.swiper-slide[data-swiper-slide-index="${activeSlideIndex}"]`
+    // );
 
     const previousSlideIndex =
       activeSlideIndex === 0 ? data.length - 1 : activeSlideIndex - 1;
     const nextSlideIndex =
       activeSlideIndex === data.length - 1 ? 0 : activeSlideIndex + 1;
 
-    const prevactiveSlideDiv = document.querySelector(
-      `.swiper-slide[data-swiper-slide-index="${previousSlideIndex}"]`
-    );
-    const nextactiveSlideDiv = document.querySelector(
-      `.swiper-slide[data-swiper-slide-index="${nextSlideIndex}"]`
-    );
+    // const prevactiveSlideDiv = document.querySelector(
+    //   `.swiper-slide[data-swiper-slide-index="${previousSlideIndex}"]`
+    // );
+    // const nextactiveSlideDiv = document.querySelector(
+    //   `.swiper-slide[data-swiper-slide-index="${nextSlideIndex}"]`
+    // );
 
-    if (activeSlideDiv) {
+    if (activeSlideIndex) {
       // Do something with the active slide div
       // console.log(activeSlideDiv.textContent);
-      console.log(prevactiveSlideDiv.textContent);
-      console.log(activeSlideDiv.textContent);
-      console.log(nextactiveSlideDiv.textContent);
+      // console.log(prevactiveSlideDiv.textContent);
+      // console.log(activeSlideDiv.textContent);
+      // console.log(nextactiveSlideDiv.textContent);
 
-      console.log(previousSlideIndex, activeSlideIndex, nextSlideIndex);
+      // console.log(previousSlideIndex, activeSlideIndex, nextSlideIndex);
 
       // change outer image
       firstImgRef.current = firstImg;
@@ -389,7 +458,7 @@ const NewOurServices = () => {
         data[nextSlideIndex].attributes.thumbnail.data.attributes.url
       );
 
-      if (swiperRef.current.swiper.touches.diff < 0) {
+      if (current < next ) {
         animR2L();
       } else {
         animL2R();
@@ -398,7 +467,45 @@ const NewOurServices = () => {
       setSecondInfo(data[activeSlideIndex].attributes.info);
     }
   };
+  
+ 
+  const sliderSettings = {
+    // className: "center",
+    accessibility: true,
+    adaptiveHeight: true,
+    arrows: false,
+    infinite: true,
+    centerMode: true,
+    centerPadding: "0px",
+    slidesToShow: 3,
+    initialSlide: 1,
+    // autoSlidesToShow: true,
+    variableWidth: true,
+    speed: 750,
+    fade: false,
+    touchThreshold:100,
+    beforeChange: (current, next) => handleSlideChange(current, next),
+    // afterChange: () => handleAfterChange()
+  };
 
+  const [clientXonMouseDown, setclientXonMouseDown] = useState(null);
+  const [clientYonMouseDown, setclientYonMouseDown] = useState(null);
+
+  const handleOnMouseDown =  (e) =>  {
+    
+      setclientXonMouseDown(e.clientX)
+      setclientYonMouseDown(e.clientY)
+    e.preventDefault() // stops weird link dragging effect
+  }
+
+  const handleOnClick = (e) => {
+    e.stopPropagation()
+    if (clientXonMouseDown !== e.clientX || 
+        clientYonMouseDown !== e.clientY) {
+      // prevent link click if the element was dragged
+      e.preventDefault()
+    }
+  }
 
   return (
     <>
@@ -410,7 +517,6 @@ const NewOurServices = () => {
         w={"100vw"}
         maxW={"100%"}
         h={["650px", "800px", "800px", "800px", "800px", "800px"]}
-        
       >
         {/* OUR SERVICES TITLE  */}
 
@@ -423,24 +529,43 @@ const NewOurServices = () => {
           Our Services
         </Text>
         {/* slider container  */}
-        <Box position={"relative"} w={"100%"} h={["100%"]} margin={"auto"} mt={["57px"]}>
-          <Swiper
+        <Box
+          position={"relative"}
+          w={"100%"}
+          h={["100%"]}
+          margin={"auto"}
+          mt={["57px"]}
+        >
+          {/* <Swiper
             slidesPerView={"auto"}
-            centeredSlides={true}
-            loop={true}
-            spaceBetween={0}
-            observer={true}
-            observeParents={true}
-            loopedSlides={50} 
-            speed={750}
-            initialSlide={2}
+            // loop={true}
+            initialSlide={1}
+            // centeredSlides={true}
+            // ref={swiperRef}
+            // onSlideChange={() => handleSlideChange()}
+            // spaceBetween={0}
+
             ref={swiperRef}
+            centeredSlides={true}
+            centeredSlidesBounds={true}
+            // loopedSlides={50}
+            loopAddBlankSlides={100}
             onSlideChange={handleSlideChange}
-            modules={[Navigation, FreeMode]}
-            watchOverflow={true}
-            className={style.swiper}
+
+
+            // centeredSlidesBounds={true}
+            // lazyLoading={true}
+            // loop and centered slide issue 
+            // observer={true}
+            // observeParents={true}
+            // loopedSlides={50} 
+            // speed={750}
+           
+            // modules={[Navigation, FreeMode]}
+            // watchOverflow={true}
+            // className={style.swiper}
             
-            onSwiper={(swiper) => swiper.update()}
+            // onSwiper={(swiper) => swiper.update()}
             
           >
             {data?.map((el) => (
@@ -479,12 +604,46 @@ const NewOurServices = () => {
                   </Box>
                 </Link>
               </SwiperSlide>
+
+            
             ))}
-          </Swiper>
+          </Swiper> */}
+
+          <Slider style={{zIndex:3}} {...sliderSettings}>
+            {data?.map((el) => (
+              <Link             
+                _hover={{ textDecor: "none" }}
+                href={`/services/${el.attributes.heading}`}
+                // zIndex={-10}
+                onMouseDown={(e) => handleOnMouseDown(e)}
+                onClick={(e) => handleOnClick(e)}
+              >
+                <Box
+                  margin={"auto"}
+                  // border={"1px"}
+                  // zIndex={2}
+                  w={["100vw", "100vw", "100vw", "50vw", "50vw", "50vw"]}
+                  // w={["100vw", "100vw", "100vw", "30vw", "30vw", "30vw"]}
+                  maxW={"100%"}
+                  h={["600px"]}
+                  position={"relative"}
+                >
+                  <Text
+                    fontSize={["32px", "32px", "32px", "31px", "40px", "48px"]}
+                    fontFamily={"Bossa-ExtendedBold"}
+                    textAlign={"center"}
+                  >
+                    {el.attributes.heading}
+                  </Text>
+                </Box>
+              </Link>
+            ))}
+          </Slider>
 
           {/* fixed images and title container */}
           <Flex
             // border={"1px solid red"}
+            // zIndex={0}
             flexWrap={"nowrap"}
             position={"absolute"}
             left={0}
@@ -494,8 +653,6 @@ const NewOurServices = () => {
             w={"100%"}
             gap={["0px", "10%", "5%", "10%", "12%", "16%"]}
             padding={["0px 0px 46px 0px"]}
-            
-            
           >
             {/* 1st Image  */}
             <Box
@@ -728,10 +885,18 @@ const NewOurServices = () => {
           alignItems={"center"}
           display={["flex", "flex", "flex", "none", "none", "none"]}
         >
-          <Box onClick={() => goPrev()} borderRadius={"50%"} border={"1px dashed black"}>
+          <Box
+            onClick={() => goPrev()}
+            borderRadius={"50%"}
+            border={"1px dashed black"}
+          >
             <ArrowBackIcon color={"black"} w={12} h={12} padding={"10px"} />
           </Box>
-          <Box  onClick={() => goNext()} borderRadius={"50%"} border={"1px dashed black"}>
+          <Box
+            onClick={() => goNext()}
+            borderRadius={"50%"}
+            border={"1px dashed black"}
+          >
             <ArrowForwardIcon color={"black"} w={12} h={12} padding={"10px"} />
           </Box>
         </Flex>

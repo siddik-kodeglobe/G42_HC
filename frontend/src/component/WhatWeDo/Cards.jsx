@@ -2,12 +2,12 @@ import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
 // Import images
-import AdvancedDiagnostics from "../../assets/WhatWeDo/AdvancedDiagnostics.svg";
-import DigitalHealth from "../../assets/WhatWeDo/DigitalHealth.svg";
-import EnvironmentalScience from "../../assets/WhatWeDo/EnvironmentalScience.svg";
-import IROS from "../../assets/WhatWeDo/IROS.svg";
-import Omics from "../../assets/WhatWeDo/Omics.svg";
-import Pharma from "../../assets/WhatWeDo/Pharma.svg";
+import AdvancedDiagnostics from "../../assets/WhatWeDo/AdvanceDiagnostics.jpg";
+import DigitalHealth from "../../assets/WhatWeDo/DigitalHealth.jpg";
+import EnvironmentalScience from "../../assets/WhatWeDo/EnvironmentalScience.jpg";
+import IROS from "../../assets/WhatWeDo/IROS.jpg";
+import Omics from "../../assets/WhatWeDo/Omics.jpg";
+import Pharma from "../../assets/WhatWeDo/PharmaTherapeutics.jpg";
 
 const Cards = () => {
   return (

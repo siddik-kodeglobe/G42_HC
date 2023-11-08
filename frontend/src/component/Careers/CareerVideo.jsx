@@ -14,6 +14,7 @@ import VideoModal from "../VideoModal/VideoModal";
 import g42Video from "../../assets/temp/Video/G42 Video.mp4";
 import BackgroundVideoContainer from "../BackgroundVideo/BackgroundVideoContainer";
 
+import careerbgImg from '../../assets/Careers/careerbgImg.jpg'
 const CareerVideo = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -26,7 +27,8 @@ const CareerVideo = () => {
           position={"relative"}
           height={["287px", "400px", "426px", "100vh", "100vh", "100vh"]}
         >
-          <BackgroundVideoContainer videosrc={g42Video} height={"100%"} />
+          <Image height={"100%"} w={"100%"} objectFit={"cover"} src={careerbgImg} alt={"careerbgImg"} />
+          {/* <BackgroundVideoContainer videosrc={g42Video} height={"100%"} /> */}
         </Box>
 
         <Box

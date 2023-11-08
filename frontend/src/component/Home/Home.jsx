@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>
       <Box>
-        {/* <LazyLoad>
+        <LazyLoad>
           <Navbar />
         </LazyLoad>
 
@@ -39,14 +39,14 @@ const Home = () => {
 
         <LazyLoad>
           <PioneeringHC />
-        </LazyLoad> */}
+        </LazyLoad>
 
         <LazyLoad>
           {/* <OurServices /> */}
           <NewOurServices/>
         </LazyLoad>
 
-        {/* <LazyLoad>
+        <LazyLoad>
           <ClientnPartner />
         </LazyLoad>
 
@@ -68,7 +68,7 @@ const Home = () => {
 
         <LazyLoad>
           <Footer_AU />
-        </LazyLoad> */}
+        </LazyLoad>
         <TopScroll />
       </Box>
     </>
